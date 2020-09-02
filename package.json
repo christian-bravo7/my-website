@@ -9,6 +9,7 @@
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint:style:fix": "stylelint **/*.{vue,css} --ignore-path .gitignore --fix",
     "lint": "npm run lint:js && npm run lint:style",
     "test": "jest"
   },
@@ -33,8 +34,10 @@
     "eslint": "^7.5.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "jest": "^26.1.0",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.7.0",
+    "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
     "ts-jest": "^26.1.3",
     "vue-jest": "^3.0.4"
   }
