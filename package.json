@@ -38,6 +38,7 @@
     "babel-jest": "^26.1.0",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
+    "cz-emoji": "^1.2.2",
     "eslint": "^7.5.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "jest": "^26.1.0",
@@ -52,7 +53,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-emoji"
     }
   }
 }
