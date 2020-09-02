@@ -3,7 +3,9 @@ import createPersistedState from 'vuex-persistedstate';
 
 export default ({ store }: Context): void => {
   createPersistedState({
-    key: 'yourkey',
-    // paths: [...]
+    key: 'hello',
+    paths: [
+      'initial',
+    ],
   })(store);
 };
