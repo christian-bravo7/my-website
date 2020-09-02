@@ -15,6 +15,12 @@
   </svg>
 </template>
 
+<script lang="ts">
+import { Vue } from 'nuxt-property-decorator';
+
+export default class Logo extends Vue {}
+</script>
+
 <style>
 .NuxtLogo {
   margin: auto;

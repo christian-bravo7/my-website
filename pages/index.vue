@@ -28,9 +28,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { Vue } from 'nuxt-property-decorator';
 
-export default Vue.extend({});
+export default class Home extends Vue {}
 </script>
 
 <style>

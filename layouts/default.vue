@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script lang="ts">
+import { Vue } from 'nuxt-property-decorator';
+
+export default class Default extends Vue {}
+</script>
+
 <style>
 html {
   box-sizing: border-box;
