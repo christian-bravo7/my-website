@@ -1,69 +1,76 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+  <main class="layout">
+    <div class="layout__navbar">
+      <div class="navbar__logo">
+        <SiteLogo />
+      </div>
+      <div class="navbar__theme-switch">
+        <ThemeSwitch />
+      </div>
+    </div>
+    <Nuxt class="layout__page" />
+  </main>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
+import { MetaInfo } from 'vue-meta/types';
 
-@Component
+import { guestStore } from '@/store';
+import SiteLogo from '~/assets/img/logo.svg?inline';
+
+@Component({
+  head (): MetaInfo {
+    return {
+      bodyAttrs: {
+        'data-theme': guestStore.theme,
+      },
+      titleTemplate: (titleChunk): string => {
+        return titleChunk ? `${titleChunk} - Christian Bravo` : 'Christian Bravo';
+      },
+    };
+  },
+  components: {
+    SiteLogo,
+  },
+})
 export default class Default extends Vue {}
 </script>
 
-<style>
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
+<style lang="scss" scoped>
+.layout {
+  display: grid;
+  min-height: 100vh;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  &__navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    padding: rem(24);
+  }
 
-.button--green {
-  display: inline-block;
-  padding: 10px 30px;
-  color: #3B8070;
-  text-decoration: none;
-  border: 1px solid #3B8070;
-  border-radius: 4px;
-}
+  .navbar {
+    &__logo {
+      width: rem(60);
+      height: rem(60);
 
-.button--green:hover {
-  color: #FFF;
-  background-color: #3B8070;
-}
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--text);
+      }
+    }
 
-.button--grey {
-  display: inline-block;
-  margin-left: 15px;
-  padding: 10px 30px;
-  color: #35495E;
-  text-decoration: none;
-  border: 1px solid #35495E;
-  border-radius: 4px;
-}
-
-.button--grey:hover {
-  color: #FFF;
-  background-color: #35495E;
+    &__theme-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1rem;
+    }
+  }
 }
 </style>

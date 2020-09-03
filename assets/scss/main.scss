@@ -1,0 +1,12 @@
+@import 'global-resources.scss';
+@import '~bulma/sass/elements/button.sass';
+@import '~bulma/sass/helpers/all.sass';
+
+html {
+  overflow-y: auto;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background);
+}

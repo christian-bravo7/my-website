@@ -1,30 +1,19 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        base-nuxt-project
+  <section class="home">
+    <section class="home__text-banner">
+      <h2 class="has-text-weight-bold text-banner__gretting">
+        Hello
+      </h2>
+      <h1 class="is-size-1 text-banner__description">
+        <span class="is-block has-text-centered">
+          I'm Christian Brav<span class="text-banner--o">o</span>
+        </span>
+        <span class="is-block has-text-centered">
+          I'm Frontend developer
+        </span>
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+    </section>
+  </section>
 </template>
 
 <script lang="ts">
@@ -34,43 +23,38 @@ import { Vue, Component } from 'nuxt-property-decorator';
 export default class Home extends Vue {}
 </script>
 
-<style>
-.container {
-  display: flex;
+<style lang="scss" scoped>
+.home {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  margin: 0 auto;
-  text-align: center;
-}
 
-.title {
-  display: block;
-  color: $black;
-  font-weight: 300;
-  font-size: 100px;
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  letter-spacing: 1px;
-}
+  &__text-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.subtitle {
-  padding-bottom: 15px;
-  color: #526488;
-  font-weight: 300;
-  font-size: 42px;
-  word-spacing: 5px;
-}
+  .text-banner {
+    &__gretting {
+      position: absolute;
+      color: var(--text-light);
+      font-size: 182px;
+      letter-spacing: 8px;
+      user-select: none;
+    }
 
-.links {
-  padding-top: 15px;
+    &__description {
+      z-index: 1;
+      color: var(--text);
+    }
+
+    &--o {
+      color: $pink-800;
+    }
+  }
 }
 </style>

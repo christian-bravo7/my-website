@@ -24,13 +24,18 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
     ],
   },
+
   /*
   ** Global CSS
   */
   css: [
+    '@/assets/scss/main.scss',
   ],
+
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
@@ -52,10 +57,13 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/style-resources-module
-    ['@nuxtjs/style-resources', {
-      scss: '@/assets/colors.scss',
-    }],
+    '@nuxtjs/style-resources',
+    // Doc: https://github.com/nuxt-community/svg-module
+    '@nuxtjs/svg',
   ],
+  styleResources: {
+    scss: '@/assets/scss/global-resources.scss',
+  },
   /*
   ** Nuxt.js modules
   */
