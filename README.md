@@ -7,6 +7,7 @@
   - Persistance state
 - Typescript support
   - Nuxt property decorators
+- SCSS
 - Eslint
 - Stylelint
 
