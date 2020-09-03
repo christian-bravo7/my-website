@@ -51,6 +51,10 @@ export default {
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    // Doc: https://github.com/nuxt-community/style-resources-module
+    ['@nuxtjs/style-resources', {
+      scss: '@/assets/colors.scss',
+    }],
   ],
   /*
   ** Nuxt.js modules

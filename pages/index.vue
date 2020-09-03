@@ -46,7 +46,7 @@ export default class Home extends Vue {}
 
 .title {
   display: block;
-  color: #35495E;
+  color: $black;
   font-weight: 300;
   font-size: 100px;
   font-family:
