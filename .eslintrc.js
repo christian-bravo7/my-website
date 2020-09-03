@@ -10,11 +10,22 @@ module.exports = {
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'plugin:nuxt/recommended',
+    'plugin:vue/vue3-recommended',
   ],
   plugins: [
     '@typescript-eslint',
   ],
   rules: {
+    'vue/component-tags-order': ['error', {
+      order: ['template', 'script', 'style'],
+    }],
+    'vue/max-attributes-per-line': ['error', {
+      singleline: 1,
+      multiline: {
+        max: 1,
+        allowFirstLine: false,
+      },
+    }],
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/explicit-function-return-type': 'error',
     'comma-dangle': ['error', {
