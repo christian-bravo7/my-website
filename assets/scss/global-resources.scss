@@ -1,3 +1,6 @@
 @import 'colors.scss';
 @import 'functions.scss';
 @import '~bulma/sass/utilities/_all';
+
+$scheme-main: $black;
+$box-shadow: 0 rem(8) rem(16) rem(2) rgba($scheme-invert, 0.2), 0 0 0 rem(1) rgba($scheme-invert, 0.02);

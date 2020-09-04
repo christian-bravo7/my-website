@@ -51,39 +51,75 @@
         <div class="skills-section__collection">
           <div class="skills-section__icon">
             <HtmlIcon />
+            <span>
+              HTML5
+            </span>
           </div>
           <div class="skills-section__icon">
             <CssIcon />
+            <span>
+              CSS3
+            </span>
           </div>
           <div class="skills-section__icon">
             <SassIcon />
+            <span>
+              SASS
+            </span>
           </div>
           <div class="skills-section__icon">
             <NuxtIcon />
+            <span>
+              Nuxt.js
+            </span>
           </div>
           <div class="skills-section__icon">
             <ReactIcon />
+            <span>
+              React.js
+            </span>
           </div>
           <div class="skills-section__icon">
             <VueIcon />
+            <span>
+              Vue.js
+            </span>
           </div>
           <div class="skills-section__icon">
             <TypescriptIcon />
+            <span>
+              Typescript
+            </span>
           </div>
           <div class="skills-section__icon">
             <JavascriptIcon />
+            <span>
+              Javascript
+            </span>
           </div>
           <div class="skills-section__icon">
             <NodeIcon />
+            <span>
+              Node.js
+            </span>
           </div>
           <div class="skills-section__icon">
             <GraphqlIcon />
+            <span>
+              GraphQL
+            </span>
           </div>
           <div class="skills-section__icon">
             <GitIcon />
+            <span>
+              Git
+            </span>
           </div>
           <div class="skills-section__icon">
             <JestIcon />
+            <span>
+              Jest
+            </span>
           </div>
         </div>
       </div>
@@ -227,21 +263,40 @@ export default class Home extends Vue {}
 
   &__collection {
     display: grid;
-    grid-gap: rem(35);
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: rem(25);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     justify-items: center;
     padding: rem(24) 0;
   }
 
   &__icon {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: rem(50);
+    width: 100%;
+    padding: rem(8);
+    transition: box-shadow 250ms;
+
+    > span {
+      margin-top: rem(8);
+      color: var(--text-light);
+      font-weight: $weight-bold;
+      font-size: $size-5;
+      transition: color 250ms;
+    }
 
     > svg {
-      width: 100%;
+      width: rem(50);
       fill: var(--asset-highlight);
+    }
+
+    &:hover {
+      box-shadow: $box-shadow;
+
+      > span {
+        color: var(--asset-highlight);
+      }
     }
   }
 }
@@ -264,6 +319,12 @@ export default class Home extends Vue {}
 
     &__description {
       font-size: $size-4;
+    }
+  }
+
+  .skills-section {
+    &__collection {
+      grid-gap: rem(10) rem(5);
     }
   }
 }
