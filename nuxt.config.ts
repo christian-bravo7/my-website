@@ -61,6 +61,8 @@ export default {
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
+    // Doc: https://github.com/nuxt-community/analytics-module
+    '@nuxtjs/google-analytics',
   ],
   styleResources: {
     scss: '@/assets/scss/global-resources.scss',
@@ -74,6 +76,9 @@ export default {
     // Doc: https://github.com/nuxt-community/i18n-module
     'nuxt-i18n',
   ],
+  googleAnalytics: {
+    id: 'UA-167467888-1',
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
