@@ -193,4 +193,14 @@ export default class Default extends Vue {
     }
   }
 }
+
+@include mobile {
+  .layout {
+    .navbar {
+      &__options {
+        display: none;
+      }
+    }
+  }
+}
 </style>

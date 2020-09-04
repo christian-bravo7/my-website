@@ -5,7 +5,7 @@
         <h2 class="has-text-weight-bold text-banner__gretting">
           {{ $t('home.gretting') }}
         </h2>
-        <h1 class="is-size-1 text-banner__description">
+        <h1 class="text-banner__description">
           <span class="is-block has-text-centered">
             {{ $t('home.iam-name-text') }}
           </span>
@@ -61,10 +61,25 @@ export default class Home extends Vue {}
   &__description {
     z-index: 1;
     color: var(--text);
+    font-size: $size-1;
   }
 
   &--o {
     color: $pink-800;
   }
 }
+
+@include mobile {
+  .text-banner {
+    &__gretting {
+      font-size: 25vw;
+      transform: rotate(-45deg);
+    }
+
+    &__description {
+      font-size: $size-4;
+    }
+  }
+}
+
 </style>

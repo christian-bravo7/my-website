@@ -10,7 +10,7 @@
             {{ $t('me.me-label') }}
           </span>
         </h2>
-        <h1 class="is-size-1 text-banner__description">
+        <h1 class="text-banner__description">
           <span class="is-block has-text-centered">
             {{ $t('home.iam-name-text') }}
           </span>
@@ -185,6 +185,7 @@ export default class Home extends Vue {}
   &__description {
     z-index: 1;
     color: var(--text);
+    font-size: $size-1;
   }
 }
 
@@ -227,9 +228,9 @@ export default class Home extends Vue {}
   &__collection {
     display: grid;
     grid-gap: rem(35);
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     justify-items: center;
-    padding: rem(24);
+    padding: rem(24) 0;
   }
 
   &__icon {
@@ -241,6 +242,23 @@ export default class Home extends Vue {}
     > svg {
       width: 100%;
       fill: var(--asset-highlight);
+    }
+  }
+}
+
+@include mobile {
+  .who-iam-section {
+    grid-template-columns: 1fr;
+  }
+
+  .text-banner {
+    &__gretting {
+      font-size: 25vw;
+      transform: rotate(-45deg);
+    }
+
+    &__description {
+      font-size: $size-4;
     }
   }
 }
