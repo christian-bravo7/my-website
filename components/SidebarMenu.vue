@@ -29,18 +29,28 @@
           <section class="sidebar__content">
             <section class="sidebar__body">
               <div class="sidebar__links">
-                <NuxtLink
-                  class="sidebar__link"
-                  :to="localePath({ name: 'index' })"
+                <div
+                  class="sidebar__link-wrapper"
+                  @click="closeSidebar"
                 >
-                  Home
-                </NuxtLink>
-                <NuxtLink
-                  class="sidebar__link"
-                  :to="localePath({ name: 'me' })"
+                  <NuxtLink
+                    class="sidebar__link"
+                    :to="localePath({ name: 'index' })"
+                  >
+                    {{ $t('navigation.home-label') }}
+                  </NuxtLink>
+                </div>
+                <div
+                  class="sidebar__link-wrapper"
+                  @click="closeSidebar"
                 >
-                  About me
-                </NuxtLink>
+                  <NuxtLink
+                    class="sidebar__link"
+                    :to="localePath({ name: 'me' })"
+                  >
+                    {{ $t('navigation.about-me-label') }}
+                  </NuxtLink>
+                </div>
               </div>
             </section>
             <section class="sidebar__footer">
@@ -138,6 +148,7 @@ export default class SidebarMenu extends Vue {
   &__footer {
     display: flex;
     justify-content: space-between;
+    padding: rem(5) rem(14);
   }
 
   &__dark-theme {
@@ -171,6 +182,11 @@ export default class SidebarMenu extends Vue {
   &__links {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__link-wrapper {
+    margin-bottom: rem(16);
   }
 
   &__link {
