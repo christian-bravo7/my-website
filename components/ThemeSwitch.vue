@@ -64,7 +64,6 @@ export default class ThemeSwitch extends Vue {}
     background-color: var(--text-light);
     border-radius: 10px;
     transform: translateY(-50%);
-    transition: 0.3s;
   }
 
   &__circle {
@@ -84,7 +83,7 @@ export default class ThemeSwitch extends Vue {}
     transition-property: transform, box-shadow, background-color, left;
 
     & > i {
-      color: #FFA85A;
+      color: $pink-800;
       font-size: 14px;
       transition-duration: 250ms;
       transition-property: color;

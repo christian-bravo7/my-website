@@ -1,6 +1,11 @@
-@import 'global-resources.scss';
+@import '~bulma/sass/base/_all';
+@import '~bulma/sass/layout/_all.sass';
 @import '~bulma/sass/elements/button.sass';
-@import '~bulma/sass/helpers/all.sass';
+@import '~bulma/sass/elements/title.sass';
+@import '~bulma/sass/elements/content.sass';
+@import '~bulma/sass/elements/container.sass';
+@import '~bulma/sass/helpers/_all.sass';
+@import 'page-transitions.scss';
 
 html {
   overflow-y: auto;
