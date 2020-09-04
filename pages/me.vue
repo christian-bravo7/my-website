@@ -12,10 +12,8 @@
         </h2>
         <h1 class="text-banner__description">
           <span class="is-block has-text-centered">
-            {{ $t('home.iam-name-text') }}
+            {{ $t('me.simple-description') }}
           </span>
-          <span class="is-block has-text-centered">
-            {{ $t('home.iam-job-text') }}
           </span>
         </h1>
       </section>
@@ -220,6 +218,7 @@ export default class Home extends Vue {}
 
   &__description {
     z-index: 1;
+    max-width: rem(800);
     color: var(--text);
     font-size: $size-1;
   }
