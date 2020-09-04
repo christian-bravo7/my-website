@@ -51,6 +51,8 @@ body[data-theme="light"] {
   --wordmark: #{$pink-800};
   --background: #{$white};
   --background-secondary: #EFF0F3;
+  --background-footer: #{$gray-800};
+  --footer-text: #{$white};
   --asset-normal: #{$pink-800};
   --asset-highlight: #{$pink-800};
 }
@@ -65,6 +67,8 @@ body[data-theme="dark"] {
   --wordmark: #{$purple-300};
   --background: #232946;
   --background-secondary: #D4D8F0;
+  --background-footer: #02071D;
+  --footer-text: #{$gray-300};
   --asset-normal: #091134;
   --asset-highlight: #5171FF;
 }

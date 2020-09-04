@@ -43,7 +43,7 @@
     </section>
     <section class="home__content">
       <div class="skills-section container">
-        <h2 class="has-text-centered has-text-weight-bold skills-section__title">
+        <h2 class="has-text-centered skills-section__title">
           {{ $t('me.skills-label') }}
         </h2>
         <div class="skills-section__collection">
@@ -122,6 +122,47 @@
         </div>
       </div>
     </section>
+    <section class="home__divider-container">
+      <div class="home__divider home__divider--down" />
+      <div class="home__divider" />
+    </section>
+    <footer class="home__content home__content--tertiary">
+      <div class="social-media-section container">
+        <div class="social-media-section__collection">
+          <a
+            target="_blank"
+            href="https://codepen.io/christian-bravo"
+            class="social-media-section__social-link"
+          >
+            <CodepenIcon />
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/christian-bravo7"
+            class="social-media-section__social-link"
+          >
+            <GithubIcon />
+          </a>
+          <a
+            href="https://www.instagram.com/christian.bravo_/"
+            target="_blank"
+            class="social-media-section__social-link"
+          >
+            <InstagramIcon />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/christian151-bravo/"
+            class="social-media-section__social-link"
+          >
+            <LinkedinIcon />
+          </a>
+        </div>
+        <p class="social-media-section__copyright-text">
+          {{ $t('me.crafted-label') }} ❤️ &copy; Christian Bravo
+        </p>
+      </div>
+    </footer>
   </section>
 </template>
 
@@ -142,6 +183,10 @@ import GitIcon from '~/assets/img/git.svg?inline';
 import SassIcon from '~/assets/img/sass.svg?inline';
 import JestIcon from '~/assets/img/jest.svg?inline';
 import HtmlIcon from '~/assets/img/html5.svg?inline';
+import CodepenIcon from '~/assets/img/codepen.svg?inline';
+import GithubIcon from '~/assets/img/github.svg?inline';
+import InstagramIcon from '~/assets/img/instagram.svg?inline';
+import LinkedinIcon from '~/assets/img/linkedin.svg?inline';
 
 @Component({
   components: {
@@ -159,6 +204,10 @@ import HtmlIcon from '~/assets/img/html5.svg?inline';
     JestIcon,
     HtmlIcon,
     NodeIcon,
+    CodepenIcon,
+    GithubIcon,
+    InstagramIcon,
+    LinkedinIcon,
   },
 })
 export default class Home extends Vue {}
@@ -179,6 +228,10 @@ export default class Home extends Vue {}
 
     &--secondary {
       background-color: var(--text-light);
+    }
+
+    &--tertiary {
+      background-color: var(--background-footer);
     }
   }
 
@@ -231,6 +284,7 @@ export default class Home extends Vue {}
 
   &__title {
     color: var(--asset-highlight);
+    font-weight: normal;
     font-size: rem(48);
   }
 
@@ -295,6 +349,40 @@ export default class Home extends Vue {}
 
       > span {
         color: var(--asset-highlight);
+      }
+    }
+  }
+}
+
+.social-media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__copyright-text {
+    color: var(--footer-text);
+    font-size: rem(12);
+  }
+
+  &__collection {
+    display: grid;
+    grid-column-gap: rem(30);
+    grid-template-columns: repeat(4, rem(25));
+    margin-bottom: rem(42);
+  }
+
+  &__social-link {
+    width: auto;
+
+    > svg {
+      transition: fill 250ms;
+      fill: var(--footer-text);
+    }
+
+    &:hover {
+      > svg {
+        fill: var(--background);
       }
     }
   }
