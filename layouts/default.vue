@@ -1,5 +1,9 @@
 <template>
   <main class="layout">
+    <SidebarMenu
+      v-if="isSidebarActive"
+      @closeSidebar="closeSidebar"
+    />
     <div class="layout__navbar">
       <NuxtLink
         class="navbar__logo"
@@ -32,6 +36,16 @@
             <ThemeSwitch />
           </div>
         </div>
+      </div>
+      <div class="navbar__burger-button-wrapper">
+        <button
+          class="button navbar__burger-button"
+          @click="openSidebar"
+        >
+          <span class="material-icons navbar__burger-button-icon">
+            menu
+          </span>
+        </button>
       </div>
     </div>
     <header class="layout__banner">
@@ -70,9 +84,19 @@ import SiteLogo from '~/assets/img/logo.svg?inline';
   },
 })
 export default class Default extends Vue {
+  isSidebarActive: boolean = false;
+
   get currentRoute (): string {
     const route = this.getRouteBaseName();
     return route;
+  }
+
+  openSidebar (): void {
+    this.isSidebarActive = true;
+  }
+
+  closeSidebar (): void {
+    this.isSidebarActive = false;
   }
 }
 </script>
@@ -152,6 +176,26 @@ export default class Default extends Vue {
       align-content: center;
     }
 
+    &__burger-button-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &__burger-button {
+      display: none;
+      height: auto;
+      padding: 0;
+      background-color: transparent;
+      border-color: transparent;
+      transition-duration: 250ms;
+      transition-property: background-color, color;
+    }
+
+    &__burger-button-icon {
+      color: var(--text);
+      font-size: rem(42);
+    }
+
     &__user-preferences {
       display: grid;
       grid-column-gap: rem(8);
@@ -199,6 +243,10 @@ export default class Default extends Vue {
     .navbar {
       &__options {
         display: none;
+      }
+
+      &__burger-button {
+        display: flex;
       }
     }
   }

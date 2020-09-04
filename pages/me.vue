@@ -249,6 +249,11 @@ export default class Home extends Vue {}
 @include mobile {
   .who-iam-section {
     grid-template-columns: 1fr;
+
+    &__asset {
+      position: absolute;
+      opacity: 0.2;
+    }
   }
 
   .text-banner {
