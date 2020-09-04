@@ -3,9 +3,9 @@ import createPersistedState from 'vuex-persistedstate';
 
 export default ({ store }: Context): void => {
   createPersistedState({
-    key: 'hello',
+    key: 'christian-bravo',
     paths: [
-      'initial',
+      'guest.theme',
     ],
   })(store);
 };
