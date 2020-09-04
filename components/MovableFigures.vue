@@ -117,4 +117,12 @@ export default class MovableFigures extends Vue {
     }
   }
 }
+
+@include mobile {
+  .figure {
+    & > svg {
+      opacity: 0.6;
+    }
+  }
+}
 </style>
