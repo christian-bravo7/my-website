@@ -265,7 +265,6 @@ export default class Home extends Vue {}
     color: var(--text-light);
     font-size: 182px;
     line-height: 1;
-    letter-spacing: 8px;
     user-select: none;
   }
 

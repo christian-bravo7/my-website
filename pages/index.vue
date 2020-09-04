@@ -54,7 +54,6 @@ export default class Home extends Vue {}
     position: absolute;
     color: var(--text-light);
     font-size: 182px;
-    letter-spacing: 8px;
     user-select: none;
   }
 
