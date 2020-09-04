@@ -85,10 +85,17 @@ import SiteLogo from '~/assets/img/logo.svg?inline';
 })
 export default class Default extends Vue {
   isSidebarActive: boolean = false;
+  previousScroll: number = window.scrollY || document.documentElement.scrollTop;
+  currentDirection: number = 0;
+  previousDirection: number = 0;
 
   get currentRoute (): string {
     const route = this.getRouteBaseName();
     return route;
+  }
+
+  mounted (): void {
+    this.checkScrollDown();
   }
 
   openSidebar (): void {
@@ -97,6 +104,38 @@ export default class Default extends Vue {
 
   closeSidebar (): void {
     this.isSidebarActive = false;
+  }
+
+  checkScroll (): void {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScroll > this.previousScroll) {
+      this.currentDirection = 2;
+    } else if (currentScroll < this.previousScroll) {
+      this.currentDirection = 1;
+    }
+
+    if (this.currentDirection !== this.previousDirection) {
+      this.toggleHeader(this.currentDirection, currentScroll);
+    }
+
+    this.previousScroll = currentScroll;
+  }
+
+  checkScrollDown (): void {
+    window.addEventListener('scroll', this.checkScroll);
+  }
+
+  toggleHeader (direction: number, currentScroll: number): void {
+    const header = document.querySelector('.layout__navbar') as HTMLElement;
+
+    if (direction === 2 && currentScroll > 52) {
+      header.classList.add('hide');
+      this.previousDirection = direction;
+    } else if (direction === 1) {
+      header.classList.remove('hide');
+      this.previousDirection = direction;
+    }
   }
 }
 </script>
@@ -116,6 +155,11 @@ export default class Default extends Vue {
     grid-template-columns: 1fr auto;
     width: 100%;
     padding: rem(24);
+    transition: top 250ms;
+
+    &.hide {
+      top: rem(-100);
+    }
   }
 
   &__banner {
