@@ -9,20 +9,25 @@
           <NuxtLink
             class="navbar__link"
             exact-active-class="navbar__link--active"
-            :to="{ name: 'index' }"
+            :to="localePath({ name: 'index' })"
           >
             home
           </NuxtLink>
           <NuxtLink
             class="navbar__link"
             exact-active-class="navbar__link--active"
-            :to="{ name: 'me' }"
+            :to="localePath({ name: 'me' })"
           >
             about me
           </NuxtLink>
         </div>
-        <div class="navbar__theme-switch">
-          <ThemeSwitch />
+        <div class="navbar__user-preferences">
+          <div>
+            <LanguagePicker abbreviation />
+          </div>
+          <div class="navbar__theme-switch">
+            <ThemeSwitch />
+          </div>
         </div>
       </div>
     </div>
@@ -63,7 +68,7 @@ import SiteLogo from '~/assets/img/logo.svg?inline';
 })
 export default class Default extends Vue {
   get currentRoute (): string {
-    const route = this.$route.name!;
+    const route = this.getRouteBaseName();
     return route;
   }
 }
@@ -142,6 +147,13 @@ export default class Default extends Vue {
       grid-column-gap: rem(80);
       grid-template-columns: auto auto;
       align-content: center;
+    }
+
+    &__user-preferences {
+      display: grid;
+      grid-column-gap: rem(8);
+      grid-template-columns: auto auto;
+      align-items: center;
     }
 
     &__links {

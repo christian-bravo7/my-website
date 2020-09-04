@@ -1,0 +1,14 @@
+{
+  "me": {
+    "about-label": "About",
+    "me-label": "Me",
+    "about-me-label": "About me",
+    "about-me-description": "I am a 20 years old frontend developer who works with JavaScript, Vue, React, Node, GraphQL and many other modern web technologies. I have a great passion for UI effects, animations and the creation of intuitive and dynamic user experiences. Ahhh and I love coffee 😊.",
+    "skills-label": "Skills"
+  },
+  "home": {
+    "gretting": "Hello",
+    "iam-name-text": "I'm Christian Bravo",
+    "iam-job-text": "I'm Frontend developer"
+  }
+}

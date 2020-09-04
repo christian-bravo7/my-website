@@ -4,18 +4,18 @@
       <section class="text-banner">
         <h2 class="has-text-weight-bold text-banner__gretting">
           <span class="is-block has-text-centered">
-            About
+            {{ $t('me.about-label') }}
           </span>
           <span class="is-block has-text-centered">
-            Me
+            {{ $t('me.me-label') }}
           </span>
         </h2>
         <h1 class="is-size-1 text-banner__description">
           <span class="is-block has-text-centered">
-            I'm Christian Bravo
+            {{ $t('home.iam-name-text') }}
           </span>
           <span class="is-block has-text-centered">
-            I'm Frontend developer
+            {{ $t('home.iam-job-text') }}
           </span>
         </h1>
       </section>
@@ -28,10 +28,10 @@
       <div class="who-iam-section container">
         <div class="content is-medium">
           <h1 class="who-iam-section__title">
-            About me
+            {{ $t('me.about-me-label') }}
           </h1>
           <p>
-            I am a 20 years old frontend developer who works with JavaScript, Vue, React, Node, GraphQL and many other modern web technologies. I have a great passion for UI effects, animations and the creation of intuitive and dynamic user experiences. Ahhh and I love coffee 😊.
+            {{ $t('me.about-me-description') }}
           </p>
         </div>
         <div class="who-iam-section__asset">

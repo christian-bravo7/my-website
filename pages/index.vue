@@ -3,14 +3,14 @@
     <Portal to="page-banner">
       <section class="text-banner">
         <h2 class="has-text-weight-bold text-banner__gretting">
-          Hello
+          {{ $t('home.gretting') }}
         </h2>
         <h1 class="is-size-1 text-banner__description">
           <span class="is-block has-text-centered">
-            I'm Christian Brav<span class="text-banner--o">o</span>
+            {{ $t('home.iam-name-text') }}
           </span>
           <span class="is-block has-text-centered">
-            I'm Frontend developer
+            {{ $t('home.iam-job-text') }}
           </span>
         </h1>
       </section>

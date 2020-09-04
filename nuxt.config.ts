@@ -1,4 +1,5 @@
 import { Configuration } from '@nuxt/types';
+import Locales from './lang';
 
 export default {
   /*
@@ -70,11 +71,39 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    // Doc: https://github.com/nuxt-community/i18n-module
+    'nuxt-i18n',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
+  i18n: {
+    locales: Locales,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      alwaysRedirect: false,
+    },
+    defaultLocale: 'en',
+    strategy: 'prefix_and_default',
+    langDir: 'lang/',
+    lazy: true,
+    vueI18n: {
+      fallbackLocale: 'en',
+      preserveState: false,
+    },
+    vuex: {
+    // Module namespace
+      moduleName: 'i18nStore',
+      // If enabled, current app's locale is synced with nuxt-i18n store module
+      syncLocale: false,
+      // If enabled, current translation messages are synced with nuxt-i18n store module
+      syncMessages: false,
+      // Mutation to commit to set route parameters translations
+      syncRouteParams: true,
+    },
+  },
   axios: {},
   /*
   ** Build configuration
