@@ -10,5 +10,9 @@
     "gretting": "Hello",
     "iam-name-text": "I'm Christian Bravo",
     "iam-job-text": "I'm Frontend developer"
+  },
+  "navigation": {
+    "home-label": "Home",
+    "about-me-label": "About me"
   }
 }

@@ -46,7 +46,7 @@
     <section class="home__content">
       <div class="skills-section container">
         <h2 class="has-text-centered has-text-weight-bold skills-section__title">
-          Skills
+          {{ $t('me.skills-label') }}
         </h2>
         <div class="skills-section__collection">
           <div class="skills-section__icon">

@@ -1,9 +1,12 @@
 <template>
   <main class="layout">
     <div class="layout__navbar">
-      <div class="navbar__logo">
+      <NuxtLink
+        class="navbar__logo"
+        :to="localePath({ name: 'index' })"
+      >
         <SiteLogo />
-      </div>
+      </NuxtLink>
       <div class="navbar__options">
         <div class="navbar__links">
           <NuxtLink
@@ -11,14 +14,14 @@
             exact-active-class="navbar__link--active"
             :to="localePath({ name: 'index' })"
           >
-            home
+            {{ $t('navigation.home-label') }}
           </NuxtLink>
           <NuxtLink
             class="navbar__link"
             exact-active-class="navbar__link--active"
             :to="localePath({ name: 'me' })"
           >
-            about me
+            {{ $t('navigation.about-me-label') }}
           </NuxtLink>
         </div>
         <div class="navbar__user-preferences">
