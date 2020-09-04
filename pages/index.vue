@@ -71,9 +71,10 @@ export default class Home extends Vue {}
 
 @include mobile {
   .text-banner {
+    padding: rem(15);
+
     &__gretting {
-      font-size: 25vw;
-      transform: rotate(-45deg);
+      font-size: 20vw;
     }
 
     &__description {
