@@ -103,7 +103,7 @@ export default class SidebarMenu extends Vue {
   left: 0;
   z-index: 20;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: transparent;
 
   &::before {
@@ -126,7 +126,7 @@ export default class SidebarMenu extends Vue {
   justify-content: space-between;
   width: 100%;
   max-width: rem(320);
-  height: 100vh;
+  height: 100%;
   padding: 0;
   background-color: var(--background);
   border-radius: rem(20) 0 0 rem(20);

@@ -8,7 +8,7 @@ $family-primary: 'Montserrat', sans-serif;
 @import '~bulma/sass/elements/content.sass';
 @import '~bulma/sass/elements/container.sass';
 @import '~bulma/sass/helpers/_all.sass';
-@import 'page-transitions.scss';
+@import 'helpers.scss';
 
 html {
   overflow-y: auto;
