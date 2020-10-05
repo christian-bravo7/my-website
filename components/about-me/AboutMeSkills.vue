@@ -97,6 +97,7 @@ export default class AboutMeSkills extends Vue {}
     color: var(--text-light);
     font-weight: bold;
     font-size: rem(182);
+    word-break: break-word;
   }
 
   &__collection {
