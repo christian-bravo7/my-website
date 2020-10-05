@@ -58,7 +58,6 @@ export default class AboutMeInformation extends Vue {}
     font-weight: bold;
     font-size: rem(110);
     line-height: 1;
-    opacity: 0.5;
   }
 
   &__asset {

@@ -41,4 +41,10 @@ export default class ContentDivider extends Vue {
     }
   }
 }
+
+@include mobile {
+  .content-divider {
+    height: rem(40);
+  }
+}
 </style>
