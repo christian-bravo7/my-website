@@ -86,7 +86,7 @@ export default class Default extends Vue {
 }
 
 .flash-text-enter-active {
-  transition: 4s;
+  transition: 2s;
 }
 
 .flash-text-enter-to {
@@ -98,7 +98,7 @@ export default class Default extends Vue {
 }
 
 .flash-text-leave-active {
-  transition: 4s;
+  transition: 2s;
 }
 
 .flash-text-leave-to {
