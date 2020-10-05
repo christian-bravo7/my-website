@@ -11,10 +11,9 @@
         name="page-banner"
         class="site__banner-content"
         slim
-        :transition="transitionComponent"
       />
     </header>
-    <Nuxt class="site__page" />
+    <Nuxt />
   </main>
 </template>
 
@@ -48,20 +47,6 @@ export default class Default extends Vue {
     return route;
   }
 
-  get transitionComponent (): any {
-    return {
-      functional: true,
-      render (h: any, context: any): any {
-        return h('transition', {
-          props: {
-            name: 'flash-text',
-            mode: 'out-in',
-          },
-        }, context.children);
-      },
-    };
-  }
-
   openSidebar (): void {
     this.isSidebarActive = true;
   }
@@ -74,34 +59,8 @@ export default class Default extends Vue {
 
 <style lang="scss" scoped>
 .site {
-  display: grid;
-
   &__banner-content {
     min-height: 100vh;
   }
-}
-
-.flash-text-enter {
-  opacity: 0;
-}
-
-.flash-text-enter-active {
-  transition: 2s;
-}
-
-.flash-text-enter-to {
-  opacity: 1;
-}
-
-.flash-text-leave {
-  opacity: 0;
-}
-
-.flash-text-leave-active {
-  transition: 2s;
-}
-
-.flash-text-leave-to {
-  opacity: 1;
 }
 </style>

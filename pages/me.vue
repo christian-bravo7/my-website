@@ -1,5 +1,5 @@
 <template>
-  <section class="home">
+  <section>
     <Portal to="page-banner">
       <AboutMeBanner />
     </Portal>
@@ -15,12 +15,9 @@
 import { Vue, Component } from 'nuxt-property-decorator';
 import { Portal } from 'portal-vue';
 
-import RemolinoLogo from '~/assets/img/remolino.svg?inline';
-
 @Component({
   components: {
     Portal,
-    RemolinoLogo,
   },
   head () {
     return {
@@ -28,16 +25,5 @@ import RemolinoLogo from '~/assets/img/remolino.svg?inline';
     };
   },
 })
-export default class Home extends Vue {}
+export default class Me extends Vue {}
 </script>
-
-<style lang="scss" scoped>
-.home {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background);
-}
-</style>

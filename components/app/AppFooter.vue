@@ -1,35 +1,19 @@
 <template>
-  <footer class="home__content home__content--tertiary">
+  <footer class="section bg-tertiary">
     <div class="social-media-section container">
       <div class="social-media-section__collection">
-        <a
-          target="_blank"
-          href="https://codepen.io/christian-bravo"
-          class="social-media-section__social-link"
-        >
+        <FooterSocialIcon link="https://codepen.io/christian-bravo">
           <CodepenIcon />
-        </a>
-        <a
-          target="_blank"
-          href="https://github.com/christian-bravo7"
-          class="social-media-section__social-link"
-        >
+        </FooterSocialIcon>
+        <FooterSocialIcon link="https://github.com/christian-bravo7">
           <GithubIcon />
-        </a>
-        <a
-          href="https://www.instagram.com/christian.bravo_/"
-          target="_blank"
-          class="social-media-section__social-link"
-        >
+        </FooterSocialIcon>
+        <FooterSocialIcon link="https://www.instagram.com/christian.bravo_/">
           <InstagramIcon />
-        </a>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/christian151-bravo/"
-          class="social-media-section__social-link"
-        >
+        </FooterSocialIcon>
+        <FooterSocialIcon link="https://www.linkedin.com/in/christian151-bravo/">
           <LinkedinIcon />
-        </a>
+        </FooterSocialIcon>
       </div>
       <p class="social-media-section__copyright-text">
         {{ $t('me.crafted-label') }} ❤️ | &copy; Christian Bravo
@@ -59,7 +43,6 @@ export default class AppFooter extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-
 .social-media-section {
   display: flex;
   flex-direction: column;
@@ -77,43 +60,5 @@ export default class AppFooter extends Vue {}
     grid-template-columns: repeat(4, rem(25));
     margin-bottom: rem(42);
   }
-
-  &__social-link {
-    width: auto;
-
-    > svg {
-      transition: fill 250ms;
-      fill: var(--footer-text);
-    }
-
-    &:hover {
-      > svg {
-        fill: var(--background);
-      }
-    }
-  }
 }
-
-.home {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background);
-
-  &__content {
-    padding: rem(92) rem(24);
-    background-color: var(--background);
-
-    &--secondary {
-      background-color: var(--text-light);
-    }
-
-    &--tertiary {
-      background-color: var(--background-footer);
-    }
-  }
-}
-
 </style>

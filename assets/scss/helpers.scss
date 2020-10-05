@@ -1,3 +1,17 @@
 .min-screen {
   min-height: 100vh;
 }
+
+.bg {
+  &-primary {
+    background-color: var(--background);
+  }
+
+  &-secondary {
+    background-color: var(--text-light);
+  }
+
+  &-tertiary {
+    background-color: var(--background-footer);
+  }
+}

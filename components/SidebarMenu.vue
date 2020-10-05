@@ -67,15 +67,7 @@
 <script lang="ts">
 import { Component, Emit, Vue } from 'nuxt-property-decorator';
 
-import LanguagePicker from '@/components/LanguagePicker.vue';
-import ThemeSwitch from '@/components/ThemeSwitch.vue';
-
-@Component({
-  components: {
-    ThemeSwitch,
-    LanguagePicker,
-  },
-})
+@Component
 export default class SidebarMenu extends Vue {
   isSidebarVisible: boolean = false;
 

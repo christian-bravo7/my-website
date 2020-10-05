@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="navbar container">
     <NuxtLink
       class="navbar__logo"
       :to="localePath({ name: 'index' })"

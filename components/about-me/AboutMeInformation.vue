@@ -1,5 +1,5 @@
 <template>
-  <section class="section home__content--secondary min-screen who-iam-section">
+  <section class="section bg-secondary min-screen who-iam-section">
     <div class="who-iam-section__container container">
       <div class="who-iam-section__content is-medium">
         <h1 class="who-iam-section__title">
@@ -48,18 +48,15 @@ export default class AboutMeInformation extends Vue {}
   &__description {
     position: relative;
     z-index: 2;
-    margin-top: rem(120);
     font-size: rem(18);
     line-height: 2;
   }
 
   &__title {
-    position: absolute;
-    top: 0;
     width: 100%;
     color: var(--asset-highlight);
     font-weight: bold;
-    font-size: rem(182);
+    font-size: rem(110);
     line-height: 1;
     opacity: 0.5;
   }
@@ -77,32 +74,18 @@ export default class AboutMeInformation extends Vue {}
   }
 }
 
-.home {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background);
-
-  &__content {
-    padding: rem(92) rem(24);
-    background-color: var(--background);
-
-    &--secondary {
-      background-color: var(--text-light);
-    }
-
-    &--tertiary {
-      background-color: var(--background-footer);
-    }
-  }
-}
-
 @include mobile {
   .who-iam-section {
     &__container {
       grid-template-columns: 1fr;
+    }
+
+    &__title {
+      font-size: rem(40);
+    }
+
+    &__description {
+      font-size: rem(16);
     }
 
     &__asset {

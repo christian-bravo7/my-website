@@ -1,5 +1,5 @@
 <template>
-  <section class="home">
+  <section>
     <Portal to="page-banner">
       <HomeBanner />
     </Portal>
@@ -22,14 +22,3 @@ import { Portal } from 'portal-vue';
 })
 export default class Home extends Vue {}
 </script>
-
-<style lang="scss" scoped>
-.home {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background);
-}
-</style>

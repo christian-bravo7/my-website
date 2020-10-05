@@ -96,7 +96,7 @@ export default class AboutMeSkills extends Vue {}
     margin-bottom: rem(24);
     color: var(--text-light);
     font-weight: bold;
-    font-size: rem(182);
+    font-size: rem(110);
     word-break: break-word;
   }
 
@@ -109,25 +109,10 @@ export default class AboutMeSkills extends Vue {}
   }
 }
 
-.home {
-  &__content {
-    padding: rem(92) rem(24);
-    background-color: var(--background);
-
-    &--secondary {
-      background-color: var(--text-light);
-    }
-
-    &--tertiary {
-      background-color: var(--background-footer);
-    }
-  }
-}
-
 @include mobile {
   .skills-section {
     &__title {
-      font-size: rem(70);
+      font-size: rem(40);
     }
 
     &__collection {

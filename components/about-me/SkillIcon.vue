@@ -48,4 +48,12 @@ export default class SkillIcon extends Vue {
     }
   }
 }
+
+@include mobile {
+  .skill-icon {
+    > span {
+      font-size: rem(16);
+    }
+  }
+}
 </style>
