@@ -4,7 +4,9 @@
       v-if="isSidebarActive"
       @closeSidebar="closeSidebar"
     />
-    <NavigationBar @openSidebar="openSidebar" />
+    <client-only>
+      <NavigationBar @openSidebar="openSidebar" />
+    </client-only>
     <header>
       <MovableFigures :current-route="currentRoute" />
       <PortalTarget

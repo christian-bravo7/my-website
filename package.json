@@ -21,7 +21,7 @@
     "@nuxtjs/axios": "^5.12.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "bulma": "^0.9.0",
-    "nuxt": "^2.14.0",
+    "nuxt": "^2.14.7",
     "nuxt-i18n": "^6.13.12",
     "portal-vue": "^2.1.7",
     "smooth-scroll": "^16.1.3",
