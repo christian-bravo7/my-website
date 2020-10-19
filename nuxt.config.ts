@@ -86,6 +86,7 @@ export default {
   */
   i18n: {
     locales: Locales,
+    seo: true,
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
