@@ -1,4 +1,4 @@
-import { Configuration } from '@nuxt/types';
+import { NuxtConfig } from '@nuxt/types';
 import Locales from './lang';
 
 export default {
@@ -6,7 +6,7 @@ export default {
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -116,4 +116,4 @@ export default {
   */
   build: {
   },
-} as Configuration;
+} as NuxtConfig;
