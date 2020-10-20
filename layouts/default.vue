@@ -4,9 +4,9 @@
       v-if="isSidebarActive"
       @closeSidebar="closeSidebar"
     />
-    <client-only>
+    <ClientOnly>
       <NavigationBar @openSidebar="openSidebar" />
-    </client-only>
+    </ClientOnly>
     <header>
       <MovableFigures :current-route="currentRoute" />
       <PortalTarget
@@ -61,6 +61,8 @@ export default class Default extends Vue {
 
 <style lang="scss" scoped>
 .site {
+  background-color: var(--background);
+
   &__banner-content {
     min-height: 100vh;
   }
