@@ -16,7 +16,10 @@
         </FooterSocialIcon>
       </div>
       <p class="social-media-section__copyright-text">
-        {{ $t('me.crafted-label') }} ❤️ | &copy; Christian Bravo
+        {{ $t('me.crafted-label') }} <span
+          role="img"
+          aria-label="heart"
+        >❤️</span> | &copy; Christian Bravo
       </p>
     </div>
   </footer>

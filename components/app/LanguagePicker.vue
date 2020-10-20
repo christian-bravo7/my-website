@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable vue-a11y/no-onchange -->
   <div class="language-picker">
     <div class="language-picker__flex-wrapper">
       <i class="material-icons language-picker__language-icon">
@@ -10,6 +11,7 @@
         class="language-picker__select"
         name="language-picker"
         @change="changeLanguage"
+        @blur="changeLanguage"
       >
         <option
           v-for="(language, index) in availableLanguages"

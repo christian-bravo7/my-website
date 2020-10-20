@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable vue-a11y/click-events-have-key-events -->
   <transition
     name="overlay"
     appear
@@ -20,6 +21,7 @@
             <button
               class="button sidebar__close-button"
               @click="closeSidebar"
+              @keydown.enter="closeSidebar"
             >
               <i class="material-icons sidebar__close-button-icon">
                 close
@@ -32,6 +34,7 @@
                 <div
                   class="sidebar__link-wrapper"
                   @click="closeSidebar"
+                  @keydown.enter="closeSidebar"
                 >
                   <NuxtLink
                     class="sidebar__link"
@@ -43,6 +46,7 @@
                 <div
                   class="sidebar__link-wrapper"
                   @click="closeSidebar"
+                  @keydown.enter="closeSidebar"
                 >
                   <NuxtLink
                     class="sidebar__link"

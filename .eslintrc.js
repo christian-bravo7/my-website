@@ -11,9 +11,11 @@ module.exports = {
     '@nuxtjs/eslint-config-typescript',
     'plugin:nuxt/recommended',
     'plugin:vue/vue3-recommended',
+    'plugin:vue-a11y/base',
   ],
   plugins: [
     '@typescript-eslint',
+    'vue-a11y',
   ],
   rules: {
     'vue/component-tags-order': ['error', {

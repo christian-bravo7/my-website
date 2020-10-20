@@ -36,6 +36,7 @@
       <button
         class="button navbar__burger-button"
         @click="openSidebar"
+        @keydown.enter="openSidebar"
       >
         <span class="material-icons navbar__burger-button-icon">
           menu
