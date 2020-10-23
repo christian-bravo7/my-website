@@ -22,7 +22,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Christian Bravo Website' },
+      { hid: 'description', name: 'description', content: 'Frontend Developer with a passion for create beautiful and functional user experiences.' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
