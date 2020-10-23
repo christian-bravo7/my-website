@@ -1,16 +1,16 @@
 <template>
-  <section class="section bg-secondary min-screen who-iam-section">
-    <div class="who-iam-section__container container">
-      <div class="who-iam-section__content is-medium">
-        <h1 class="who-iam-section__title">
+  <section class="min-h-screen flex items-center py-8 px-4 bg-gray-200 dark:bg-blue-700">
+    <div class="grid grid-cols-1 md:grid-cols-2 text-black dark:text-white container mx-auto">
+      <div class="relative is-medium">
+        <h1 class="w-full text-pink-800 dark:text-blue-500 font-bold text-6xl sm:text-8xl md:text-10xl leading-none">
           {{ $t('me.i-label') }}
         </h1>
-        <p class="who-iam-section__description">
+        <p class="relative z-10 text-base md:text-lg leading-loose">
           {{ $t('me.about-me-description') }}
         </p>
       </div>
-      <div class="who-iam-section__asset">
-        <RemolinoLogo />
+      <div class="flex items-center justify-center text-pink-800 dark:text-blue-500">
+        <RemolinoLogo class="w w-11/12 fill-current" />
       </div>
     </div>
   </section>
@@ -29,68 +29,3 @@ import RemolinoLogo from '~/assets/img/remolino.svg?inline';
 export default class AboutMeInformation extends Vue {}
 
 </script>
-
-<style lang="scss" scoped>
-.who-iam-section {
-  display: flex;
-  align-items: center;
-
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    color: var(--text);
-  }
-
-  &__content {
-    position: relative;
-  }
-
-  &__description {
-    position: relative;
-    z-index: 2;
-    font-size: rem(18);
-    line-height: 2;
-  }
-
-  &__title {
-    width: 100%;
-    color: var(--asset-highlight);
-    font-weight: bold;
-    font-size: rem(110);
-    line-height: 1;
-  }
-
-  &__asset {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    & > svg {
-      width: 90%;
-      max-height: rem(300);
-      fill: var(--asset-highlight);
-    }
-  }
-}
-
-@include mobile {
-  .who-iam-section {
-    &__container {
-      grid-template-columns: 1fr;
-    }
-
-    &__title {
-      font-size: rem(40);
-    }
-
-    &__description {
-      font-size: rem(16);
-    }
-
-    &__asset {
-      display: none;
-    }
-  }
-}
-
-</style>

@@ -122,7 +122,7 @@ export default class Cv extends Vue {}
   }
 
   &__section-value {
-    color: $pink-800;
+    color: red;
     font-weight: bold;
     font-size: rem(18);
   }

@@ -1,10 +1,10 @@
 <template>
   <AppBanner>
     <template #primary-text>
-      <span class="is-block has-text-centered">
+      <span class="text-center block">
         {{ $t('home.iam-name-text') }}
       </span>
-      <span class="is-block has-text-centered">
+      <span class="text-center block">
         {{ $t('home.iam-job-text') }}
       </span>
     </template>

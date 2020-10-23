@@ -1,22 +1,22 @@
 <template>
-  <div class="movable-figures">
+  <div class="absolute w-full h-full pointer-events-none">
     <figure
-      class="figure figure--1"
+      class="absolute w-6 h-6 text-pink-800 dark:text-blue-700 figure figure--1"
       :class="currentRoute"
     >
-      <TriangleSolid />
+      <TriangleSolid class="fill-current w-full h-full opacity-50 md:opacity-100" />
     </figure>
     <figure
-      class="figure figure--2"
+      class="absolute w-6 h-6 text-pink-800 dark:text-blue-500 figure figure--2"
       :class="currentRoute"
     >
-      <TriangleOutlined />
+      <TriangleOutlined class="fill-current w-full h-full opacity-50 md:opacity-100" />
     </figure>
     <figure
-      class="figure figure--3"
+      class="absolute w-6 h-6 text-pink-800 dark:text-blue-500 figure figure--3"
       :class="currentRoute"
     >
-      <SquareOutlined />
+      <SquareOutlined class="fill-current w-full h-full opacity-50 md:opacity-100" />
     </figure>
   </div>
 </template>
@@ -43,43 +43,10 @@ export default class MovableFigures extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.movable-figures {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .figure {
   $self: &;
 
-  position: absolute;
-  width: rem(25);
-  height: rem(25);
-  transition: 4s;
-
-  & > svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  &--1 {
-    > svg {
-      fill: var(--asset-normal);
-    }
-  }
-
-  &--2 {
-    > svg {
-      fill: var(--asset-highlight);
-    }
-  }
-
-  &--3 {
-    > svg {
-      fill: var(--asset-highlight);
-    }
-  }
+  transition: color 200ms, top 4s, left 4s, transform 4s;
 
   &.index {
     &#{$self}--1 {
@@ -114,14 +81,6 @@ export default class MovableFigures extends Vue {
       top: 50%;
       left: 75%;
       transform: rotate(-80deg);
-    }
-  }
-}
-
-@include mobile {
-  .figure {
-    & > svg {
-      opacity: 0.6;
     }
   }
 }

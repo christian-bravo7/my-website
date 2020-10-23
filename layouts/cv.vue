@@ -26,7 +26,7 @@ export default class CvLayout extends Vue {}
 <style lang="scss" scoped>
 .cv {
   min-height: 100vh;
-  background-color: $gray-100;
+  background-color: gray;
 
   &__content {
     padding-top: rem(93);

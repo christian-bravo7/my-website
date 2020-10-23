@@ -1,7 +1,7 @@
 <template>
-  <footer class="section bg-tertiary">
-    <div class="social-media-section container">
-      <div class="social-media-section__collection">
+  <footer class="py-16 px-4 bg-gray-800 dark:bg-gray-900">
+    <div class="mx-auto container flex justify-center items-center flex-col">
+      <div class="grid grid-cols-4 gap-x-6 mb-10">
         <FooterSocialIcon link="https://codepen.io/christian-bravo">
           <CodepenIcon />
         </FooterSocialIcon>
@@ -15,7 +15,7 @@
           <LinkedinIcon />
         </FooterSocialIcon>
       </div>
-      <p class="social-media-section__copyright-text">
+      <p class="text-white text-xs">
         {{ $t('me.crafted-label') }} <span
           role="img"
           aria-label="heart"
@@ -44,24 +44,3 @@ import LinkedinIcon from '~/assets/img/linkedin.svg?inline';
 export default class AppFooter extends Vue {}
 
 </script>
-
-<style lang="scss" scoped>
-.social-media-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  &__copyright-text {
-    color: var(--footer-text);
-    font-size: rem(12);
-  }
-
-  &__collection {
-    display: grid;
-    grid-column-gap: rem(30);
-    grid-template-columns: repeat(4, rem(25));
-    margin-bottom: rem(42);
-  }
-}
-</style>

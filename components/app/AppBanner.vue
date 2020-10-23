@@ -1,10 +1,10 @@
 <template>
   <transition name="flash-text">
-    <section class="app-banner">
-      <h2 class="app-banner__gretting">
+    <section class="relative flex justify-center items-center px-4">
+      <h2 class="absolute font-bold text-8xl sm:text-10xl md:text-12xl leading-none select-none text-gray-200 dark:text-blue-700">
         <slot name="secondary-text" />
       </h2>
-      <h1 class="app-banner__description">
+      <h1 class="max-w-screen-md text-3xl md:text-5xl z-10 text-gray-900 dark:text-white">
         <slot name="primary-text" />
       </h1>
     </section>
@@ -20,29 +20,6 @@ export default class AppBanner extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.app-banner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__gretting {
-    position: absolute;
-    color: var(--text-light);
-    font-weight: bold;
-    font-size: rem(180);
-    line-height: 1;
-    user-select: none;
-  }
-
-  &__description {
-    z-index: 1;
-    max-width: rem(800);
-    color: var(--text);
-    font-size: $size-1;
-  }
-}
-
 .flash-text-enter {
   opacity: 0;
 }
@@ -65,19 +42,5 @@ export default class AppBanner extends Vue {}
 
 .flash-text-leave-to {
   opacity: 1;
-}
-
-@include mobile {
-  .app-banner {
-    padding: rem(15);
-
-    &__gretting {
-      font-size: 20vw;
-    }
-
-    &__description {
-      font-size: $size-4;
-    }
-  }
 }
 </style>

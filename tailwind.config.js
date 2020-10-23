@@ -1,0 +1,73 @@
+module.exports = {
+  future: {
+    // removeDeprecatedGapUtilities: true,
+    // purgeLayersByDefault: true,
+  },
+  purge: [],
+  theme: {
+    extend: {
+      colors: {
+        white: '#FFFFFE',
+        blue: {
+          500: '#5171FF',
+          600: '#232946',
+          700: '#091134',
+          800: '#02071D',
+        },
+        pink: {
+          50: '#FEEBF4',
+          100: '#FED8E9',
+          200: '#FCB0D2',
+          300: '#FB89BC',
+          400: '#FA75B1',
+          500: '#F94E9B',
+          600: '#F72684',
+          700: '#D90866',
+          800: '#C5075D',
+          900: '#8A0541',
+        },
+        purple: {
+          50: '#F6F2F8',
+          100: '#E5D8E9',
+          200: '#D3BDDB',
+          300: '#B189BE',
+          400: '#9F6EAF',
+          500: '#8C579E',
+          600: '#754884',
+          700: '#5D3A69',
+          800: '#3D2645',
+          900: '#2F1D35',
+        },
+        gray: {
+          50: '#FDFDFD',
+          100: '#F3F3F3',
+          200: '#E5E5E5',
+          300: '#DEE0E4',
+          400: '#999999',
+          500: '#707070',
+          600: '#5C5C5C',
+          700: '#2A2A2A',
+          800: '#1F1F1F',
+          900: '#121212',
+        },
+      },
+      fontSize: {
+        '7xl': '5rem',
+        '8xl': '6rem',
+        '9xl': '7rem',
+        '10xl': '8rem',
+        '11xl': '9rem',
+        '12xl': '10rem',
+      },
+    },
+    darkSelector: '.dark-mode',
+  },
+  variants: {
+    backgroundColor: ['dark', 'dark-hover'],
+    borderColor: ['dark'],
+    textColor: ['group-hover', 'dark', 'dark-hover', 'dark-group-hover'],
+  },
+  plugins: [
+    require('tailwindcss-dark-mode')(),
+  ],
+};

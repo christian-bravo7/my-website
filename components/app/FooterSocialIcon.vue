@@ -2,7 +2,7 @@
   <a
     target="_blank"
     :href="link"
-    class="footer-social-icon"
+    class="w-6 h-6 text-white footer-social-icon"
   >
     <slot />
   </a>
@@ -20,17 +20,8 @@ export default class FooterSocialIcon extends Vue {
 
 <style lang="scss" scoped>
 .footer-social-icon {
-  width: auto;
-
   > svg {
-    transition: fill 250ms;
-    fill: var(--footer-text);
-  }
-
-  &:hover {
-    > svg {
-      fill: var(--background);
-    }
+    @apply fill-current;
   }
 }
 </style>

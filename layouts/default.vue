@@ -1,5 +1,5 @@
 <template>
-  <main class="site">
+  <main class="site bg-white dark:bg-blue-600">
     <SidebarMenu
       v-if="isSidebarActive"
       @closeSidebar="closeSidebar"
@@ -11,7 +11,7 @@
       <MovableFigures :current-route="currentRoute" />
       <PortalTarget
         name="page-banner"
-        class="site__banner-content"
+        class="min-h-screen"
         slim
       />
     </header>
@@ -58,13 +58,3 @@ export default class Default extends Vue {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.site {
-  background-color: var(--background);
-
-  &__banner-content {
-    min-height: 100vh;
-  }
-}
-</style>

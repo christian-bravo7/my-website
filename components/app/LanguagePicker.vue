@@ -1,14 +1,14 @@
 <template>
   <!-- eslint-disable vue-a11y/no-onchange -->
-  <div class="language-picker">
-    <div class="language-picker__flex-wrapper">
-      <i class="material-icons language-picker__language-icon">
+  <div class="inline-block">
+    <div class="flex items-center">
+      <i class="material-icons text-sm -mr-3 text-pink-800 dark:text-blue-500">
         translate
       </i>
       <select
         id="languagePicker"
         v-model="currentLanguage"
-        class="language-picker__select"
+        class="px-4 text-base bg-transparent border-none cursor-pointer appearance-none text-pink-800 dark:text-blue-500"
         name="language-picker"
         @change="changeLanguage"
         @blur="changeLanguage"
@@ -16,13 +16,13 @@
         <option
           v-for="(language, index) in availableLanguages"
           :key="index"
-          class="language-picker__option"
+          class="text-black"
           :value="language.code"
         >
           {{ language.name }}
         </option>
       </select>
-      <i class="material-icons language-picker__arrow-icon">
+      <i class="material-icons text-sm -ml-3 text-pink-800 dark:text-blue-500 pointer-events-none">
         expand_more
       </i>
     </div>
@@ -62,52 +62,3 @@ export default class LanguagePicker extends Vue {
   languageChanged (): void {}
 }
 </script>
-
-<style lang="scss" scoped>
-
-.language-picker {
-  display: inline-block;
-
-  &__flex-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  &__select,
-  &__option {
-    font-size: rem(12);
-  }
-
-  &__option {
-    color: var(--black);
-    font-size: rem(18);
-  }
-
-  &__select {
-    height: rem(20);
-    padding: 0 rem(16);
-    color: var(--asset-highlight);
-    font-size: rem(16);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    appearance: none;
-  }
-
-  &__language-icon,
-  &__arrow-icon {
-    color: var(--asset-highlight);
-    font-size: rem(12);
-  }
-
-  &__language-icon {
-    margin-right: rem(-12);
-  }
-
-  &__arrow-icon {
-    margin-left: rem(-10);
-    pointer-events: none;
-  }
-}
-
-</style>

@@ -97,12 +97,12 @@ export default class CVNavigationBar extends Vue {
     svg {
       width: 100%;
       height: 100%;
-      fill: $pink-800;
+      fill: red;
     }
   }
 
   &__language-picker {
-    color: $pink-800;
+    color: red;
   }
 
   &__options {

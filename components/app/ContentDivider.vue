@@ -1,14 +1,14 @@
 <template>
   <section
-    class="content-divider"
+    class="grid grid-cols-2 h-24"
   >
     <div
-      class="content-divider__section"
-      :class="{ 'content-divider__section--hidden': second }"
+      class="h-full bg-gray-200 dark:bg-blue-700"
+      :class="{ 'opacity-0': second }"
     />
     <div
-      class="content-divider__section"
-      :class="{ 'content-divider__section--hidden': first }"
+      class="h-full bg-gray-200 dark:bg-blue-700"
+      :class="{ 'opacity-0': first }"
     />
   </section>
 </template>
@@ -25,26 +25,3 @@ export default class ContentDivider extends Vue {
   readonly second!: boolean;
 }
 </script>
-
-<style lang="scss" scoped>
-.content-divider {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: rem(80);
-
-  &__section {
-    height: 100%;
-    background-color: var(--text-light);
-
-    &--hidden {
-      opacity: 0;
-    }
-  }
-}
-
-@include mobile {
-  .content-divider {
-    height: rem(40);
-  }
-}
-</style>

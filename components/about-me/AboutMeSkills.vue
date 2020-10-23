@@ -1,10 +1,10 @@
 <template>
-  <section class="section min-screen skills-section">
-    <div class="skills-section__container container">
-      <h2 class="has-text-centered skills-section__title">
+  <section class="min-h-screen py-20 px-4">
+    <div class="container mx-auto flex flex-col">
+      <h2 class="text-center mb-8 text-6xl sm:text-8xl md:text-10xl break-all font-bold text-gray-300 dark:text-blue-700">
         {{ $t('me.skills-label') }}
       </h2>
-      <div class="skills-section__collection">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         <SkillIcon name="HTML5">
           <HtmlIcon />
         </SkillIcon>
@@ -31,9 +31,6 @@
         </SkillIcon>
         <SkillIcon name="Node.js">
           <NodeIcon />
-        </SkillIcon>
-        <SkillIcon name="GraphQL">
-          <GraphqlIcon />
         </SkillIcon>
         <SkillIcon name="Git">
           <GitIcon />
@@ -81,43 +78,3 @@ import HtmlIcon from '~/assets/img/html5.svg?inline';
 export default class AboutMeSkills extends Vue {}
 
 </script>
-
-<style lang="scss" scoped>
-.skills-section {
-  display: flex;
-  align-items: center;
-
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  &__title {
-    margin-bottom: rem(24);
-    color: var(--text-light);
-    font-weight: bold;
-    font-size: rem(110);
-    word-break: break-word;
-  }
-
-  &__collection {
-    display: grid;
-    grid-gap: rem(25);
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    justify-items: center;
-    padding: rem(24) 0;
-  }
-}
-
-@include mobile {
-  .skills-section {
-    &__title {
-      font-size: rem(40);
-    }
-
-    &__collection {
-      grid-gap: rem(10) rem(5);
-    }
-  }
-}
-</style>

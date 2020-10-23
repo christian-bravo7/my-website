@@ -6,7 +6,7 @@
     @after-enter="openSidebar"
   >
     <div
-      class="overlay"
+      class="fixed inset-0 z-30 w-full h-full bg-transparent overlay"
       @click.self="closeSidebar"
     >
       <transition
@@ -15,52 +15,48 @@
       >
         <aside
           v-if="isSidebarVisible"
-          class="sidebar box"
+          class="absolute inset-y-0 right-0 w-full h-full max-w-sm p-0 bg-gray-50 dark:bg-blue-600 rounded-3xl rounded-r-none sidebar-grid"
         >
-          <section class="sidebar__header">
+          <section class="flex justify-end p-4">
             <button
-              class="button sidebar__close-button"
+              class="flex md:hidden justify-items-center items-center text-gray-900 dark:text-gray-50"
               @click="closeSidebar"
               @keydown.enter="closeSidebar"
             >
-              <i class="material-icons sidebar__close-button-icon">
+              <i class="material-icons text-5xl">
                 close
               </i>
             </button>
           </section>
-          <section class="sidebar__content">
-            <section class="sidebar__body">
-              <div class="sidebar__links">
-                <div
-                  class="sidebar__link-wrapper"
-                  @click="closeSidebar"
-                  @keydown.enter="closeSidebar"
-                >
-                  <NuxtLink
-                    class="sidebar__link"
-                    :to="localePath({ name: 'index' })"
-                  >
-                    {{ $t('navigation.home-label') }}
-                  </NuxtLink>
-                </div>
-                <div
-                  class="sidebar__link-wrapper"
-                  @click="closeSidebar"
-                  @keydown.enter="closeSidebar"
-                >
-                  <NuxtLink
-                    class="sidebar__link"
-                    :to="localePath({ name: 'me' })"
-                  >
-                    {{ $t('navigation.about-me-label') }}
-                  </NuxtLink>
-                </div>
-              </div>
-            </section>
-            <section class="sidebar__footer">
-              <ThemeSwitch />
-              <LanguagePicker @language-changed="closeSidebar" />
-            </section>
+          <section class="flex flex-col items-start p-4">
+            <div
+              class="mb-4"
+              @click="closeSidebar"
+              @keydown.enter="closeSidebar"
+            >
+              <NuxtLink
+                class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
+                :to="localePath({ name: 'index' })"
+              >
+                {{ $t('navigation.home-label') }}
+              </NuxtLink>
+            </div>
+            <div
+              class="mb-4"
+              @click="closeSidebar"
+              @keydown.enter="closeSidebar"
+            >
+              <NuxtLink
+                class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
+                :to="localePath({ name: 'me' })"
+              >
+                {{ $t('navigation.about-me-label') }}
+              </NuxtLink>
+            </div>
+          </section>
+          <section class="flex justify-between p-4">
+            <ThemeSwitch />
+            <LanguagePicker @language-changed="closeSidebar" />
           </section>
         </aside>
       </transition>
@@ -92,104 +88,26 @@ export default class SidebarMenu extends Vue {
 <style lang="scss" scoped>
 
 .overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 20;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-
   &::before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--text-light);
-    filter: opacity(0.6);
+    @apply absolute w-full h-full bg-gray-300 bg-opacity-75;
+
     content: '';
   }
 }
 
-.sidebar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  max-width: rem(320);
-  height: 100%;
-  padding: 0;
-  background-color: var(--background);
-  border-radius: rem(20) 0 0 rem(20);
-
-  &__header {
-    display: flex;
-    justify-content: flex-end;
-    padding: rem(24);
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: rem(16);
-  }
-
-  &__footer {
-    display: flex;
-    justify-content: space-between;
-    padding: rem(5) rem(14);
-  }
-
-  &__dark-theme {
-    display: flex;
-    align-items: center;
-  }
-
-  &__close-button-icon {
-    color: var(--text);
-    font-size: rem(24);
-  }
-
-  &__close-button {
-    height: auto;
-    padding: rem(8);
-    background-color: transparent;
-    border-color: var(--text);
-    border-radius: 50%;
-    transition-duration: 250ms;
-    transition-property: background-color, color;
-
-    &:hover {
-      background-color: var(--text);
-
-      .sidebar__close-button-icon {
-        color: var(--background);
-      }
+html.dark-mode {
+  .overlay {
+    &::before {
+      @apply bg-blue-700 bg-opacity-75;
     }
   }
+}
 
-  &__links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.sidebar-grid {
+  @apply grid;
 
-  &__link-wrapper {
-    margin-bottom: rem(16);
-  }
-
-  &__link {
-    color: var(--asset-highlight);
-    font-weight: $weight-bold;
-    font-size: $size-3;
-  }
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
 }
 
 // OVERLAY TRANSITIONS

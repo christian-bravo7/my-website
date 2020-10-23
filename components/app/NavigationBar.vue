@@ -1,53 +1,52 @@
 <template>
-  <div class="navbar container">
-    <NuxtLink
-      class="navbar__logo"
-      :to="localePath({ name: 'index' })"
-    >
-      <SiteLogo />
-    </NuxtLink>
-    <div class="navbar__options">
-      <div class="navbar__links">
-        <NuxtLink
-          class="navbar__link"
-          exact-active-class="navbar__link--active"
-          :to="localePath({ name: 'index' })"
-        >
-          {{ $t('navigation.home-label') }}
-        </NuxtLink>
-        <NuxtLink
-          class="navbar__link"
-          exact-active-class="navbar__link--active"
-          :to="localePath({ name: 'me' })"
-        >
-          {{ $t('navigation.about-me-label') }}
-        </NuxtLink>
-      </div>
-      <div class="navbar__user-preferences">
-        <div>
-          <LanguagePicker abbreviation />
+  <nav class="p-4 fixed top-0 left-0 right-0 z-20 bg-transparent navbar transition-all duration-150">
+    <div class="mx-auto container flex justify-between">
+      <NuxtLink
+        class="flex w-12 h-12 text-black dark:text-white"
+        :to="localePath({ name: 'index' })"
+      >
+        <SiteLogo class="w-full h-full fill-current" />
+      </NuxtLink>
+      <div class="hidden md:grid grid-cols-2 gap-x-8">
+        <div class="grid grid-cols-2 gap-x-6 content-center">
+          <NuxtLink
+            class="text-center text-pink-800 dark:text-blue-500"
+            exact-active-class="font-bold"
+            :to="localePath({ name: 'index' })"
+          >
+            {{ $t('navigation.home-label') }}
+          </NuxtLink>
+          <NuxtLink
+            class="relative text-center text-pink-800 dark:text-blue-500"
+            exact-active-class="font-bold"
+            :to="localePath({ name: 'me' })"
+          >
+            {{ $t('navigation.about-me-label') }}
+          </NuxtLink>
         </div>
-        <div class="navbar__theme-switch">
-          <ThemeSwitch />
+        <div class="grid grid-cols-2 content-center">
+          <div>
+            <LanguagePicker abbreviation />
+          </div>
+          <div class="flex justify-center items-center">
+            <ThemeSwitch />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="navbar__burger-button-wrapper">
       <button
-        class="button navbar__burger-button"
+        class="flex md:hidden justify-items-center items-center text-gray-900 dark:text-gray-50"
         @click="openSidebar"
         @keydown.enter="openSidebar"
       >
-        <span class="material-icons navbar__burger-button-icon">
+        <span class="material-icons text-5xl">
           menu
         </span>
       </button>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script lang="ts">
-
 import { Vue, Component, Emit } from 'nuxt-property-decorator';
 
 import SiteLogo from '~/assets/img/logo.svg?inline';
@@ -106,83 +105,11 @@ export default class NavigationBar extends Vue {
 
 <style lang="scss" scoped>
 .navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 5;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  width: 100%;
-  padding: rem(24);
-  transition: top 250ms;
-
   &.hide {
     top: rem(-100);
   }
 
-  &__logo {
-    width: rem(45);
-    height: rem(45);
-
-    svg {
-      width: 100%;
-      height: 100%;
-      fill: var(--text);
-    }
-  }
-
-  &__theme-switch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1rem;
-  }
-
-  &__options {
-    display: grid;
-    grid-column-gap: rem(80);
-    grid-template-columns: auto auto;
-    align-content: center;
-  }
-
-  &__burger-button-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  &__burger-button {
-    display: none;
-    height: auto;
-    padding: 0;
-    background-color: transparent;
-    border-color: transparent;
-    transition-duration: 250ms;
-    transition-property: background-color, color;
-  }
-
-  &__burger-button-icon {
-    color: var(--text);
-    font-size: rem(42);
-  }
-
-  &__user-preferences {
-    display: grid;
-    grid-column-gap: rem(8);
-    grid-template-columns: auto auto;
-    align-items: center;
-  }
-
-  &__links {
-    display: grid;
-    grid-column-gap: rem(40);
-    grid-template-columns: auto auto;
-  }
-
   &__link {
-    position: relative;
-    color: var(--asset-highlight);
-
     &::after {
       position: absolute;
       bottom: rem(-2);
@@ -203,18 +130,6 @@ export default class NavigationBar extends Vue {
       &::after {
         width: 100%;
       }
-    }
-  }
-}
-
-@include mobile {
-  .navbar {
-    &__options {
-      display: none;
-    }
-
-    &__burger-button {
-      display: flex;
     }
   }
 }

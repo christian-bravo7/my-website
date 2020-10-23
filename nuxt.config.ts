@@ -64,6 +64,10 @@ export default {
     '@nuxtjs/svg',
     // Doc: https://github.com/nuxt-community/analytics-module
     '@nuxtjs/google-analytics',
+    // Doc: https://tailwindcss.nuxtjs.org/setup
+    '@nuxtjs/tailwindcss',
+    // Doc: https://color-mode.nuxtjs.org/
+    '@nuxtjs/color-mode',
   ],
   styleResources: {
     scss: '@/assets/scss/global-resources.scss',

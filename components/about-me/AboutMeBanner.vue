@@ -1,15 +1,15 @@
 <template>
   <AppBanner>
     <template #primary-text>
-      <span class="is-block has-text-centered">
+      <span class="block text-center">
         {{ $t('me.simple-description') }}
       </span>
     </template>
     <template #secondary-text>
-      <span class="is-block has-text-centered">
+      <span class="block text-center">
         {{ $t('me.about-label') }}
       </span>
-      <span class="is-block has-text-centered">
+      <span class="block text-center">
         {{ $t('me.me-label') }}
       </span>
     </template>
