@@ -9,9 +9,7 @@
       </span>
     </template>
     <template #secondary-text>
-      <span>
-        {{ $t('home.gretting') }}
-      </span>
+      {{ $t('home.gretting') }}
     </template>
   </AppBanner>
 </template>

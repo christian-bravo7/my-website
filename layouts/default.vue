@@ -1,5 +1,5 @@
 <template>
-  <main class="site bg-white dark:bg-blue-600">
+  <main class="bg-gray-50 dark:bg-blue-600">
     <AppFallbackLoad v-show="!isReady" />
     <template v-show="isReady">
       <SidebarMenu
@@ -37,7 +37,7 @@ import { guestStore } from '@/store';
         'data-theme': guestStore.theme,
       },
       titleTemplate: (titleChunk): string => {
-        return titleChunk ? `${titleChunk} - Christian Bravo` : 'Christian Bravo';
+        return titleChunk ? `${titleChunk} | Christian Bravo` : 'Christian Bravo';
       },
     };
   },

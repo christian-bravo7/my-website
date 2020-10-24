@@ -6,12 +6,7 @@
       </span>
     </template>
     <template #secondary-text>
-      <span class="block text-center">
-        {{ $t('me.about-label') }}
-      </span>
-      <span class="block text-center">
-        {{ $t('me.me-label') }}
-      </span>
+      {{ $t('navigation.about-me-label') }}
     </template>
   </AppBanner>
 </template>
