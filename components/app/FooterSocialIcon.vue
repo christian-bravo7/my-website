@@ -20,7 +20,7 @@ export default class FooterSocialIcon extends Vue {
 
 <style lang="scss" scoped>
 .footer-social-icon {
-  > svg {
+  svg {
     @apply fill-current;
   }
 }

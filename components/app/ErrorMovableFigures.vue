@@ -25,21 +25,6 @@ export default class ErrorMovableFigures extends Vue {}
 <style lang="scss" scoped>
 /* stylelint-disable */
 
-// @for $i from 1 through 100 {
-//   .figure--#{$i}) {
-//     display: flex;
-//     align-items: flex-start;
-//     height: $i * 1 + rem;
-//     transform: rotate($i * 15deg);
-
-//     svg {
-//       opacity: 0.15;
-//       width: $i * 1.5 + px;
-//       height: $i * 1.5 + px;
-//     }
-//   }
-// }
-
 .figure {
   &--1 {
     @apply w-12 h-12;

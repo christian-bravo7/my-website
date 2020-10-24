@@ -108,29 +108,5 @@ export default class NavigationBar extends Vue {
   &.hide {
     top: rem(-100);
   }
-
-  &__link {
-    &::after {
-      position: absolute;
-      bottom: rem(-2);
-      left: 50%;
-      width: 0;
-      height: rem(2);
-      background-color: var(--asset-highlight);
-      transform: translateX(-50%);
-      transition: width 250ms;
-      content: '';
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
-
-    &--active {
-      &::after {
-        width: 100%;
-      }
-    }
-  }
 }
 </style>
