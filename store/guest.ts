@@ -7,6 +7,11 @@ import { Module, VuexModule, Mutation } from 'vuex-module-decorators';
 })
 export default class GuestStore extends VuexModule {
   theme: string = 'light';
+  storeReady: boolean = false;
+
+  get isReady (): boolean {
+    return this.storeReady;
+  }
 
   get hasDarkTheme (): boolean {
     return this.theme === 'dark';
@@ -16,5 +21,10 @@ export default class GuestStore extends VuexModule {
   changeTheme (): void {
     const theme = this.theme === 'dark' ? 'light' : 'dark';
     this.theme = theme;
+  }
+
+  @Mutation
+  setStoreReady (): void {
+    this.storeReady = true;
   }
 }

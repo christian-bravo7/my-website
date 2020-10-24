@@ -1,9 +1,11 @@
 import { Context } from '@nuxt/types';
 import createPersistedState from 'vuex-persistedstate';
 
+import { guestStore } from '@/store';
+
 export default ({ store }: Context): void => {
   window.onNuxtReady(() => {
-    console.log('hello world');
+    guestStore.setStoreReady();
     createPersistedState({
       key: 'christian-bravo',
       paths: [

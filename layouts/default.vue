@@ -1,21 +1,24 @@
 <template>
   <main class="site bg-white dark:bg-blue-600">
-    <SidebarMenu
-      v-if="isSidebarActive"
-      @closeSidebar="closeSidebar"
-    />
-    <ClientOnly>
-      <NavigationBar @openSidebar="openSidebar" />
-    </ClientOnly>
-    <header>
-      <MovableFigures :current-route="currentRoute" />
-      <PortalTarget
-        name="page-banner"
-        class="min-h-screen"
-        slim
+    <AppFallbackLoad v-show="!isReady" />
+    <template v-show="isReady">
+      <SidebarMenu
+        v-if="isSidebarActive"
+        @closeSidebar="closeSidebar"
       />
-    </header>
-    <Nuxt />
+      <ClientOnly>
+        <NavigationBar @openSidebar="openSidebar" />
+      </ClientOnly>
+      <header>
+        <MovableFigures :current-route="currentRoute" />
+        <PortalTarget
+          name="page-banner"
+          class="min-h-screen"
+          slim
+        />
+      </header>
+      <Nuxt />
+    </template>
   </main>
 </template>
 
@@ -23,6 +26,7 @@
 import { Vue, Component } from 'nuxt-property-decorator';
 import { MetaInfo } from 'vue-meta/types';
 import { PortalTarget } from 'portal-vue';
+import { mapGetters } from 'vuex';
 
 import { guestStore } from '@/store';
 
@@ -39,6 +43,11 @@ import { guestStore } from '@/store';
   },
   components: {
     PortalTarget,
+  },
+  computed: {
+    ...mapGetters({
+      isReady: 'guest/isReady',
+    }),
   },
 })
 export default class Default extends Vue {
