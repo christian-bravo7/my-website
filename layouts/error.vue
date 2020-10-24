@@ -1,5 +1,5 @@
 <template>
-  <section class="flex items-center justify-items-center w-full">
+  <section class="flex items-center justify-center w-full">
     <section class="flex flex-col items-center justify-center">
       <h1 class="text-7xl md:text-8xl text-gray-900 dark:text-gray-50">
         Oops!
