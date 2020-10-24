@@ -17,5 +17,9 @@
   "navigation": {
     "home-label": "Inicio",
     "about-me-label": "Sobre mí"
+  },
+  "error": {
+    "404-description": "Lo siento, pero esta página no existe.",
+    "home-link": "Regresar al inicio"
   }
 }
