@@ -8,23 +8,45 @@
         <SiteLogo class="w-full h-full fill-current" />
       </NuxtLink>
       <div class="hidden md:flex items-center">
-        <div class="grid grid-cols-2 gap-x-6 content-center">
+        <div class="flex content-center">
           <NuxtLink
-            class="text-center text-pink-800 dark:text-blue-500"
+            class="text-center text-pink-800 dark:text-blue-500 ml-12"
             exact-active-class="font-bold"
             :to="localePath({ name: 'index' })"
           >
-            {{ $t('navigation.home-label') }}
+            <template v-if="onlyEnglish">
+              Home
+            </template>
+            <template v-else>
+              {{ $t('navigation.home-label') }}
+            </template>
           </NuxtLink>
           <NuxtLink
-            class="relative text-center text-pink-800 dark:text-blue-500"
+            class="text-center text-pink-800 dark:text-blue-500 ml-12"
             exact-active-class="font-bold"
             :to="localePath({ name: 'me' })"
           >
-            {{ $t('navigation.about-me-label') }}
+            <template v-if="onlyEnglish">
+              About me
+            </template>
+            <template v-else>
+              {{ $t('navigation.about-me-label') }}
+            </template>
+          </NuxtLink>
+          <NuxtLink
+            class="text-center text-pink-800 dark:text-blue-500 ml-12"
+            exact-active-class="font-bold"
+            :to="localePath({ name: 'blog' })"
+          >
+            <template v-if="onlyEnglish">
+              Blog
+            </template>
+            <template v-else>
+              {{ $t('navigation.blog-label') }}
+            </template>
           </NuxtLink>
         </div>
-        <div class="flex items-center ml-8">
+        <div class="flex items-center ml-12">
           <div
             v-if="hasLanguagePicker"
             class="mr-8"
@@ -66,6 +88,9 @@ export default class NavigationBar extends Vue {
 
   @Prop({ type: Boolean, default: true })
   readonly hasLanguagePicker!: boolean;
+
+  @Prop({ type: Boolean, default: false })
+  readonly onlyEnglish!: boolean;
 
   @Emit('openSidebar')
   openSidebar (): void {}

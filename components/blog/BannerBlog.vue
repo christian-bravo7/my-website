@@ -12,13 +12,13 @@
       <div
         class="flex flex-col justify-center items-center"
       >
-        <span class="text-xs text-gray-300">
-          {{ createdAt }}
+        <span class="text-xs text-center text-gray-300">
+          {{ formattedDate }}
         </span>
-        <h1 class="text-3xl md:text-5xl text-gray-50 font-bold">
+        <h1 class="text-3xl text-center md:text-5xl text-gray-50 font-bold">
           {{ title }}
         </h1>
-        <h6 class="text-base text-gray-50">
+        <h6 class="text-base  text-center text-gray-50">
           {{ description }}
         </h6>
       </div>
@@ -53,6 +53,33 @@ export default class BannerBlog extends Vue {
 
   @Prop({ type: Number, required: true })
   readonly minutesToRead!: number;
+
+  get formattedDate (): string {
+    const months: any = {
+      0: 'January',
+      1: 'February',
+      2: 'March',
+      3: 'April',
+      4: 'May',
+      5: 'June',
+      6: 'July',
+      7: 'August',
+      8: 'September',
+      9: 'October',
+      10: 'November',
+      11: 'December',
+    };
+    const ms = Date.parse(this.createdAt);
+    const date = new Date(ms);
+
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDate();
+
+    const fullDate = `${months[month]} ${day}, ${year}`;
+
+    return fullDate;
+  }
 }
 
 </script>

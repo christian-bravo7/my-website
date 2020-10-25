@@ -1,16 +1,16 @@
 ---
 title: Hello world
 description: Welcome to my first post of the many that I hope to share us ❤️
-minutes: 3
+minutes: 2
 image: https://images.pexels.com/photos/2646531/pexels-photo-2646531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 tags: ['welcome']
 ---
 
 # hello-world
 
-Hi! I'm Christian Bravo a Guatemalan frontend developer and I welcome you to my first post. It is a great pleasure to have you here!
+Hi! I'm Christian Bravo a Guatemalan Frontend developer and I welcome you to my first post. It's a great pleasure to have you here!
 
-Honestly a couple of days ago I would not think I was writing this first post. It all started out of curiosity, when I started experimenting with <a target="_blank" href="https://content.nuxtjs.org/">Nuxt Content</a>. And after a couple of ideas and inspiration from <a target="_blank" href="https://dribbble.com/shots">Dribbble</a>, I decided to get on and create this little project.
+Honestly, a couple of days ago I couldn't imagine that I'm writing this right now. This started out of curiosity, when I started experimenting with <a target="_blank" href="https://content.nuxtjs.org/">Nuxt Content</a>. And after a couple of ideas and inspiration from <a target="_blank" href="https://dribbble.com/shots">Dribbble</a>, here I am.
 
 But, the 3 main reasons that really motivate me to create this blog are the following:
 
@@ -39,6 +39,6 @@ Since I can remember, I've always had difficulties expressing and transmitting c
 
 ## }
 
-Here I will write about software development, web technologies and many interesting things.
+Here I hope write about software development, web technologies and many interesting things.
 
 Thanks for reading my first post. You don't know how special it is to finally be able to reach other people with my words :)

@@ -3,7 +3,7 @@
     <AppFallbackLoad v-show="!isReady" />
     <template v-show="isReady">
       <SidebarMenu
-        v-if="isSidebarActive"
+        v-show="isSidebarActive"
         @closeSidebar="closeSidebar"
       />
       <ClientOnly>

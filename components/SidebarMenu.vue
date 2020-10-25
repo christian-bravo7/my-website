@@ -38,7 +38,12 @@
                 class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
                 :to="localePath({ name: 'index' })"
               >
-                {{ $t('navigation.home-label') }}
+                <template v-if="onlyEnglish">
+                  Home
+                </template>
+                <template v-else>
+                  {{ $t('navigation.home-label') }}
+                </template>
               </NuxtLink>
             </div>
             <div
@@ -50,13 +55,38 @@
                 class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
                 :to="localePath({ name: 'me' })"
               >
-                {{ $t('navigation.about-me-label') }}
+                <template v-if="onlyEnglish">
+                  About me
+                </template>
+                <template v-else>
+                  {{ $t('navigation.about-me-label') }}
+                </template>
+              </NuxtLink>
+            </div>
+            <div
+              class="mb-4"
+              @click="closeSidebar"
+              @keydown.enter="closeSidebar"
+            >
+              <NuxtLink
+                class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
+                :to="localePath({ name: 'blog' })"
+              >
+                <template v-if="onlyEnglish">
+                  Blog
+                </template>
+                <template v-else>
+                  {{ $t('navigation.blog-label') }}
+                </template>
               </NuxtLink>
             </div>
           </section>
           <section class="flex justify-between p-4">
             <ThemeSwitch />
-            <LanguagePicker @language-changed="closeSidebar" />
+            <LanguagePicker
+              v-if="hasLanguagePicker"
+              @language-changed="closeSidebar"
+            />
           </section>
         </aside>
       </transition>
@@ -65,11 +95,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Emit, Vue } from 'nuxt-property-decorator';
+import { Component, Emit, Prop, Vue } from 'nuxt-property-decorator';
 
 @Component
 export default class SidebarMenu extends Vue {
   isSidebarVisible: boolean = false;
+
+  @Prop({ type: Boolean, default: false })
+  readonly onlyEnglish!: boolean;
+
+  @Prop({ type: Boolean, default: true })
+  readonly hasLanguagePicker!: boolean;
 
   closeSidebar (): void {
     this.isSidebarVisible = false;

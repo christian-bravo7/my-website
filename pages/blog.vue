@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container mx-auto py-20">
+    <div class="container mx-auto py-8 md:py-20">
       <div class="blog-grid">
         <PostCard
           v-for="(article, index) in articles"
@@ -37,8 +37,6 @@ import { Vue, Component } from 'nuxt-property-decorator';
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' });
       });
-
-    console.log(articles);
 
     return {
       articles,

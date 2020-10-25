@@ -45,7 +45,7 @@
     <template v-else>
       <div class="absolute inset-0 p-2 flex flex-col items-center justify-center select-none">
         <p class="text-gray-600 dark:text-gray-400 text-center">
-          Writing stuff...
+          Writing cool things...
         </p>
         <p class="text-gray-600 dark:text-gray-400 text-center">
           Come back soon :)

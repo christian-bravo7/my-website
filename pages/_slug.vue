@@ -76,22 +76,39 @@ export default class Blog extends Vue {
 </script>
 
 <style lang="scss">
+/* stylelint-disable */
 
 .blog-content {
   h1 {
-    @apply text-5xl mb-6 font-bold;
+    @apply text-3xl mb-6 font-bold;
+
+    @screen md {
+      @apply text-5xl;
+    }
   }
 
   h2 {
-    @apply text-3xl mb-4 font-bold;
+    @apply text-xl mb-4 font-bold;
+
+    @screen md {
+      @apply text-3xl;
+    }
   }
 
   h3 {
-    @apply text-xl mb-3 font-bold;
+    @apply text-lg mb-3 font-bold;
+
+    @screen md {
+      @apply text-xl;
+    }
   }
 
   p {
-    @apply text-lg mb-4 leading-loose;
+    @apply text-base mb-4 leading-loose;
+
+    @screen md {
+      @apply text-lg;
+    }
   }
 
   ul {

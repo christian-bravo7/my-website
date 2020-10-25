@@ -16,7 +16,8 @@
   },
   "navigation": {
     "about-me-label": "Moi",
-    "home-label": "Accueil"
+    "home-label": "Accueil",
+    "blog-label": "Blog"
   },
   "error": {
     "404-description": "Désolé, mais cette page n'existe pas.",
