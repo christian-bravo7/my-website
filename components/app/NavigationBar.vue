@@ -7,7 +7,7 @@
       >
         <SiteLogo class="w-full h-full fill-current" />
       </NuxtLink>
-      <div class="hidden md:grid grid-cols-2 gap-x-8">
+      <div class="hidden md:flex items-center">
         <div class="grid grid-cols-2 gap-x-6 content-center">
           <NuxtLink
             class="text-center text-pink-800 dark:text-blue-500"
@@ -24,8 +24,11 @@
             {{ $t('navigation.about-me-label') }}
           </NuxtLink>
         </div>
-        <div class="grid grid-cols-2 content-center">
-          <div>
+        <div class="flex items-center ml-8">
+          <div
+            v-if="hasLanguagePicker"
+            class="mr-8"
+          >
             <LanguagePicker abbreviation />
           </div>
           <div class="flex justify-center items-center">
@@ -47,7 +50,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Emit } from 'nuxt-property-decorator';
+import { Vue, Component, Emit, Prop } from 'nuxt-property-decorator';
 
 import SiteLogo from '~/assets/img/logo.svg?inline';
 
@@ -60,6 +63,9 @@ export default class NavigationBar extends Vue {
   previousScroll: number = window.scrollY || document.documentElement.scrollTop;
   currentDirection: number = 0;
   previousDirection: number = 0;
+
+  @Prop({ type: Boolean, default: true })
+  readonly hasLanguagePicker!: boolean;
 
   @Emit('openSidebar')
   openSidebar (): void {}

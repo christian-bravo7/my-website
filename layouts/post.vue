@@ -1,0 +1,52 @@
+<template>
+  <main class="bg-gray-50 dark:bg-blue-600">
+    <AppFallbackLoad v-show="!isReady" />
+    <template v-show="isReady">
+      <header>
+        <PortalTarget
+          name="blog-banner"
+          class="blog-banner"
+          slim
+        />
+      </header>
+      <Nuxt />
+    </template>
+  </main>
+</template>
+
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator';
+import { MetaInfo } from 'vue-meta/types';
+import { PortalTarget } from 'portal-vue';
+import { mapGetters } from 'vuex';
+
+import { guestStore } from '@/store';
+
+@Component({
+  head (): MetaInfo {
+    return {
+      bodyAttrs: {
+        'data-theme': guestStore.theme,
+      },
+      titleTemplate: (titleChunk): string => {
+        return titleChunk ? `${titleChunk} | Christian Bravo` : 'Christian Bravo';
+      },
+    };
+  },
+  components: {
+    PortalTarget,
+  },
+  computed: {
+    ...mapGetters({
+      isReady: 'guest/isReady',
+    }),
+  },
+})
+export default class BlogLayout extends Vue {}
+</script>
+
+<style lang="scss" scoped>
+.blog-banner {
+  min-height: 50vh;
+}
+</style>

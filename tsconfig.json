@@ -27,7 +27,8 @@
       "@types/node",
       "@nuxt/types",
       "@types/jest",
-      "@types/smooth-scroll"
+      "@types/smooth-scroll",
+      "@nuxt/content"
     ]
   },
   "exclude": [

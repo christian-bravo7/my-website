@@ -13,7 +13,7 @@
         </h2>
         <h1
           id="primary"
-          class="relative max-w-screen-md text-center text-3xl md:text-5xl z-10 text-gray-900 dark:text-gray-50 transition-opacity duration-700 primary-text"
+          class="relative max-w-screen-md text-center text-3xl md:text-5xl z-10 text-gray-900 dark:text-gray-50 primary-text"
         >
           <slot name="primary-text" />
         </h1>
@@ -40,6 +40,11 @@ export default class AppBanner extends Vue {
 
 <style lang="scss" scoped>
 
+.primary-text {
+  transition-duration: 2000ms;
+  transition-property: opacity;
+}
+
 .secondary-text {
   top: 50%;
   left: 50%;
@@ -53,7 +58,7 @@ export default class AppBanner extends Vue {
 }
 
 .flash-text-enter-active {
-  transition: 2s;
+  transition: 5s;
 }
 
 .flash-text-enter-to {

@@ -63,7 +63,8 @@ module.exports = {
     darkSelector: '.dark-mode',
   },
   variants: {
-    backgroundColor: ['dark', 'dark-hover'],
+    backgroundOpacity: ['dark', 'dark-hover', 'hover'],
+    backgroundColor: ['dark', 'dark-hover', 'hover'],
     borderColor: ['dark'],
     textColor: ['group-hover', 'dark', 'dark-hover', 'dark-group-hover'],
   },

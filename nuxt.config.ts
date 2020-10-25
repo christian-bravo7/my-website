@@ -79,6 +79,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    // Doc: https://content.nuxtjs.org/installation
+    '@nuxt/content',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/i18n-module
