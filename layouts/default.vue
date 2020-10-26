@@ -7,7 +7,11 @@
         @closeSidebar="closeSidebar"
       />
       <ClientOnly>
-        <NavigationBar @openSidebar="openSidebar" />
+        <NavigationBar
+          :has-language-picker="currentRoute !== 'blog'"
+          :only-english="currentRoute === 'blog'"
+          @openSidebar="openSidebar"
+        />
       </ClientOnly>
       <header>
         <MovableFigures :current-route="currentRoute" />

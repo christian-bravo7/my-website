@@ -2,6 +2,12 @@
   <main class="bg-gray-50 dark:bg-blue-600">
     <AppFallbackLoad v-show="!isReady" />
     <template v-show="isReady">
+      <ClientOnly>
+        <NavigationBar
+          :only-white="true"
+          :has-language-picker="false"
+        />
+      </ClientOnly>
       <header>
         <PortalTarget
           name="blog-banner"

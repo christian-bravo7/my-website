@@ -46,7 +46,7 @@ export default class MovableFigures extends Vue {
 .figure {
   $self: &;
 
-  transition: color 200ms, top 4s, left 4s, transform 4s;
+  transition: color 200ms, top 6s, left 6s, transform 6s;
 
   &.index {
     &#{$self}--1 {
@@ -80,6 +80,24 @@ export default class MovableFigures extends Vue {
     &#{$self}--3 {
       top: 50%;
       left: 75%;
+      transform: rotate(-80deg);
+    }
+  }
+
+  &.blog {
+    &#{$self}--1 {
+      top: 35%;
+      left: 10%;
+      transform: rotate(0deg);
+    }
+    &#{$self}--2 {
+      top: 90%;
+      left: 50%;
+      transform: rotate(-100deg);
+    }
+    &#{$self}--3 {
+      top: 20%;
+      left: 85%;
       transform: rotate(-80deg);
     }
   }

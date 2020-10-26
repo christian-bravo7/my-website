@@ -3,6 +3,7 @@
     <div class="mx-auto container flex justify-between">
       <NuxtLink
         class="flex w-12 h-12 text-black dark:text-white"
+        :class="{ 'only-white': onlyWhite }"
         :to="localePath({ name: 'index' })"
       >
         <SiteLogo class="w-full h-full fill-current" />
@@ -11,8 +12,9 @@
         <div class="flex content-center">
           <NuxtLink
             class="text-center text-pink-800 dark:text-blue-500 ml-12"
+            :class="{ 'only-white': onlyWhite }"
             exact-active-class="font-bold"
-            :to="localePath({ name: 'index' })"
+            :to="onlyEnglish ? localePath({ name: 'index' }, 'en') : localePath({ name: 'index' })"
           >
             <template v-if="onlyEnglish">
               Home
@@ -23,8 +25,9 @@
           </NuxtLink>
           <NuxtLink
             class="text-center text-pink-800 dark:text-blue-500 ml-12"
+            :class="{ 'only-white': onlyWhite }"
             exact-active-class="font-bold"
-            :to="localePath({ name: 'me' })"
+            :to="onlyEnglish ? localePath({ name: 'me' }, 'en') : localePath({ name: 'me' })"
           >
             <template v-if="onlyEnglish">
               About me
@@ -35,8 +38,9 @@
           </NuxtLink>
           <NuxtLink
             class="text-center text-pink-800 dark:text-blue-500 ml-12"
+            :class="{ 'only-white': onlyWhite }"
             exact-active-class="font-bold"
-            :to="localePath({ name: 'blog' })"
+            :to="localePath({ name: 'blog' }, 'en')"
           >
             <template v-if="onlyEnglish">
               Blog
@@ -92,6 +96,9 @@ export default class NavigationBar extends Vue {
   @Prop({ type: Boolean, default: false })
   readonly onlyEnglish!: boolean;
 
+  @Prop({ type: Boolean, default: false })
+  readonly onlyWhite!: boolean;
+
   @Emit('openSidebar')
   openSidebar (): void {}
 
@@ -134,10 +141,14 @@ export default class NavigationBar extends Vue {
 
 </script>
 
-<style lang="scss" scoped>
-.navbar {
-  &.hide {
-    top: rem(-100);
-  }
+<style scoped>
+/* stylelint-disable */
+
+.navbar.hide {
+  top: -100px;
+}
+
+.only-white {
+  @apply text-white !important;
 }
 </style>
