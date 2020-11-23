@@ -91,10 +91,6 @@ import SiteLogo from '~/assets/img/logo.svg?inline';
   },
 })
 export default class NavigationBar extends Vue {
-  previousScroll: number = window.scrollY || document.documentElement.scrollTop;
-  currentDirection: number = 0;
-  previousDirection: number = 0;
-
   @Prop({ type: Boolean, default: true })
   readonly hasLanguagePicker!: boolean;
 
@@ -106,42 +102,6 @@ export default class NavigationBar extends Vue {
 
   @Emit('openSidebar')
   openSidebar (): void {}
-
-  mounted (): void {
-    this.checkScrollDown();
-  }
-
-  checkScroll (): void {
-    const currentScroll = window.scrollY || document.documentElement.scrollTop;
-
-    if (currentScroll > this.previousScroll) {
-      this.currentDirection = 2;
-    } else if (currentScroll < this.previousScroll) {
-      this.currentDirection = 1;
-    }
-
-    if (this.currentDirection !== this.previousDirection) {
-      this.toggleHeader(this.currentDirection, currentScroll);
-    }
-
-    this.previousScroll = currentScroll;
-  }
-
-  checkScrollDown (): void {
-    window.addEventListener('scroll', this.checkScroll);
-  }
-
-  toggleHeader (direction: number, currentScroll: number): void {
-    const header = document.querySelector('.navbar') as HTMLElement;
-
-    if (direction === 2 && currentScroll > 52) {
-      header.classList.add('hide');
-      this.previousDirection = direction;
-    } else if (direction === 1) {
-      header.classList.remove('hide');
-      this.previousDirection = direction;
-    }
-  }
 }
 
 </script>
