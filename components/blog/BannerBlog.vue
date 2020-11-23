@@ -3,7 +3,7 @@
     class="flex relative bg-black"
   >
     <img
-      class="absolute inset-0 w-full h-full object-cover object-center opacity-25"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-50"
       :src="imageSource"
       alt="ballon"
     >

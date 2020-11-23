@@ -36,7 +36,7 @@
             >
               <NuxtLink
                 class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
-                :to="localePath({ name: 'index' })"
+                :to="onlyEnglish ? localePath({ name: 'index' }, 'en') : localePath({ name: 'index' })"
               >
                 <template v-if="onlyEnglish">
                   Home
@@ -53,7 +53,7 @@
             >
               <NuxtLink
                 class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
-                :to="localePath({ name: 'me' })"
+                :to="onlyEnglish ? localePath({ name: 'me' }, 'en') : localePath({ name: 'me' })"
               >
                 <template v-if="onlyEnglish">
                   About me
@@ -70,7 +70,7 @@
             >
               <NuxtLink
                 class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
-                :to="localePath({ name: 'blog' })"
+                :to="onlyEnglish ? localePath({ name: 'blog' }, 'en') : localePath({ name: 'blog' })"
               >
                 <template v-if="onlyEnglish">
                   Blog

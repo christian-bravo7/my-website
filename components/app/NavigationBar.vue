@@ -1,17 +1,20 @@
 <template>
-  <nav class="p-4 fixed top-0 left-0 right-0 z-20 bg-transparent navbar transition-all duration-150">
-    <div class="mx-auto container flex justify-between">
+  <nav
+    class="p-4 fixed top-0 left-0 right-0 z-20 bg-transparent navbar transition-all duration-150"
+    :class="{ 'bg-black bg-opacity-25': onlyWhite}"
+  >
+    <div class="navbar-grid">
       <NuxtLink
-        class="flex w-12 h-12 text-black dark:text-white"
+        class="flex w-12 h-12 text-black dark:text-white col-span-1"
         :class="{ 'only-white': onlyWhite }"
         :to="localePath({ name: 'index' })"
       >
         <SiteLogo class="w-full h-full fill-current" />
       </NuxtLink>
-      <div class="hidden md:flex items-center">
+      <div class="hidden md:flex items-center justify-center col-span-3">
         <div class="flex content-center">
           <NuxtLink
-            class="text-center text-pink-800 dark:text-blue-500 ml-12"
+            class="text-center text-pink-800 dark:text-blue-500 mx-8"
             :class="{ 'only-white': onlyWhite }"
             exact-active-class="font-bold"
             :to="onlyEnglish ? localePath({ name: 'index' }, 'en') : localePath({ name: 'index' })"
@@ -24,7 +27,7 @@
             </template>
           </NuxtLink>
           <NuxtLink
-            class="text-center text-pink-800 dark:text-blue-500 ml-12"
+            class="text-center text-pink-800 dark:text-blue-500 mx-8"
             :class="{ 'only-white': onlyWhite }"
             exact-active-class="font-bold"
             :to="onlyEnglish ? localePath({ name: 'me' }, 'en') : localePath({ name: 'me' })"
@@ -37,7 +40,7 @@
             </template>
           </NuxtLink>
           <NuxtLink
-            class="text-center text-pink-800 dark:text-blue-500 ml-12"
+            class="text-center text-pink-800 dark:text-blue-500 mx-8"
             :class="{ 'only-white': onlyWhite }"
             exact-active-class="font-bold"
             :to="localePath({ name: 'blog' }, 'en')"
@@ -50,16 +53,16 @@
             </template>
           </NuxtLink>
         </div>
-        <div class="flex items-center ml-12">
-          <div
-            v-if="hasLanguagePicker"
-            class="mr-8"
-          >
-            <LanguagePicker abbreviation />
-          </div>
-          <div class="flex justify-center items-center">
-            <ThemeSwitch />
-          </div>
+      </div>
+      <div class="flex items-center justify-end col-span-1">
+        <div
+          v-if="hasLanguagePicker"
+          class="mr-8"
+        >
+          <LanguagePicker abbreviation />
+        </div>
+        <div class="flex justify-center items-center">
+          <ThemeSwitch />
         </div>
       </div>
       <button
@@ -146,6 +149,10 @@ export default class NavigationBar extends Vue {
 
 .navbar.hide {
   top: -100px;
+}
+
+.navbar-grid {
+  @apply grid grid-cols-5;
 }
 
 .only-white {

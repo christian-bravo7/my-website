@@ -4,6 +4,8 @@
     <template v-show="isReady">
       <SidebarMenu
         v-show="isSidebarActive"
+        :has-language-picker="currentRoute !== 'blog'"
+        :only-english="currentRoute === 'blog'"
         @closeSidebar="closeSidebar"
       />
       <ClientOnly>
