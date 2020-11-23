@@ -15,6 +15,8 @@
           @openSidebar="openSidebar"
         />
       </ClientOnly>
+      <PageSocialMedia />
+      <PageAuthorCredits />
       <header>
         <MovableFigures :current-route="currentRoute" />
         <PortalTarget

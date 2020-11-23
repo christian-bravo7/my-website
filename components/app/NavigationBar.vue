@@ -3,7 +3,7 @@
     class="p-4 fixed top-0 left-0 right-0 z-20 bg-transparent navbar transition-all duration-150"
     :class="{ 'bg-black bg-opacity-25': onlyWhite}"
   >
-    <div class="navbar-grid">
+    <div class="grid grid-cols-2 md:grid-cols-5 navbar-grid">
       <NuxtLink
         class="flex w-12 h-12 text-black dark:text-white col-span-1"
         :class="{ 'only-white': onlyWhite }"
@@ -54,7 +54,7 @@
           </NuxtLink>
         </div>
       </div>
-      <div class="flex items-center justify-end col-span-1">
+      <div class="items-center justify-end col-span-1 hidden md:flex">
         <div
           v-if="hasLanguagePicker"
           class="mr-8"
@@ -65,15 +65,17 @@
           <ThemeSwitch />
         </div>
       </div>
-      <button
-        class="flex md:hidden justify-items-center items-center text-gray-900 dark:text-gray-50"
-        @click="openSidebar"
-        @keydown.enter="openSidebar"
-      >
-        <span class="material-icons text-5xl">
-          menu
-        </span>
-      </button>
+      <div class="flex md:hidden justify-end items-center">
+        <button
+          class="text-gray-900 dark:text-gray-50"
+          @click="openSidebar"
+          @keydown.enter="openSidebar"
+        >
+          <span class="material-icons text-5xl">
+            menu
+          </span>
+        </button>
+      </div>
     </div>
   </nav>
 </template>
@@ -151,9 +153,9 @@ export default class NavigationBar extends Vue {
   top: -100px;
 }
 
-.navbar-grid {
+/* .navbar-grid {
   @apply grid grid-cols-5;
-}
+} */
 
 .only-white {
   @apply text-white !important;

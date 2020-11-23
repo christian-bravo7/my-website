@@ -28,6 +28,7 @@
       "@nuxt/types",
       "@types/jest",
       "@types/smooth-scroll",
+      "@types/scrollreveal",
       "@nuxt/content"
     ]
   },

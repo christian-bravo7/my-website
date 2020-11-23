@@ -65,8 +65,8 @@ module.exports = {
   variants: {
     backgroundOpacity: ['dark', 'dark-hover', 'hover'],
     backgroundColor: ['dark', 'dark-hover', 'hover'],
-    borderColor: ['dark'],
-    textColor: ['group-hover', 'dark', 'dark-hover', 'dark-group-hover'],
+    borderColor: ['dark', 'hover', 'dark-hover'],
+    textColor: ['group-hover', 'dark', 'dark-hover', 'dark-group-hover', 'hover'],
   },
   plugins: [
     require('tailwindcss-dark-mode')(),
