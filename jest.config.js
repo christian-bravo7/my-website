@@ -22,4 +22,6 @@ module.exports = {
     '<rootDir>/layouts/**/*.vue',
     '!**/node_modules/**',
   ],
+  snapshotSerializers: ['jest-serializer-vue'],
+  snapshotResolver: './snapshotResolver.js',
 };
