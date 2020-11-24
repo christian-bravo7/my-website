@@ -27,5 +27,4 @@ import RemolinoLogo from '~/assets/img/remolino.svg?inline';
   },
 })
 export default class AboutMeInformation extends Vue {}
-
 </script>
