@@ -1,5 +1,6 @@
 module.exports = {
   moduleNameMapper: {
+    '.+\\.svg?.+$': '<rootDir>/__mocks__/svg-empty.vue',
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
     '^vue$': 'vue/dist/vue.common.js',
