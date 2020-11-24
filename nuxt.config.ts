@@ -48,6 +48,7 @@ export default {
   plugins: [
     { src: '@/plugins/persistedState.ts', ssr: false },
     { src: '@/plugins/scrollReveal.ts', ssr: false },
+    { src: '@/plugins/portalVue.ts', ssr: false },
   ],
   /*
   ** Auto import components

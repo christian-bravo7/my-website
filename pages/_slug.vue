@@ -23,16 +23,11 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
-import { Portal } from 'portal-vue';
-
 @Component({
   head () {
     return {
       title: this.title,
     };
-  },
-  components: {
-    Portal,
   },
   async asyncData ({ $content, error, params }): Promise<any> {
     const articles = await $content(params.slug)

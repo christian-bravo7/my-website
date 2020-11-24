@@ -39,13 +39,9 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
-import { Portal } from 'portal-vue';
 import baffle from 'baffle';
 
 @Component({
-  components: {
-    Portal,
-  },
   async asyncData ({ $content, error }): Promise<any> {
     const articles = await $content()
       .fetch()

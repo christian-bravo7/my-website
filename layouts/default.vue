@@ -1,7 +1,7 @@
 <template>
   <main class="bg-gray-50 dark:bg-blue-600">
-    <AppFallbackLoad v-show="!isReady" />
-    <template v-show="isReady">
+    <AppFallbackLoad v-if="!isReady" />
+    <template v-else>
       <SidebarMenu
         v-show="isSidebarActive"
         :has-language-picker="currentRoute !== 'blog'"
@@ -33,7 +33,6 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import { MetaInfo } from 'vue-meta/types';
-import { PortalTarget } from 'portal-vue';
 import { mapGetters } from 'vuex';
 
 import { guestStore } from '@/store';
@@ -48,9 +47,6 @@ import { guestStore } from '@/store';
         return titleChunk ? `${titleChunk} | Christian Bravo` : 'Christian Bravo';
       },
     };
-  },
-  components: {
-    PortalTarget,
   },
   computed: {
     ...mapGetters({

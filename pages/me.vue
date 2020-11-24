@@ -14,12 +14,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-import { Portal } from 'portal-vue';
 
 @Component({
-  components: {
-    Portal,
-  },
   head () {
     return {
       title: this.$t('navigation.about-me-label') as string,

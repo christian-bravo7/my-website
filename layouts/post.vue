@@ -23,7 +23,6 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import { MetaInfo } from 'vue-meta/types';
-import { PortalTarget } from 'portal-vue';
 import { mapGetters } from 'vuex';
 
 import { guestStore } from '@/store';
@@ -38,9 +37,6 @@ import { guestStore } from '@/store';
         return titleChunk ? `${titleChunk} | Christian Bravo` : 'Christian Bravo';
       },
     };
-  },
-  components: {
-    PortalTarget,
   },
   computed: {
     ...mapGetters({

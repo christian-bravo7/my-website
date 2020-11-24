@@ -29,7 +29,6 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import { MetaInfo } from 'vue-meta/types';
-import { PortalTarget } from 'portal-vue';
 import { mapGetters } from 'vuex';
 import baffle from 'baffle';
 
@@ -49,7 +48,6 @@ import SiteLogo from '~/assets/img/logo.svg?inline';
     };
   },
   components: {
-    PortalTarget,
     SiteLogo,
   },
   computed: {
