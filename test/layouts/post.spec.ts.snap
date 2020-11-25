@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`post layout should render correclty 1`] = `
+<main class="bg-gray-50 dark:bg-blue-600">
+  <appfallbackload></appfallbackload>
+  <clientonly>
+    <navigationbar only-white="true"></navigationbar>
+  </clientonly>
+  <header>
+    <portaltarget name="blog-banner" slim="" class="blog-banner"></portaltarget>
+  </header>
+  <nuxt></nuxt>
+</main>
+`;

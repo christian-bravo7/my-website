@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`blog layout should render correclty 1`] = `
+<main class="flex flex-col bg-gray-100 dark:bg-blue-600 min-h-screen">
+  <appfallbackload></appfallbackload>
+  <sidebarmenu only-english="true" style="display: none;"></sidebarmenu>
+  <clientonly>
+    <navigationbar only-english="true"></navigationbar>
+  </clientonly>
+  <nuxt class="pt-0 md:pt-20 px-4 w-full z-10 order-2"></nuxt>
+  <h1 id="greeting" class="static md:absolute max-w-screen-sm md:max-w-none right-0 bottom-0 text-4xl sm:text-6xl md:text-12xl mx-auto md:mr-8 pt-24 px-4 md:pt-0 md:px-0 font-bold text-right text-gray-300 dark:text-blue-700 select-none text-min-content order-1">
+    Good afternoon!
+  </h1>
+</main>
+`;
