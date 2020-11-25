@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageAuthorCredits component should render correclty 1`] = `
+<p class="z-50 text-gray-400 dark:text-gray-400 text-xs page-author-credits select-none">
+  © 2021 CHRISTIAN BRAVO
+</p>
+`;

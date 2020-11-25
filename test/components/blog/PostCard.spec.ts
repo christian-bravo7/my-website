@@ -21,6 +21,10 @@ describe('PostCard component', () => {
   it('should render placeholder template if prop placeholder is provided', () => {
     const wrapper = mount(PostCard, {
       propsData: {
+        backgroundImage: 'image.png',
+        path: 'something-cool',
+        title: 'awesome post',
+        description: 'this is the amazing post ever',
         placeholder: true,
       },
     });
