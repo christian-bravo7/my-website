@@ -26,6 +26,10 @@
                 :class="dynamicColors(index)"
               />
               <PostCard
+                title="placholder"
+                description="placeholder"
+                path="placeholder"
+                background-image="placeholder"
                 :placeholder="true"
               />
             </div>
@@ -51,6 +55,11 @@ import baffle from 'baffle';
 
     return {
       articles,
+    };
+  },
+  head () {
+    return {
+      title: this.$t('navigation.blog-label') as string,
     };
   },
 })
@@ -101,10 +110,6 @@ export default class Blog extends Vue {
     ];
 
     return greetings.find((el: any) => el.test).greet;
-  }
-
-  mounted (): void {
-    this.shuffleText();
   }
 
   shuffleText (): void {

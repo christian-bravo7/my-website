@@ -1,4 +1,4 @@
-import { createLocalVue, mount, shallowMount } from '@vue/test-utils';
+import { createLocalVue, mount } from '@vue/test-utils';
 import Me from '@/pages/me.vue';
 import PortalVue from 'portal-vue';
 import VueMeta from 'vue-meta';
