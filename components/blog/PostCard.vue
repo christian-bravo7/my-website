@@ -60,19 +60,19 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator';
 
 @Component
 export default class PostCard extends Vue {
-  @Prop({ type: String })
+  @Prop({ type: String, required: true })
   readonly backgroundImage!: string;
 
-  @Prop({ type: String })
+  @Prop({ type: String, required: true })
   readonly path!: string;
 
-  @Prop({ type: String })
+  @Prop({ type: String, required: true })
   readonly title!: string;
 
-  @Prop({ type: String })
+  @Prop({ type: String, required: true })
   readonly description!: string;
 
-  @Prop({ type: Boolean })
+  @Prop({ type: Boolean, default: false })
   readonly first!: boolean;
 
   @Prop({ type: Boolean, default: false })
