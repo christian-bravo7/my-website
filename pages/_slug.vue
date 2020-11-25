@@ -36,6 +36,8 @@ import { Vue, Component } from 'nuxt-property-decorator';
         error({ statusCode: 404, message: 'Page not found' });
       });
 
+    console.log(articles);
+
     return {
       articles,
     };

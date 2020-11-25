@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`single post page should render page correctly 1`] = `
+<section>
+  <div class="v-portal" style="display: none;"></div>
+  <div>
+    <div class="container mx-auto py-20 px-4">
+      <div document="[object Object]" class="blog-content"></div>
+    </div>
+  </div>
+</section>
+`;
