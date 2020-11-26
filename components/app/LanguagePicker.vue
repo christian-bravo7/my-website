@@ -2,13 +2,13 @@
   <!-- eslint-disable vue-a11y/no-onchange -->
   <div class="inline-block">
     <div class="flex items-center">
-      <i class="material-icons text-sm -mr-3 text-pink-800 dark:text-blue-500">
+      <i class="material-icons text-sm -mr-3 primary-text">
         translate
       </i>
       <select
         id="languagePicker"
         v-model="currentLanguage"
-        class="px-4 text-base bg-transparent border-none cursor-pointer appearance-none text-pink-800 dark:text-blue-500"
+        class="px-4 text-base bg-transparent border-none cursor-pointer appearance-none primary-text"
         name="language-picker"
         @change="changeLanguage"
         @blur="changeLanguage"
@@ -22,7 +22,7 @@
           {{ language.name }}
         </option>
       </select>
-      <i class="material-icons text-sm -ml-3 text-pink-800 dark:text-blue-500 pointer-events-none">
+      <i class="material-icons text-sm -ml-3 primary-text pointer-events-none">
         expand_more
       </i>
     </div>

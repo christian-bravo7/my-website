@@ -1,5 +1,6 @@
 import Vuex from 'vuex';
 import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils';
+import MockDate from 'mockdate';
 
 import Blog from '@/layouts/blog.vue';
 import AppFallbackLoad from '@/components/app/AppFallbackLoad.vue';
@@ -23,6 +24,8 @@ describe('blog layout', () => {
   });
 
   it('should render correclty', () => {
+    MockDate.set('Wed Nov 25 2020 23:00:00 GMT-0600 (Central Standard Time)');
+
     const wrapper = mount(Blog, {
       store,
       localVue,

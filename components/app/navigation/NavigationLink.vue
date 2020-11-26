@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    class="text-center text-pink-800 dark:text-blue-500 mx-8"
+    class="text-center primary-text mx-8"
     exact-active-class="font-bold"
     :to="localePath(...linkPath)"
   >
@@ -9,26 +9,10 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'nuxt-property-decorator';
+import { Vue, Component, mixins } from 'nuxt-property-decorator';
 
-import { RawLocation } from 'vue-router/types';
+import LinkEnglishPath from '@/components/app/navigation/LinkEnglishPath';
 
 @Component
-export default class NavigationLink extends Vue {
-  @Prop({ type: String, required: true })
-  readonly path!: string;
-
-  @Prop({ type: Boolean, default: false })
-  readonly isOnlyEnglish!: boolean;
-
-  get linkPath (): Array<RawLocation | string> {
-    const path: RawLocation = { name: this.path };
-
-    if (this.isOnlyEnglish) {
-      return [path, 'en'];
-    }
-
-    return [path];
-  }
-}
+export default class NavigationLink extends mixins(Vue, LinkEnglishPath) { }
 </script>

@@ -7,9 +7,9 @@ import guest from '@/store/guest';
 
 let guestStore: guest;
 
-function initializeStores (store: Store<any>): void {
+const initializeStores = (store: Store<any>): void => {
   guestStore = getModule(guest, store);
-}
+};
 
 export {
   initializeStores,

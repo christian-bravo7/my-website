@@ -3,7 +3,7 @@
     <figure
       v-for="index in 10"
       :key="index"
-      :class="`text-pink-800 dark:text-blue-500 opacity-50 absolute figure--${index}`"
+      :class="`primary-text opacity-50 absolute figure--${index}`"
     >
       <QuestionIcon class="w-full h-full fill-current" />
     </figure>

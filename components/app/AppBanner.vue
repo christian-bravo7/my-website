@@ -7,13 +7,13 @@
       <div class="relative">
         <h2
           id="secondary"
-          class="absolute font-bold text-center text-8xl sm:text-10xl md:text-12xl leading-none select-none text-gray-200 dark:text-blue-700 secondary-text"
+          class="absolute font-bold text-center text-8xl sm:text-10xl md:text-12xl leading-none select-none text-gray-200 dark:text-blue-700 app-banner__secondary-text"
         >
           <slot name="secondary-text" />
         </h2>
         <h1
           id="primary"
-          class="relative max-w-screen-md text-center text-3xl md:text-5xl z-10 text-gray-900 dark:text-gray-50 primary-text"
+          class="relative max-w-screen-md text-center text-3xl md:text-5xl z-10 text-gray-900 dark:text-gray-50 app-banner__primary-text"
         >
           <slot name="primary-text" />
         </h1>
@@ -40,19 +40,21 @@ export default class AppBanner extends Vue {
 
 <style lang="scss" scoped>
 
-.primary-text {
-  transition-duration: 2000ms;
-  transition-property: opacity;
-}
+.app-banner {
+  &__primary-text {
+    transition-duration: 2000ms;
+    transition-property: opacity;
+  }
 
-.secondary-text {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  &__secondary-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .flash-text-enter {
-  .primary-text {
+  .app-banner__primary-text {
     opacity: 0;
   }
 }
@@ -62,7 +64,7 @@ export default class AppBanner extends Vue {
 }
 
 .flash-text-enter-to {
-  .primary-text {
+  .app-banner__primary-text {
     opacity: 1;
   }
 }

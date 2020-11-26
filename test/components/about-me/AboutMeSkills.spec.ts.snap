@@ -7,40 +7,40 @@ exports[`AboutMeSkills component should render correctly 1`] = `
       me.skills-label
     </h2>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     CSS3
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     Javascript
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     NuxtJS
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     VueJS
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     ReactJS
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     Typescript
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     GraphQL
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     Git
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     SASS
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     Jest
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     HTML5
   </span></div>
-      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 text-pink-800 dark:text-blue-500"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+      <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150"><span class="w-16 primary-text"><svg></svg></span> <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
     NodeJS
   </span></div>
     </div>

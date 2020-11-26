@@ -14,7 +14,7 @@
         @after-leave="closeSidebarOverlay"
       >
         <aside
-          v-if="isSidebarVisible"
+          v-show="isSidebarVisible"
           class="absolute inset-y-0 right-0 w-full h-full max-w-sm p-0 bg-gray-50 dark:bg-blue-600 rounded-3xl rounded-r-none sidebar-grid"
         >
           <section class="flex justify-end p-4">
@@ -32,7 +32,7 @@
             <SidebarLink
               path="index"
               :is-only-english="onlyEnglish"
-              @onClick="closeSidebar"
+              @click="closeSidebar"
               @onKeydownEnter="closeSidebar"
             >
               <template v-if="onlyEnglish">
@@ -45,7 +45,7 @@
             <SidebarLink
               path="me"
               :is-only-english="onlyEnglish"
-              @onClick="closeSidebar"
+              @click="closeSidebar"
               @onKeydownEnter="closeSidebar"
             >
               <template v-if="onlyEnglish">
@@ -58,7 +58,7 @@
             <SidebarLink
               path="blog"
               :is-only-english="onlyEnglish"
-              @onClick="closeSidebar"
+              @click="closeSidebar"
               @onKeydownEnter="closeSidebar"
             >
               <template v-if="onlyEnglish">

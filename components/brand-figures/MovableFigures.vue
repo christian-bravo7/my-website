@@ -7,13 +7,13 @@
       <TriangleSolid class="fill-current w-full h-full opacity-50 md:opacity-100" />
     </figure>
     <figure
-      class="absolute w-6 h-6 text-pink-800 dark:text-blue-500 figure figure--2"
+      class="absolute w-6 h-6 primary-text figure figure--2"
       :class="currentRoute"
     >
       <TriangleOutlined class="fill-current w-full h-full opacity-50 md:opacity-100" />
     </figure>
     <figure
-      class="absolute w-6 h-6 text-pink-800 dark:text-blue-500 figure figure--3"
+      class="absolute w-6 h-6 primary-text figure figure--3"
       :class="currentRoute"
     >
       <SquareOutlined class="fill-current w-full h-full opacity-50 md:opacity-100" />

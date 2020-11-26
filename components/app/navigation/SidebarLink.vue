@@ -1,11 +1,11 @@
 <template>
   <div
     class="mb-4"
-    @click="onClick"
+    @click="click"
     @keydown.enter="onKeydownEnter"
   >
     <NuxtLink
-      class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
+      class="primary-text font-bold text-3xl"
       :to="localePath(...linkPath)"
     >
       <slot />
@@ -14,33 +14,16 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Emit, Prop } from 'nuxt-property-decorator';
+import { Vue, Component, Emit, mixins } from 'nuxt-property-decorator';
 
-import { RawLocation } from 'vue-router/types';
+import LinkEnglishPath from '@/components/app/navigation/LinkEnglishPath';
 
 @Component
-export default class SidebarLink extends Vue {
-  @Prop({ type: String, required: true })
-  path!: string;
-
-  @Prop({ type: Boolean, default: false })
-  isOnlyEnglish!: boolean;
-
+export default class SidebarLink extends mixins(Vue, LinkEnglishPath) {
   @Emit('onKeydownEnter')
   onKeydownEnter (): void {}
 
-  @Emit('onClick')
-  onClick (): void {}
-
-  get linkPath (): Array<RawLocation | string> {
-    const path: RawLocation = { name: this.path };
-
-    if (this.isOnlyEnglish) {
-      return [path, 'en'];
-    }
-
-    return [path];
-  }
+  @Emit('click')
+  click (): void {}
 }
-
 </script>
