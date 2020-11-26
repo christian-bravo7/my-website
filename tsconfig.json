@@ -29,7 +29,7 @@
       "@types/jest",
       "@types/smooth-scroll",
       "@types/scrollreveal",
-      "@nuxt/content",
+      "@nuxt/content"
     ]
   },
   "exclude": [

@@ -6,6 +6,7 @@ import Blog from '@/layouts/blog.vue';
 import AppFallbackLoad from '@/components/app/AppFallbackLoad.vue';
 import NavigationBar from '@/components/app/navigation/NavigationBar.vue';
 import SidebarMenu from '@/components/app/navigation/SidebarMenu.vue';
+import SidebarLink from '@/components/app/navigation/SidebarLink.vue';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
@@ -25,6 +26,9 @@ describe('blog layout', () => {
 
   it('should render correclty', () => {
     MockDate.set('Wed Nov 25 2020 23:00:00 GMT-0600 (Central Standard Time)');
+
+    // @ts-ignore
+    SidebarMenu.options.components.SidebarLink = SidebarLink;
 
     const wrapper = mount(Blog, {
       store,

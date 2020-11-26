@@ -3,36 +3,6 @@
 exports[`blog layout should render correclty 1`] = `
 <main class="flex flex-col bg-gray-100 dark:bg-blue-600 min-h-screen">
   <div class="fixed inset-0 z-50 flex justify-center items-center bg-white text-pink-800 dark:bg-blue-600 dark:text-blue-500 text-12xl"><svg class="fill-current pulse-effect"></svg></div>
-  <transition-stub name="overlay" appear="true" style="display: none;">
-    <div class="fixed inset-0 z-30 w-full h-full bg-transparent overlay">
-      <transition-stub name="sidebar">
-        <aside class="absolute inset-y-0 right-0 w-full h-full max-w-sm p-0 bg-gray-50 dark:bg-blue-600 rounded-3xl rounded-r-none sidebar-grid" style="display: none;">
-          <section class="flex justify-end p-4"><button class="flex md:hidden justify-items-center items-center text-gray-900 dark:text-gray-50"><i class="material-icons text-5xl">
-                close
-              </i></button></section>
-          <section class="flex flex-col items-start p-4">
-            <sidebarlink path="index" is-only-english="true">
-              Home
-            </sidebarlink>
-            <sidebarlink path="me" is-only-english="true">
-              About me
-            </sidebarlink>
-            <sidebarlink path="blog" is-only-english="true">
-              Blog
-            </sidebarlink>
-          </section>
-          <section class="flex justify-between p-4">
-            <themeswitch></themeswitch>
-            <!---->
-          </section>
-        </aside>
-      </transition-stub>
-    </div>
-  </transition-stub>
-  <div></div>
-  <div class="pt-0 md:pt-20 px-4 w-full z-10 order-2"></div>
-  <h1 id="greeting" class="static md:absolute max-w-screen-sm md:max-w-none right-0 bottom-0 text-4xl sm:text-6xl md:text-12xl mx-auto md:mr-8 pt-24 px-4 md:pt-0 md:px-0 font-bold text-right text-gray-300 dark:text-blue-700 select-none text-min-content order-1">
-    Good night!
-  </h1>
+  <!---->
 </main>
 `;
