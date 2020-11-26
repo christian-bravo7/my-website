@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BannerBlog component should render correclty 1`] = `
-<div class="flex relative bg-black"><img src="image.png" alt="ballon" class="absolute inset-0 w-full h-full object-cover object-center opacity-50">
+<section class="flex relative bg-black"><img src="image.png" alt="ballon" class="absolute inset-0 w-full h-full object-cover object-center opacity-50">
   <div class="flex flex-col justify-between container mx-auto relative z-10 p-4">
     <div></div>
     <div class="flex flex-col justify-center items-center"><span class="text-xs text-center text-gray-300">
@@ -20,5 +20,5 @@ exports[`BannerBlog component should render correclty 1`] = `
       min read
       </span></div>
   </div>
-</div>
+</section>
 `;

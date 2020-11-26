@@ -17,21 +17,11 @@
               <PostCard
                 v-for="(article, index) in articles"
                 :key="index"
+                v-bind="article"
                 :first="index === 0"
-                :title="article.title"
-                :description="article.description"
-                :path="article.path"
-                :background-image="article.image"
-                :tags="article.tags"
                 :class="dynamicColors(index)"
               />
-              <PostCard
-                title="placholder"
-                description="placeholder"
-                path="placeholder"
-                background-image="placeholder"
-                :placeholder="true"
-              />
+              <PostCardEmpty />
             </div>
           </div>
         </div>
@@ -42,11 +32,16 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-
 import baffle from 'baffle';
 
-@Component({
-  async asyncData ({ $content, error }): Promise<any> {
+import { greetingByHour } from '@/utils/date/greetingByHour';
+
+import { Context } from '@nuxt/types';
+import { MetaInfo } from 'vue-meta/types';
+
+@Component
+export default class Blog extends Vue {
+  async asyncData ({ $content, error }: Context): Promise<any> {
     const articles = await $content()
       .fetch()
       .catch(() => {
@@ -56,14 +51,14 @@ import baffle from 'baffle';
     return {
       articles,
     };
-  },
-  head () {
+  }
+
+  head (): MetaInfo {
     return {
       title: this.$t('navigation.blog-label') as string,
     };
-  },
-})
-export default class Blog extends Vue {
+  }
+
   get dynamicColors (): (index: number) => string {
     const colors = [
       'hover:bg-teal-100 dark-hover:bg-teal-900',
@@ -79,37 +74,7 @@ export default class Blog extends Vue {
   }
 
   get grettingWord (): string {
-    const now = new Date();
-    const hours = now.getHours();
-
-    const greetings: any = [
-      {
-        greet: 'Good Night!',
-        test: hours >= 21 && hours <= 24,
-      },
-      {
-        greet: 'Good Evening!',
-        test: hours >= 18 && hours <= 20,
-      },
-      {
-        greet: 'Good Afternoon!',
-        test: hours >= 13 && hours <= 17,
-      },
-      {
-        greet: 'Good Noon!',
-        test: hours === 12,
-      },
-      {
-        greet: 'Have a nice day!',
-        test: hours >= 9 && hours <= 11,
-      },
-      {
-        greet: 'Good Morning!',
-        test: hours >= 1 && hours <= 8,
-      },
-    ];
-
-    return greetings.find((el: any) => el.test).greet;
+    return greetingByHour();
   }
 
   shuffleText (): void {

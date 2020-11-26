@@ -1,4 +1,4 @@
-import Slug from '@/pages/_slug.vue';
+import Post from '@/pages/_post.vue';
 import PortalVue from 'portal-vue';
 import VueMeta from 'vue-meta';
 import { createLocalVue, mount } from '@vue/test-utils';
@@ -9,7 +9,7 @@ localVue.use(VueMeta, { keyName: 'head' });
 
 describe('single post page', () => {
   it('should render page correctly', () => {
-    const wrapper = mount(Slug, {
+    const wrapper = mount(Post, {
       localVue,
       stubs: {
         NuxtContent: {
@@ -18,7 +18,7 @@ describe('single post page', () => {
       },
       data: () => ({
         articles: {
-          slug: 'hello-world',
+          Post: 'hello-world',
           title: 'Hello world',
           description: 'Welcome to my first post of the many that I hope to share us ❤️',
           minutes: 2,
@@ -31,7 +31,7 @@ describe('single post page', () => {
   });
 
   it('should display meta-tag title', () => {
-    const wrapper = mount(Slug, {
+    const wrapper = mount(Post, {
       localVue,
       stubs: {
         NuxtContent: {
@@ -40,7 +40,7 @@ describe('single post page', () => {
       },
       data: () => ({
         articles: {
-          slug: 'hello-world',
+          Post: 'hello-world',
           title: 'Hello world',
           description: 'Welcome to my first post of the many that I hope to share us ❤️',
           minutes: 2,

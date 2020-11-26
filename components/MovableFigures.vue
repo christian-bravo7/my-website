@@ -23,6 +23,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
+
 import TriangleSolid from '~/assets/img/triangle-solid.svg?inline';
 import TriangleOutlined from '~/assets/img/triangle-outlined.svg?inline';
 import SquareSolid from '~/assets/img/square-solid.svg?inline';
@@ -37,9 +38,9 @@ import SquareOutlined from '~/assets/img/square-outlined.svg?inline';
   },
 })
 export default class MovableFigures extends Vue {
-  @Prop({ type: String, required: true }) currentRoute!: string;
+  @Prop({ type: String, required: true })
+  currentRoute!: string;
 }
-
 </script>
 
 <style lang="scss" scoped>

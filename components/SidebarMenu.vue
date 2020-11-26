@@ -29,57 +29,45 @@
             </button>
           </section>
           <section class="flex flex-col items-start p-4">
-            <div
-              class="mb-4"
-              @click="closeSidebar"
-              @keydown.enter="closeSidebar"
+            <SidebarLink
+              path="index"
+              :is-only-english="onlyEnglish"
+              @onClick="closeSidebar"
+              @onKeydownEnter="closeSidebar"
             >
-              <NuxtLink
-                class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
-                :to="onlyEnglish ? localePath({ name: 'index' }, 'en') : localePath({ name: 'index' })"
-              >
-                <template v-if="onlyEnglish">
-                  Home
-                </template>
-                <template v-else>
-                  {{ $t('navigation.home-label') }}
-                </template>
-              </NuxtLink>
-            </div>
-            <div
-              class="mb-4"
-              @click="closeSidebar"
-              @keydown.enter="closeSidebar"
+              <template v-if="onlyEnglish">
+                Home
+              </template>
+              <template v-else>
+                {{ $t('navigation.home-label') }}
+              </template>
+            </SidebarLink>
+            <SidebarLink
+              path="me"
+              :is-only-english="onlyEnglish"
+              @onClick="closeSidebar"
+              @onKeydownEnter="closeSidebar"
             >
-              <NuxtLink
-                class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
-                :to="onlyEnglish ? localePath({ name: 'me' }, 'en') : localePath({ name: 'me' })"
-              >
-                <template v-if="onlyEnglish">
-                  About me
-                </template>
-                <template v-else>
-                  {{ $t('navigation.about-me-label') }}
-                </template>
-              </NuxtLink>
-            </div>
-            <div
-              class="mb-4"
-              @click="closeSidebar"
-              @keydown.enter="closeSidebar"
+              <template v-if="onlyEnglish">
+                About me
+              </template>
+              <template v-else>
+                {{ $t('navigation.about-me-label') }}
+              </template>
+            </SidebarLink>
+            <SidebarLink
+              path="blog"
+              :is-only-english="onlyEnglish"
+              @onClick="closeSidebar"
+              @onKeydownEnter="closeSidebar"
             >
-              <NuxtLink
-                class="text-pink-800 dark:text-blue-500 font-bold text-3xl"
-                :to="onlyEnglish ? localePath({ name: 'blog' }, 'en') : localePath({ name: 'blog' })"
-              >
-                <template v-if="onlyEnglish">
-                  Blog
-                </template>
-                <template v-else>
-                  {{ $t('navigation.blog-label') }}
-                </template>
-              </NuxtLink>
-            </div>
+              <template v-if="onlyEnglish">
+                Blog
+              </template>
+              <template v-else>
+                {{ $t('navigation.blog-label') }}
+              </template>
+            </SidebarLink>
           </section>
           <section class="flex justify-between p-4">
             <ThemeSwitch />

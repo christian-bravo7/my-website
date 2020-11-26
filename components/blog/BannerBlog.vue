@@ -1,10 +1,10 @@
 <template>
-  <div
+  <section
     class="flex relative bg-black"
   >
     <img
       class="absolute inset-0 w-full h-full object-cover object-center opacity-50"
-      :src="imageSource"
+      :src="image"
       alt="ballon"
     >
     <div class="flex flex-col justify-between container mx-auto relative z-10 p-4">
@@ -25,22 +25,24 @@
       <div class="flex justify-end">
         <span class="text-gray-50 text-xs">
           <span class="text-xl">
-            {{ minutesToRead }}
+            {{ minutes }}
           </span>
           min read
         </span>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
 
+import { formatDate } from '@/utils/date/formatDate';
+
 @Component
 export default class BannerBlog extends Vue {
   @Prop({ type: String, required: true })
-  readonly imageSource!: string;
+  readonly image!: string;
 
   @Prop({ type: String, required: true })
   readonly createdAt!: string;
@@ -52,34 +54,10 @@ export default class BannerBlog extends Vue {
   readonly description!: string;
 
   @Prop({ type: Number, required: true })
-  readonly minutesToRead!: number;
+  readonly minutes!: number;
 
   get formattedDate (): string {
-    const months: any = {
-      0: 'January',
-      1: 'February',
-      2: 'March',
-      3: 'April',
-      4: 'May',
-      5: 'June',
-      6: 'July',
-      7: 'August',
-      8: 'September',
-      9: 'October',
-      10: 'November',
-      11: 'December',
-    };
-    const ms = Date.parse(this.createdAt);
-    const date = new Date(ms);
-
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const day = date.getDate();
-
-    const fullDate = `${months[month]} ${day}, ${year}`;
-
-    return fullDate;
+    return formatDate(this.createdAt);
   }
 }
-
 </script>

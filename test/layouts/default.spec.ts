@@ -1,6 +1,8 @@
-import Default from '@/layouts/default.vue';
 import { createLocalVue, mount } from '@vue/test-utils';
 import Vuex from 'vuex';
+
+import Default from '@/layouts/default.vue';
+import AppFallbackLoad from '@/components/app/AppFallbackLoad.vue';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
@@ -11,7 +13,7 @@ describe('default layout', () => {
 
   beforeEach(() => {
     getters = {
-      isReady: jest.fn(() => false),
+      'guest/isReady': jest.fn(() => false),
     };
     store = new Vuex.Store({
       getters,
@@ -22,6 +24,9 @@ describe('default layout', () => {
     const wrapper = mount(Default, {
       store,
       localVue,
+      components: {
+        AppFallbackLoad,
+      },
     });
 
     expect(wrapper.html()).toMatchSnapshot();

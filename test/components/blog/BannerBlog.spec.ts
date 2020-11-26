@@ -5,11 +5,11 @@ describe('BannerBlog component', () => {
   it('should render correclty', () => {
     const wrapper = mount(BannerBlog, {
       propsData: {
-        imageSource: 'image.png',
+        image: 'image.png',
         createdAt: '2020-10-24T17:53:36.488Z',
         title: 'my new post',
         description: 'welcome to my new post',
-        minutesToRead: 2,
+        minutes: 2,
       },
     });
 
@@ -19,11 +19,11 @@ describe('BannerBlog component', () => {
   it('should format created date', () => {
     const wrapper = mount(BannerBlog, {
       propsData: {
-        imageSource: 'image.png',
+        image: 'image.png',
         createdAt: '2020-10-24T17:53:36.488Z',
         title: 'my new post',
         description: 'welcome to my new post',
-        minutesToRead: 2,
+        minutes: 2,
       },
     });
 

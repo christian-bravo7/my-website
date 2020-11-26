@@ -1,8 +1,12 @@
 import Vuex from 'vuex';
-import Post from '@/layouts/post.vue';
+import PortalVue from 'portal-vue';
 import { createLocalVue, mount } from '@vue/test-utils';
 
+import Post from '@/layouts/post.vue';
+import AppFallbackLoad from '@/components/app/AppFallbackLoad.vue';
+
 const localVue = createLocalVue();
+localVue.use(PortalVue);
 localVue.use(Vuex);
 
 describe('post layout', () => {
@@ -11,7 +15,7 @@ describe('post layout', () => {
 
   beforeEach(() => {
     getters = {
-      isReady: jest.fn(() => false),
+      'guest/isReady': jest.fn(() => false),
     };
     store = new Vuex.Store({
       getters,
@@ -22,6 +26,17 @@ describe('post layout', () => {
     const wrapper = mount(Post, {
       store,
       localVue,
+      components: {
+        AppFallbackLoad,
+      },
+      stubs: {
+        ClientOnly: {
+          template: '<div></div>',
+        },
+        Nuxt: {
+          template: '<div></div>',
+        },
+      },
     });
 
     expect(wrapper.html()).toMatchSnapshot();

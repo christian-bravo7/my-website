@@ -1,13 +1,7 @@
 <template>
   <section>
     <Portal to="blog-banner">
-      <BannerBlog
-        :image-source="imageSource"
-        :title="title"
-        :created-at="createdAt"
-        :description="description"
-        :minutes-to-read="minutesToRead"
-      />
+      <BannerBlog v-bind="bannerInfo" />
     </Portal>
     <div>
       <div class="container mx-auto py-20 px-4">
@@ -23,51 +17,44 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
+import { IContentDocument } from '@nuxt/content/types/content';
+import { Context } from '@nuxt/types';
+import { MetaInfo } from 'vue-meta/types';
+
 @Component({
-  head () {
+  layout: 'post',
+})
+export default class Blog extends Vue {
+  private articles!: IContentDocument;
+
+  head (): MetaInfo {
     return {
-      title: this.title,
+      title: this.bannerInfo.title,
     };
-  },
-  async asyncData ({ $content, error, params }): Promise<any> {
-    const articles = await $content(params.slug)
+  }
+
+  async asyncData ({ $content, error, params }: Context): Promise<{ articles: IContentDocument }> {
+    const articles = await $content(params.post)
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' });
       });
 
-    console.log(articles);
+    return {
+      articles: articles as IContentDocument,
+    };
+  }
+
+  get bannerInfo (): any {
+    const { title, description, createdAt, image, minutes } = this.articles;
 
     return {
-      articles,
+      title,
+      description,
+      createdAt,
+      image,
+      minutes,
     };
-  },
-  layout: 'post',
-})
-export default class Blog extends Vue {
-  get title (): string {
-    // @ts-ignore
-    return this.articles.title;
-  }
-
-  get description (): string {
-    // @ts-ignore
-    return this.articles.description;
-  }
-
-  get createdAt (): string {
-    // @ts-ignore
-    return this.articles.createdAt;
-  }
-
-  get imageSource (): string {
-    // @ts-ignore
-    return this.articles.image;
-  }
-
-  get minutesToRead (): string {
-    // @ts-ignore
-    return this.articles.minutes;
   }
 }
 </script>
