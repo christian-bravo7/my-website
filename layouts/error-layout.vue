@@ -1,7 +1,7 @@
 <template>
   <main class="min-h-screen flex items-center p-4 bg-gray-50 dark:bg-blue-600">
     <Nuxt class="z-10" />
-    <ErrorMovableFigures />
+    <ErrorFigures />
   </main>
 </template>
 

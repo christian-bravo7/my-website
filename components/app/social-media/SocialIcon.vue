@@ -2,7 +2,7 @@
   <a
     target="_blank"
     :href="link"
-    class="w-10 h-10 bg-transparent dark:text-gray-50 dark-hover:bg-blue-500 dark-hover:border-blue-500 text-gray-900 hover:bg-pink-800 hover:text-gray-50 hover:border-pink-800 footer-social-icon rounded-full transition-colors duration-200"
+    class="w-10 h-10 bg-transparent dark:text-gray-50 dark-hover:bg-blue-500 dark-hover:border-blue-500 text-gray-900 hover:bg-pink-800 hover:text-gray-50 hover:border-pink-800 social-icon rounded-full transition-colors duration-200"
   >
     <slot />
   </a>
@@ -12,7 +12,7 @@
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
 
 @Component
-export default class FooterSocialIcon extends Vue {
+export default class SocialIcon extends Vue {
   @Prop({ type: String, required: true })
   readonly link!: string;
 }
@@ -22,7 +22,7 @@ export default class FooterSocialIcon extends Vue {
 $light-color: #C5075D;
 $dark-color: #5171FF;
 
-.footer-social-icon {
+.social-icon {
   padding: rem(10);
 
   &:hover {
@@ -35,7 +35,7 @@ $dark-color: #5171FF;
 }
 
 html.dark-mode {
-  .footer-social-icon {
+  .social-icon {
     &:hover {
       box-shadow: 0 0 0 5px rgba($dark-color, 0.2);
     }

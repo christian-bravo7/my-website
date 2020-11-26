@@ -5,38 +5,12 @@
         {{ $t('me.skills-label') }}
       </h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        <SkillIcon name="HTML5">
-          <HtmlIcon />
-        </SkillIcon>
-        <SkillIcon name="CSS3">
-          <CssIcon />
-        </SkillIcon>
-        <SkillIcon name="SASS">
-          <SassIcon />
-        </SkillIcon>
-        <SkillIcon name="Nuxt.js">
-          <NuxtIcon />
-        </SkillIcon>
-        <SkillIcon name="React.js">
-          <ReactIcon />
-        </SkillIcon>
-        <SkillIcon name="Vue.js">
-          <VueIcon />
-        </SkillIcon>
-        <SkillIcon name="Typescript">
-          <TypescriptIcon />
-        </SkillIcon>
-        <SkillIcon name="Javascript">
-          <JavascriptIcon />
-        </SkillIcon>
-        <SkillIcon name="Node.js">
-          <NodeIcon />
-        </SkillIcon>
-        <SkillIcon name="Git">
-          <GitIcon />
-        </SkillIcon>
-        <SkillIcon name="Jest">
-          <JestIcon />
+        <SkillIcon
+          v-for="({ name, component }, index) in skills"
+          :key="index"
+          :name="name"
+        >
+          <Component :is="component" />
         </SkillIcon>
       </div>
     </div>
@@ -75,6 +49,20 @@ import HtmlIcon from '~/assets/img/html5.svg?inline';
     NodeIcon,
   },
 })
-export default class AboutMeSkills extends Vue {}
-
+export default class AboutMeSkills extends Vue {
+  skills: Array<{ name: string, component: any }> = [
+    { name: 'CSS3', component: CssIcon },
+    { name: 'Javascript', component: JavascriptIcon },
+    { name: 'NuxtJS', component: NuxtIcon },
+    { name: 'VueJS', component: VueIcon },
+    { name: 'ReactJS', component: ReactIcon },
+    { name: 'Typescript', component: TypescriptIcon },
+    { name: 'GraphQL', component: GraphqlIcon },
+    { name: 'Git', component: GitIcon },
+    { name: 'SASS', component: SassIcon },
+    { name: 'Jest', component: JestIcon },
+    { name: 'HTML5', component: HtmlIcon },
+    { name: 'NodeJS', component: NodeIcon },
+  ]
+}
 </script>

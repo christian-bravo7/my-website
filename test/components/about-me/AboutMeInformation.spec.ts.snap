@@ -11,7 +11,7 @@ exports[`AboutMeInformation component should render correctly 1`] = `
         me.about-me-description
       </p>
     </div>
-    <div class="flex items-center justify-center text-pink-800 dark:text-blue-500"><svg class="w w-11/12 fill-current"></svg></div>
+    <div class="flex items-center justify-center text-pink-800 dark:text-blue-500"><svg class="w-11/12 fill-current"></svg></div>
   </div>
 </section>
 `;

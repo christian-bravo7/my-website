@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="flex items-center justify-center text-pink-800 dark:text-blue-500">
-        <RemolinoLogo class="w w-11/12 fill-current" />
+        <RemolinoLogo class="w-11/12 fill-current" />
       </div>
     </div>
   </section>

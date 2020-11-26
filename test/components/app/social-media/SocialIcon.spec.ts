@@ -1,9 +1,10 @@
-import FooterSocialIcon from '@/components/app/FooterSocialIcon.vue';
 import { mount } from '@vue/test-utils';
 
-describe('FooterSocialIcon component', () => {
+import SocialIcon from '@/components/app/social-media/SocialIcon.vue';
+
+describe('SocialIcon component', () => {
   it('should render correclty', () => {
-    const wrapper = mount(FooterSocialIcon, {
+    const wrapper = mount(SocialIcon, {
       slots: {
         default: '<svg></svg>',
       },
@@ -16,7 +17,7 @@ describe('FooterSocialIcon component', () => {
   });
 
   it('should display slot content', () => {
-    const wrapper = mount(FooterSocialIcon, {
+    const wrapper = mount(SocialIcon, {
       slots: {
         default: 'I am slot content',
       },
@@ -25,7 +26,7 @@ describe('FooterSocialIcon component', () => {
       },
     });
 
-    const slotContent = wrapper.find('.footer-social-icon');
+    const slotContent = wrapper.find('.social-icon');
     expect(slotContent.text()).toBe('I am slot content');
   });
 });

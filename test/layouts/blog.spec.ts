@@ -1,10 +1,10 @@
 import Vuex from 'vuex';
-import Blog from '@/layouts/blog.vue';
 import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils';
 
+import Blog from '@/layouts/blog.vue';
 import AppFallbackLoad from '@/components/app/AppFallbackLoad.vue';
-import NavigationBar from '@/components/app/NavigationBar.vue';
-import SidebarMenu from '@/components/SidebarMenu.vue';
+import NavigationBar from '@/components/app/navigation/NavigationBar.vue';
+import SidebarMenu from '@/components/app/navigation/SidebarMenu.vue';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);

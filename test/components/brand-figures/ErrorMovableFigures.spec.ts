@@ -1,15 +1,15 @@
-import ErrorMovableFigures from '@/components/app/ErrorMovableFigures.vue';
+import ErrorFigures from '@/components/brand-figures/ErrorFigures.vue';
 import { mount } from '@vue/test-utils';
 
-describe('ErrorMovableFigures component', () => {
+describe('ErrorFigures component', () => {
   it('should render correclty', () => {
-    const wrapper = mount(ErrorMovableFigures);
+    const wrapper = mount(ErrorFigures);
 
     expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('should display 10 question icons', () => {
-    const wrapper = mount(ErrorMovableFigures);
+    const wrapper = mount(ErrorFigures);
 
     const questionIcons = wrapper.findAll('figure');
 

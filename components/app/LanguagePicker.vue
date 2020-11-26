@@ -34,7 +34,9 @@ import { Component, Emit, Prop, Vue } from 'nuxt-property-decorator';
 
 @Component
 export default class LanguagePicker extends Vue {
-  @Prop({ type: Boolean, default: false }) readonly abbreviation!: boolean;
+  @Prop({ type: Boolean, default: false })
+  readonly abbreviation!: boolean;
+
   language: string = '';
 
   get currentLanguage (): string {
@@ -45,20 +47,14 @@ export default class LanguagePicker extends Vue {
     this.language = language;
   }
 
-  get availableLanguages (): any {
-    return [
-      { code: 'es', name: 'Español' },
-      { code: 'en', name: 'English' },
-      { code: 'fr', name: 'Français' },
-    ];
-  }
-
-  changeLanguage (): void {
-    this.$router.push(this.switchLocalePath(this.currentLanguage));
-    this.languageChanged();
+  get availableLanguages (): Array<any> {
+    // @ts-ignore
+    return this.$i18n.locales;
   }
 
   @Emit('language-changed')
-  languageChanged (): void {}
+  changeLanguage (): void {
+    this.$router.push(this.switchLocalePath(this.currentLanguage));
+  }
 }
 </script>

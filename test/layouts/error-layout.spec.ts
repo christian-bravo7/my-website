@@ -1,13 +1,13 @@
 import { mount } from '@vue/test-utils';
 
 import ErrorLayout from '@/layouts/error-layout.vue';
-import ErrorMovableFigures from '@/components/app/ErrorMovableFigures.vue';
+import ErrorFigures from '@/components/brand-figures/ErrorFigures.vue';
 
 describe('error layout', () => {
   it('should render correclty', () => {
     const wrapper = mount(ErrorLayout, {
       components: {
-        ErrorMovableFigures,
+        ErrorFigures,
       },
       stubs: {
         Nuxt: {

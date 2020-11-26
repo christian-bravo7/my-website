@@ -12,6 +12,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
+
 import QuestionIcon from '~/assets/img/question-icon.svg?inline';
 
 @Component({
@@ -19,7 +20,7 @@ import QuestionIcon from '~/assets/img/question-icon.svg?inline';
     QuestionIcon,
   },
 })
-export default class ErrorMovableFigures extends Vue {}
+export default class ErrorFigures extends Vue {}
 </script>
 
 <style lang="scss" scoped>

@@ -4,20 +4,13 @@
     :class="{ 'bg-black bg-opacity-25': onlyWhite}"
   >
     <div class="grid grid-cols-2 md:grid-cols-5 navbar-grid">
-      <NuxtLink
-        class="flex w-12 h-12 text-black dark:text-white col-span-1"
-        :class="{ 'only-white': onlyWhite }"
-        :to="localePath({ name: 'index' })"
-      >
-        <SiteLogo class="w-full h-full fill-current" />
-      </NuxtLink>
+      <AppLogo :class="{ 'only-white': onlyWhite }" />
       <div class="hidden md:flex items-center justify-center col-span-3">
         <div class="flex content-center">
-          <NuxtLink
-            class="text-center text-pink-800 dark:text-blue-500 mx-8"
+          <NavigationLink
             :class="{ 'only-white': onlyWhite }"
-            exact-active-class="font-bold"
-            :to="onlyEnglish ? localePath({ name: 'index' }, 'en') : localePath({ name: 'index' })"
+            :is-only-english="onlyEnglish"
+            path="index"
           >
             <template v-if="onlyEnglish">
               Home
@@ -25,12 +18,11 @@
             <template v-else>
               {{ $t('navigation.home-label') }}
             </template>
-          </NuxtLink>
-          <NuxtLink
-            class="text-center text-pink-800 dark:text-blue-500 mx-8"
+          </NavigationLink>
+          <NavigationLink
             :class="{ 'only-white': onlyWhite }"
-            exact-active-class="font-bold"
-            :to="onlyEnglish ? localePath({ name: 'me' }, 'en') : localePath({ name: 'me' })"
+            :is-only-english="onlyEnglish"
+            path="me"
           >
             <template v-if="onlyEnglish">
               About me
@@ -38,12 +30,11 @@
             <template v-else>
               {{ $t('navigation.about-me-label') }}
             </template>
-          </NuxtLink>
-          <NuxtLink
-            class="text-center text-pink-800 dark:text-blue-500 mx-8"
+          </NavigationLink>
+          <NavigationLink
             :class="{ 'only-white': onlyWhite }"
-            exact-active-class="font-bold"
-            :to="localePath({ name: 'blog' }, 'en')"
+            :is-only-english="onlyEnglish"
+            path="blog"
           >
             <template v-if="onlyEnglish">
               Blog
@@ -51,7 +42,7 @@
             <template v-else>
               {{ $t('navigation.blog-label') }}
             </template>
-          </NuxtLink>
+          </NavigationLink>
         </div>
       </div>
       <div class="items-center justify-end col-span-1 hidden md:flex">
@@ -59,7 +50,7 @@
           v-if="hasLanguagePicker"
           class="mr-8"
         >
-          <LanguagePicker abbreviation />
+          <LanguagePicker :abbreviation="true" />
         </div>
         <div class="flex justify-center items-center">
           <ThemeSwitch />
@@ -83,13 +74,7 @@
 <script lang="ts">
 import { Vue, Component, Emit, Prop } from 'nuxt-property-decorator';
 
-import SiteLogo from '~/assets/img/logo.svg?inline';
-
-@Component({
-  components: {
-    SiteLogo,
-  },
-})
+@Component
 export default class NavigationBar extends Vue {
   @Prop({ type: Boolean, default: true })
   readonly hasLanguagePicker!: boolean;
@@ -103,20 +88,9 @@ export default class NavigationBar extends Vue {
   @Emit('openSidebar')
   openSidebar (): void {}
 }
-
 </script>
 
 <style scoped>
-/* stylelint-disable */
-
-.navbar.hide {
-  top: -100px;
-}
-
-/* .navbar-grid {
-  @apply grid grid-cols-5;
-} */
-
 .only-white {
   @apply text-white !important;
 }
