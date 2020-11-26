@@ -23,12 +23,10 @@ import { Component, Vue } from 'nuxt-property-decorator';
 @Component
 export default class ThemeSwitch extends Vue {
   get hasDarkTheme (): boolean {
-    // @ts-ignore
     return this.$colorMode.value === 'dark';
   }
 
   changeTheme (): void {
-    // @ts-ignore
     this.$colorMode.preference = this.hasDarkTheme ? 'light' : 'dark';
   }
 }
