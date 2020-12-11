@@ -59,6 +59,7 @@
       <div class="flex md:hidden justify-end items-center">
         <button
           class="text-gray-900 dark:text-gray-50"
+          :class="{ 'only-white': onlyWhite }"
           @click="openSidebar"
           @keydown.enter="openSidebar"
         >

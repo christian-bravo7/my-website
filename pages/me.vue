@@ -22,23 +22,5 @@ import { Vue, Component } from 'nuxt-property-decorator';
     };
   },
 })
-export default class Me extends Vue {
-  mounted (): void {
-    this.$scrollreveal.reveal('.prueba', {
-      distance: '1000px',
-      opacity: 0,
-      viewFactor: 0.1,
-    });
-  }
-}
+export default class Me extends Vue {}
 </script>
-
-<style lang="scss" scoped>
-.prueba {
-  margin-top: -90px;
-
-  &__svg {
-    margin-bottom: -85px;
-  }
-}
-</style>

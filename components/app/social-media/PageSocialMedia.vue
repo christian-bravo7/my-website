@@ -1,5 +1,5 @@
 <template>
-  <section class="fixed z-50 left-0 grid gap-3 grid-cols-1 page-social-icons">
+  <section class="fixed z-40 left-0 grid gap-3 grid-cols-1 page-social-icons">
     <SocialIcon
       v-for="({ link, component }, index) in socialLinks"
       :key="index"
@@ -37,8 +37,17 @@ export default class AppSocialIcons extends Vue {
 </script>
 
 <style lang="scss" scoped>
+/* stylelint-disable */
+
 .page-social-icons {
-  bottom: rem(16);
-  left: rem(16);
+  bottom: rem(4);
+  left: rem(4);
+}
+
+@screen md {
+  .page-social-icons {
+    bottom: rem(16);
+    left: rem(16);
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <p class="z-50 text-gray-400 dark:text-gray-400 text-xs page-author-credits select-none">
+  <p class="hidden md:block z-50 text-gray-400 dark:text-gray-400 text-xs page-author-credits select-none">
     &copy; 2021 CHRISTIAN BRAVO
   </p>
 </template>

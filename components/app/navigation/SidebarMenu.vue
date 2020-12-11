@@ -6,7 +6,7 @@
     @after-enter="openSidebar"
   >
     <div
-      class="fixed inset-0 z-30 w-full h-full bg-transparent overlay"
+      class="fixed inset-0 z-50 w-full h-full bg-transparent overlay"
       @click.self="closeSidebar"
     >
       <transition

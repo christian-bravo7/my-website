@@ -2,10 +2,17 @@
   <main class="bg-gray-50 dark:bg-blue-600">
     <AppFallbackLoad v-show="!isReady" />
     <template v-show="isReady">
+      <SidebarMenu
+        v-show="isSidebarActive"
+        :only-english="true"
+        :has-language-picker="false"
+        @closeSidebar="closeSidebar"
+      />
       <ClientOnly>
         <NavigationBar
           :only-white="true"
           :has-language-picker="false"
+          @openSidebar="openSidebar"
         />
       </ClientOnly>
       <header>
@@ -44,7 +51,17 @@ import { guestStore } from '@/store';
     }),
   },
 })
-export default class BlogLayout extends Vue {}
+export default class BlogLayout extends Vue {
+  isSidebarActive: boolean = false;
+
+  openSidebar (): void {
+    this.isSidebarActive = true;
+  }
+
+  closeSidebar (): void {
+    this.isSidebarActive = false;
+  }
+}
 </script>
 
 <style lang="scss" scoped>
