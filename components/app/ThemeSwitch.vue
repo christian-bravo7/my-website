@@ -12,7 +12,7 @@
       for="theme-switch"
     >
       <span class="absolute block w-full h-full bg-gray-300 rounded-xl border border-gray-400 dark:border-blue-500 theme-switch__bar" />
-      <span class="absolute flex items-center justify-center w-5 h-5 bg-gray-50 rounded-full border border-pink-800 dark:border-blue-500 theme-switch__circle" />
+      <span class="absolute flex items-center justify-center w-5 h-5 bg-gray-50 rounded-full border border-pink-500 dark:border-blue-500 theme-switch__circle" />
     </label>
   </div>
 </template>

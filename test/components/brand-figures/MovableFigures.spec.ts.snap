@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MovableFigures component should render correctly 1`] = `
-<div class="absolute w-full h-full pointer-events-none">
-  <figure class="absolute w-6 h-6 text-pink-800 dark:text-blue-700 figure figure--1 about"><svg class="fill-current w-full h-full opacity-50 md:opacity-100"></svg></figure>
-  <figure class="absolute w-6 h-6 primary-text figure figure--2 about"><svg class="fill-current w-full h-full opacity-50 md:opacity-100"></svg></figure>
-  <figure class="absolute w-6 h-6 primary-text figure figure--3 about"><svg class="fill-current w-full h-full opacity-50 md:opacity-100"></svg></figure>
+<div class="absolute overflow-hidden w-full h-full pointer-events-none">
+  <figure class="absolute w-48 h-48 rounded-full figure figure--1 about"></figure>
+  <figure class="absolute w-32 h-32 rounded-full figure figure--2 about"></figure>
+  <figure class="absolute w-20 h-20 rounded-full figure figure--3 about"></figure>
 </div>
 `;

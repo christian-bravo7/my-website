@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-gray-50 dark:bg-blue-600">
+  <main class="bg-gray-50 dark:bg-blue-800">
     <AppFallbackLoad v-if="!isReady" />
     <template v-else>
       <SidebarMenu
@@ -16,7 +16,6 @@
         />
       </ClientOnly>
       <PageSocialMedia />
-      <PageAuthorCredits />
       <header>
         <MovableFigures :current-route="currentRoute" />
         <PortalTarget

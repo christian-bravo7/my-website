@@ -11,6 +11,7 @@ describe('HomeBanner component', () => {
       },
       mocks: {
         $t: jest.fn(msg => msg),
+        $md: jest.fn(msg => msg),
       },
     });
 
@@ -24,6 +25,7 @@ describe('HomeBanner component', () => {
       },
       mocks: {
         $t: jest.fn(msg => msg),
+        $md: jest.fn(msg => msg),
       },
     });
 

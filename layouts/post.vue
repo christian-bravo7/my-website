@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-gray-50 dark:bg-blue-600">
+  <main class="bg-gray-50 dark:bg-blue-800">
     <AppFallbackLoad v-show="!isReady" />
     <template v-show="isReady">
       <SidebarMenu

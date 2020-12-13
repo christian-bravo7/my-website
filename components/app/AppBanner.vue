@@ -7,7 +7,7 @@
       <div class="relative">
         <h2
           id="secondary"
-          class="absolute font-bold text-center text-8xl sm:text-10xl md:text-12xl leading-none select-none text-gray-200 dark:text-blue-700 app-banner__secondary-text"
+          class="absolute font-bold text-center text-8xl sm:text-10xl md:text-12xl leading-none select-none text-gray-200 dark:text-blue-900 app-banner__secondary-text"
         >
           <slot name="secondary-text" />
         </h2>
@@ -68,4 +68,6 @@ export default class AppBanner extends Vue {
     opacity: 1;
   }
 }
+
+// linear-gradient(132deg, #8ec5fc9c 0%, #e0c3fc99 41%, #ffffff 100%)
 </style>

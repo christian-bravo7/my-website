@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`blog layout should render correclty 1`] = `
-<main class="flex flex-col bg-gray-100 dark:bg-blue-600 min-h-screen">
-  <div class="fixed inset-0 z-50 flex justify-center items-center bg-white text-pink-800 dark:bg-blue-600 dark:text-blue-500 text-12xl"><svg class="fill-current pulse-effect"></svg></div>
+<main class="flex flex-col bg-gray-100 dark:bg-blue-800 min-h-screen">
+  <div class="fixed inset-0 z-50 flex justify-center items-center bg-white text-pink-500 dark:bg-blue-800 dark:text-blue-500 text-12xl"><svg class="fill-current pulse-effect"></svg></div>
   <!---->
 </main>
 `;

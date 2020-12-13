@@ -1,8 +1,8 @@
 <template>
-  <section class="min-h-screen flex items-center py-8 px-4 bg-gray-200 dark:bg-blue-700">
+  <section class="min-h-screen flex items-center py-8 px-4 bg-gray-200 dark:bg-blue-900">
     <div class="grid grid-cols-1 md:grid-cols-2 text-black dark:text-white container mx-auto">
       <div class="relative is-medium">
-        <h1 class="w-full primary-text font-bold text-6xl sm:text-8xl md:text-10xl leading-none">
+        <h1 class="w-full font-bold text-6xl sm:text-8xl md:text-10xl leading-none about-me-information__title">
           {{ $t('me.i-label') }}
         </h1>
         <p class="relative z-10 text-base md:text-lg leading-loose">
@@ -28,3 +28,19 @@ import RemolinoLogo from '~/assets/img/remolino.svg?inline';
 })
 export default class AboutMeInformation extends Vue {}
 </script>
+
+<style lang="scss" scoped>
+.about-me-information {
+  &__title {
+    @extend .gradient-four;
+  }
+}
+
+html.dark-mode {
+  .about-me-information {
+    &__title {
+      @extend .gradient-three;
+    }
+  }
+}
+</style>

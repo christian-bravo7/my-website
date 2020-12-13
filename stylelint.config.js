@@ -9,7 +9,7 @@ module.exports = {
     'max-nesting-depth': 5,
     'color-hex-case': 'upper',
     'at-rule-no-unknown': [true, {
-      ignoreAtRules: ['function', 'if', 'each', 'include', 'mixin', 'return'],
+      ignoreAtRules: ['function', 'if', 'each', 'include', 'mixin', 'return', 'extend'],
     }],
   },
 };

@@ -3,7 +3,7 @@
     v-if="inverse"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1440 320"
-    class="text-gray-200 dark:text-blue-700"
+    class="text-gray-200 dark:text-blue-900"
   ><path
     fill="currentColor"
     fill-opacity="1"
@@ -13,7 +13,7 @@
     v-else
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1440 320"
-    class="text-gray-200 dark:text-blue-700"
+    class="text-gray-200 dark:text-blue-900"
   ><path
     fill="currentColor"
     fill-opacity="1"

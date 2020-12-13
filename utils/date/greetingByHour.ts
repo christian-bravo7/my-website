@@ -21,7 +21,7 @@ const greetings: Array<{ greet: string, test: (hours: number) => boolean }> = [
   },
   {
     greet: 'Good Morning!',
-    test: (hours: number): boolean => hours >= 1 && hours <= 8,
+    test: (hours: number): boolean => hours >= 0 && hours <= 8,
   },
 ];
 

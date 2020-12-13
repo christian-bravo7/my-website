@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed inset-0 z-50 flex justify-center items-center bg-white text-pink-800 dark:bg-blue-600 dark:text-blue-500 text-12xl"
+    class="fixed inset-0 z-50 flex justify-center items-center bg-white text-pink-500 dark:bg-blue-800 dark:text-blue-500 text-12xl"
   >
     <SiteLogo class="fill-current pulse-effect" />
   </div>

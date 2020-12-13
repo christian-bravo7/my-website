@@ -44,6 +44,6 @@ describe('AboutMeSkills component', () => {
 
     const icons = wrapper.findAllComponents(SkillIcon);
 
-    expect(icons.length).toBe(12);
+    expect(icons.length).toBe(11);
   });
 });

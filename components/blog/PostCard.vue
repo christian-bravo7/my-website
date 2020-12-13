@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative bg-white dark:bg-blue-700 bg-opacity-75 dark:bg-opacity-75 hover:bg hover:bg-opacity-100 dark-hover:bg-opacity-100 rounded-lg shadow-md transition-colors duration-200"
+    class="relative bg-white dark:bg-blue-900 bg-opacity-75 dark:bg-opacity-75 hover:bg hover:bg-opacity-100 dark-hover:bg-opacity-100 rounded-lg shadow-md transition-colors duration-200"
   >
     <div class="absolute inset-0 p-2 flex flex-col">
       <figure class="relative flex-1 overflow-hidden rounded-lg">
@@ -19,7 +19,7 @@
             <span
               v-for="(tag, index) in tags"
               :key="index"
-              class="py-1 px-2 text-xs font-bold ml-2 select-none capitalize rounded-full bg-pink-800 text-gray-50"
+              class="py-1 px-2 text-xs font-bold ml-2 select-none capitalize rounded-full bg-pink-500 text-gray-50"
             >
               {{ tag }}
             </span>
@@ -70,10 +70,9 @@ export default class PostCard extends Vue {
 
 <style lang="scss" scoped>
 .line-clamp {
-  display: -webkit-box;
-  overflow: hidden;
+  display: flex;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .post-image {

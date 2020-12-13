@@ -3,9 +3,10 @@ body {
 }
 
 .primary-text {
-  @apply text-pink-800;
+  @apply text-pink-500;
 }
 
+/* stylelint-disable selector-no-qualifying-type */
 html.dark-mode {
   .primary-text {
     @apply text-blue-500;

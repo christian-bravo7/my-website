@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col group items-center justify-center w-full p-2 skill-icon hover:shadow-lg transition-shadow duration-150">
-    <span class="w-16 primary-text">
+  <div class="flex flex-col group items-center justify-center p-2 rounded-xl skill-icon hover:shadow-lg transition-shadow duration-150">
+    <span class="w-16">
       <slot name="default" />
     </span>
-    <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-800 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
+    <span class="mt-2 text-gray-300 dark:text-blue-700 group-hover:text-pink-500 dark-group-hover:text-blue-500 text-base md:text-lg font-bold transition-colors duration-150">
       {{ name }}
     </span>
   </div>
@@ -21,6 +21,8 @@ export default class SkillIcon extends Vue {
 
 <style lang="scss" scoped>
 .skill-icon {
+  min-width: 140px;
+
   svg {
     @apply fill-current;
   }

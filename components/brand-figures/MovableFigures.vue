@@ -1,42 +1,24 @@
 <template>
-  <div class="absolute w-full h-full pointer-events-none">
+  <div class="absolute overflow-hidden w-full h-full pointer-events-none">
     <figure
-      class="absolute w-6 h-6 text-pink-800 dark:text-blue-700 figure figure--1"
+      class="absolute w-48 h-48 rounded-full figure figure--1"
       :class="currentRoute"
-    >
-      <TriangleSolid class="fill-current w-full h-full opacity-50 md:opacity-100" />
-    </figure>
+    />
     <figure
-      class="absolute w-6 h-6 primary-text figure figure--2"
+      class="absolute w-32 h-32 rounded-full figure figure--2"
       :class="currentRoute"
-    >
-      <TriangleOutlined class="fill-current w-full h-full opacity-50 md:opacity-100" />
-    </figure>
+    />
     <figure
-      class="absolute w-6 h-6 primary-text figure figure--3"
+      class="absolute w-20 h-20 rounded-full figure figure--3"
       :class="currentRoute"
-    >
-      <SquareOutlined class="fill-current w-full h-full opacity-50 md:opacity-100" />
-    </figure>
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
 
-import TriangleSolid from '~/assets/img/triangle-solid.svg?inline';
-import TriangleOutlined from '~/assets/img/triangle-outlined.svg?inline';
-import SquareSolid from '~/assets/img/square-solid.svg?inline';
-import SquareOutlined from '~/assets/img/square-outlined.svg?inline';
-
-@Component({
-  components: {
-    TriangleSolid,
-    TriangleOutlined,
-    SquareSolid,
-    SquareOutlined,
-  },
-})
+@Component
 export default class MovableFigures extends Vue {
   @Prop({ type: String, required: true })
   currentRoute!: string;
@@ -44,6 +26,19 @@ export default class MovableFigures extends Vue {
 </script>
 
 <style lang="scss" scoped>
+
+.figure--1 {
+  background: linear-gradient(210deg, #FFFFFF1A 0%, #FE65651A 58%, #A40EB033 100%);
+}
+
+.figure--2 {
+  background: linear-gradient(210deg, #FFFFFF1A 0%, #A8EDE938 58%, #FED6E385 100%);
+}
+
+.figure--3 {
+  background: linear-gradient(210deg, #FFFFFF1A 0%, #C7EAFD3F 58%, #E8198B28 100%);
+}
+
 .figure {
   $self: &;
 
@@ -51,56 +46,77 @@ export default class MovableFigures extends Vue {
 
   &.index {
     &#{$self}--1 {
-      top: 25%;
-      left: 80%;
-      transform: rotate(35deg);
+      top: 30%;
+      left: 92%;
     }
     &#{$self}--2 {
       top: 20%;
-      left: 20%;
-      transform: rotate(-35deg);
+      left: 10%;
     }
     &#{$self}--3 {
       top: 80%;
       left: 60%;
-      transform: rotate(100deg);
     }
   }
 
   &.me {
     &#{$self}--1 {
-      top: 25%;
-      left: 50%;
-      transform: rotate(0deg);
+      top: 20%;
+      left: 80%;
     }
     &#{$self}--2 {
-      top: 80%;
-      left: 30%;
-      transform: rotate(-100deg);
+      top: 50%;
+      left: 15%;
     }
     &#{$self}--3 {
-      top: 50%;
-      left: 75%;
-      transform: rotate(-80deg);
+      top: 90%;
+      left: 70%;
     }
   }
 
   &.blog {
     &#{$self}--1 {
-      top: 35%;
-      left: 10%;
-      transform: rotate(0deg);
+      top: 10%;
+      left: 88%;
     }
     &#{$self}--2 {
-      top: 90%;
-      left: 50%;
-      transform: rotate(-100deg);
+      top: 60%;
+      left: 5%;
     }
     &#{$self}--3 {
-      top: 20%;
-      left: 85%;
-      transform: rotate(-80deg);
+      top: 94%;
+      left: 50%;
     }
+  }
+}
+
+html.dark-mode {
+  .figure {
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      width: 97%;
+      height: 97%;
+      background: theme('colors.blue.800');
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+    }
+  }
+
+  .figure--1 {
+    background: linear-gradient(210deg, rgba(255, 255, 255, 0.46) 0%, rgba(254, 101, 101, 0.52) 58%, rgba(164, 14, 176, 0.86) 100%);
+  }
+
+  .figure--2 {
+    background: linear-gradient(210deg, rgba(255, 255, 255, 0.62) 0%, rgba(168, 237, 233, 0.27) 58%, rgba(255, 71, 131, 0.6) 100%);
+  }
+
+  .figure--3 {
+    background: linear-gradient(210deg, rgba(255, 255, 255, 0.44) 0%, rgba(199, 234, 253, 0.17) 58%, rgba(232, 25, 139, 0.86) 100%);
   }
 }
 </style>

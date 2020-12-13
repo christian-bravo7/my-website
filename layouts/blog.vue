@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col bg-gray-100 dark:bg-blue-600 min-h-screen">
+  <main class="flex flex-col bg-gray-100 dark:bg-blue-800 min-h-screen">
     <AppFallbackLoad v-show="!isReady" />
     <template v-if="isReady">
       <SidebarMenu

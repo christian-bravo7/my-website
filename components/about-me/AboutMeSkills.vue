@@ -1,10 +1,10 @@
 <template>
   <section class="min-h-screen py-20 px-4">
     <div class="container mx-auto flex flex-col">
-      <h2 class="text-center mb-8 text-6xl sm:text-8xl md:text-10xl break-all font-bold text-gray-300 dark:text-blue-700">
+      <h2 class="text-center mb-8 text-6xl sm:text-8xl md:text-10xl break-all font-bold about-me-skills__title">
         {{ $t('me.skills-label') }}
       </h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 justify-items-center gap-4">
         <SkillIcon
           v-for="({ name, component }, index) in skills"
           :key="index"
@@ -27,7 +27,6 @@ import ReactIcon from '~/assets/img/react.svg?inline';
 import VueIcon from '~/assets/img/vue-dot-js.svg?inline';
 import TypescriptIcon from '~/assets/img/typescript.svg?inline';
 import NodeIcon from '~/assets/img/node-dot-js.svg?inline';
-import GraphqlIcon from '~/assets/img/graphql.svg?inline';
 import GitIcon from '~/assets/img/git.svg?inline';
 import SassIcon from '~/assets/img/sass.svg?inline';
 import JestIcon from '~/assets/img/jest.svg?inline';
@@ -41,7 +40,6 @@ import HtmlIcon from '~/assets/img/html5.svg?inline';
     ReactIcon,
     VueIcon,
     TypescriptIcon,
-    GraphqlIcon,
     GitIcon,
     SassIcon,
     JestIcon,
@@ -57,7 +55,6 @@ export default class AboutMeSkills extends Vue {
     { name: 'VueJS', component: VueIcon },
     { name: 'ReactJS', component: ReactIcon },
     { name: 'Typescript', component: TypescriptIcon },
-    { name: 'GraphQL', component: GraphqlIcon },
     { name: 'Git', component: GitIcon },
     { name: 'SASS', component: SassIcon },
     { name: 'Jest', component: JestIcon },
@@ -66,3 +63,19 @@ export default class AboutMeSkills extends Vue {
   ]
 }
 </script>
+
+<style lang="scss" scoped>
+.about-me-skills {
+  &__title {
+    @extend .gradient-one;
+  }
+}
+
+html.dark-mode {
+  .about-me-skills {
+    &__title {
+      @extend .gradient-two;
+    }
+  }
+}
+</style>

@@ -15,7 +15,7 @@
       >
         <aside
           v-show="isSidebarVisible"
-          class="absolute inset-y-0 right-0 w-full h-full max-w-sm p-0 bg-gray-50 dark:bg-blue-600 rounded-3xl rounded-r-none sidebar-grid"
+          class="absolute inset-y-0 right-0 w-full h-full max-w-sm p-0 bg-gray-50 dark:bg-blue-800 rounded-3xl rounded-r-none sidebar-grid"
         >
           <section class="flex justify-end p-4">
             <button
@@ -122,7 +122,7 @@ export default class SidebarMenu extends Vue {
 html.dark-mode {
   .overlay {
     &::before {
-      @apply bg-blue-700 bg-opacity-75;
+      @apply bg-blue-900 bg-opacity-75;
     }
   }
 }
