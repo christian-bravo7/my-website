@@ -4,7 +4,7 @@ import Token from 'markdown-it/lib/token';
 
 const md = new MarkDownIt();
 
-const defaultRender =
+const customRender =
   md.renderer.rules.link_open ||
   ((tokens, idx, options, _env, self): string => self.renderToken(tokens, idx, options));
 
@@ -18,7 +18,7 @@ md.renderer.rules.link_open = (tokens : Array<Token>, idx : number, options, env
     aToken.attrSet('target', '_BLANK');
   }
 
-  return defaultRender(tokens, idx, options, env, self);
+  return customRender(tokens, idx, options, env, self);
 };
 
 Vue.prototype.$md = (markdown: string): string => md.render(markdown);
