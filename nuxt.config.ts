@@ -88,6 +88,8 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/i18n-module
     'nuxt-i18n',
+    // Doc: https://github.com/nuxt-community/sitemap-module - Conserve this module at the end
+    '@nuxtjs/sitemap',
   ],
   googleAnalytics: {
     id: 'UA-167467888-1',
@@ -124,6 +126,12 @@ export default {
     },
   },
   axios: {},
+  sitemap: {
+    i18n: true,
+    routes: [
+      'hello-world',
+    ],
+  },
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
