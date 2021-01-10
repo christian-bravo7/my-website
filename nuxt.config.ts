@@ -127,6 +127,7 @@ export default {
   },
   axios: {},
   sitemap: {
+    hostname: 'https://christian-bravo.dev',
     i18n: true,
     routes: [
       'hello-world',
