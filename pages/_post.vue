@@ -37,7 +37,7 @@ export default class Blog extends Vue {
     const articles = await $content(params.post)
       .fetch()
       .catch(() => {
-        error({ statusCode: 404, message: 'Page not found' });
+        error({ statusCode: 404 });
       });
 
     return {
