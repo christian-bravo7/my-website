@@ -2,11 +2,12 @@
   <AppBanner>
     <template #primary-text>
       <span
-        class="text-center block"
+        class="block | text-center"
       >
-        {{ $t('home.iam-name-text') }}</span>
+        {{ $t('home.iam-name-text') }}
+      </span>
       <span
-        class="text-center block home-banner__description"
+        class="block | text-center | home-banner__description"
         v-html="$md($t('home.iam-job-text'))"
       />
     </template>
@@ -40,7 +41,7 @@ html.dark-mode {
       /deep/ strong {
         font-weight: normal;
 
-        @extend .gradient-two;
+        @extend .gradient-five;
       }
     }
   }

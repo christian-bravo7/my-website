@@ -46,8 +46,8 @@ export default class AppSocialIcons extends Vue {
 
 @screen md {
   .page-social-icons {
-    bottom: rem(16);
-    left: rem(16);
+    bottom: rem(12);
+    left: rem(12);
   }
 }
 </style>

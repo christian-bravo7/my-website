@@ -3,17 +3,17 @@
     name="flash-text"
     @enter="shuffleText"
   >
-    <section class="flex justify-center items-center px-4">
+    <section class="flex justify-center items-center | px-4">
       <div class="relative">
         <h2
           id="secondary"
-          class="absolute font-bold text-center text-8xl sm:text-10xl md:text-12xl leading-none select-none text-gray-200 dark:text-blue-900 app-banner__secondary-text"
+          class="absolute | font-bold text-center | text-8xl sm:text-10xl md:text-12xl | leading-none select-none | text-gray-200 dark:text-blue-900 | app-banner__secondary-text"
         >
           <slot name="secondary-text" />
         </h2>
         <h1
           id="primary"
-          class="relative max-w-screen-md text-center text-3xl md:text-5xl z-10 text-gray-900 dark:text-gray-50 app-banner__primary-text"
+          class="relative z-10 | max-w-screen-md | text-center text-3xl md:text-5xl | text-gray-900 dark:text-gray-50 | app-banner__primary-text"
         >
           <slot name="primary-text" />
         </h1>

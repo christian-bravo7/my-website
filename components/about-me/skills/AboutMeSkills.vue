@@ -1,17 +1,20 @@
 <template>
-  <section class="min-h-screen py-20 px-4">
-    <div class="container mx-auto flex flex-col">
-      <h2 class="text-center mb-8 text-6xl sm:text-8xl md:text-10xl break-all font-bold about-me-skills__title">
+  <section class="min-h-screen | flex | p-20">
+    <div class="flex flex-col | w-full">
+      <h2 class="mb-8 | text-center break-all | section-title about-me-skills__title">
         {{ $t('me.skills-label') }}
       </h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 justify-items-center gap-4">
-        <SkillIcon
-          v-for="({ name, component }, index) in skills"
-          :key="index"
-          :name="name"
-        >
-          <Component :is="component" />
-        </SkillIcon>
+      <div class="flex justify-center items-center | flex-1">
+        <div class="flex flex-wrap justify-center | max-w-screen-lg">
+          <SkillIcon
+            v-for="({ name, component }, index) in skills"
+            :key="index"
+            :name="name"
+            class="m-2"
+          >
+            <Component :is="component" />
+          </SkillIcon>
+        </div>
       </div>
     </div>
   </section>
@@ -49,17 +52,17 @@ import HtmlIcon from '~/assets/img/html5.svg?inline';
 })
 export default class AboutMeSkills extends Vue {
   skills: Array<{ name: string, component: any }> = [
-    { name: 'CSS3', component: CssIcon },
     { name: 'Javascript', component: JavascriptIcon },
+    { name: 'Typescript', component: TypescriptIcon },
     { name: 'NuxtJS', component: NuxtIcon },
     { name: 'VueJS', component: VueIcon },
     { name: 'ReactJS', component: ReactIcon },
-    { name: 'Typescript', component: TypescriptIcon },
-    { name: 'Git', component: GitIcon },
-    { name: 'SASS', component: SassIcon },
-    { name: 'Jest', component: JestIcon },
-    { name: 'HTML5', component: HtmlIcon },
     { name: 'NodeJS', component: NodeIcon },
+    { name: 'Git', component: GitIcon },
+    { name: 'Jest', component: JestIcon },
+    { name: 'SASS', component: SassIcon },
+    { name: 'CSS3', component: CssIcon },
+    { name: 'HTML5', component: HtmlIcon },
   ]
 }
 </script>

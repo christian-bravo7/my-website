@@ -1,11 +1,11 @@
 <template>
-  <div class="absolute inset-0 overflow-hidden pointer-events-none flex justify-center items-center">
+  <div class="absolute inset-0 | flex justify-center items-center | overflow-hidden pointer-events-none">
     <figure
       v-for="index in 10"
       :key="index"
-      :class="`primary-text opacity-50 absolute figure--${index}`"
+      :class="`absolute | opacity-50 | primary-text figure--${index}`"
     >
-      <QuestionIcon class="w-full h-full fill-current" />
+      <QuestionIcon class="w-full h-full | fill-current" />
     </figure>
   </div>
 </template>

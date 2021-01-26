@@ -3,12 +3,9 @@
     <Portal to="page-banner">
       <AboutMeBanner />
     </Portal>
-    <div class="prueba">
-      <ContentDivider class="prueba__svg" />
-      <AboutMeInformation />
-      <ContentDivider :inverse="true" />
-    </div>
+    <AboutMeInformation />
     <AboutMeSkills />
+    <AboutMeBriefHistory />
   </section>
 </template>
 
