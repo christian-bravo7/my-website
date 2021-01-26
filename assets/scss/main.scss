@@ -12,3 +12,20 @@ html.dark-mode {
     @apply text-blue-500;
   }
 }
+
+.section-title {
+  @apply font-bold text-6xl leading-normal;
+}
+
+/* stylelint-disable at-rule-no-unknown */
+@screen sm {
+  .section-title {
+    @apply text-8xl;
+  }
+}
+
+@screen md {
+  .section-title {
+    @apply text-10xl;
+  }
+}
