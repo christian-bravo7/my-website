@@ -7,7 +7,8 @@
     "simple-description": "Je **code** des choses très simples et **j'aime** ce que je fais",
     "about-me-description": "Je suis Christian Bravo, un développeur frontend âgé de 20 ans qui travaille avec JavaScript, Vue, React, Node, GraphQL et de nombreuses autres technologies Web modernes. J'ai une grande passion pour les effets d'interface utilisateur, les animations et la création d'expériences utilisateur intuitives et dynamiques. Ahhh et j'adore le café 😊",
     "skills-label": "Compétences",
-    "crafted-label": "Créé avec"
+    "crafted-label": "Créé avec",
+    "work-experience": "l'expérience professionnelle"
   },
   "home": {
     "gretting": "Salut",
