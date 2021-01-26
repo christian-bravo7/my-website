@@ -68,6 +68,10 @@ export default {
     },
   },
 
+  router: {
+    middleware: ['wipMiddleware'],
+  },
+
   styleResources: {
     scss: '@/assets/scss/global-resources.scss',
   },

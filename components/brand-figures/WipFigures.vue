@@ -8,7 +8,7 @@
       :key="index"
       :class="`absolute | opacity-50 | primary-text figure--${index}`"
     >
-      <QuestionIcon class="w-full h-full | fill-current" />
+      <GearIcon class="w-full h-full | fill-current" />
     </figure>
   </div>
 </template>
@@ -16,14 +16,14 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
 
-import QuestionIcon from '~/assets/img/question-icon.svg?inline';
+import GearIcon from '~/assets/img/gear.svg?inline';
 
 @Component({
   components: {
-    QuestionIcon,
+    GearIcon,
   },
 })
-export default class ErrorFigures extends Vue {}
+export default class WipFigures extends Vue {}
 </script>
 
 <style lang="scss" scoped>

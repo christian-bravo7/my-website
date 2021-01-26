@@ -17,6 +17,7 @@
         {{ $t('error.home-link') }}
       </NuxtLink>
     </section>
+    <ErrorFigures />
   </section>
 </template>
 
