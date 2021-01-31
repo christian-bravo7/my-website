@@ -40,9 +40,6 @@ import { guestStore } from '@/store';
       bodyAttrs: {
         'data-theme': guestStore.theme,
       },
-      titleTemplate: (titleChunk): string => {
-        return titleChunk ? `${titleChunk} | Christian Bravo` : 'Christian Bravo';
-      },
     };
   },
   computed: {

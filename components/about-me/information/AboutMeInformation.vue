@@ -6,7 +6,7 @@
           {{ $t('me.i-label') }}
         </h2>
         <p class="relative z-10 | text-base md:text-lg | leading-loose">
-          {{ $t('me.about-me-description') }}
+          {{ $t('me.about-me-description', { age: currentAge }) }}
         </p>
       </div>
       <div class="flex items-center justify-center | primary-text">
@@ -26,7 +26,38 @@ import RemolinoLogo from '~/assets/img/remolino.svg?inline';
     RemolinoLogo,
   },
 })
-export default class AboutMeInformation extends Vue {}
+export default class AboutMeInformation extends Vue {
+  readonly birthday: string = '2000-01-15';
+
+  get currentAge (): number {
+    const currentDate = new Date();
+    const birth = new Date(Date.parse(this.birthday));
+
+    const currentMonth = currentDate.getMonth();
+    const currentYear = currentDate.getFullYear();
+    const currentDay = currentDate.getDate();
+    const birthMonth = birth.getMonth();
+    const birthYear = birth.getFullYear();
+    const birthDay = birth.getDate();
+
+    const age = currentYear - birthYear;
+    const ageNotCompleted = age - 1;
+
+    if (birthMonth > currentMonth) {
+      return ageNotCompleted;
+    }
+
+    if (birthMonth < currentMonth) {
+      return age;
+    }
+
+    if (birthDay > currentDay) {
+      return ageNotCompleted;
+    }
+
+    return age;
+  }
+}
 </script>
 
 <style lang="scss" scoped>

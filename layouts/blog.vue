@@ -24,16 +24,7 @@
 import { Vue, Component } from 'nuxt-property-decorator';
 import { mapGetters } from 'vuex';
 
-import { MetaInfo } from 'vue-meta/types';
-
 @Component({
-  head (): MetaInfo {
-    return {
-      titleTemplate: (titleChunk): string => {
-        return titleChunk ? `${titleChunk} | Christian Bravo` : 'Christian Bravo';
-      },
-    };
-  },
   computed: {
     ...mapGetters({
       isReady: 'guest/isReady',

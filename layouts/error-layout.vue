@@ -6,16 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
-import { MetaInfo } from 'vue-meta';
 
-@Component({
-  head (): MetaInfo {
-    return {
-      titleTemplate: (titleChunk): string => {
-        return titleChunk ? `${titleChunk} | Christian Bravo` : 'Christian Bravo';
-      },
-    };
-  },
-})
+@Component
 export default class ErrorLayout extends Vue {}
 </script>
