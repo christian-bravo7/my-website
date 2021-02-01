@@ -14,9 +14,19 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
+import getMetaTags from '@/seo';
 
 @Component({
   layout: 'error-layout',
+  head () {
+    const homeMetaTags = getMetaTags({
+      siteTitle: 'WIP',
+    });
+
+    return {
+      ...homeMetaTags,
+    };
+  },
 })
 export default class WorkInProgressPage extends Vue {}
 </script>
