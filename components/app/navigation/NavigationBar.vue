@@ -4,21 +4,7 @@
     :class="{ 'bg-black bg-opacity-25': onlyWhite}"
   >
     <div class="grid grid-cols-2 md:grid-cols-5 navbar-grid">
-      <div>
-        <AppLogo :class="{ 'only-white': onlyWhite }" />
-        <AppSelect v-model="selectValue">
-          <AppSelectOption value="option-1">
-            Option 1
-          </AppSelectOption>
-          <AppSelectOption value="option-2">
-            Option 2
-          </AppSelectOption>
-          <AppSelectOption value="option-3">
-            Option 3
-          </AppSelectOption>
-        </AppSelect>
-        {{ selectValue }}
-      </div>
+      <AppLogo :class="{ 'only-white': onlyWhite }" />
       <div class="hidden md:flex items-center justify-center col-span-3">
         <div class="flex content-center">
           <NavigationLink
@@ -91,8 +77,6 @@ import { Vue, Component, Emit, Prop } from 'nuxt-property-decorator';
 
 @Component
 export default class NavigationBar extends Vue {
-  selectValue: string = 'option-1';
-
   @Prop({ type: Boolean, default: true })
   readonly hasLanguagePicker!: boolean;
 

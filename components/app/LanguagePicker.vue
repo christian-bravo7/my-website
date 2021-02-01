@@ -5,23 +5,19 @@
       <i class="material-icons text-sm -mr-3 primary-text">
         translate
       </i>
-      <select
-        id="languagePicker"
+      <AppSelect
         v-model="currentLanguage"
-        class="px-4 text-base bg-transparent border-none cursor-pointer appearance-none primary-text"
-        name="language-picker"
         @change="changeLanguage"
         @blur="changeLanguage"
       >
-        <option
+        <AppSelectOption
           v-for="(language, index) in availableLanguages"
           :key="index"
-          class="text-black"
           :value="language.code"
         >
           {{ language.name }}
-        </option>
-      </select>
+        </AppSelectOption>
+      </AppSelect>
       <i class="material-icons text-sm -ml-3 primary-text pointer-events-none">
         expand_more
       </i>
