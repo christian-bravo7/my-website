@@ -21,7 +21,7 @@ module.exports = {
           900: '#080b19',
         },
         pink: {
-          50: '#f9e6ef',
+          50: '#fae8f0',
           100: '#f3cddf',
           200: '#e89cbe',
           300: '#dc6a9e',
@@ -73,6 +73,7 @@ module.exports = {
     backgroundColor: ['dark', 'dark-hover', 'hover'],
     borderColor: ['dark', 'hover', 'dark-hover'],
     textColor: ['group-hover', 'dark', 'dark-hover', 'dark-group-hover', 'hover'],
+    padding: ['hover'],
   },
   plugins: [
     require('tailwindcss-dark-mode')(),
