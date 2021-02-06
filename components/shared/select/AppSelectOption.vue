@@ -1,7 +1,7 @@
 <template>
   <div
     ref="itemRef"
-    class="p-2 | hover:text-pink-500 | rounded-2xl | cursor-pointer | transition-all duration-300 | app-select-option"
+    class="px-2 py-1 | text-sm | hover:text-pink-500 | rounded-md | cursor-pointer | transition-all duration-300 | app-select-option"
     :class="{ active }"
     @click="selectOption"
     @keydown.enter="selectOption"
@@ -19,6 +19,9 @@ export default class AppSelectOption extends Vue {
 
   @Prop()
   value!: any;
+
+  @Prop()
+  label!: any;
 
   @Inject()
   onSelectOptionClick!: Function;
@@ -40,7 +43,7 @@ export default class AppSelectOption extends Vue {
 <style lang="scss" scoped>
 .app-select-option {
   &:hover {
-    @apply pl-4;
+    @apply pl-3;
   }
 
   &.active {
@@ -48,7 +51,7 @@ export default class AppSelectOption extends Vue {
   }
 
   &.active:hover {
-    @apply p-2;
+    @apply px-2;
   }
 }
 </style>

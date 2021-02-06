@@ -2,25 +2,28 @@
   <!-- eslint-disable vue-a11y/no-onchange -->
   <div class="inline-block">
     <div class="flex items-center">
-      <i class="material-icons text-sm -mr-3 primary-text">
-        translate
-      </i>
       <AppSelect
         v-model="currentLanguage"
         @change="changeLanguage"
         @blur="changeLanguage"
       >
+        <template #placeholder="{ label }">
+          <span class="flex items-center">
+            <i class="material-icons text-sm mr-2">
+              translate
+            </i>
+            {{ label }}
+          </span>
+        </template>
         <AppSelectOption
           v-for="(language, index) in availableLanguages"
           :key="index"
           :value="language.code"
+          :label="language.name"
         >
           {{ language.name }}
         </AppSelectOption>
       </AppSelect>
-      <i class="material-icons text-sm -ml-3 primary-text pointer-events-none">
-        expand_more
-      </i>
     </div>
   </div>
 </template>

@@ -1,29 +1,45 @@
 <template>
-  <div class="relative | select-none">
+  <div class="relative | select-none | app-select">
     <div
       ref="selectButton"
       tabindex="0"
-      class="py-2 px-4 | bg-gray-100 | rounded-2xl | cursor-pointer"
+      class="flex items-center | py-2 pl-4 pr-1 | text-sm | text-gray-900 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | rounded-lg | transition-colors duration-300 cursor-pointer | app-select__button"
+      :class="{ 'active' : isOptionListOpened }"
       @click="openOptions"
       @keydown.enter="openOptions"
       @keydown.up="selectPreviousOption"
       @keydown.down="selectNextOption"
+      @focus.prevent="saveFocusElement"
     >
-      {{ value }}
+      <slot
+        :label="label"
+        name="placeholder"
+      >
+        {{ label }}
+      </slot>
+      <i
+        class="material-icons ml-1 | transition-transform duration-300"
+        :class="{ 'transform rotate-180': isOptionListOpened }"
+      >
+        keyboard_arrow_down
+      </i>
     </div>
-    <div
-      v-show="isOptionListOpened"
-      ref="optionsList"
-      tabindex="0"
-      class="absolute right-0 | w-full | bg-gray-50 | rounded-2xl shadow-lg focus:outline-none | app-select__options-list"
-      @blur="closeOptions"
-      @keydown.up="preparePreviousOption"
-      @keydown.down="prepareNextOption"
-      @keydown.esc="closeOptions"
-      @keydown.enter="confirmPreparedOption"
-    >
-      <slot />
-    </div>
+    <Transition name="option-list">
+      <div
+        v-show="isOptionListOpened"
+        ref="optionsList"
+        tabindex="0"
+        class="absolute right-0 | p-1 | bg-gray-50 | rounded-lg shadow-lg focus:outline-none | app-select__options-list"
+        @blur="clearBlurFromOptions"
+        @focus.prevent="saveFocusElement"
+        @keydown.up.prevent="preparePreviousOption"
+        @keydown.down.prevent="prepareNextOption"
+        @keydown.esc="closeOptions"
+        @keydown.enter="confirmPreparedOption"
+      >
+        <slot />
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -36,6 +52,10 @@ import AppSelectOption from '@/components/shared/select/AppSelectOption.vue';
 export default class AppSelect extends Vue {
   isOptionListOpened: boolean = false;
   activeIndex: number = 0;
+  label: any = '';
+  currentFocusElement: any;
+  shouldClose: boolean = false;
+  isOptionListFocusClear: boolean = false;
 
   @Model('change') value!: any;
 
@@ -102,6 +122,11 @@ export default class AppSelect extends Vue {
   }
 
   async openOptions (): Promise<void> {
+    if (this.shouldClose) {
+      this.shouldClose = false;
+      return;
+    }
+
     this.isOptionListOpened = true;
     await this.$nextTick();
     this.optionsList.focus();
@@ -111,13 +136,36 @@ export default class AppSelect extends Vue {
     this.isOptionListOpened = false;
   }
 
+  saveFocusElement (element: any): void {
+    const currentElement = element.target === this.optionsList ? 'lista' : element.target === this.selectButton ? 'button' : 'otro';
+    console.log(currentElement);
+    // if (
+    //   this.currentFocusElement === this.optionsList &&
+    //   element.target === this.selectButton
+    // ) {
+    //   console.log(true);
+    //   // this.shouldClose = true;
+    // }
+
+    this.isOptionListFocusClear = false;
+    this.currentFocusElement = element.target;
+  }
+
+  clearBlurFromOptions (element: any, other: any): void {
+    console.log(element, other);
+    console.log('clear');
+    this.isOptionListFocusClear = true;
+    this.closeOptions();
+  }
+
   @Watch('value')
   updateActiveStyles (newValue: any): void {
     this.$children.forEach((element: Vue, index: number) => {
-      const { value, setActive, setInactive } = element as AppSelectOption;
+      const { value, setActive, setInactive, label } = element as AppSelectOption;
 
       if (value === newValue) {
         this.activeIndex = index;
+        this.label = label;
         setActive();
       } else {
         setInactive();
@@ -143,7 +191,65 @@ export default class AppSelect extends Vue {
 <style lang="scss" scoped>
 .app-select {
   &__options-list {
-    top: 100%;
+    $extra-width: rem(50);
+    $extra-top: rem(8);
+
+    top: calc(100% + #{$extra-top});
+    min-width: calc(100% + #{$extra-width});
   }
+
+  /deep/ .app-select-option {
+    @apply mb-1;
+
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+
+  &__button {
+    &.active {
+      @apply bg-gray-50 shadow-md;
+    }
+  }
+}
+
+html.dark-mode {
+  .app-select {
+    &__button {
+      &.active {
+        @apply bg-blue-800 shadow-2xl;
+      }
+    }
+  }
+}
+
+.option-list-enter {
+  transform: translateY(-10%);
+  opacity: 0;
+}
+
+.option-list-enter-active {
+  transition-duration: 200ms;
+  transition-property: opacity, transform;
+}
+
+.option-list-enter-to {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.option-list-leave {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.option-list-leave-active {
+  transition-duration: 200ms;
+  transition-property: opacity, transform;
+}
+
+.option-list-leave-to {
+  transform: translateY(-10%);
+  opacity: 0;
 }
 </style>

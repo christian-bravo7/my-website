@@ -53,7 +53,7 @@
           <LanguagePicker :abbreviation="true" />
         </div>
         <div class="flex justify-center items-center">
-          <ThemeSwitch />
+          <DarkModeSwitch />
         </div>
       </div>
       <div class="flex md:hidden justify-end items-center">
