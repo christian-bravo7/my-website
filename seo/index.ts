@@ -5,10 +5,10 @@ import { SeoContent } from '@/seo/types';
 const siteUrl = 'https://christian-bravo.dev';
 const siteType = 'website';
 const siteTitle = 'Christian Bravo | Frontend Developer';
-const siteDescription = 'I am la mera versh';
-const siteImage = 'https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png0';
+const siteDescription = 'Hi, I\'m Christian Bravo, Frontend developer from Guatemala specializing in web development, search engine optimization, responsive design, and custom web app solutions.';
+const siteImage = 'https://christian-bravo.dev/meta-stock-image.jpg';
 
-export default (customSiteContent: Partial<SeoContent> = {}): MetaInfo => {
+export const getMetaTags = (customSiteContent: Partial<SeoContent> = {}): MetaInfo => {
   const siteContent: SeoContent = {
     siteUrl,
     siteType,

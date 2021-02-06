@@ -9,7 +9,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
-import getMetaTags from '@/seo';
+import { getMetaTags } from '@/seo';
 
 @Component({
   head () {

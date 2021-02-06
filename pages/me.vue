@@ -12,10 +12,16 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
+import { getMetaTags } from '@/seo';
+
 @Component({
   head () {
+    const aboutMeTags = getMetaTags({
+      siteTitle: this.$t('navigation.about-me-label') as string,
+    });
+
     return {
-      title: this.$t('navigation.about-me-label') as string,
+      ...aboutMeTags,
     };
   },
 })

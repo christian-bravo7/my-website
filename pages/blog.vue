@@ -31,15 +31,24 @@
 </template>
 
 <script lang="ts">
+import { Context } from '@nuxt/types';
 import { Vue, Component } from 'nuxt-property-decorator';
 import baffle from 'baffle';
 
 import { greetingByHour } from '@/utils/date/greetingByHour';
+import { getMetaTags } from '@/seo';
 
-import { Context } from '@nuxt/types';
-import { MetaInfo } from 'vue-meta/types';
+@Component({
+  head () {
+    const homeMetaTags = getMetaTags({
+      siteTitle: this.$t('navigation.blog-label') as string,
+    });
 
-@Component
+    return {
+      ...homeMetaTags,
+    };
+  },
+})
 export default class Blog extends Vue {
   async asyncData ({ $content, error }: Context): Promise<any> {
     const articles = await $content()
@@ -50,12 +59,6 @@ export default class Blog extends Vue {
 
     return {
       articles,
-    };
-  }
-
-  head (): MetaInfo {
-    return {
-      title: this.$t('navigation.blog-label') as string,
     };
   }
 

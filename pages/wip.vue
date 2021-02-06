@@ -14,17 +14,18 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
-import getMetaTags from '@/seo';
+
+import { getMetaTags } from '@/seo';
 
 @Component({
   layout: 'error-layout',
   head () {
-    const homeMetaTags = getMetaTags({
+    const WIPMetaTags = getMetaTags({
       siteTitle: 'WIP',
     });
 
     return {
-      ...homeMetaTags,
+      ...WIPMetaTags,
     };
   },
 })
