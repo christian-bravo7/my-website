@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 
-import AboutMeInformation from '@/components/about-me/AboutMeInformation.vue';
+import AboutMeInformation from '@/components/about-me/information/AboutMeInformation.vue';
 
 describe('AboutMeInformation component', () => {
   it('should render correctly', () => {
@@ -20,10 +20,10 @@ describe('AboutMeInformation component', () => {
       },
     });
 
-    const title = wrapper.find('h1');
+    const title = wrapper.find('h2');
     const descriptionText = wrapper.find('p');
 
-    expect(title.text()).toBe('me.i-label');
+    expect(title.text()).toBe('me.hi-label');
     expect(descriptionText.text()).toBe('me.about-me-description');
   });
 });

@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AboutMeInformation component should render correctly 1`] = `
-<section class="min-h-screen flex items-center py-8 px-4 bg-gray-200 dark:bg-blue-900">
-  <div class="grid grid-cols-1 md:grid-cols-2 text-black dark:text-white container mx-auto">
-    <div class="relative is-medium">
-      <h1 class="w-full font-bold text-6xl sm:text-8xl md:text-10xl leading-none about-me-information__title">
-        me.i-label
-      </h1>
-      <p class="relative z-10 text-base md:text-lg leading-loose">
-        me.about-me-description
-      </p>
+<section class="min-h-screen | flex | p-4 sm:p-20">
+  <div class="container | flex | my-0 mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center | text-black dark:text-white">
+      <div class="relative">
+        <h2 class="section-title about-me-information__title">
+          me.hi-label
+        </h2>
+        <p class="relative z-10 | text-sm md:text-lg | leading-loose">
+          me.about-me-description
+        </p>
+      </div>
+      <div class="flex items-center justify-center | primary-text"><svg class="w-11/12 fill-current"></svg></div>
     </div>
-    <div class="flex items-center justify-center primary-text"><svg class="w-11/12 fill-current"></svg></div>
   </div>
 </section>
 `;

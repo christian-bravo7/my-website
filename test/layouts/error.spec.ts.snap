@@ -11,5 +11,17 @@ exports[`error page should render correclty 1`] = `
       error.home-link
     </a>
   </section>
+  <div class="absolute inset-0 | flex justify-center items-center | overflow-hidden pointer-events-none" style="z-index: -1;">
+    <figure class="absolute | opacity-50 | primary-text figure--1"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-50 | primary-text figure--2"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-50 | primary-text figure--3"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-50 | primary-text figure--4"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-50 | primary-text figure--5"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-50 | primary-text figure--6"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-50 | primary-text figure--7"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-50 | primary-text figure--8"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-50 | primary-text figure--9"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-50 | primary-text figure--10"><svg class="w-full h-full | fill-current"></svg></figure>
+  </div>
 </section>
 `;

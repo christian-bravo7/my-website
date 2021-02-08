@@ -31,9 +31,9 @@ describe('blog page', () => {
     });
 
     // @ts-ignore
-    const greeting = wrapper.vm.grettingWord;
+    const greeting = wrapper.vm.greetingWord;
 
-    expect(greeting).toBe('Good Morning!');
+    expect(greeting).toBe('good-morning');
   });
 
   it('should present a greeting word properly before noon', () => {
@@ -47,9 +47,9 @@ describe('blog page', () => {
     });
 
     // @ts-ignore
-    const greeting = wrapper.vm.grettingWord;
+    const greeting = wrapper.vm.greetingWord;
 
-    expect(greeting).toBe('Have a nice day!');
+    expect(greeting).toBe('good-morning');
   });
 
   it('should present a greeting word properly for noon', () => {
@@ -63,9 +63,9 @@ describe('blog page', () => {
     });
 
     // @ts-ignore
-    const greeting = wrapper.vm.grettingWord;
+    const greeting = wrapper.vm.greetingWord;
 
-    expect(greeting).toBe('Good Noon!');
+    expect(greeting).toBe('good-noon');
   });
 
   it('should present a greeting word properly for afternoon', () => {
@@ -79,9 +79,9 @@ describe('blog page', () => {
     });
 
     // @ts-ignore
-    const greeting = wrapper.vm.grettingWord;
+    const greeting = wrapper.vm.greetingWord;
 
-    expect(greeting).toBe('Good Afternoon!');
+    expect(greeting).toBe('good-afternoon');
   });
 
   it('should present a greeting word properly for evening', () => {
@@ -95,9 +95,9 @@ describe('blog page', () => {
     });
 
     // @ts-ignore
-    const greeting = wrapper.vm.grettingWord;
+    const greeting = wrapper.vm.greetingWord;
 
-    expect(greeting).toBe('Good Evening!');
+    expect(greeting).toBe('good-evening');
   });
 
   it('should present a greeting word properly for night', () => {
@@ -111,9 +111,9 @@ describe('blog page', () => {
     });
 
     // @ts-ignore
-    const greeting = wrapper.vm.grettingWord;
+    const greeting = wrapper.vm.greetingWord;
 
-    expect(greeting).toBe('Good Night!');
+    expect(greeting).toBe('good-evening');
   });
 
   it('should return dynamic class for post index', () => {

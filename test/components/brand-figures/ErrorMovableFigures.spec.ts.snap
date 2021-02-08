@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorFigures component should render correclty 1`] = `
-<div class="absolute inset-0 overflow-hidden pointer-events-none flex justify-center items-center">
-  <figure class="primary-text opacity-50 absolute figure--1"><svg class="w-full h-full fill-current"></svg></figure>
-  <figure class="primary-text opacity-50 absolute figure--2"><svg class="w-full h-full fill-current"></svg></figure>
-  <figure class="primary-text opacity-50 absolute figure--3"><svg class="w-full h-full fill-current"></svg></figure>
-  <figure class="primary-text opacity-50 absolute figure--4"><svg class="w-full h-full fill-current"></svg></figure>
-  <figure class="primary-text opacity-50 absolute figure--5"><svg class="w-full h-full fill-current"></svg></figure>
-  <figure class="primary-text opacity-50 absolute figure--6"><svg class="w-full h-full fill-current"></svg></figure>
-  <figure class="primary-text opacity-50 absolute figure--7"><svg class="w-full h-full fill-current"></svg></figure>
-  <figure class="primary-text opacity-50 absolute figure--8"><svg class="w-full h-full fill-current"></svg></figure>
-  <figure class="primary-text opacity-50 absolute figure--9"><svg class="w-full h-full fill-current"></svg></figure>
-  <figure class="primary-text opacity-50 absolute figure--10"><svg class="w-full h-full fill-current"></svg></figure>
+<div class="absolute inset-0 | flex justify-center items-center | overflow-hidden pointer-events-none" style="z-index: -1;">
+  <figure class="absolute | opacity-50 | primary-text figure--1"><svg class="w-full h-full | fill-current"></svg></figure>
+  <figure class="absolute | opacity-50 | primary-text figure--2"><svg class="w-full h-full | fill-current"></svg></figure>
+  <figure class="absolute | opacity-50 | primary-text figure--3"><svg class="w-full h-full | fill-current"></svg></figure>
+  <figure class="absolute | opacity-50 | primary-text figure--4"><svg class="w-full h-full | fill-current"></svg></figure>
+  <figure class="absolute | opacity-50 | primary-text figure--5"><svg class="w-full h-full | fill-current"></svg></figure>
+  <figure class="absolute | opacity-50 | primary-text figure--6"><svg class="w-full h-full | fill-current"></svg></figure>
+  <figure class="absolute | opacity-50 | primary-text figure--7"><svg class="w-full h-full | fill-current"></svg></figure>
+  <figure class="absolute | opacity-50 | primary-text figure--8"><svg class="w-full h-full | fill-current"></svg></figure>
+  <figure class="absolute | opacity-50 | primary-text figure--9"><svg class="w-full h-full | fill-current"></svg></figure>
+  <figure class="absolute | opacity-50 | primary-text figure--10"><svg class="w-full h-full | fill-current"></svg></figure>
 </div>
 `;

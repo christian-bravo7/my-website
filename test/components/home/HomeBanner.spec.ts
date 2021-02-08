@@ -29,7 +29,7 @@ describe('HomeBanner component', () => {
       },
     });
 
-    const primaryText = wrapper.find('#primary');
+    const primaryText = wrapper.find('.app-banner__primary-text');
     const insideTexts = primaryText.findAll('span.text-center.block');
     const firstText = insideTexts.at(0);
     const secondText = insideTexts.at(1);
@@ -38,6 +38,6 @@ describe('HomeBanner component', () => {
 
     expect(firstText.text()).toBe('home.iam-name-text');
     expect(secondText.text()).toBe('home.iam-job-text');
-    expect(secondaryText.text()).toBe('home.gretting');
+    expect(secondaryText.text()).toBe('greeting.good-evening');
   });
 });

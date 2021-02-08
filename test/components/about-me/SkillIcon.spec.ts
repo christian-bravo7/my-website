@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 
-import SkillIcon from '@/components/about-me/SkillIcon.vue';
+import SkillIcon from '@/components/about-me/skills/SkillIcon.vue';
 
 describe('SkillIcon component', () => {
   it('should render correctly', () => {

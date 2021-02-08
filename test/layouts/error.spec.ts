@@ -2,6 +2,8 @@ import { mount, RouterLinkStub } from '@vue/test-utils';
 
 import Error from '@/layouts/error.vue';
 
+import ErrorFigures from '@/components/brand-figures/ErrorFigures.vue';
+
 describe('error page', () => {
   it('should render correclty', () => {
     const wrapper = mount(Error, {
@@ -14,6 +16,9 @@ describe('error page', () => {
         Nuxt: {
           template: '<div></div>',
         },
+      },
+      components: {
+        ErrorFigures,
       },
     });
 

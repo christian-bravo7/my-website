@@ -21,7 +21,7 @@ describe('AppBanner component', () => {
       },
     });
 
-    const primaryText = wrapper.find('#primary');
+    const primaryText = wrapper.find('.app-banner__primary-text');
     const secondaryText = wrapper.find('#secondary');
 
     expect(primaryText.text()).toBe('This is a primary text');

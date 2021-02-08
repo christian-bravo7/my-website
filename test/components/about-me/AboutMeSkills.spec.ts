@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 
-import AboutMeSkills from '@/components/about-me/AboutMeSkills.vue';
-import SkillIcon from '@/components/about-me/SkillIcon.vue';
+import AboutMeSkills from '@/components/about-me/skills/AboutMeSkills.vue';
+import SkillIcon from '@/components/about-me/skills/SkillIcon.vue';
 
 describe('AboutMeSkills component', () => {
   it('should render correctly', () => {

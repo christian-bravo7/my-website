@@ -29,7 +29,7 @@ describe('AboutMeBanner component', () => {
       },
     });
 
-    const primaryText = wrapper.find('#primary');
+    const primaryText = wrapper.find('.app-banner__primary-text');
     const secondaryText = wrapper.find('#secondary');
 
     expect(primaryText.text()).toBe('me.simple-description');
