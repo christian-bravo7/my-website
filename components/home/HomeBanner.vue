@@ -12,16 +12,22 @@
       />
     </template>
     <template #secondary-text>
-      {{ $t('home.gretting') }}
+      {{ $t(homeGreetingKey) }}
     </template>
   </AppBanner>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
+import { greetingByHour } from '@/utils/date/greetingByHour';
 
 @Component
-export default class HomeBanner extends Vue {}
+export default class HomeBanner extends Vue {
+  get homeGreetingKey (): string {
+    const greetingKey = greetingByHour();
+    return `greeting.${greetingKey}`;
+  }
+}
 </script>
 
 <style lang="scss" scoped>
