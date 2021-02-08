@@ -15,7 +15,7 @@
           @openSidebar="openSidebar"
         />
       </ClientOnly>
-      <PageSocialMedia />
+      <PageSocialMedia class="hidden md:grid" />
       <header>
         <MovableFigures :current-route="currentRoute" />
         <PortalTarget

@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute overflow-hidden w-full h-full pointer-events-none">
+  <div class="hidden md:block absolute overflow-hidden w-full h-full pointer-events-none">
     <figure
       class="absolute w-48 h-48 rounded-full figure figure--1"
       :class="currentRoute"

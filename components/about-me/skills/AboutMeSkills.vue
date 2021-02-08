@@ -1,19 +1,21 @@
 <template>
-  <section class="min-h-screen | flex | p-20">
-    <div class="flex flex-col | w-full">
-      <h2 class="mb-8 | text-center break-all | section-title about-me-skills__title">
-        {{ $t('me.skills-label') }}
-      </h2>
-      <div class="flex justify-center items-center | flex-1">
-        <div class="flex flex-wrap justify-center | max-w-screen-lg">
-          <SkillIcon
-            v-for="({ name, component }, index) in skills"
-            :key="index"
-            :name="name"
-            class="m-2"
-          >
-            <Component :is="component" />
-          </SkillIcon>
+  <section class="min-h-screen | flex | p-4 sm:p-20">
+    <div class="container | flex | my-0 mx-auto">
+      <div class="flex flex-col | w-full">
+        <h2 class="mb-8 | text-center break-all | section-title about-me-skills__title">
+          {{ $t('me.skills-label') }}
+        </h2>
+        <div class="flex justify-center items-center | flex-1">
+          <div class="flex flex-wrap justify-center | max-w-screen-lg">
+            <SkillIcon
+              v-for="({ name, component }, index) in skills"
+              :key="index"
+              :name="name"
+              class="m-2"
+            >
+              <Component :is="component" />
+            </SkillIcon>
+          </div>
         </div>
       </div>
     </div>

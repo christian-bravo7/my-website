@@ -29,7 +29,7 @@
         v-show="isOptionListOpened"
         ref="optionsList"
         tabindex="0"
-        class="absolute right-0 | p-1 | bg-gray-50 | rounded-lg shadow-lg focus:outline-none | app-select__options-list"
+        class="absolute right-0 | p-1 | bg-gray-50 dark:bg-blue-900 | rounded-lg shadow-lg focus:outline-none | app-select__options-list"
         @blur="clearBlurFromOptions"
         @focus.prevent="saveFocusElement"
         @keydown.up.prevent="preparePreviousOption"
@@ -137,23 +137,11 @@ export default class AppSelect extends Vue {
   }
 
   saveFocusElement (element: any): void {
-    const currentElement = element.target === this.optionsList ? 'lista' : element.target === this.selectButton ? 'button' : 'otro';
-    console.log(currentElement);
-    // if (
-    //   this.currentFocusElement === this.optionsList &&
-    //   element.target === this.selectButton
-    // ) {
-    //   console.log(true);
-    //   // this.shouldClose = true;
-    // }
-
     this.isOptionListFocusClear = false;
     this.currentFocusElement = element.target;
   }
 
-  clearBlurFromOptions (element: any, other: any): void {
-    console.log(element, other);
-    console.log('clear');
+  clearBlurFromOptions (): void {
     this.isOptionListFocusClear = true;
     this.closeOptions();
   }
@@ -217,7 +205,7 @@ html.dark-mode {
   .app-select {
     &__button {
       &.active {
-        @apply bg-blue-800 shadow-2xl;
+        @apply bg-blue-900;
       }
     }
   }

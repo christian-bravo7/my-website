@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-blue-700 | shadow-md hover:shadow-xl | transition-shadow duration-300">
+  <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | shadow-md border border-transparent hover:shadow-xl dark:border-blue-300 | transition-all duration-300">
     <div class="flex items-center | text-black dark:text-white">
       <div class="flex flex-col flex-1">
         <span class="text-lg | font-bold">

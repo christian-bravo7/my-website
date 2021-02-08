@@ -54,4 +54,18 @@ export default class AppSelectOption extends Vue {
     @apply px-2;
   }
 }
+
+html.dark-mode {
+  .app-select-option {
+    @apply bg-blue-900 text-white;
+
+    &:hover {
+      @apply text-blue-500;
+    }
+
+    &.active {
+      @apply bg-blue-800 text-blue-500;
+    }
+  }
+}
 </style>

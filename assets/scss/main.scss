@@ -14,17 +14,23 @@ html.dark-mode {
 }
 
 .section-title {
-  @apply font-bold text-6xl leading-normal;
+  @apply font-bold text-4xl leading-normal break-all;
 }
 
 /* stylelint-disable at-rule-no-unknown */
 @screen sm {
   .section-title {
-    @apply text-8xl;
+    @apply text-7xl;
   }
 }
 
 @screen md {
+  .section-title {
+    @apply text-8xl;
+  }
+}
+
+@screen lg {
   .section-title {
     @apply text-9xl;
   }

@@ -1,16 +1,18 @@
 <template>
-  <section class="min-h-screen | flex items-center | p-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 | text-black dark:text-white">
-      <div class="relative">
-        <h2 class="section-title about-me-information__title">
-          {{ $t('me.i-label') }}
-        </h2>
-        <p class="relative z-10 | text-base md:text-lg | leading-loose">
-          {{ $t('me.about-me-description', { age: currentAge }) }}
-        </p>
-      </div>
-      <div class="flex items-center justify-center | primary-text">
-        <RemolinoLogo class="w-11/12 fill-current" />
+  <section class="min-h-screen | flex | p-4 sm:p-20">
+    <div class="container | flex | my-0 mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center | text-black dark:text-white">
+        <div class="relative">
+          <h2 class="section-title about-me-information__title">
+            {{ $t('me.hi-label') }}
+          </h2>
+          <p class="relative z-10 | text-sm md:text-lg | leading-loose">
+            {{ $t('me.about-me-description', { age: currentAge }) }}
+          </p>
+        </div>
+        <div class="flex items-center justify-center | primary-text">
+          <RemolinoLogo class="w-11/12 fill-current" />
+        </div>
       </div>
     </div>
   </section>

@@ -1,11 +1,11 @@
 <template>
   <nav
-    class="p-4 fixed top-0 left-0 right-0 z-20 bg-transparent navbar transition-all duration-150"
+    class="fixed top-0 left-0 right-0 z-20 | p-4  | bg-transparent | transition-all duration-150 | navbar"
     :class="{ 'bg-black bg-opacity-25': onlyWhite}"
   >
-    <div class="grid grid-cols-2 md:grid-cols-5 navbar-grid">
+    <div class="grid grid-cols-2 md:grid-cols-5">
       <AppLogo :class="{ 'only-white': onlyWhite }" />
-      <div class="hidden md:flex items-center justify-center col-span-3">
+      <div class="hidden | md:flex items-center justify-center col-span-3">
         <div class="flex content-center">
           <NavigationLink
             :class="{ 'only-white': onlyWhite }"
@@ -45,7 +45,7 @@
           </NavigationLink>
         </div>
       </div>
-      <div class="items-center justify-end col-span-1 hidden md:flex">
+      <div class="hidden | md:flex items-center justify-end col-span-1">
         <div
           v-if="hasLanguagePicker"
           class="mr-8"
@@ -63,7 +63,7 @@
           @click="openSidebar"
           @keydown.enter="openSidebar"
         >
-          <span class="material-icons text-5xl">
+          <span class="material-icons | text-5xl">
             menu
           </span>
         </button>
@@ -92,6 +92,14 @@ export default class NavigationBar extends Vue {
 </script>
 
 <style scoped>
+/* stylelint-disable */
+
+@screen md {
+  .navbar {
+    backdrop-filter: blur(100px);
+  }
+}
+
 .only-white {
   @apply text-white !important;
 }
