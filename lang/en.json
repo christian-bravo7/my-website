@@ -2,16 +2,16 @@
   "me": {
     "about-label": "About",
     "me-label": "Me",
-    "i-label": "Me",
+    "hi-label": "Hi",
     "about-me-label": "About me",
     "simple-description": "I **code** beautifully simple things, and I **love** what I do",
     "about-me-description": "I am a {age} years old frontend developer who works with JavaScript, Vue, React, Node, GraphQL and many other modern web technologies. I have a great passion for UI effects, animations and the creation of intuitive and dynamic user experiences. Ahhh and I love coffee 😊.",
     "skills-label": "Skills",
     "crafted-label": "Crafted with",
-    "work-experience": "Work experience"
+    "work-experience": "Experience"
   },
   "home": {
-    "gretting": "Hello",
+    "greeting": "Hello",
     "iam-name-text": "I'm Christian Bravo",
     "iam-job-text": "**Frontend** developer"
   },
@@ -23,5 +23,11 @@
   "error": {
     "404-description": "Sorry, but this page doesn't exist.",
     "home-link": "Take me home"
+  },
+  "greeting": {
+    "good-morning": "Good morning",
+    "good-afternoon": "Good afternoon",
+    "good-evening": "Good evening",
+    "good-noon": "Good noon"
   }
 }

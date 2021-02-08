@@ -2,16 +2,16 @@
   "me": {
     "about-label": "À propos",
     "me-label": "Moi",
-    "i-label": "Moi",
+    "hi-label": "Salut",
     "about-me-label": "À propos de moi",
     "simple-description": "Je **code** des choses très simples et **j'aime** ce que je fais",
     "about-me-description": "Je suis Christian Bravo, un développeur frontend âgé de {age} ans qui travaille avec JavaScript, Vue, React, Node, GraphQL et de nombreuses autres technologies Web modernes. J'ai une grande passion pour les effets d'interface utilisateur, les animations et la création d'expériences utilisateur intuitives et dynamiques. Ahhh et j'adore le café 😊",
     "skills-label": "Compétences",
     "crafted-label": "Créé avec",
-    "work-experience": "l'expérience professionnelle"
+    "work-experience": "Expérience"
   },
   "home": {
-    "gretting": "Salut",
+    "greeting": "Salut",
     "iam-name-text": "Je suis Christian Bravo",
     "iam-job-text": "développeur **Frontend**"
   },
@@ -23,5 +23,11 @@
   "error": {
     "404-description": "Désolé, mais cette page n'existe pas.",
     "home-link": "Rentrer à la maison"
+  },
+  "greeting": {
+    "good-morning": "Bonjour",
+    "good-afternoon": "Bonne après-midi",
+    "good-evening": "Bonsoir",
+    "good-noon": "Bon midi"
   }
 }
