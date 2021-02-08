@@ -64,6 +64,7 @@ module.exports = {
         '10xl': '8rem',
         '11xl': '9rem',
         '12xl': '10rem',
+        '13xl': '11rem',
       },
     },
     darkSelector: '.dark-mode',
@@ -73,7 +74,7 @@ module.exports = {
     backgroundColor: ['dark', 'dark-hover', 'hover'],
     borderColor: ['dark', 'hover', 'dark-hover'],
     textColor: ['group-hover', 'dark', 'dark-hover', 'dark-group-hover', 'hover'],
-    padding: ['hover'],
+    padding: ['hover', 'responsive'],
   },
   plugins: [
     require('tailwindcss-dark-mode')(),
