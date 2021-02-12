@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppBanner component should render correclty 1`] = `
-<section class="flex justify-center items-center | px-4">
+<section class="relative | flex justify-center items-center | px-4">
   <div class="relative">
     <h2 id="secondary" class="absolute | font-bold text-center | text-6xl sm:text-8xl md:text-13xl | leading-none select-none | text-gray-200 dark:text-blue-900 | app-banner__secondary-text">This is a secondary text</h2>
     <h1 class="relative z-10 | max-w-xs sm:max-w-lg md:max-w-screen-md | text-center text-xl sm:text-3xl md:text-5xl | text-gray-900 dark:text-gray-50 | app-banner__primary-text" style="display: none;">This is a primary text</h1>
   </div>
+  <!---->
 </section>
 `;
