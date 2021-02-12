@@ -3,7 +3,7 @@
 exports[`me page should render correctly 1`] = `
 <section>
   <div class="v-portal" style="display: none;"></div>
-  <section class="min-h-screen | flex | p-4 sm:p-20">
+  <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center | text-black dark:text-white">
         <div class="relative">
@@ -18,7 +18,7 @@ exports[`me page should render correctly 1`] = `
       </div>
     </div>
   </section>
-  <section class="min-h-screen | flex | p-4 sm:p-20">
+  <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="flex flex-col | w-full">
         <h2 class="mb-8 | text-center break-all | section-title about-me-skills__title">
@@ -64,7 +64,7 @@ exports[`me page should render correctly 1`] = `
       </div>
     </div>
   </section>
-  <section class="min-h-screen | flex | p-4 sm:p-20">
+  <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="flex flex-col | w-full">
         <h2 class="section-title about-me-brief-history__title">

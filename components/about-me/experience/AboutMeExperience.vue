@@ -1,8 +1,8 @@
 <template>
-  <section class="min-h-screen | flex | p-4 sm:p-20">
+  <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="flex flex-col | w-full">
-        <h2 class="section-title about-me-brief-history__title">
+        <h2 class="section-title about-me-experience__title">
           {{ $t('me.work-experience') }}
         </h2>
         <div class="flex justify-center items-center | flex-1">
@@ -44,18 +44,18 @@
 import { Vue, Component } from 'nuxt-property-decorator';
 
 @Component
-export default class AboutMeBriefHistory extends Vue {}
+export default class AboutMeExperience extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.about-me-brief-history {
+.about-me-experience {
   &__title {
     @extend .gradient-four;
   }
 }
 
 html.dark-mode {
-  .about-me-brief-history {
+  .about-me-experience {
     &__title {
       @extend .gradient-five;
     }

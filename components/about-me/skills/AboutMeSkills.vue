@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen | flex | p-4 sm:p-20">
+  <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="flex flex-col | w-full">
         <h2 class="mb-8 | text-center break-all | section-title about-me-skills__title">

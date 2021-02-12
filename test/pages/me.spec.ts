@@ -4,7 +4,7 @@ import PortalVue from 'portal-vue';
 import VueMeta from 'vue-meta';
 import ContentDivider from '@/components/app/ContentDivider.vue';
 import AboutMeInformation from '@/components/about-me/information/AboutMeInformation.vue';
-import AboutMeBriefHistory from '@/components/about-me/experience/AboutMeBriefHistory.vue';
+import AboutMeExperience from '@/components/about-me/experience/AboutMeExperience.vue';
 import AboutMeJobCard from '@/components/about-me/experience/AboutMeJobCard.vue';
 import AboutMeSkills from '@/components/about-me/skills/AboutMeSkills.vue';
 import SkillIcon from '@/components/about-me/skills/SkillIcon.vue';
@@ -18,14 +18,14 @@ describe('me page', () => {
     // @ts-ignore
     AboutMeSkills.options.components.SkillIcon = SkillIcon;
     // @ts-ignore
-    AboutMeBriefHistory.options.components.AboutMeJobCard = AboutMeJobCard;
+    AboutMeExperience.options.components.AboutMeJobCard = AboutMeJobCard;
 
     const wrapper = mount(Me, {
       components: {
         ContentDivider,
         AboutMeInformation,
         AboutMeSkills,
-        AboutMeBriefHistory,
+        AboutMeExperience,
       },
       localVue,
       mocks: {
@@ -46,7 +46,7 @@ describe('me page', () => {
         ContentDivider,
         AboutMeInformation,
         AboutMeSkills,
-        AboutMeBriefHistory,
+        AboutMeExperience,
       },
       localVue,
       mocks: {

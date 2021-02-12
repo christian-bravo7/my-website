@@ -48,7 +48,7 @@
       <div class="hidden | md:flex items-center justify-end col-span-1">
         <div
           v-if="hasLanguagePicker"
-          class="mr-8"
+          class="mr-4"
         >
           <LanguagePicker :abbreviation="true" />
         </div>

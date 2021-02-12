@@ -5,7 +5,7 @@
     </Portal>
     <AboutMeInformation />
     <AboutMeSkills />
-    <AboutMeBriefHistory />
+    <AboutMeExperience />
   </section>
 </template>
 

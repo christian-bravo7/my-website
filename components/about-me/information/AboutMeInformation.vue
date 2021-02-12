@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen | flex | p-4 sm:p-20">
+  <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center | text-black dark:text-white">
         <div class="relative">

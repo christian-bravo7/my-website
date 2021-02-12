@@ -1,15 +1,17 @@
 <template>
-  <div class="relative | select-none | app-select">
+  <div
+    class="relative | select-none | app-select"
+    @blur.capture="handleBlur"
+  >
     <div
       ref="selectButton"
       tabindex="0"
       class="flex items-center | py-2 pl-4 pr-1 | text-sm | text-gray-900 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | rounded-lg | transition-colors duration-300 cursor-pointer | app-select__button"
       :class="{ 'active' : isOptionListOpened }"
-      @click="openOptions"
-      @keydown.enter="openOptions"
+      @click="toggleOptions"
+      @keydown.enter="toggleOptions"
       @keydown.up="selectPreviousOption"
       @keydown.down="selectNextOption"
-      @focus.prevent="saveFocusElement"
     >
       <slot
         :label="label"
@@ -30,8 +32,6 @@
         ref="optionsList"
         tabindex="0"
         class="absolute right-0 | p-1 | bg-gray-50 dark:bg-blue-900 | rounded-lg shadow-lg focus:outline-none | app-select__options-list"
-        @blur="clearBlurFromOptions"
-        @focus.prevent="saveFocusElement"
         @keydown.up.prevent="preparePreviousOption"
         @keydown.down.prevent="prepareNextOption"
         @keydown.esc="closeOptions"
@@ -52,12 +52,9 @@ import AppSelectOption from '@/components/shared/select/AppSelectOption.vue';
 export default class AppSelect extends Vue {
   isOptionListOpened: boolean = false;
   activeIndex: number = 0;
-  label: any = '';
-  currentFocusElement: any;
-  shouldClose: boolean = false;
-  isOptionListFocusClear: boolean = false;
+  label: string = '';
 
-  @Model('change') value!: any;
+  @Model('change') value!: string;
 
   @Ref('selectButton') readonly selectButton!: HTMLDivElement;
   @Ref('optionsList') readonly optionsList!: HTMLDivElement;
@@ -76,16 +73,16 @@ export default class AppSelect extends Vue {
     return index;
   }
 
-  get activeComponent (): any {
-    return this.$children[this.activeIndex];
+  get activeComponent (): AppSelectOption {
+    return this.$children[this.activeIndex] as AppSelectOption;
   }
 
-  get nextActiveComponent (): any {
-    return this.$children[this.nextComponentIndex];
+  get nextActiveComponent (): AppSelectOption {
+    return this.$children[this.nextComponentIndex] as AppSelectOption;
   }
 
-  get previousActiveComponent (): any {
-    return this.$children[this.previousComponentIndex];
+  get previousActiveComponent (): AppSelectOption {
+    return this.$children[this.previousComponentIndex] as AppSelectOption;
   }
 
   mounted (): void {
@@ -122,11 +119,6 @@ export default class AppSelect extends Vue {
   }
 
   async openOptions (): Promise<void> {
-    if (this.shouldClose) {
-      this.shouldClose = false;
-      return;
-    }
-
     this.isOptionListOpened = true;
     await this.$nextTick();
     this.optionsList.focus();
@@ -136,27 +128,33 @@ export default class AppSelect extends Vue {
     this.isOptionListOpened = false;
   }
 
-  saveFocusElement (element: any): void {
-    this.isOptionListFocusClear = false;
-    this.currentFocusElement = element.target;
+  toggleOptions (): void {
+    this.isOptionListOpened ? this.closeOptions() : this.openOptions();
   }
 
   clearBlurFromOptions (): void {
-    this.isOptionListFocusClear = true;
+    this.closeOptions();
+  }
+
+  handleBlur (event: MouseEvent): void {
+    if (this.$el.contains(event.relatedTarget as Node)) {
+      return;
+    }
+
     this.closeOptions();
   }
 
   @Watch('value')
-  updateActiveStyles (newValue: any): void {
-    this.$children.forEach((element: Vue, index: number) => {
-      const { value, setActive, setInactive, label } = element as AppSelectOption;
+  updateActiveStyles (newValue: string): void {
+    this.$children.forEach((component: Vue, index: number) => {
+      const selectOption = component as AppSelectOption;
 
-      if (value === newValue) {
+      if (selectOption.value === newValue) {
         this.activeIndex = index;
-        this.label = label;
-        setActive();
+        this.label = selectOption.label;
+        selectOption.setActive();
       } else {
-        setInactive();
+        selectOption.setInactive();
       }
     });
   }
@@ -170,7 +168,6 @@ export default class AppSelect extends Vue {
   @Emit('change')
   selectOption ({ value }: AppSelectOption): void {
     this.closeOptions();
-
     return value;
   }
 }
