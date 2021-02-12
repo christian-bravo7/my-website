@@ -9,6 +9,7 @@
     <template #secondary-text>
       {{ $t('navigation.about-me-label') }}
     </template>
+    <ScrollIndicator class="absolute | about-me-banner__scroll-indicator" />
   </AppBanner>
 </template>
 
@@ -27,6 +28,10 @@ export default class AboutMeBanner extends Vue {}
 
       @extend .gradient-one;
     }
+  }
+
+  &__scroll-indicator {
+    bottom: rem(50);
   }
 }
 

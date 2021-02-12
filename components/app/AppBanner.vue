@@ -4,7 +4,7 @@
     @enter="shuffleText"
     @after-enter="displayPrimaryText"
   >
-    <section class="flex justify-center items-center | px-4">
+    <section class="relative | flex justify-center items-center | px-4">
       <div class="relative">
         <h2
           id="secondary"
@@ -21,6 +21,7 @@
           </h1>
         </Transition>
       </div>
+      <slot v-if="isPrimaryTextVisible" />
     </section>
   </Transition>
 </template>
