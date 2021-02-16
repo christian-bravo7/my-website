@@ -1,3 +1,6 @@
+@import 'figures';
+@import 'sections';
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -6,40 +9,8 @@ body {
   @apply text-pink-500;
 }
 
-/* stylelint-disable selector-no-qualifying-type */
-html.dark-mode {
+@include dark-mode {
   .primary-text {
     @apply text-blue-500;
-  }
-}
-
-.section-title {
-  @apply font-bold text-4xl leading-normal break-all;
-}
-
-.section-container {
-  @apply min-h-screen flex p-4;
-}
-
-/* stylelint-disable at-rule-no-unknown */
-@screen sm {
-  .section-title {
-    @apply text-7xl;
-  }
-
-  .section-container {
-    @apply p-20;
-  }
-}
-
-@screen md {
-  .section-title {
-    @apply text-8xl;
-  }
-}
-
-@screen lg {
-  .section-title {
-    @apply text-9xl;
   }
 }

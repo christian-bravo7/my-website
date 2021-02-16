@@ -1,0 +1,29 @@
+.section-title {
+  @apply font-bold text-4xl leading-normal break-all;
+}
+
+.section-container {
+  @apply min-h-screen flex p-4;
+}
+
+@screen sm {
+  .section-title {
+    @apply text-7xl;
+  }
+
+  .section-container {
+    @apply p-20;
+  }
+}
+
+@screen md {
+  .section-title {
+    @apply text-8xl;
+  }
+}
+
+@screen lg {
+  .section-title {
+    @apply text-9xl;
+  }
+}
