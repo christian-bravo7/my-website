@@ -29,7 +29,8 @@
       "@nuxt/types",
       "@types/jest",
       "@types/scrollreveal",
-      "@nuxt/content"
+      "@nuxt/content",
+      "nuxt18n/types"
     ]
   },
   "exclude": [

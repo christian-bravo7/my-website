@@ -1,5 +1,5 @@
 import { NuxtConfig } from '@nuxt/types';
-import Locales from './lang';
+import Locales from './lang/index';
 
 export default {
   target: 'static',
@@ -102,5 +102,16 @@ export default {
   },
 
   // Build configuration: https://nuxtjs.org/api/configuration-build/
-  build: {},
+  build: {
+    postcss: {
+      plugins: {
+        'postcss-each-variables': {},
+        'postcss-each': {},
+        'postcss-pxtorem': {
+          propList: ['*'],
+        },
+        'postcss-nested': {},
+      },
+    },
+  },
 } as NuxtConfig;
