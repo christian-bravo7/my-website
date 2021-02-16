@@ -70,7 +70,7 @@
             </SidebarLink>
           </section>
           <section class="flex justify-between p-4">
-            <ThemeSwitch />
+            <DarkModeSwitch />
             <LanguagePicker
               v-if="hasLanguagePicker"
               @language-changed="closeSidebar"
@@ -110,7 +110,6 @@ export default class SidebarMenu extends Vue {
 </script>
 
 <style lang="scss" scoped>
-
 .overlay {
   &::before {
     @apply absolute w-full h-full bg-gray-300 bg-opacity-75;
@@ -119,7 +118,7 @@ export default class SidebarMenu extends Vue {
   }
 }
 
-html.dark-mode {
+@include dark-mode {
   .overlay {
     &::before {
       @apply bg-blue-900 bg-opacity-75;

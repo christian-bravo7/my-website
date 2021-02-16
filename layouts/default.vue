@@ -9,9 +9,7 @@
         @closeSidebar="closeSidebar"
       />
       <ClientOnly>
-        <NavigationBar
-          :has-language-picker="currentRoute !== 'blog'"
-          :only-english="currentRoute === 'blog'"
+        <AppNavigationBar
           @openSidebar="openSidebar"
         />
       </ClientOnly>

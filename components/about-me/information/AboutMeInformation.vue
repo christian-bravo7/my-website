@@ -65,15 +65,7 @@ export default class AboutMeInformation extends Vue {
 <style lang="scss" scoped>
 .about-me-information {
   &__title {
-    @extend .gradient-four;
-  }
-}
-
-html.dark-mode {
-  .about-me-information {
-    &__title {
-      @extend .gradient-five;
-    }
+    @include theme-gradients(four, five);
   }
 }
 </style>

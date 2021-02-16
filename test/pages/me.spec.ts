@@ -5,7 +5,7 @@ import VueMeta from 'vue-meta';
 import ContentDivider from '@/components/app/ContentDivider.vue';
 import AboutMeInformation from '@/components/about-me/information/AboutMeInformation.vue';
 import AboutMeExperience from '@/components/about-me/experience/AboutMeExperience.vue';
-import AboutMeJobCard from '@/components/about-me/experience/AboutMeJobCard.vue';
+import AboutMeExperienceCard from '@/components/about-me/experience/AboutMeExperienceCard.vue';
 import AboutMeSkills from '@/components/about-me/skills/AboutMeSkills.vue';
 import SkillIcon from '@/components/about-me/skills/SkillIcon.vue';
 
@@ -18,7 +18,7 @@ describe('me page', () => {
     // @ts-ignore
     AboutMeSkills.options.components.SkillIcon = SkillIcon;
     // @ts-ignore
-    AboutMeExperience.options.components.AboutMeJobCard = AboutMeJobCard;
+    AboutMeExperience.options.components.AboutMeExperienceCard = AboutMeExperienceCard;
 
     const wrapper = mount(Me, {
       components: {

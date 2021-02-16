@@ -49,13 +49,7 @@ export default class AppBanner extends Vue {
 </script>
 
 <style lang="scss" scoped>
-
 .app-banner {
-  &__primary-text {
-    transition-duration: 2000ms;
-    transition-property: opacity;
-  }
-
   &__secondary-text {
     top: 50%;
     left: 50%;
@@ -63,20 +57,8 @@ export default class AppBanner extends Vue {
   }
 }
 
-.flash-text-enter {
-  .app-banner__primary-text {
-    opacity: 0;
-  }
-}
-
 .flash-text-enter-active {
   transition: 0.9s;
-}
-
-.flash-text-enter-to {
-  .app-banner__primary-text {
-    opacity: 1;
-  }
 }
 
 .primary-text-enter {

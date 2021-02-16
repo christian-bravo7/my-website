@@ -1,5 +1,4 @@
 <template>
-  <!-- eslint-disable vue-a11y/no-onchange -->
   <div class="inline-block">
     <div class="flex items-center">
       <AppSelect
@@ -29,13 +28,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Emit, Prop, Vue } from 'nuxt-property-decorator';
+import { Component, Emit, Vue } from 'nuxt-property-decorator';
+
+import { i18nLocale } from '@/lang/types';
 
 @Component
 export default class LanguagePicker extends Vue {
-  @Prop({ type: Boolean, default: false })
-  readonly abbreviation!: boolean;
-
   language: string = '';
 
   get currentLanguage (): string {
@@ -46,7 +44,7 @@ export default class LanguagePicker extends Vue {
     this.language = language;
   }
 
-  get availableLanguages (): Array<any> {
+  get availableLanguages (): Array<i18nLocale> {
     // @ts-ignore
     return this.$i18n.locales;
   }

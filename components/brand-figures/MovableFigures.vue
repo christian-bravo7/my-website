@@ -1,15 +1,15 @@
 <template>
   <div class="hidden md:block absolute overflow-hidden w-full h-full pointer-events-none">
     <figure
-      class="absolute w-48 h-48 rounded-full figure figure--1"
+      class="absolute w-48 h-48 rounded-full movable-figure movable-figure--1"
       :class="currentRoute"
     />
     <figure
-      class="absolute w-32 h-32 rounded-full figure figure--2"
+      class="absolute w-32 h-32 rounded-full movable-figure movable-figure--2"
       :class="currentRoute"
     />
     <figure
-      class="absolute w-20 h-20 rounded-full figure figure--3"
+      class="absolute w-20 h-20 rounded-full movable-figure movable-figure--3"
       :class="currentRoute"
     />
   </div>
@@ -26,23 +26,22 @@ export default class MovableFigures extends Vue {
 </script>
 
 <style lang="scss" scoped>
-
-.figure--1 {
-  background: linear-gradient(210deg, #FFFFFF1A 0%, #FE65651A 58%, #A40EB033 100%);
-}
-
-.figure--2 {
-  background: linear-gradient(210deg, #FFFFFF1A 0%, #A8EDE938 58%, #FED6E385 100%);
-}
-
-.figure--3 {
-  background: linear-gradient(210deg, #FFFFFF1A 0%, #C7EAFD3F 58%, #E8198B28 100%);
-}
-
-.figure {
+.movable-figure {
   $self: &;
 
   transition: color 200ms, top 6s, left 6s, transform 6s;
+
+  &--1 {
+    background: linear-gradient(210deg, #FFFFFF1A 0%, #FE65651A 58%, #A40EB033 100%);
+  }
+
+  &--2 {
+    background: linear-gradient(210deg, #FFFFFF1A 0%, #A8EDE938 58%, #FED6E385 100%);
+  }
+
+  &--3 {
+    background: linear-gradient(210deg, #FFFFFF1A 0%, #C7EAFD3F 58%, #E8198B28 100%);
+  }
 
   &.index {
     &#{$self}--1 {
@@ -90,8 +89,8 @@ export default class MovableFigures extends Vue {
   }
 }
 
-html.dark-mode {
-  .figure {
+@include dark-mode {
+  .movable-figure {
     &::after {
       position: absolute;
       top: 50%;
@@ -105,18 +104,18 @@ html.dark-mode {
       transform: translate(-50%, -50%);
       content: '';
     }
-  }
 
-  .figure--1 {
-    background: linear-gradient(210deg, rgba(255, 255, 255, 0.46) 0%, rgba(254, 101, 101, 0.52) 58%, rgba(164, 14, 176, 0.86) 100%);
-  }
+    &--1 {
+      background: linear-gradient(210deg, rgba(255, 255, 255, 0.46) 0%, rgba(254, 101, 101, 0.52) 58%, rgba(164, 14, 176, 0.86) 100%);
+    }
 
-  .figure--2 {
-    background: linear-gradient(210deg, rgba(255, 255, 255, 0.62) 0%, rgba(168, 237, 233, 0.27) 58%, rgba(255, 71, 131, 0.6) 100%);
-  }
+    &--2 {
+      background: linear-gradient(210deg, rgba(255, 255, 255, 0.62) 0%, rgba(168, 237, 233, 0.27) 58%, rgba(255, 71, 131, 0.6) 100%);
+    }
 
-  .figure--3 {
-    background: linear-gradient(210deg, rgba(255, 255, 255, 0.44) 0%, rgba(199, 234, 253, 0.17) 58%, rgba(232, 25, 139, 0.86) 100%);
+    &--3 {
+      background: linear-gradient(210deg, rgba(255, 255, 255, 0.44) 0%, rgba(199, 234, 253, 0.17) 58%, rgba(232, 25, 139, 0.86) 100%);
+    }
   }
 }
 </style>

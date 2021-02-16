@@ -36,19 +36,7 @@ export default class HomeBanner extends Vue {
     /deep/ strong {
       font-weight: normal;
 
-      @extend .gradient-one;
-    }
-  }
-}
-
-html.dark-mode {
-  .home-banner {
-    &__description {
-      /deep/ strong {
-        font-weight: normal;
-
-        @extend .gradient-five;
-      }
+      @include theme-gradients (one, two);
     }
   }
 }

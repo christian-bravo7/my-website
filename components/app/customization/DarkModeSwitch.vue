@@ -18,14 +18,14 @@
         <i
           v-show="hasDarkTheme"
           key="dark"
-          class="material-icons dark-mode-switch__icon"
+          class="absolute material-icons dark-mode-switch__icon"
         >
           mode_night
         </i>
         <i
           v-show="!hasDarkTheme"
           key="light"
-          class="material-icons dark-mode-switch__icon"
+          class="absolute material-icons dark-mode-switch__icon"
         >
           wb_sunny
         </i>
@@ -52,34 +52,23 @@ export default class DarkModeSwitch extends Vue {
 <style lang="scss" scoped>
 .dark-mode-switch {
   &__icon {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
 
-.theme-icon-enter {
-  transform: translate(-50%, -50%) scale(0.1);
-}
-
-.theme-icon-enter-to {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.theme-icon-enter-active {
-  transition-duration: 300ms;
-  transition-property: transform;
-}
-
-.theme-icon-leave {
-  transform: translate(-50%, -50%) scale(1);
-}
-
+.theme-icon-enter,
 .theme-icon-leave-to {
   transform: translate(-50%, -50%) scale(0.1);
 }
 
+.theme-icon-enter-to,
+.theme-icon-leave {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.theme-icon-enter-active,
 .theme-icon-leave-active {
   transition-duration: 300ms;
   transition-property: transform;

@@ -1,4 +1,4 @@
-const months: any = {
+const months: Record<string, string> = {
   0: 'January',
   1: 'February',
   2: 'March',

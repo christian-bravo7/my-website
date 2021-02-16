@@ -43,16 +43,3 @@ export default class BlogLayout extends Vue {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-/* stylelint-disable */
-
-.text-min-content {
-  width: 100%;
-  line-height: normal;
-
-  @screen md {
-    width: min-content;
-  }
-}
-</style>

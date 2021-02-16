@@ -21,8 +21,8 @@ export default class SkillIcon extends Vue {
 
 <style lang="scss" scoped>
 .skill-icon {
-  min-width: rem(140);
-  min-height: rem(120);
+  min-width: 140px;
+  min-height: 120px;
 
   svg {
     @apply fill-current;

@@ -17,7 +17,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
-import { IContentDocument } from '@nuxt/content/types/content';
+import { PostContent } from '@/content/types';
 import { Context } from '@nuxt/types';
 import { MetaInfo } from 'vue-meta/types';
 
@@ -25,7 +25,7 @@ import { MetaInfo } from 'vue-meta/types';
   layout: 'post',
 })
 export default class Blog extends Vue {
-  private articles!: IContentDocument;
+  private articles!: PostContent;
 
   head (): MetaInfo {
     return {
@@ -33,7 +33,7 @@ export default class Blog extends Vue {
     };
   }
 
-  async asyncData ({ $content, error, params }: Context): Promise<{ articles: IContentDocument }> {
+  async asyncData ({ $content, error, params }: Context): Promise<{ articles: PostContent }> {
     const articles = await $content(params.post)
       .fetch()
       .catch(() => {
@@ -41,11 +41,11 @@ export default class Blog extends Vue {
       });
 
     return {
-      articles: articles as IContentDocument,
+      articles: articles as PostContent,
     };
   }
 
-  get bannerInfo (): any {
+  get bannerInfo (): Partial<PostContent> {
     const { title, description, createdAt, image, minutes } = this.articles;
 
     return {
@@ -60,8 +60,6 @@ export default class Blog extends Vue {
 </script>
 
 <style lang="scss">
-/* stylelint-disable */
-
 .blog-content {
   h1 {
     @apply text-3xl mb-6 font-bold;
@@ -108,7 +106,7 @@ export default class Blog extends Vue {
   }
 }
 
-html.dark-mode {
+@include dark-mode {
   h1,
   h2,
   h3,
@@ -120,5 +118,4 @@ html.dark-mode {
     @apply text-gray-50;
   }
 }
-
 </style>

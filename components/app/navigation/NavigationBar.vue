@@ -91,9 +91,7 @@ export default class NavigationBar extends Vue {
 }
 </script>
 
-<style scoped>
-/* stylelint-disable */
-
+<style lang="scss" scoped>
 @screen md {
   .navbar {
     backdrop-filter: blur(100px);
@@ -101,6 +99,6 @@ export default class NavigationBar extends Vue {
 }
 
 .only-white {
-  @apply text-white !important;
+  @apply text-white #{!important};
 }
 </style>

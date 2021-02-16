@@ -6,8 +6,8 @@
     <div
       ref="selectButton"
       tabindex="0"
-      class="flex items-center | py-2 pl-4 pr-1 | text-sm | text-gray-900 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | rounded-lg | transition-colors duration-300 cursor-pointer | app-select__button"
-      :class="{ 'active' : isOptionListOpened }"
+      class="flex items-center | py-2 pl-4 pr-1 | text-sm | text-gray-900 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | rounded-lg | cursor-pointer | app-select__button"
+      :class="{ 'app-select__button--active' : isOptionListOpened }"
       @click="toggleOptions"
       @keydown.enter="toggleOptions"
       @keydown.up="selectPreviousOption"
@@ -145,11 +145,11 @@ export default class AppSelect extends Vue {
   }
 
   @Watch('value')
-  updateActiveStyles (newValue: string): void {
+  updateActiveStyles (value: string): void {
     this.$children.forEach((component: Vue, index: number) => {
       const selectOption = component as AppSelectOption;
 
-      if (selectOption.value === newValue) {
+      if (selectOption.value === value) {
         this.activeIndex = index;
         this.label = selectOption.label;
         selectOption.setActive();
@@ -176,65 +176,42 @@ export default class AppSelect extends Vue {
 <style lang="scss" scoped>
 .app-select {
   &__options-list {
-    $extra-width: rem(50);
-    $extra-top: rem(8);
-
-    top: calc(100% + #{$extra-top});
-    min-width: calc(100% + #{$extra-width});
-  }
-
-  /deep/ .app-select-option {
-    @apply mb-1;
-
-    &:last-child {
-      @apply mb-0;
-    }
+    top: calc(100% + 8px);
+    min-width: calc(100% + 50px);
   }
 
   &__button {
-    &.active {
+    &--active {
       @apply bg-gray-50 shadow-md;
     }
   }
 }
 
-html.dark-mode {
+@include dark-mode {
   .app-select {
     &__button {
-      &.active {
+      &--active {
         @apply bg-blue-900;
       }
     }
   }
 }
 
-.option-list-enter {
+.option-list-enter,
+.option-list-leave-to {
   transform: translateY(-10%);
   opacity: 0;
 }
 
-.option-list-enter-active {
-  transition-duration: 200ms;
-  transition-property: opacity, transform;
-}
-
-.option-list-enter-to {
-  transform: translateY(0%);
-  opacity: 1;
-}
-
-.option-list-leave {
-  transform: translateY(0%);
-  opacity: 1;
-}
-
+.option-list-enter-active,
 .option-list-leave-active {
   transition-duration: 200ms;
   transition-property: opacity, transform;
 }
 
-.option-list-leave-to {
-  transform: translateY(-10%);
-  opacity: 0;
+.option-list-enter-to,
+.option-list-leave {
+  transform: translateY(0%);
+  opacity: 1;
 }
 </style>

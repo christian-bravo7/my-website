@@ -81,7 +81,7 @@ export default class PostCard extends Vue {
   }
 }
 
-html.dark-mode {
+@include dark-mode {
   .post-image {
     filter: brightness(0.9);
   }

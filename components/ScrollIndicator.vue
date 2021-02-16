@@ -13,7 +13,7 @@ import { Component, Vue } from 'nuxt-property-decorator';
 export default class ScrollIndicator extends Vue {}
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .scroll-indicator {
   span {
     animation: scroll-indicator-animation 2s infinite backwards;

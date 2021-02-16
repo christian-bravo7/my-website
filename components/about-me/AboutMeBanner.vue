@@ -26,24 +26,12 @@ export default class AboutMeBanner extends Vue {}
     /deep/ strong {
       font-weight: normal;
 
-      @extend .gradient-one;
+      @include theme-gradients (one, two);
     }
   }
 
   &__scroll-indicator {
-    bottom: rem(50);
-  }
-}
-
-html.dark-mode {
-  .about-me-banner {
-    &__description {
-      /deep/ strong {
-        font-weight: normal;
-
-        @extend .gradient-two;
-      }
-    }
+    bottom: 60px;
   }
 }
 </style>

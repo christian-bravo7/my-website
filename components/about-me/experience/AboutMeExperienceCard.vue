@@ -25,7 +25,7 @@
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
 
 @Component
-export default class AboutMeJobCard extends Vue {
+export default class AboutMeExperienceCard extends Vue {
   @Prop({ type: String, required: true })
   readonly company!: string;
 

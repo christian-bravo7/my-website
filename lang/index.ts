@@ -1,3 +1,5 @@
+import { i18nLocale } from '@/lang/types';
+
 export default [
   {
     name: 'English',
@@ -17,4 +19,4 @@ export default [
     iso: 'fr-FR',
     file: 'fr.json',
   },
-];
+] as Array<i18nLocale>;

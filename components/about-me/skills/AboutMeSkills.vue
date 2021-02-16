@@ -25,6 +25,8 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
+import { SkillIconData } from '@/components/about-me/skills/types';
+
 import CssIcon from '~/assets/img/css3.svg?inline';
 import JavascriptIcon from '~/assets/img/javascript.svg?inline';
 import NuxtIcon from '~/assets/img/nuxt-dot-js.svg?inline';
@@ -53,7 +55,7 @@ import HtmlIcon from '~/assets/img/html5.svg?inline';
   },
 })
 export default class AboutMeSkills extends Vue {
-  skills: Array<{ name: string, component: any }> = [
+  skills: Array<SkillIconData> = [
     { name: 'Javascript', component: JavascriptIcon },
     { name: 'Typescript', component: TypescriptIcon },
     { name: 'NuxtJS', component: NuxtIcon },
@@ -72,15 +74,7 @@ export default class AboutMeSkills extends Vue {
 <style lang="scss" scoped>
 .about-me-skills {
   &__title {
-    @extend .gradient-one;
-  }
-}
-
-html.dark-mode {
-  .about-me-skills {
-    &__title {
-      @extend .gradient-two;
-    }
+    @include theme-gradients(one, two);
   }
 }
 </style>

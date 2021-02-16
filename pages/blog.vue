@@ -37,8 +37,10 @@ import baffle from 'baffle';
 
 import { greetingByHour } from '@/utils/date/greetingByHour';
 import { getMetaTags } from '@/seo';
+import { IContentDocument } from '@nuxt/content/types/content';
 
 @Component({
+  middleware: ['redirectEnglishPath'],
   head () {
     const homeMetaTags = getMetaTags({
       siteTitle: this.$t('navigation.blog-label') as string,
@@ -50,7 +52,7 @@ import { getMetaTags } from '@/seo';
   },
 })
 export default class Blog extends Vue {
-  async asyncData ({ $content, error }: Context): Promise<any> {
+  async asyncData ({ $content, error }: Context): Promise<{ articles: IContentDocument[]}> {
     const articles = await $content()
       .fetch()
       .catch(() => {
@@ -58,7 +60,7 @@ export default class Blog extends Vue {
       });
 
     return {
-      articles,
+      articles: articles as IContentDocument[],
     };
   }
 
@@ -89,8 +91,6 @@ export default class Blog extends Vue {
 </script>
 
 <style lang="scss" scoped>
-/* stylelint-disable */
-
 .blog-grid {
   grid-template-columns: repeat(2, 1fr);
 
