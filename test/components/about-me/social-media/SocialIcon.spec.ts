@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 
-import SocialIcon from '@/components/app/social-media/SocialIcon.vue';
+import SocialIcon from '@/components/about-me/social-media/SocialIcon.vue';
 
 describe('SocialIcon component', () => {
   it('should render correclty', () => {

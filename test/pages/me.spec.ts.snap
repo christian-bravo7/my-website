@@ -72,7 +72,7 @@ exports[`me page should render correctly 1`] = `
         </h2>
         <div class="flex justify-center items-center | flex-1">
           <div class="w-full | grid grid-cols-1 gap-4 md:gap-2 md:grid-cols-9">
-            <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | shadow-md border border-transparent hover:shadow-xl dark:border-blue-300 | transition-all duration-300 md:col-start-1 md:row-start-1 md:col-span-3">
+            <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | shadow-md border border-transparent hover:shadow-xl dark:border-blue-300 | transition-all duration-300 md:col-span-3 md:row-start-1 md:col-start-1">
               <div class="flex items-center | text-black dark:text-white">
                 <div class="flex flex-col flex-1"><span class="text-lg | font-bold">
         Software Developer
@@ -86,7 +86,7 @@ exports[`me page should render correctly 1`] = `
                 </div>
               </div>
             </div>
-            <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | shadow-md border border-transparent hover:shadow-xl dark:border-blue-300 | transition-all duration-300 md:col-start-3 md:row-start-2 md:col-span-3">
+            <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | shadow-md border border-transparent hover:shadow-xl dark:border-blue-300 | transition-all duration-300 md:col-span-3 md:row-start-2 md:col-start-3">
               <div class="flex items-center | text-black dark:text-white">
                 <div class="flex flex-col flex-1"><span class="text-lg | font-bold">
         Frontend Developer
@@ -100,7 +100,7 @@ exports[`me page should render correctly 1`] = `
                 </div>
               </div>
             </div>
-            <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | shadow-md border border-transparent hover:shadow-xl dark:border-blue-300 | transition-all duration-300 md:col-start-5 md:row-start-3 md:col-span-3">
+            <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | shadow-md border border-transparent hover:shadow-xl dark:border-blue-300 | transition-all duration-300 md:col-span-3 md:row-start-3 md:col-start-5">
               <div class="flex items-center | text-black dark:text-white">
                 <div class="flex flex-col flex-1"><span class="text-lg | font-bold">
         Frontend Developer
@@ -114,7 +114,7 @@ exports[`me page should render correctly 1`] = `
       </span></div>
               </div>
             </div>
-            <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | shadow-md border border-transparent hover:shadow-xl dark:border-blue-300 | transition-all duration-300 md:col-start-7 md:row-start-4 md:col-span-3">
+            <div class="inline-block | p-4 | rounded-2xl select-none | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | shadow-md border border-transparent hover:shadow-xl dark:border-blue-300 | transition-all duration-300 md:col-span-3 md:row-start-4 md:col-start-7">
               <div class="flex items-center | text-black dark:text-white">
                 <div class="flex flex-col flex-1"><span class="text-lg | font-bold">
         Quality Assurance

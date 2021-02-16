@@ -2,7 +2,6 @@ import { createLocalVue, mount } from '@vue/test-utils';
 import Me from '@/pages/me.vue';
 import PortalVue from 'portal-vue';
 import VueMeta from 'vue-meta';
-import ContentDivider from '@/components/app/ContentDivider.vue';
 import AboutMeInformation from '@/components/about-me/information/AboutMeInformation.vue';
 import AboutMeExperience from '@/components/about-me/experience/AboutMeExperience.vue';
 import AboutMeExperienceCard from '@/components/about-me/experience/AboutMeExperienceCard.vue';
@@ -22,7 +21,6 @@ describe('me page', () => {
 
     const wrapper = mount(Me, {
       components: {
-        ContentDivider,
         AboutMeInformation,
         AboutMeSkills,
         AboutMeExperience,
@@ -43,7 +41,6 @@ describe('me page', () => {
   it('should display meta-tag title', () => {
     const wrapper = mount(Me, {
       components: {
-        ContentDivider,
         AboutMeInformation,
         AboutMeSkills,
         AboutMeExperience,

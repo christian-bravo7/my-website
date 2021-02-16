@@ -2,8 +2,8 @@
 
 exports[`MovableFigures component should render correctly 1`] = `
 <div class="hidden md:block absolute overflow-hidden w-full h-full pointer-events-none">
-  <figure class="absolute w-48 h-48 rounded-full figure figure--1 about"></figure>
-  <figure class="absolute w-32 h-32 rounded-full figure figure--2 about"></figure>
-  <figure class="absolute w-20 h-20 rounded-full figure figure--3 about"></figure>
+  <figure class="absolute w-48 h-48 rounded-full movable-figure movable-figure--1 about"></figure>
+  <figure class="absolute w-32 h-32 rounded-full movable-figure movable-figure--2 about"></figure>
+  <figure class="absolute w-20 h-20 rounded-full movable-figure movable-figure--3 about"></figure>
 </div>
 `;

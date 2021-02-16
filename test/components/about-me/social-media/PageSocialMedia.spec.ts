@@ -1,5 +1,6 @@
-import PageSocialMedia from '@/components/app/social-media/PageSocialMedia.vue';
-import SocialIcon from '@/components/app/social-media/SocialIcon.vue';
+import PageSocialMedia from '@/components/about-me/social-media/PageSocialMedia.vue';
+import SocialIcon from '@/components/about-me/social-media/SocialIcon.vue';
+
 import { mount } from '@vue/test-utils';
 
 describe('PageSocialMedia component', () => {
