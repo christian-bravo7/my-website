@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutMeInformation component should render correctly 1`] = `
+<section class="section-container">
+  <div class="container | flex | my-0 mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center | text-black dark:text-white">
+      <div class="relative">
+        <h2 class="section-title about-me-information__title">
+          me.hi-label
+        </h2>
+        <p class="relative z-10 | text-sm md:text-lg | leading-loose">
+          me.about-me-description
+        </p>
+      </div>
+      <div class="flex items-center justify-center | primary-text"><svg class="w-11/12 fill-current"></svg></div>
+    </div>
+  </div>
+</section>
+`;
