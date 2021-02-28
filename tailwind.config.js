@@ -3,7 +3,6 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
   theme: {
     extend: {
       colors: {
@@ -74,7 +73,7 @@ module.exports = {
     backgroundColor: ['dark', 'dark-hover', 'hover'],
     borderColor: ['dark', 'hover', 'dark-hover'],
     textColor: ['group-hover', 'dark', 'dark-hover', 'dark-group-hover', 'hover'],
-    padding: ['hover', 'responsive'],
+    padding: ['responsive', 'hover'],
   },
   plugins: [
     require('tailwindcss-dark-mode')(),
