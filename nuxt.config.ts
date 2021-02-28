@@ -3,7 +3,9 @@ import Locales from './lang/index';
 
 export default {
   target: 'static',
-  components: true,
+  components: [
+    { path: '~/components', pathPrefix: false },
+  ],
 
   server: {
     port: 3000,

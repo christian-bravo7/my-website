@@ -8,14 +8,20 @@
         <div class="flex justify-center items-center | flex-1">
           <div class="w-full | grid grid-cols-1 gap-4 md:gap-2 md:grid-cols-9">
             <AboutMeExperienceCard
-              v-for="(workExperience, index) in myWorkExperiences"
-              :key="index"
-              v-bind="workExperience"
-              class="md:col-span-3"
-              :class="[
-                `md:row-start-${index + 1}`,
-                `md:col-start-${index + index + 1}`
-              ]"
+              v-bind="myWorkExperiences[0]"
+              class="md:col-span-3 md:row-start-1 md:col-start-1"
+            />
+            <AboutMeExperienceCard
+              v-bind="myWorkExperiences[1]"
+              class="md:col-span-3 md:row-start-2 md:col-start-3"
+            />
+            <AboutMeExperienceCard
+              v-bind="myWorkExperiences[2]"
+              class="md:col-span-3 md:row-start-3 md:col-start-5"
+            />
+            <AboutMeExperienceCard
+              v-bind="myWorkExperiences[3]"
+              class="md:col-span-3 md:row-start-4 md:col-start-7"
             />
           </div>
         </div>
