@@ -1,7 +1,7 @@
 <template>
   <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 items-center | text-black dark:text-white">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-0 | text-black dark:text-white">
         <div class="relative">
           <h2 class="section-title about-me-information__title">
             {{ $t('me.hi-label') }}
@@ -11,7 +11,11 @@
           </p>
         </div>
         <div class="flex items-center justify-center | primary-text">
-          <RemolinoLogo class="w-11/12 fill-current" />
+          <img
+            class="w-3/4"
+            src="~assets/img/photo.png"
+            alt="christian"
+          >
         </div>
       </div>
     </div>

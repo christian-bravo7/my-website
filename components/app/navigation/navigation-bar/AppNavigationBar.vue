@@ -1,7 +1,9 @@
 <template>
   <AppNavigationBarBase>
     <template #left>
-      <AppLogo />
+      <div class="hidden md:flex">
+        <AppLogo />
+      </div>
     </template>
     <template #center>
       <div class="hidden | w-full | md:flex items-center justify-end col-span-3">
@@ -15,11 +17,6 @@
             :to="localePath({ name: 'me' })"
           >
             {{ $t('navigation.about-me-label') }}
-          </AppNavigationBarLink>
-          <AppNavigationBarLink
-            to="blog"
-          >
-            {{ $t('navigation.blog-label') }}
           </AppNavigationBarLink>
         </div>
       </div>
@@ -35,6 +32,7 @@
       </div>
       <div class="flex md:hidden justify-end items-center">
         <AppBurgerButton
+          :is-active="isSidebarActive"
           @click="toggleSidebar"
         />
       </div>
@@ -43,10 +41,13 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Emit } from 'nuxt-property-decorator';
+import { Vue, Component, Emit, Prop } from 'nuxt-property-decorator';
 
 @Component
 export default class AppNavigationBar extends Vue {
+  @Prop({ type: Boolean, default: false })
+  readonly isSidebarActive!: boolean;
+
   @Emit('openSidebar')
   openSidebar (): void {}
 

@@ -14,6 +14,7 @@
     <template #secondary-text>
       {{ $t(homeGreetingKey) }}
     </template>
+    <ScrollIndicator class="absolute | home-banner__scroll-indicator" />
   </AppBanner>
 </template>
 
@@ -39,6 +40,18 @@ export default class HomeBanner extends Vue {
       font-weight: normal;
 
       @include theme-gradients (one, two);
+    }
+  }
+
+  &__scroll-indicator {
+    bottom: 100px;
+  }
+}
+
+@screen md {
+  .home-banner {
+    &__scroll-indicator {
+      bottom: 60px;
     }
   }
 }

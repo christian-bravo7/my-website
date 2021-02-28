@@ -13,7 +13,9 @@
   "home": {
     "greeting": "Salut",
     "iam-name-text": "Je suis Christian Bravo",
-    "iam-job-text": "développeur **Frontend**"
+    "iam-job-text": "développeur **Frontend**",
+    "recent-projects": "Les projets récents",
+    "no-recent-projects-message": "Désolé, je travaille toujours sur cette section, vous verrez bientôt mes projets :)"
   },
   "navigation": {
     "about-me-label": "Moi",

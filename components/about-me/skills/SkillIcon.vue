@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-between | p-2 | bg-gray-100 dark:bg-transparent dark-hover:bg-blue-700 dark-hover:bg-opacity-25 | rounded-xl shadow-md hover:shadow-xl border border-transparent dark:border-blue-300 | select-none | group transition-all duration-300 | skill-icon">
+  <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon">
     <span class="flex justify-center items-center flex-1 | w-16">
       <slot name="default" />
     </span>

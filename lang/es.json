@@ -13,7 +13,9 @@
   "home": {
     "greeting": "Hola",
     "iam-name-text": "Soy Christian Bravo",
-    "iam-job-text": "Desarrollador **Frontend**"
+    "iam-job-text": "Desarrollador **Frontend**",
+    "recent-projects": "Proyectos recientes",
+    "no-recent-projects-message": "Lo siento, todavía estoy trabajando en esta sección, pronto verás mis proyectos :)"
   },
   "navigation": {
     "home-label": "Inicio",
@@ -25,9 +27,9 @@
     "home-link": "Regresar al inicio"
   },
   "greeting": {
-    "good-morning": "Buen día",
+    "good-morning": "Buenos días",
     "good-afternoon": "Buenas tardes",
-    "good-evening": "Buena noche",
+    "good-evening": "Buenas noches",
     "good-noon": "Buen mediodía"
   }
 }

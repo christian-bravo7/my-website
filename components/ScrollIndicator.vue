@@ -1,8 +1,8 @@
 <template>
   <div class="scroll-indicator">
-    <span class="block | w-5 h-5 | -m-2 | border-r-2 border-b-2 border-gray-600 dark:border-gray-100 | transform rotate-45" />
-    <span class="block | w-5 h-5 | -m-2 | border-r-2 border-b-2 border-gray-600 dark:border-gray-100 | transform rotate-45" />
-    <span class="block | w-5 h-5 | -m-2 | border-r-2 border-b-2 border-gray-600 dark:border-gray-100 | transform rotate-45" />
+    <span class="block | w-4 h-4 md:w-5 md:h-5 | -m-2 | border-r-2 border-b-2 border-gray-600 dark:border-gray-300 | transform rotate-45" />
+    <span class="block | w-4 h-4 md:w-5 md:h-5 | -m-2 | border-r-2 border-b-2 border-gray-600 dark:border-gray-300 | transform rotate-45" />
+    <span class="block | w-4 h-4 md:w-5 md:h-5 | -m-2 | border-r-2 border-b-2 border-gray-600 dark:border-gray-300 | transform rotate-45" />
   </div>
 </template>
 

@@ -13,7 +13,9 @@
   "home": {
     "greeting": "Hello",
     "iam-name-text": "I'm Christian Bravo",
-    "iam-job-text": "**Frontend** developer"
+    "iam-job-text": "**Frontend** developer",
+    "recent-projects": "Recent projects",
+    "no-recent-projects-message": "Sorry, I'm still working on this section, you will see my projects soon :)"
   },
   "navigation": {
     "home-label": "Home",

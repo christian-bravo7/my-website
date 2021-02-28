@@ -31,6 +31,7 @@
         v-show="isOptionListOpened"
         ref="optionsList"
         tabindex="0"
+        :class="{ 'app-select__options-list--top-right': isTopRight }"
         class="absolute right-0 | p-1 | bg-gray-50 dark:bg-blue-900 | rounded-lg shadow-lg focus:outline-none | app-select__options-list"
         @keydown.up.prevent="preparePreviousOption"
         @keydown.down.prevent="prepareNextOption"
@@ -44,7 +45,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Provide, Model, Emit, Watch, Ref } from 'nuxt-property-decorator';
+import { Vue, Component, Provide, Model, Emit, Watch, Ref, Prop } from 'nuxt-property-decorator';
 
 import AppSelectOption from '@/components/shared/select/AppSelectOption.vue';
 
@@ -53,6 +54,9 @@ export default class AppSelect extends Vue {
   isOptionListOpened: boolean = false;
   activeIndex: number = 0;
   label: string = '';
+
+  @Prop({ type: Boolean, default: false })
+  readonly isTopRight!: boolean;
 
   @Model('change') value!: string;
 
@@ -178,6 +182,11 @@ export default class AppSelect extends Vue {
   &__options-list {
     top: calc(100% + 8px);
     min-width: calc(100% + 50px);
+
+    &--top-right {
+      top: initial;
+      bottom: calc(100% + 8px);
+    }
   }
 
   &__button {

@@ -17,17 +17,7 @@
           v-show="isSidebarVisible"
           class="absolute inset-y-0 right-0 w-full h-full max-w-sm p-0 bg-gray-50 dark:bg-blue-800 rounded-3xl rounded-r-none sidebar-grid"
         >
-          <section class="flex justify-end p-4">
-            <button
-              class="flex md:hidden justify-items-center items-center text-gray-900 dark:text-gray-50"
-              @click="closeSidebar"
-              @keydown.enter="closeSidebar"
-            >
-              <i class="material-icons text-5xl">
-                close
-              </i>
-            </button>
-          </section>
+          <section class="flex justify-end p-10" />
           <section class="flex flex-col items-start p-4">
             <SidebarLink
               path="index"
@@ -55,24 +45,12 @@
                 {{ $t('navigation.about-me-label') }}
               </template>
             </SidebarLink>
-            <SidebarLink
-              path="blog"
-              :is-only-english="onlyEnglish"
-              @click="closeSidebar"
-              @onKeydownEnter="closeSidebar"
-            >
-              <template v-if="onlyEnglish">
-                Blog
-              </template>
-              <template v-else>
-                {{ $t('navigation.blog-label') }}
-              </template>
-            </SidebarLink>
           </section>
           <section class="flex justify-between p-4">
             <DarkModeSwitch />
             <LanguagePicker
               v-if="hasLanguagePicker"
+              :is-top-right="true"
               @language-changed="closeSidebar"
             />
           </section>

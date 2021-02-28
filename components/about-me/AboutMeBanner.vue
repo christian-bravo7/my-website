@@ -31,7 +31,15 @@ export default class AboutMeBanner extends Vue {}
   }
 
   &__scroll-indicator {
-    bottom: 60px;
+    bottom: 100px;
+  }
+}
+
+@screen md {
+  .about-me-banner {
+    &__scroll-indicator {
+      bottom: 60px;
+    }
   }
 }
 </style>

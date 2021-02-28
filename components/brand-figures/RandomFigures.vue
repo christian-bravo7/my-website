@@ -20,8 +20,8 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator';
 
 @Component
 export default class RandomFigures extends Vue {
-  @Prop({ type: [String, Object as () => Vue], default: 'div' })
-  readonly figureComponent!: string | Vue;
+  @Prop({ type: [Function, String, Object as () => Vue], default: 'div' })
+  readonly figureComponent!: string | Vue | Function;
 }
 </script>
 

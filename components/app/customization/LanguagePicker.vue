@@ -3,6 +3,7 @@
     <div class="flex items-center">
       <AppSelect
         v-model="currentLanguage"
+        :is-top-right="isTopRight"
         @change="changeLanguage"
         @blur="changeLanguage"
       >
@@ -28,12 +29,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Emit, Vue } from 'nuxt-property-decorator';
+import { Component, Emit, Prop, Vue } from 'nuxt-property-decorator';
 
 import { i18nLocale } from '@/lang/types';
 
 @Component
 export default class LanguagePicker extends Vue {
+  @Prop({ type: Boolean, default: false })
+  readonly isTopRight!: boolean;
+
   language: string = '';
 
   get currentLanguage (): string {

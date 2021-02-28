@@ -8,14 +8,14 @@
       <div class="relative">
         <h2
           id="secondary"
-          class="absolute | font-bold text-center | text-6xl sm:text-8xl md:text-13xl | leading-none select-none | text-gray-200 dark:text-blue-900 | app-banner__secondary-text"
+          class="absolute | font-bold text-center | text-6xl sm:text-8xl md:text-10xl xl:text-13xl | leading-none select-none | text-gray-200 dark:text-blue-900 | app-banner__secondary-text"
         >
           <slot name="secondary-text" />
         </h2>
         <Transition name="primary-text">
           <h1
             v-show="isPrimaryTextVisible"
-            class="relative z-10 | max-w-xs sm:max-w-lg md:max-w-screen-md | text-center text-xl sm:text-3xl md:text-5xl | text-gray-900 dark:text-gray-50 | app-banner__primary-text"
+            class="relative z-10 | max-w-xs sm:max-w-lg md:max-w-screen-md | text-center text-xl sm:text-3xl md:text-4xl xl:text-5xl | text-gray-900 dark:text-gray-50 | app-banner__primary-text"
           >
             <slot name="primary-text" />
           </h1>

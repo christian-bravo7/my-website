@@ -6,12 +6,6 @@
         @enter="shuffleText"
       >
         <div class="pt-0 md:pt-20">
-          <h1
-            id="greeting"
-            class="relative z-10 md:z-0 md:absolute max-w-screen-sm md:max-w-none right-0 bottom-0 text-4xl sm:text-6xl md:text-12xl mx-auto md:mr-8 pt-24 px-4 md:pt-0 md:px-0 font-bold text-right text-gray-300 dark:text-blue-900 select-none text-min-content order-1"
-          >
-            {{ greetingWord }}
-          </h1>
           <div class="container mx-auto px-4 md:px-0 py-8 md:py-20 relative z-10">
             <div class="blog-grid">
               <PostCard
@@ -40,7 +34,7 @@ import { getMetaTags } from '@/seo';
 import { IContentDocument } from '@nuxt/content/types/content';
 
 @Component({
-  middleware: ['redirectEnglishPath'],
+  middleware: ['wipMiddleware'],
   head () {
     const homeMetaTags = getMetaTags({
       siteTitle: this.$t('navigation.blog-label') as string,

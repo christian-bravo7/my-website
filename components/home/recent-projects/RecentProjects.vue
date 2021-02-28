@@ -1,25 +1,31 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`index page should render page correctly 1`] = `
-<section>
-  <div class="v-portal" style="display: none;"></div>
+<template>
   <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="flex flex-col | w-full">
         <h2 class="mb-8 | text-center | section-title recent-projects__title">
-          home.recent-projects
+          {{ $t('home.recent-projects') }}
         </h2>
         <div class="flex justify-center items-center | flex-1">
           <div class="flex flex-wrap justify-center | max-w-screen-lg">
-            <div class="card">
-              <p class="text-base | text-black dark:text-white">
-                home.no-recent-projects-message
-              </p>
-            </div>
+            <RecentProjectAdvice />
           </div>
         </div>
       </div>
     </div>
   </section>
-</section>
-`;
+</template>
+
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator';
+
+@Component
+export default class RecentProjects extends Vue {}
+</script>
+
+<style lang="scss" scoped>
+.recent-projects {
+  &__title {
+    @include theme-gradients(four, five);
+  }
+}
+</style>

@@ -2,7 +2,7 @@
   <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="flex flex-col | w-full">
-        <h2 class="mb-8 | text-center break-all | section-title about-me-skills__title">
+        <h2 class="mb-8 | text-center | section-title about-me-skills__title">
           {{ $t('me.skills-label') }}
         </h2>
         <div class="flex justify-center items-center | flex-1">

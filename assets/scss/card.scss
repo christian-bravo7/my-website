@@ -1,0 +1,17 @@
+.card {
+  @apply p-4 rounded-2xl select-none bg-gray-100  shadow-md border border-transparent;
+
+  &:hover {
+    @apply shadow-xl;
+  }
+}
+
+@include dark-mode {
+  .card {
+    @apply bg-transparent border-blue-300;
+
+    &:hover {
+      @apply bg-blue-700 bg-opacity-25;
+    }
+  }
+}

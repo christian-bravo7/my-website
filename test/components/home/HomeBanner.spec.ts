@@ -1,4 +1,5 @@
 import { mount } from '@vue/test-utils';
+import MockDate from 'mockdate';
 
 import HomeBanner from '@/components/home/HomeBanner.vue';
 import AppBanner from '@/components/app/AppBanner.vue';
@@ -19,6 +20,8 @@ describe('HomeBanner component', () => {
   });
 
   it('should render primary and seconday text', () => {
+    MockDate.set('Wed Nov 25 2020 21:00:00 GMT-0600 (Central Standard Time)');
+
     const wrapper = mount(HomeBanner, {
       components: {
         AppBanner,

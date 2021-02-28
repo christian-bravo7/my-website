@@ -1,6 +1,6 @@
 <template>
   <button
-    class="w-12 h-12 | p-3 | rounded-full | bg-gray-100 | app-burger-button"
+    class="w-12 h-12 | p-3 | rounded-full | bg-gray-100 dark:bg-blue-900 | app-burger-button"
     :class="{ 'z-50': isActive }"
     @click="onClick"
     @keydown.enter="onClick"
@@ -9,24 +9,23 @@
       class="flex flex-col items-end justify-center | relative | w-full h-full | app-burger-button__wrapper"
       :class="{ 'app-burger-button__wrapper--active': isActive }"
     >
-      <span class="absolute | block | w-9/12 | bg-black" />
-      <span class="absolute | block | w-full | bg-black" />
-      <span class="absolute | block | w-7/12 | bg-black" />
+      <span class="absolute | block | w-9/12 | bg-black dark:bg-gray-100" />
+      <span class="absolute | block | w-full | bg-black dark:bg-gray-100" />
+      <span class="absolute | block | w-7/12 | bg-black dark:bg-gray-100" />
     </div>
   </button>
 </template>
 
 <script lang="ts">
-import { Component, Emit, Vue } from 'nuxt-property-decorator';
+import { Component, Emit, Prop, Vue } from 'nuxt-property-decorator';
 
 @Component
 export default class AppBurgerButton extends Vue {
-  isActive: boolean = false;
+  @Prop({ type: Boolean, default: false })
+  readonly isActive!: boolean;
 
   @Emit('click')
-  onClick (): void {
-    this.isActive = !this.isActive;
-  }
+  onClick (): void { }
 }
 </script>
 

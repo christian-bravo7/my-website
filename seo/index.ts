@@ -6,7 +6,7 @@ const siteUrl = 'https://christian-bravo.dev';
 const siteType = 'website';
 const siteTitle = 'Christian Bravo | Frontend Developer';
 const siteDescription = 'Hi, I\'m Christian Bravo, Frontend developer from Guatemala specializing in web development, search engine optimization, responsive design, and custom web app solutions.';
-const siteImage = '/meta-stock-image.jpg';
+const siteImage = '/meta-stock-image.png';
 
 export const getMetaTags = (customSiteContent: Partial<SeoContent> = {}): MetaInfo => {
   const siteContent: SeoContent = {

@@ -9,6 +9,7 @@
       />
       <ClientOnly>
         <AppNavigationBar
+          :is-sidebar-active="isSidebarActive"
           @toggleSidebar="toggleSidebar"
         />
       </ClientOnly>
@@ -38,6 +39,15 @@ import { mapGetters } from 'vuex';
     ...mapGetters({
       isAppInitialized: 'guest/isAppInitialized',
     }),
+  },
+  head () {
+    const metaColor = this.$colorMode.value === 'dark' ? '#080b19' : '#8a0541';
+
+    return {
+      meta: [
+        { name: 'theme-color', content: metaColor },
+      ],
+    };
   },
 })
 export default class Default extends Vue {
