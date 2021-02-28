@@ -1,7 +1,6 @@
 <template>
   <main class="bg-gray-50 dark:bg-blue-800">
-    <AppFallbackLoad v-if="!isReady" />
-    <template v-else>
+    <template v-if="isAppInitialized">
       <SidebarMenu
         v-show="isSidebarActive"
         :has-language-picker="currentRoute !== 'blog'"
@@ -10,7 +9,7 @@
       />
       <ClientOnly>
         <AppNavigationBar
-          @openSidebar="openSidebar"
+          @toggleSidebar="toggleSidebar"
         />
       </ClientOnly>
       <PageSocialMedia class="hidden md:grid" />
@@ -24,27 +23,20 @@
       </header>
       <Nuxt />
     </template>
+    <template v-else>
+      <AppFallbackLoad />
+    </template>
   </main>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-import { MetaInfo } from 'vue-meta/types';
 import { mapGetters } from 'vuex';
 
-import { guestStore } from '@/store';
-
 @Component({
-  head (): MetaInfo {
-    return {
-      bodyAttrs: {
-        'data-theme': guestStore.theme,
-      },
-    };
-  },
   computed: {
     ...mapGetters({
-      isReady: 'guest/isReady',
+      isAppInitialized: 'guest/isAppInitialized',
     }),
   },
 })
@@ -54,6 +46,10 @@ export default class Default extends Vue {
   get currentRoute (): string {
     const route = this.getRouteBaseName();
     return route;
+  }
+
+  toggleSidebar (): void {
+    this.isSidebarActive = !this.isSidebarActive;
   }
 
   openSidebar (): void {

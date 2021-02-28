@@ -13,7 +13,7 @@ describe('default layout', () => {
 
   beforeEach(() => {
     getters = {
-      'guest/isReady': jest.fn(() => false),
+      'guest/isAppInitialized': jest.fn(() => false),
     };
     store = new Vuex.Store({
       getters,

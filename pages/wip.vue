@@ -8,7 +8,7 @@
         This site is under construction
       </p>
     </section>
-    <WipFigures />
+    <RandomFigures :figure-component="gearIcon" />
   </section>
 </template>
 
@@ -16,6 +16,8 @@
 import { Component, Vue } from 'nuxt-property-decorator';
 
 import { getMetaTags } from '@/seo';
+
+import GearIcon from '~/assets/img/gear.svg?inline';
 
 @Component({
   layout: 'error-layout',
@@ -29,5 +31,9 @@ import { getMetaTags } from '@/seo';
     };
   },
 })
-export default class WorkInProgressPage extends Vue {}
+export default class WorkInProgressPage extends Vue {
+  get gearIcon (): Vue {
+    return GearIcon as Vue;
+  }
+}
 </script>

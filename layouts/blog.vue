@@ -1,7 +1,7 @@
 <template>
   <main class="flex flex-col bg-gray-100 dark:bg-blue-800 min-h-screen">
-    <AppFallbackLoad v-show="!isReady" />
-    <template v-if="isReady">
+    <AppFallbackLoad v-show="!isAppInitialized" />
+    <template v-if="isAppInitialized">
       <SidebarMenu
         v-show="isSidebarActive"
         :only-english="true"
@@ -27,7 +27,7 @@ import { mapGetters } from 'vuex';
 @Component({
   computed: {
     ...mapGetters({
-      isReady: 'guest/isReady',
+      isAppInitialized: 'guest/isAppInitialized',
     }),
   },
 })

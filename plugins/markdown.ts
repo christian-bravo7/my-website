@@ -4,8 +4,7 @@ import Token from 'markdown-it/lib/token';
 
 const md = new MarkDownIt();
 
-const customRender =
-  md.renderer.rules.link_open ||
+const customRender = md.renderer.rules.link_open ||
   ((tokens, idx, options, _env, self): string => self.renderToken(tokens, idx, options));
 
 md.renderer.rules.link_open = (tokens : Array<Token>, idx : number, options, env, self): string => {

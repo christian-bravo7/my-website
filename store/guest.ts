@@ -9,7 +9,7 @@ export default class GuestStore extends VuexModule {
   theme: string = 'light';
   storeReady: boolean = false;
 
-  get isReady (): boolean {
+  get isAppInitialized (): boolean {
     return this.storeReady;
   }
 

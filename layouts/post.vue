@@ -1,7 +1,7 @@
 <template>
   <main class="bg-gray-50 dark:bg-blue-800">
-    <AppFallbackLoad v-show="!isReady" />
-    <template v-show="isReady">
+    <AppFallbackLoad v-show="!isAppInitialized" />
+    <template v-show="isAppInitialized">
       <SidebarMenu
         v-show="isSidebarActive"
         :only-english="true"
@@ -44,7 +44,7 @@ import { guestStore } from '@/store';
   },
   computed: {
     ...mapGetters({
-      isReady: 'guest/isReady',
+      isAppInitialized: 'guest/isAppInitialized',
     }),
   },
 })

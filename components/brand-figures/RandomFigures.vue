@@ -1,3 +1,35 @@
+<template>
+  <div
+    class="absolute inset-0 | flex justify-center items-center | overflow-hidden pointer-events-none | random-figures"
+  >
+    <figure
+      v-for="index in 10"
+      :key="index"
+      :class="`absolute | opacity-50 | primary-text figure figure--${index}`"
+    >
+      <component
+        :is="figureComponent"
+        class="w-full h-full | fill-current"
+      />
+    </figure>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue } from 'nuxt-property-decorator';
+
+@Component
+export default class RandomFigures extends Vue {
+  @Prop({ type: [String, Object as () => Vue], default: 'div' })
+  readonly figureComponent!: string | Vue;
+}
+</script>
+
+<style lang="scss" scoped>
+.random-figures {
+  z-index: -1;
+}
+
 .figure {
   &--1 {
     @apply w-12 h-12;
@@ -91,3 +123,4 @@
     transform: rotate(-25deg);
   }
 }
+</style>

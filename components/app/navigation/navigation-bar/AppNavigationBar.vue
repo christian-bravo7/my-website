@@ -1,11 +1,11 @@
 <template>
-  <nav
-    class="fixed top-0 left-0 right-0 z-20 | p-4  | bg-transparent | transition-all duration-150 | navbar"
-  >
-    <div class="grid grid-cols-2 md:grid-cols-5">
+  <AppNavigationBarBase>
+    <template #left>
       <AppLogo />
-      <div class="hidden | md:flex items-center justify-center col-span-3">
-        <div class="flex content-center">
+    </template>
+    <template #center>
+      <div class="hidden | w-full | md:flex items-center justify-end col-span-3">
+        <div class="flex content-center | mr-6">
           <AppNavigationBarLink
             :to="localePath({ name: 'index' })"
           >
@@ -23,10 +23,10 @@
           </AppNavigationBarLink>
         </div>
       </div>
+    </template>
+    <template #right>
       <div class="hidden | md:flex items-center justify-end col-span-1">
-        <div
-          class="mr-4"
-        >
+        <div class="mr-4">
           <LanguagePicker />
         </div>
         <div class="flex justify-center items-center">
@@ -34,18 +34,12 @@
         </div>
       </div>
       <div class="flex md:hidden justify-end items-center">
-        <button
-          class="text-gray-900 dark:text-gray-50"
-          @click="openSidebar"
-          @keydown.enter="openSidebar"
-        >
-          <span class="material-icons | text-5xl">
-            menu
-          </span>
-        </button>
+        <AppBurgerButton
+          @click="toggleSidebar"
+        />
       </div>
-    </div>
-  </nav>
+    </template>
+  </AppNavigationBarBase>
 </template>
 
 <script lang="ts">
@@ -55,6 +49,9 @@ import { Vue, Component, Emit } from 'nuxt-property-decorator';
 export default class AppNavigationBar extends Vue {
   @Emit('openSidebar')
   openSidebar (): void {}
+
+  @Emit('toggleSidebar')
+  toggleSidebar (): void {}
 }
 </script>
 
