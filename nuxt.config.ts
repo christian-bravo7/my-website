@@ -96,6 +96,10 @@ export default {
     },
   },
 
+  router: {
+    middleware: ['wipMiddleware'],
+  },
+
   sitemap: {
     hostname: process.env.HOSTNAME,
     i18n: true,
