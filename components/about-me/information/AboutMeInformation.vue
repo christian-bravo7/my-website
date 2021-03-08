@@ -6,14 +6,15 @@
           <h2 class="section-title about-me-information__title">
             {{ $t('me.hi-label') }}
           </h2>
-          <p class="relative z-10 | text-sm md:text-lg | leading-loose">
-            {{ $t('me.about-me-description', { age: currentAge }) }}
-          </p>
+          <p
+            class="relative z-10 | text-sm md:text-lg | md:leading-loose"
+            v-html="$md($t('me.about-me-description', { age: currentAge }))"
+          />
         </div>
-        <div class="flex items-center justify-center | primary-text">
+        <div class="flex items-center justify-center">
           <img
-            class="w-3/4"
-            src="~assets/img/photo.png"
+            class="w-3/5"
+            src="~assets/img/photo-2.png"
             alt="christian"
           >
         </div>

@@ -2,7 +2,7 @@
   <AppBanner>
     <template #primary-text>
       <span
-        class="block | text-center | about-me-banner__description"
+        class="block | text-center | leading-snug | about-me-banner__description"
         v-html="$md($t('me.simple-description'))"
       />
     </template>

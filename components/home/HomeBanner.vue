@@ -2,12 +2,12 @@
   <AppBanner>
     <template #primary-text>
       <span
-        class="block | text-center"
+        class="block | text-center | leading-snug"
       >
         {{ $t('home.iam-name-text') }}
       </span>
       <span
-        class="block | text-center | home-banner__description"
+        class="block | text-center | leading-snug | home-banner__description"
         v-html="$md($t('home.iam-job-text'))"
       />
     </template>

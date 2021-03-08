@@ -15,7 +15,7 @@
         <Transition name="primary-text">
           <h1
             v-show="isPrimaryTextVisible"
-            class="relative z-10 | max-w-xs sm:max-w-lg md:max-w-screen-md | text-center text-xl sm:text-3xl md:text-4xl xl:text-5xl | text-gray-900 dark:text-gray-50 | app-banner__primary-text"
+            class="relative z-10 | max-w-xs sm:max-w-lg md:max-w-screen-lg | text-center text-xl sm:text-3xl md:text-4xl xl:text-5xl | text-gray-900 dark:text-gray-50 | app-banner__primary-text"
           >
             <slot name="primary-text" />
           </h1>

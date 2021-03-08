@@ -1,5 +1,5 @@
 <template>
-  <section class="fixed z-40 left-0 grid gap-3 grid-cols-1 page-social-icons">
+  <section class="absolute z-10 left-0 grid gap-3 grid-cols-1 page-social-icons">
     <SocialIcon
       v-for="({ link, component }, index) in socialMediaIcons"
       :key="index"

@@ -4,8 +4,8 @@
     "me-label": "Me",
     "hi-label": "Hi",
     "about-me-label": "About me",
-    "simple-description": "I **code** beautifully simple things, and I **love** what I do",
-    "about-me-description": "I am a {age} years old frontend developer who works with JavaScript, Vue, React, Node, GraphQL and many other modern web technologies. I have a great passion for UI effects, animations and the creation of intuitive and dynamic user experiences. Ahhh and I love coffee 😊.",
+    "simple-description": "Helping companies achieve their **goals**, doing what I **love**",
+    "about-me-description": "I'm Christian Bravo, a {age} years old Frontend Developer with a great passion for web development using modern technologies. \n\n I enjoy solving problems, creating dynamic and intuitive user interfaces, developing rich web applications and experiences. \n\n Outside of the office you will find me playing soccer, collecting cactus and spending time with my pets and family.",
     "skills-label": "Skills",
     "crafted-label": "Crafted with",
     "work-experience": "Experience"
