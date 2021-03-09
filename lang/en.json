@@ -4,7 +4,7 @@
     "me-label": "Me",
     "hi-label": "Hi",
     "about-me-label": "About me",
-    "simple-description": "Helping companies achieve their **goals**, doing what I **love**",
+    "simple-description": "**Helping** companies achieve their goals, doing what I **love**",
     "about-me-description": "I'm Christian Bravo, a {age} years old Frontend Developer with a great passion for web development using modern technologies. \n\n I enjoy solving problems, creating dynamic and intuitive user interfaces, developing rich web applications and experiences. \n\n Outside of the office you will find me playing soccer, collecting cactus and spending time with my pets and family.",
     "skills-label": "Skills",
     "crafted-label": "Crafted with",
@@ -31,5 +31,14 @@
     "good-afternoon": "Good afternoon",
     "good-evening": "Good evening",
     "good-noon": "Good noon"
+  },
+  "contact-me": {
+    "say-hi": "Just say hi",
+    "contact-me-description": "I'm always open to discuss about projects and new challenges, do not hesitate to contact me and let's talk.",
+    "email-me": "Email me at:"
+  },
+  "footer": {
+    "made-with-love": "Made with love",
+    "frontend-developer": "Frontend developer"
   }
 }

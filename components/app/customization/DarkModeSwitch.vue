@@ -2,13 +2,13 @@
   <div class="relative flex select-none">
     <input
       id="dark-mode-switch"
-      class="hidden dark-mode-switch__checkbox"
+      class="hidden"
       type="checkbox"
       :checked="hasDarkTheme"
       @change="changeTheme"
     >
     <label
-      class="relative | flex justify-center items-center | w-10 h-10 | text-yellow-500 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | cursor-pointer rounded-lg | dark-mode-switch__label"
+      class="relative | flex justify-center items-center | w-8 h-8 | p-2 | text-yellow-500 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | cursor-pointer rounded-lg"
       for="dark-mode-switch"
     >
       <TransitionGroup
@@ -18,14 +18,14 @@
         <i
           v-show="hasDarkTheme"
           key="dark"
-          class="absolute material-icons dark-mode-switch__icon"
+          class="absolute | text-xl | material-icons dark-mode-switch__icon"
         >
           mode_night
         </i>
         <i
           v-show="!hasDarkTheme"
           key="light"
-          class="absolute material-icons dark-mode-switch__icon"
+          class="absolute | text-xl | material-icons dark-mode-switch__icon"
         >
           wb_sunny
         </i>

@@ -12,17 +12,17 @@
 
 @screen sm {
   .section-title {
-    @apply text-7xl;
+    @apply text-5xl leading-normal;
   }
 
   .section-container {
-    @apply p-20 my-0;
+    @apply py-20 px-8 my-0;
   }
 }
 
 @screen md {
   .section-title {
-    @apply text-8xl;
+    @apply text-6xl leading-normal;
   }
 
   .section-container {
@@ -32,6 +32,6 @@
 
 @screen lg {
   .section-title {
-    @apply text-9xl;
+    @apply text-7xl leading-normal;
   }
 }

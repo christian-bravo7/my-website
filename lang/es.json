@@ -4,7 +4,7 @@
     "me-label": "mí",
     "hi-label": "Hola",
     "about-me-label": "Sobre mí",
-    "simple-description": "Ayudo a las empresas a alcanzar sus **objetivos**, haciendo lo que **amo**",
+    "simple-description": "**Ayudo** a las empresas a alcanzar sus objetivos, haciendo lo que **amo**",
     "about-me-description": "Soy Christian Bravo, un Desarrollador Frontend de {age} años, con una gran pasión por el desarrollo web utilizando tecnologías modernas.\n\n Disfruto resolver problemas, crear interfaces de usuario dinámicas e intuitivas, desarrollar aplicaciones y experiencias web.\n\n Fuera de la oficina me encontrarás jugando al fútbol, coleccionando cactus y pasando tiempo con mis mascotas y mi familia.",
     "skills-label": "Hábilidades",
     "crafted-label": "Crafteado con",
@@ -31,5 +31,14 @@
     "good-afternoon": "Buenas tardes",
     "good-evening": "Buenas noches",
     "good-noon": "Buen mediodía"
+  },
+  "footer": {
+    "frontend-developer": "Desarrollador frontend",
+    "made-with-love": "Hecho con amor"
+  },
+  "contact-me": {
+    "say-hi": "Di hola",
+    "contact-me-description": "Siempre estoy abierto a discutir sobre proyectos y nuevos retos, no dudes en contactarme y hablemos.",
+    "email-me": "Envíame un correo electrónico a:"
   }
 }

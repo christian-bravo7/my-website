@@ -6,7 +6,7 @@
     <div
       ref="selectButton"
       tabindex="0"
-      class="flex items-center | py-2 pl-4 pr-1 | text-sm | text-gray-900 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | rounded-lg | cursor-pointer | app-select__button"
+      class="flex items-center | py-1 pl-4 pr-1 | text-sm | text-gray-900 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | rounded-lg | cursor-pointer | app-select__button"
       :class="{ 'app-select__button--active' : isOptionListOpened }"
       @click="toggleOptions"
       @keydown.enter="toggleOptions"

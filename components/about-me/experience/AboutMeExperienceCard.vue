@@ -2,7 +2,7 @@
   <div class="inline-block | transition-all duration-300 | card">
     <div class="flex items-center | text-black dark:text-white">
       <div class="flex flex-col flex-1">
-        <span class="text-lg | font-bold">
+        <span class="mb-1 | text-lg | font-bold">
           {{ jobRole }}
         </span>
         <span class="text-sm">

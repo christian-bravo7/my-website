@@ -1,8 +1,6 @@
 <template>
   <div class="scroll-indicator">
-    <span class="block | w-4 h-4 md:w-5 md:h-5 | -m-2 | border-r-2 border-b-2 border-gray-600 dark:border-gray-300 | transform rotate-45" />
-    <span class="block | w-4 h-4 md:w-5 md:h-5 | -m-2 | border-r-2 border-b-2 border-gray-600 dark:border-gray-300 | transform rotate-45" />
-    <span class="block | w-4 h-4 md:w-5 md:h-5 | -m-2 | border-r-2 border-b-2 border-gray-600 dark:border-gray-300 | transform rotate-45" />
+    <div class="relative | h-12 w-8 | rounded-3xl border-2 border-gray-300 dark:border-gray-400 | scroll-indicator__content" />
   </div>
 </template>
 
@@ -13,36 +11,45 @@ import { Component, Vue } from 'nuxt-property-decorator';
 export default class ScrollIndicator extends Vue {}
 </script>
 
-<style lang="postcss" scoped>
+<style lang="scss" scoped>
 .scroll-indicator {
-  span {
-    animation: scroll-indicator-animation 2s infinite backwards;
-  }
+  &__content {
+    &::before {
+      @apply absolute top-3 w-1 h-1 rounded-full bg-gray-500;
 
-  span:nth-child(1) {
-    animation-delay: 0s;
-  }
-
-  span:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-
-  span:nth-child(3) {
-    animation-delay: 0.4s;
+      left: calc(50% - theme('width.1') / 2);
+      animation: scroll-animation 4s infinite;
+      content: '';
+    }
   }
 }
 
-@keyframes scroll-indicator-animation {
+@include dark-mode {
+  .scroll-indicator {
+    &__content {
+      &::before {
+        @apply bg-gray-200;
+      }
+    }
+  }
+}
+
+@keyframes scroll-animation {
   0% {
     opacity: 0;
   }
 
-  50% {
-    transform: rotate(45deg) translate(5px, 5px);
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  40% {
     opacity: 1;
   }
 
   100% {
+    transform: translateY(16px);
     opacity: 0;
   }
 }

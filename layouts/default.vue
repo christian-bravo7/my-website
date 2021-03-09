@@ -13,7 +13,6 @@
           @toggleSidebar="toggleSidebar"
         />
       </ClientOnly>
-      <PageSocialMedia class="hidden md:grid" />
       <header>
         <MovableFigures :current-route="currentRoute" />
         <PortalTarget
@@ -23,6 +22,8 @@
         />
       </header>
       <Nuxt />
+      <AppContactMe />
+      <AppFooter />
     </template>
     <template v-else>
       <AppFallbackLoad />

@@ -1,19 +1,18 @@
 <template>
   <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-0 | text-black dark:text-white">
+      <div class="text-black dark:text-white | about-me-information__content">
         <div class="relative">
-          <h2 class="section-title about-me-information__title">
+          <h2 class="mb-4 | section-title about-me-information__title">
             {{ $t('me.hi-label') }}
           </h2>
           <p
-            class="relative z-10 | text-sm md:text-lg | md:leading-loose"
+            class="relative z-10 | text-sm md:text-lg | md:leading-loose | about-me-information__description"
             v-html="$md($t('me.about-me-description', { age: currentAge }))"
           />
         </div>
         <div class="flex items-center justify-center">
           <img
-            class="w-3/5"
             src="~assets/img/photo-2.png"
             alt="christian"
           >
@@ -26,13 +25,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
-import RemolinoLogo from '~/assets/img/remolino.svg?inline';
-
-@Component({
-  components: {
-    RemolinoLogo,
-  },
-})
+@Component
 export default class AboutMeInformation extends Vue {
   readonly birthday: string = '2000-01-15';
 
@@ -69,8 +62,28 @@ export default class AboutMeInformation extends Vue {
 
 <style lang="scss" scoped>
 .about-me-information {
+  &__content {
+    @apply grid grid-cols-1 items-center;
+  }
+
   &__title {
     @include theme-gradients(four, five);
+  }
+
+  &__description {
+    /deep/ p {
+      @apply mb-4;
+    }
+  }
+}
+
+@screen lg {
+  .about-me-information {
+    &__content {
+      @apply gap-40;
+
+      grid-template-columns: 1fr auto;
+    }
   }
 }
 </style>

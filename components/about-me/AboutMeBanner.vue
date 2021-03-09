@@ -9,7 +9,6 @@
     <template #secondary-text>
       {{ $t('navigation.about-me-label') }}
     </template>
-    <ScrollIndicator class="absolute | about-me-banner__scroll-indicator" />
   </AppBanner>
 </template>
 

@@ -1,24 +1,36 @@
 <template>
   <div class="hidden md:block absolute overflow-hidden w-full h-full pointer-events-none">
-    <figure
-      class="absolute w-48 h-48 rounded-full movable-figure movable-figure--1"
-      :class="currentRoute"
-    />
-    <figure
-      class="absolute w-32 h-32 rounded-full movable-figure movable-figure--2"
-      :class="currentRoute"
-    />
-    <figure
-      class="absolute w-20 h-20 rounded-full movable-figure movable-figure--3"
-      :class="currentRoute"
-    />
+    <span class="text-pink-500 dark:text-blue-500 text-opacity-30 dark:text-opacity-30">
+      <CircleIcon
+        class="absolute w-6 h-6 movable-figure movable-figure--1 fill-current"
+        :class="currentRoute"
+      />
+    </span>
+    <span class="text-pink-500 dark:text-blue-500 text-opacity-30 dark:text-opacity-30">
+      <CircleIcon
+        class="absolute w-7 h-7 movable-figure movable-figure--2 fill-current"
+        :class="currentRoute"
+      />
+    </span>
+    <span class="text-pink-500 dark:text-blue-500 text-opacity-30 dark:text-opacity-30">
+      <CircleIcon
+        class="absolute w-8 h-8 movable-figure movable-figure--3 fill-current"
+        :class="currentRoute"
+      />
+    </span>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
 
-@Component
+import CircleIcon from '~/assets/img/circle-outline.svg?inline';
+
+@Component({
+  components: {
+    CircleIcon,
+  },
+})
 export default class MovableFigures extends Vue {
   @Prop({ type: String, required: true })
   currentRoute!: string;
@@ -30,18 +42,6 @@ export default class MovableFigures extends Vue {
   $self: &;
 
   transition: color 200ms, top 6s, left 6s, transform 6s;
-
-  &--1 {
-    background: linear-gradient(210deg, #FFFFFF1A 0%, #FE65651A 58%, #A40EB033 100%);
-  }
-
-  &--2 {
-    background: linear-gradient(210deg, #FFFFFF1A 0%, #A8EDE938 58%, #FED6E385 100%);
-  }
-
-  &--3 {
-    background: linear-gradient(210deg, #FFFFFF1A 0%, #C7EAFD3F 58%, #E8198B28 100%);
-  }
 
   &.index {
     &#{$self}--1 {
@@ -65,7 +65,7 @@ export default class MovableFigures extends Vue {
     }
     &#{$self}--2 {
       top: 50%;
-      left: 15%;
+      left: 10%;
     }
     &#{$self}--3 {
       top: 90%;
@@ -89,33 +89,4 @@ export default class MovableFigures extends Vue {
   }
 }
 
-@include dark-mode {
-  .movable-figure {
-    &::after {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      bottom: 0;
-      left: 50%;
-      width: 97%;
-      height: 97%;
-      background: theme('colors.blue.800');
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      content: '';
-    }
-
-    &--1 {
-      background: linear-gradient(210deg, rgba(255, 255, 255, 0.46) 0%, rgba(254, 101, 101, 0.52) 58%, rgba(164, 14, 176, 0.86) 100%);
-    }
-
-    &--2 {
-      background: linear-gradient(210deg, rgba(255, 255, 255, 0.62) 0%, rgba(168, 237, 233, 0.27) 58%, rgba(255, 71, 131, 0.6) 100%);
-    }
-
-    &--3 {
-      background: linear-gradient(210deg, rgba(255, 255, 255, 0.44) 0%, rgba(199, 234, 253, 0.17) 58%, rgba(232, 25, 139, 0.86) 100%);
-    }
-  }
-}
 </style>

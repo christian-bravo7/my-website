@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    class="flex w-12 h-12 text-black dark:text-white col-span-1"
+    class="flex w-8 h-8 text-black dark:text-white col-span-1"
     :to="localePath({ name: 'index' })"
   >
     <SiteLogo class="w-full h-full fill-current" />

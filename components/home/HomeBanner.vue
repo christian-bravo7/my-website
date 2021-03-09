@@ -14,7 +14,6 @@
     <template #secondary-text>
       {{ $t(homeGreetingKey) }}
     </template>
-    <ScrollIndicator class="absolute | home-banner__scroll-indicator" />
   </AppBanner>
 </template>
 

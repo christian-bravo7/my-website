@@ -1,12 +1,14 @@
 <template>
-  <section class="absolute z-10 left-0 grid gap-3 grid-cols-1 page-social-icons">
-    <SocialIcon
-      v-for="({ link, component }, index) in socialMediaIcons"
-      :key="index"
-      :link="link"
-    >
-      <Component :is="component" />
-    </SocialIcon>
+  <section class="flex justify-center items-center">
+    <div class="grid gap-6 grid-cols-4 md:grid-cols-2 lg:grid-cols-4 page-social-icons">
+      <SocialIcon
+        v-for="({ link, component }, index) in socialMediaIcons"
+        :key="index"
+        :link="link"
+      >
+        <Component :is="component" />
+      </SocialIcon>
+    </div>
   </section>
 </template>
 
@@ -37,17 +39,3 @@ export default class AppSocialIcons extends Vue {
   ]
 }
 </script>
-
-<style lang="scss" scoped>
-.page-social-icons {
-  bottom: 4px;
-  left: 4px;
-}
-
-@screen md {
-  .page-social-icons {
-    bottom: 12px;
-    left: 12px;
-  }
-}
-</style>

@@ -1,4 +1,4 @@
-import PageSocialMedia from '@/components/about-me/social-media/PageSocialMedia.vue';
+import PageSocialMedia from '@/components/about-me/social-media/AppSocialMedia.vue';
 import SocialIcon from '@/components/about-me/social-media/SocialIcon.vue';
 
 import { mount } from '@vue/test-utils';
