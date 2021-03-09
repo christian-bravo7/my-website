@@ -7,10 +7,10 @@ export default {
     { path: '~/components', pathPrefix: false },
   ],
 
-  server: {
-    port: 3000,
-    host: '0.0.0.0',
-  },
+  // server: {
+  //   port: 3000,
+  //   host: '0.0.0.0',
+  // },
 
   // Page headers: https://nuxtjs.org/api/configuration-head
   head: {
@@ -97,9 +97,9 @@ export default {
     },
   },
 
-  router: {
-    middleware: ['wipMiddleware'],
-  },
+  // router: {
+  //   middleware: ['wipMiddleware'],
+  // },
 
   sitemap: {
     hostname: process.env.HOSTNAME,

@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-10 px-4 | bg-gray-100 dark:bg-blue-900 | text-black dark:text-white rounded-tl-3xl rounded-tr-3xl">
+  <footer class="py-10 px-4 | bg-gray-100 dark:bg-blue-900 | text-gray-700 dark:text-gray-300">
     <div class="container | my-0 mx-auto">
       <div class="flex justify-between flex-col md:flex-row">
         <div class="flex items-center flex-col md:flex-row | mb-6 md:mb-0">
@@ -10,7 +10,7 @@
             <h3 class="text-lg">
               Christian Bravo
             </h3>
-            <h4 class="text-sm">
+            <h4 class="text-lg">
               {{ $t('footer.frontend-developer') }}
             </h4>
           </div>
