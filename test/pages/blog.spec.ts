@@ -12,9 +12,6 @@ describe('blog page', () => {
   it('should render correctly', () => {
     const wrapper = mount(Blog, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     expect(wrapper.html()).toMatchSnapshot();
@@ -25,9 +22,6 @@ describe('blog page', () => {
 
     const wrapper = mount(Blog, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     // @ts-ignore
@@ -41,9 +35,6 @@ describe('blog page', () => {
 
     const wrapper = mount(Blog, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     // @ts-ignore
@@ -57,9 +48,6 @@ describe('blog page', () => {
 
     const wrapper = mount(Blog, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     // @ts-ignore
@@ -73,9 +61,6 @@ describe('blog page', () => {
 
     const wrapper = mount(Blog, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     // @ts-ignore
@@ -89,9 +74,6 @@ describe('blog page', () => {
 
     const wrapper = mount(Blog, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     // @ts-ignore
@@ -105,9 +87,6 @@ describe('blog page', () => {
 
     const wrapper = mount(Blog, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     // @ts-ignore
@@ -119,9 +98,6 @@ describe('blog page', () => {
   it('should return dynamic class for post index', () => {
     const wrapper = mount(Blog, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     // @ts-ignore
@@ -133,9 +109,6 @@ describe('blog page', () => {
   it('should display meta-tag title', () => {
     const wrapper = mount(Blog, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     const title = wrapper.vm.$meta().refresh().metaInfo.title;

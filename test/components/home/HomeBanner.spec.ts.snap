@@ -4,11 +4,11 @@ exports[`HomeBanner component should render correctly 1`] = `
 <section class="relative | flex justify-center items-center | px-4">
   <div class="relative">
     <h2 id="secondary" class="absolute | font-bold text-center | text-6xl sm:text-8xl md:text-10xl xl:text-13xl | leading-none select-none | text-gray-200 dark:text-blue-900 | app-banner__secondary-text">
-      greeting.good-afternoon
+      greeting.good-evening
     </h2>
-    <h1 class="relative z-10 | max-w-xs sm:max-w-lg md:max-w-screen-md | text-center text-xl sm:text-3xl md:text-4xl xl:text-5xl | text-gray-900 dark:text-gray-50 | app-banner__primary-text" style="display: none;"><span class="block | text-center">
+    <h1 class="relative z-10 | max-w-md sm:max-w-lg lg:max-w-screen-md xl:max-w-screen-lg | text-center text-xl sm:text-3xl md:text-4xl xl:text-5xl | text-gray-900 dark:text-gray-50 | app-banner__primary-text" style="display: none;"><span class="block | text-center | leading-snug">
       home.iam-name-text
-    </span> <span class="block | text-center | home-banner__description">home.iam-job-text</span></h1>
+    </span> <span class="block | text-center | leading-snug | home-banner__description">home.iam-job-text</span></h1>
   </div>
   <!---->
 </section>

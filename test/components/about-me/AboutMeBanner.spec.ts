@@ -9,10 +9,6 @@ describe('AboutMeBanner component', () => {
       components: {
         AppBanner,
       },
-      mocks: {
-        $t: jest.fn(msg => msg),
-        $md: jest.fn(msg => msg),
-      },
     });
 
     expect(wrapper.html()).toMatchSnapshot();
@@ -22,10 +18,6 @@ describe('AboutMeBanner component', () => {
     const wrapper = mount(AboutMeBanner, {
       components: {
         AppBanner,
-      },
-      mocks: {
-        $t: jest.fn(msg => msg),
-        $md: jest.fn(msg => msg),
       },
     });
 

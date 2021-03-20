@@ -7,7 +7,7 @@
             {{ $t('me.hi-label') }}
           </h2>
           <p
-            class="relative z-10 | text-sm md:text-lg | leading-7 md:leading-loose | about-me-information__description"
+            class="relative z-10 | font-base | about-me-information__description"
             v-html="$md($t('me.about-me-description', { age: currentAge }))"
           />
         </div>

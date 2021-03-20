@@ -10,10 +10,6 @@ describe('HomeBanner component', () => {
       components: {
         AppBanner,
       },
-      mocks: {
-        $t: jest.fn(msg => msg),
-        $md: jest.fn(msg => msg),
-      },
     });
 
     expect(wrapper.html()).toMatchSnapshot();
@@ -25,10 +21,6 @@ describe('HomeBanner component', () => {
     const wrapper = mount(HomeBanner, {
       components: {
         AppBanner,
-      },
-      mocks: {
-        $t: jest.fn(msg => msg),
-        $md: jest.fn(msg => msg),
       },
     });
 

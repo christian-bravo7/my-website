@@ -17,9 +17,6 @@ describe('index page', () => {
 
     const wrapper = mount(IndexPage, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
       components: {
         RecentProjects,
       },
@@ -34,9 +31,6 @@ describe('index page', () => {
 
     const wrapper = mount(IndexPage, {
       localVue,
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
       components: {
         RecentProjects,
       },

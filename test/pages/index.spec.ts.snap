@@ -12,7 +12,7 @@ exports[`index page should render page correctly 1`] = `
         <div class="flex justify-center items-center | flex-1">
           <div class="flex flex-wrap justify-center | max-w-screen-lg">
             <div class="card">
-              <p class="text-base | text-black dark:text-white">
+              <p class="font-base">
                 home.no-recent-projects-message
               </p>
             </div>

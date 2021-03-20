@@ -3,16 +3,14 @@
 exports[`AboutMeInformation component should render correctly 1`] = `
 <section class="section-container">
   <div class="container | flex | my-0 mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-0 | text-black dark:text-white">
-      <div class="relative">
-        <h2 class="section-title about-me-information__title">
+    <div class="text-black dark:text-white | about-me-information__content">
+      <div class="relative | mb-4 md:mb-0">
+        <h2 class="mb-4 | section-title about-me-information__title">
           me.hi-label
         </h2>
-        <p class="relative z-10 | text-sm md:text-lg | leading-loose">
-          me.about-me-description
-        </p>
+        <p class="relative z-10 | font-base | about-me-information__description">me.about-me-description</p>
       </div>
-      <div class="flex items-center justify-center | primary-text"><img src="~assets/img/photo.png" alt="christian" class="w-3/4"></div>
+      <div class="flex items-center justify-center"><img src="~assets/img/photo-2.png" alt="christian"></div>
     </div>
   </div>
 </section>

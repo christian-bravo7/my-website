@@ -9,9 +9,6 @@ describe('AboutMeSkills component', () => {
       components: {
         SkillIcon,
       },
-      mocks: {
-        $t: jest.fn(msg => msg),
-      },
     });
 
     expect(wrapper.html()).toMatchSnapshot();
@@ -21,9 +18,6 @@ describe('AboutMeSkills component', () => {
     const wrapper = mount(AboutMeSkills, {
       components: {
         SkillIcon,
-      },
-      mocks: {
-        $t: jest.fn(msg => msg),
       },
     });
 
@@ -36,9 +30,6 @@ describe('AboutMeSkills component', () => {
     const wrapper = mount(AboutMeSkills, {
       components: {
         SkillIcon,
-      },
-      mocks: {
-        $t: jest.fn(msg => msg),
       },
     });
 

@@ -27,7 +27,6 @@ describe('me page', () => {
       },
       localVue,
       mocks: {
-        $t: jest.fn(msg => msg),
         $scrollreveal: {
           reveal: jest.fn(() => {}),
           sync: jest.fn(() => {}),
@@ -47,7 +46,6 @@ describe('me page', () => {
       },
       localVue,
       mocks: {
-        $t: jest.fn(msg => msg),
         $scrollreveal: {
           reveal: jest.fn(() => {}),
           sync: jest.fn(() => {}),

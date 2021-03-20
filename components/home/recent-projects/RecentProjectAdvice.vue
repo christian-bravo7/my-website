@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <p class="text-base | text-black dark:text-white">
+    <p class="font-base">
       {{ $t('home.no-recent-projects-message') }}
     </p>
   </div>
