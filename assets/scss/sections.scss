@@ -3,7 +3,7 @@
 }
 
 .section-container {
-  @apply flex p-4 my-5;
+  @apply flex p-4;
 
   &:last-child {
     @apply mb-0;
@@ -16,7 +16,7 @@
   }
 
   .section-container {
-    @apply py-20 px-8 my-0;
+    @apply py-20 px-8;
   }
 }
 

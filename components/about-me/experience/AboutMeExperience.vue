@@ -6,7 +6,7 @@
           {{ $t('me.work-experience') }}
         </h2>
         <div class="flex justify-center items-center | flex-1">
-          <div class="w-full | grid grid-cols-1 gap-4 md:gap-2 md:grid-cols-9">
+          <div class="w-full | grid grid-cols-1 gap-8 md:gap-2 md:grid-cols-9">
             <AboutMeExperienceCard
               v-bind="myWorkExperiences[0]"
               class="md:col-span-3 md:row-start-1 md:col-start-1"

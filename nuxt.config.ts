@@ -7,14 +7,13 @@ export default {
     { path: '~/components', pathPrefix: false },
   ],
 
-  // server: {
-  //   port: 3000,
-  //   host: '0.0.0.0',
-  // },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
 
   // Page headers: https://nuxtjs.org/api/configuration-head
   head: {
-    title: 'Christian Bravo',
     titleTemplate: (chunk): string => chunk ? `${chunk} | Christian Bravo` : 'Christian Bravo',
     meta: [
       { charset: 'utf-8' },

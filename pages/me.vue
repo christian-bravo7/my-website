@@ -3,8 +3,8 @@
     <Portal to="page-banner">
       <AboutMeBanner />
     </Portal>
-    <AboutMeInformation />
-    <AboutMeSkills />
+    <AboutMeInformation class="mb-24 md:mb-0" />
+    <AboutMeSkills class="mb-24 md:mb-0" />
     <AboutMeExperience />
   </section>
 </template>

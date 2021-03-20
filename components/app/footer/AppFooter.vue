@@ -6,11 +6,11 @@
           <div class="mr-0 mb-4 md:mr-8 md:mb-0">
             <AppLogo class="w-10 h-10 md:w-12 md:h-12" />
           </div>
-          <div class="flex flex-col text-center md:text-left">
-            <h3 class="text-lg">
+          <div class="flex flex-col | text-center md:text-left | text-base md:text-lg">
+            <h3>
               Christian Bravo
             </h3>
-            <h4 class="text-lg">
+            <h4>
               {{ $t('footer.frontend-developer') }}
             </h4>
           </div>

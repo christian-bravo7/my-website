@@ -38,7 +38,7 @@
     "email-me": "Email me at:"
   },
   "footer": {
-    "made-with-love": "Made with love",
+    "made-with-love": "Made with Love and Nuxt.js",
     "frontend-developer": "Frontend developer"
   }
 }

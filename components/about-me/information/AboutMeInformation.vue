@@ -2,12 +2,12 @@
   <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="text-black dark:text-white | about-me-information__content">
-        <div class="relative">
+        <div class="relative | mb-4 md:mb-0">
           <h2 class="mb-4 | section-title about-me-information__title">
             {{ $t('me.hi-label') }}
           </h2>
           <p
-            class="relative z-10 | text-sm md:text-lg | md:leading-loose | about-me-information__description"
+            class="relative z-10 | text-sm md:text-lg | leading-7 md:leading-loose | about-me-information__description"
             v-html="$md($t('me.about-me-description', { age: currentAge }))"
           />
         </div>

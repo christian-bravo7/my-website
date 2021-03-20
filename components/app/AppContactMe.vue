@@ -6,7 +6,7 @@
           <h3 class="mb-4 | section-title contact-me__title">
             {{ $t('contact-me.say-hi') }}
           </h3>
-          <p class="mb-14 mr-0 md:mr-8 md:mb-20 | text-sm md:text-lg">
+          <p class="mb-14 mr-0 md:mr-8 md:mb-20 | text-sm md:text-lg | leading-7 md:leading-loose">
             {{ $t('contact-me.contact-me-description') }}
           </p>
           <div class="flex flex-col items-start">
