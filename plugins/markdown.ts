@@ -1,6 +1,7 @@
-import Vue from 'vue';
 import MarkDownIt from 'markdown-it';
 import Token from 'markdown-it/lib/token';
+import { Inject } from '@nuxt/types/app';
+import { Context } from '@nuxt/types';
 
 const md = new MarkDownIt();
 
@@ -20,4 +21,6 @@ md.renderer.rules.link_open = (tokens : Array<Token>, idx : number, options, env
   return customRender(tokens, idx, options, env, self);
 };
 
-Vue.prototype.$md = (markdown: string): string => md.render(markdown);
+export default function (_: Context, inject: Inject): void {
+  inject('md', (markdown: string): string => md.render(markdown));
+}

@@ -1,33 +1,29 @@
 <template>
   <main class="bg-gray-50 dark:bg-blue-800">
-    <template v-if="isAppInitialized">
-      <SidebarMenu
-        v-show="isSidebarActive"
-        :has-language-picker="currentRoute !== 'blog'"
-        :only-english="currentRoute === 'blog'"
-        @closeSidebar="closeSidebar"
+    <SidebarMenu
+      v-show="isSidebarActive"
+      :has-language-picker="currentRoute !== 'blog'"
+      :only-english="currentRoute === 'blog'"
+      @closeSidebar="closeSidebar"
+    />
+    <ClientOnly>
+      <AppNavigationBar
+        :is-sidebar-active="isSidebarActive"
+        @toggleSidebar="toggleSidebar"
       />
-      <ClientOnly>
-        <AppNavigationBar
-          :is-sidebar-active="isSidebarActive"
-          @toggleSidebar="toggleSidebar"
-        />
-      </ClientOnly>
-      <header>
-        <MovableFigures :current-route="currentRoute" />
-        <PortalTarget
-          name="page-banner"
-          class="min-h-screen"
-          slim
-        />
-      </header>
-      <Nuxt />
-      <AppContactMe />
-      <AppFooter />
-    </template>
-    <template v-else>
-      <AppFallbackLoad />
-    </template>
+    </ClientOnly>
+    <header>
+      <MovableFigures :current-route="currentRoute" />
+      <PortalTarget
+        name="page-banner"
+        class="min-h-screen"
+        slim
+      />
+    </header>
+    <Nuxt />
+    <AppContactMe />
+    <AppFooter />
+    <AppFallbackLoad v-show="!isAppInitialized" />
   </main>
 </template>
 
