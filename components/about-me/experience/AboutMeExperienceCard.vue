@@ -9,12 +9,12 @@
           {{ company }}
         </span>
       </div>
-      <div class="flex flex-col | ml-5 | text-xs">
+      <div class="flex flex-col | ml-5 | text-xs | capitalize">
         <span>
-          {{ startYear }} {{ separatorSymbol }}
+          {{ formattedStartYear }} {{ separatorSymbol }}
         </span>
         <span v-if="endYear">
-          {{ endYear }}
+          {{ formattedEndYear }}
         </span>
       </div>
     </div>
@@ -24,6 +24,8 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
 
+import dayjs from 'dayjs';
+
 @Component
 export default class AboutMeExperienceCard extends Vue {
   @Prop({ type: String, required: true })
@@ -32,14 +34,26 @@ export default class AboutMeExperienceCard extends Vue {
   @Prop({ type: String, required: true })
   readonly jobRole!: string;
 
-  @Prop({ type: String, required: true })
-  readonly startYear!: string;
+  @Prop({ type: Array, required: true })
+  readonly startYear!: Array<number>;
 
-  @Prop({ type: String })
-  readonly endYear!: string;
+  @Prop({ type: Array })
+  readonly endYear!: Array<number>;
+
+  get formattedStartYear (): string {
+    return this.formattedYear(this.startYear);
+  }
+
+  get formattedEndYear (): string {
+    return this.formattedYear(this.endYear);
+  }
 
   get separatorSymbol (): string {
     return this.endYear ? '/' : '~';
+  }
+
+  formattedYear (date: any): string {
+    return dayjs(date).format('MMM YYYY');
   }
 }
 </script>

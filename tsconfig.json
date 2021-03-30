@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -27,10 +28,10 @@
     "types": [
       "@types/node",
       "@nuxt/types",
+      "nuxt-i18n",
       "@types/jest",
       "@types/scrollreveal",
       "@nuxt/content",
-      "nuxt18n/types"
     ]
   },
   "exclude": [
