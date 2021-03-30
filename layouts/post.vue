@@ -1,29 +1,21 @@
 <template>
   <main class="bg-gray-50 dark:bg-blue-800">
     <AppFallbackLoad v-show="!isAppInitialized" />
-    <template v-show="isAppInitialized">
-      <SidebarMenu
-        v-show="isSidebarActive"
-        :only-english="true"
-        :has-language-picker="false"
-        @closeSidebar="closeSidebar"
+    <AppSidebarMenu
+      v-show="isSidebarActive"
+      @closeSidebar="closeSidebar"
+    />
+    <AppNavigationBar
+      @openSidebar="openSidebar"
+    />
+    <header>
+      <PortalTarget
+        name="blog-banner"
+        class="blog-banner"
+        slim
       />
-      <ClientOnly>
-        <NavigationBar
-          :only-white="true"
-          :has-language-picker="false"
-          @openSidebar="openSidebar"
-        />
-      </ClientOnly>
-      <header>
-        <PortalTarget
-          name="blog-banner"
-          class="blog-banner"
-          slim
-        />
-      </header>
-      <Nuxt />
-    </template>
+    </header>
+    <Nuxt />
   </main>
 </template>
 

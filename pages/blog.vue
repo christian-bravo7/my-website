@@ -1,43 +1,39 @@
 <template>
   <section>
-    <Portal to="page-banner">
-      <transition
-        name="flash-text"
-        @enter="shuffleText"
-      >
-        <div class="pt-0 md:pt-20">
-          <div class="container mx-auto px-4 md:px-0 py-8 md:py-20 relative z-10">
-            <div class="blog-grid">
-              <PostCard
-                v-for="(article, index) in articles"
-                :key="index"
-                v-bind="article"
-                :first="index === 0"
-                :class="dynamicColors(index)"
-              />
-              <PostCardEmpty />
-            </div>
-          </div>
+    <div class="pt-0 md:pt-20">
+      <div class="container mx-auto px-4 md:px-0 py-8 md:py-20 relative z-10">
+        <div class="blog-grid">
+          <PostCard
+            v-for="(article, index) in articles"
+            :key="index"
+            v-bind="article"
+            :first="index === 0"
+            :class="dynamicColors(index)"
+          />
+          <PostCardEmpty />
         </div>
-      </transition>
-    </Portal>
+      </div>
+    </div>
   </section>
 </template>
 
 <script lang="ts">
 import { Context } from '@nuxt/types';
 import { Vue, Component } from 'nuxt-property-decorator';
-import baffle from 'baffle';
 
-import { greetingByHour } from '@/utils/date/greetingByHour';
 import { getMetaTags } from '@/seo';
 import { IContentDocument } from '@nuxt/content/types/content';
 
+// @ts-ignore
 @Component({
   middleware: ['wipMiddleware'],
+  layout: 'blog',
+  nuxtI18n: {
+    locales: ['en'],
+  },
   head () {
     const homeMetaTags = getMetaTags({
-      siteTitle: this.$t('navigation.blog-label') as string,
+      siteTitle: 'blog',
     });
 
     return {
@@ -70,16 +66,6 @@ export default class Blog extends Vue {
     return (index: number): string => {
       return colors[index];
     };
-  }
-
-  get greetingWord (): string {
-    return greetingByHour();
-  }
-
-  shuffleText (): void {
-    // @ts-ignore
-    const greetingText = baffle('#greeting', { speed: 80 });
-    greetingText.reveal(1000);
   }
 }
 </script>

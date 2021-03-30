@@ -4,7 +4,7 @@ import MockDate from 'mockdate';
 
 import Blog from '@/layouts/blog.vue';
 import AppFallbackLoad from '@/components/app/AppFallbackLoad.vue';
-import NavigationBar from '@/components/app/navigation/navigation-bar/AppNavigationBar.vue';
+import NavigationBar from '@/components/app/navigation/AppNavigationBar.vue';
 import SidebarMenu from '@/components/app/navigation/sidebar/SidebarMenu.vue';
 import SidebarLink from '@/components/app/navigation/sidebar/SidebarLink.vue';
 

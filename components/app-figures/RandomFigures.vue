@@ -5,7 +5,7 @@
     <figure
       v-for="index in 10"
       :key="index"
-      :class="`absolute | opacity-50 | primary-text figure figure--${index}`"
+      :class="`absolute | opacity-25 | primary-text figure figure--${index}`"
     >
       <component
         :is="figureComponent"

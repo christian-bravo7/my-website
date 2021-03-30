@@ -19,32 +19,20 @@
         >
           <section class="flex justify-end p-10" />
           <section class="flex flex-col items-start p-4">
-            <SidebarLink
-              path="index"
-              :is-only-english="onlyEnglish"
+            <AppSidebarLink
+              :to="localePath({ name: 'index'})"
               @click="closeSidebar"
-              @onKeydownEnter="closeSidebar"
+              @keydown.enter="closeSidebar"
             >
-              <template v-if="onlyEnglish">
-                Home
-              </template>
-              <template v-else>
-                {{ $t('navigation.home-label') }}
-              </template>
-            </SidebarLink>
-            <SidebarLink
-              path="me"
-              :is-only-english="onlyEnglish"
+              {{ $t('navigation.home-label') }}
+            </AppSidebarLink>
+            <AppSidebarLink
+              :to="localePath({ name: 'me'})"
               @click="closeSidebar"
-              @onKeydownEnter="closeSidebar"
+              @keydown.enter="closeSidebar"
             >
-              <template v-if="onlyEnglish">
-                About me
-              </template>
-              <template v-else>
-                {{ $t('navigation.about-me-label') }}
-              </template>
-            </SidebarLink>
+              {{ $t('navigation.about-me-label') }}
+            </AppSidebarLink>
           </section>
           <section class="flex justify-between p-4">
             <DarkModeSwitch />
@@ -64,7 +52,7 @@
 import { Component, Emit, Prop, Vue } from 'nuxt-property-decorator';
 
 @Component
-export default class SidebarMenu extends Vue {
+export default class AppSidebarMenu extends Vue {
   isSidebarVisible: boolean = false;
 
   @Prop({ type: Boolean, default: false })

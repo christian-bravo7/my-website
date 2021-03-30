@@ -1,22 +1,15 @@
 <template>
   <main class="flex flex-col bg-gray-100 dark:bg-blue-800 min-h-screen">
     <AppFallbackLoad v-show="!isAppInitialized" />
-    <template v-if="isAppInitialized">
-      <SidebarMenu
-        v-show="isSidebarActive"
-        :only-english="true"
-        :has-language-picker="false"
-        @closeSidebar="closeSidebar"
-      />
-      <ClientOnly>
-        <NavigationBar
-          :has-language-picker="false"
-          :only-english="true"
-          @openSidebar="openSidebar"
-        />
-      </ClientOnly>
-      <Nuxt class="pt-0 md:pt-20 px-4 w-full z-10 order-2" />
-    </template>
+    <AppSidebarMenu
+      v-show="isSidebarActive"
+      @closeSidebar="closeSidebar"
+    />
+    <AppNavigationBar
+      :is-sidebar-active="isSidebarActive"
+      @toggleSidebar="toggleSidebar"
+    />
+    <Nuxt class="pt-0 md:pt-20 px-4 w-full z-10 order-2" />
   </main>
 </template>
 
@@ -33,6 +26,10 @@ import { mapGetters } from 'vuex';
 })
 export default class BlogLayout extends Vue {
   isSidebarActive: boolean = false;
+
+  toggleSidebar (): void {
+    this.isSidebarActive = !this.isSidebarActive;
+  }
 
   openSidebar (): void {
     this.isSidebarActive = true;

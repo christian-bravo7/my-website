@@ -3,11 +3,11 @@
     <section class="flex flex-col items-center justify-center">
       <span
         id="oops-label"
-        class="text-5xl md:text-8xl | text-gray-900 dark:text-gray-50 | font-bold"
+        class="text-5xl md:text-8xl | mb-6 | text-gray-900 dark:text-gray-100 | font-bold"
       >
         @#$%@#
       </span>
-      <p class="text-md md:text-3xl | text-center | mb-10 md:mb-12 | text-gray-900 dark:text-gray-50">
+      <p class="text-md md:text-3xl | text-center | mb-10 md:mb-12 | text-gray-900 dark:text-gray-100">
         {{ $t('error.404-description') }}
       </p>
       <NuxtLink

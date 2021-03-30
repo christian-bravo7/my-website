@@ -16,14 +16,14 @@
         mode="out-in"
       >
         <i
-          v-show="hasDarkTheme"
+          v-if="hasDarkTheme"
           key="dark"
           class="absolute | text-xl | material-icons dark-mode-switch__icon"
         >
           mode_night
         </i>
         <i
-          v-show="!hasDarkTheme"
+          v-else
           key="light"
           class="absolute | text-xl | material-icons dark-mode-switch__icon"
         >
