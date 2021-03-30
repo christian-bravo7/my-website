@@ -31,6 +31,10 @@ export default {
     '@/assets/scss/main.scss',
   ],
 
+  tailwind: {
+    jit: true,
+  },
+
   plugins: [
     { src: '@/plugins/persistedState.ts', ssr: false },
     { src: '@/plugins/scrollReveal.ts', ssr: false },
