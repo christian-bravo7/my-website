@@ -31,7 +31,7 @@ export default {
     '@/assets/scss/main.scss',
   ],
 
-  tailwind: {
+  tailwindcss: {
     jit: true,
   },
 
