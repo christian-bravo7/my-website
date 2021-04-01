@@ -5,4 +5,5 @@ export interface PostContent extends IContentDocument {
   description: string;
   image: string;
   minutes: number;
+  date: Array<number>;
 }

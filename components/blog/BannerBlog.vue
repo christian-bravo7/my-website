@@ -36,16 +36,15 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
-
-import { formatDate } from '@/utils/date/formatDate';
+import dayjs from 'dayjs';
 
 @Component
 export default class BannerBlog extends Vue {
   @Prop({ type: String, required: true })
   readonly image!: string;
 
-  @Prop({ type: String, required: true })
-  readonly createdAt!: string;
+  @Prop({ type: Array, required: true })
+  readonly date!: Array<number>;
 
   @Prop({ type: String, required: true })
   readonly title!: string;
@@ -57,7 +56,7 @@ export default class BannerBlog extends Vue {
   readonly minutes!: number;
 
   get formattedDate (): string {
-    return formatDate(this.createdAt);
+    return dayjs(this.date as any).format('MMM DD, YYYY');
   }
 }
 </script>
