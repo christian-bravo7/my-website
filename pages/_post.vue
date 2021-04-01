@@ -21,6 +21,8 @@ import { PostContent } from '@/content/types';
 import { Context } from '@nuxt/types';
 import { MetaInfo } from 'vue-meta/types';
 
+import { getMetaTags } from '@/seo';
+
 @Component({
   layout: 'post',
 })
@@ -28,8 +30,13 @@ export default class Blog extends Vue {
   private articles!: PostContent;
 
   head (): MetaInfo {
+    const postMetaTags = getMetaTags({
+      siteTitle: this.bannerInfo.title,
+      siteImage: this.bannerInfo.image,
+    });
+
     return {
-      title: this.bannerInfo.title,
+      ...postMetaTags,
     };
   }
 
