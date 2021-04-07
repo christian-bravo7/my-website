@@ -6,7 +6,7 @@ describe('BannerBlog component', () => {
     const wrapper = mount(BannerBlog, {
       propsData: {
         image: 'image.png',
-        createdAt: '2020-10-24T17:53:36.488Z',
+        date: [2020, 10, 24],
         title: 'my new post',
         description: 'welcome to my new post',
         minutes: 2,
@@ -20,7 +20,7 @@ describe('BannerBlog component', () => {
     const wrapper = mount(BannerBlog, {
       propsData: {
         image: 'image.png',
-        createdAt: '2020-10-24T17:53:36.488Z',
+        date: [2020, 10, 24],
         title: 'my new post',
         description: 'welcome to my new post',
         minutes: 2,
@@ -29,6 +29,6 @@ describe('BannerBlog component', () => {
 
     const date = wrapper.find('span.text-xs.text-center.text-gray-300');
 
-    expect(date.text()).toBe('October 24, 2020');
+    expect(date.text()).toBe('Oct 24, 2020');
   });
 });

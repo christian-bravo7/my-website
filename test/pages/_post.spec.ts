@@ -17,12 +17,13 @@ describe('single post page', () => {
         },
       },
       data: () => ({
-        articles: {
+        article: {
           Post: 'hello-world',
           title: 'Hello world',
           description: 'Welcome to my first post of the many that I hope to share us ❤️',
           minutes: 2,
           image: 'https://images.pexels.com/photos/2646531/pexels-photo-2646531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: [2020, 10, 24],
         },
       }),
     });
@@ -39,12 +40,13 @@ describe('single post page', () => {
         },
       },
       data: () => ({
-        articles: {
+        article: {
           Post: 'hello-world',
           title: 'Hello world',
           description: 'Welcome to my first post of the many that I hope to share us ❤️',
           minutes: 2,
           image: 'https://images.pexels.com/photos/2646531/pexels-photo-2646531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: [2020, 10, 24],
         },
       }),
     });

@@ -2,8 +2,9 @@
 title: Hello world
 description: Welcome to my first post of the many that I hope to share us ❤️
 minutes: 2
-image: https://images.pexels.com/photos/2646531/pexels-photo-2646531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+image: https://images.pexels.com/photos/2166/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&h=750&w=1260
 tags: ['welcome']
+date: [2021, 2, 31]
 ---
 
 # hello-world

@@ -77,8 +77,8 @@ exports[`me page should render correctly 1`] = `
       </span> <span class="text-sm">
         TELUS International
       </span></div>
-                <div class="flex flex-col | ml-5 | text-xs"><span>
-        Dec 2020 ~
+                <div class="flex flex-col | ml-5 | text-xs | capitalize"><span>
+        Nov 2020 ~
       </span>
                   <!---->
                 </div>
@@ -91,8 +91,8 @@ exports[`me page should render correctly 1`] = `
       </span> <span class="text-sm">
         Freelance
       </span></div>
-                <div class="flex flex-col | ml-5 | text-xs"><span>
-        Mar 2020 ~
+                <div class="flex flex-col | ml-5 | text-xs | capitalize"><span>
+        Feb 2020 ~
       </span>
                   <!---->
                 </div>
@@ -105,10 +105,10 @@ exports[`me page should render correctly 1`] = `
       </span> <span class="text-sm">
         Master Development
       </span></div>
-                <div class="flex flex-col | ml-5 | text-xs"><span>
-        Oct 2019 /
+                <div class="flex flex-col | ml-5 | text-xs | capitalize"><span>
+        Sep 2019 /
       </span> <span>
-        Aug 2020
+        Jul 2020
       </span></div>
               </div>
             </div>
@@ -119,10 +119,10 @@ exports[`me page should render correctly 1`] = `
       </span> <span class="text-sm">
         Viaro Networks
       </span></div>
-                <div class="flex flex-col | ml-5 | text-xs"><span>
-        Jun 2018 /
+                <div class="flex flex-col | ml-5 | text-xs | capitalize"><span>
+        May 2018 /
       </span> <span>
-        Oct 2019
+        Sep 2019
       </span></div>
               </div>
             </div>

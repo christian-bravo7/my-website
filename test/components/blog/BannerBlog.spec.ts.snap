@@ -5,7 +5,7 @@ exports[`BannerBlog component should render correclty 1`] = `
   <div class="flex flex-col justify-between container mx-auto relative z-10 p-4">
     <div></div>
     <div class="flex flex-col justify-center items-center"><span class="text-xs text-center text-gray-300">
-        October 24, 2020
+        Oct 24, 2020
       </span>
       <h1 class="text-3xl text-center md:text-5xl text-gray-50 font-bold">
         my new post

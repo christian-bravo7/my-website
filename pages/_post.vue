@@ -7,7 +7,7 @@
       <div class="container mx-auto py-20 px-4">
         <NuxtContent
           class="blog-content"
-          :document="articles"
+          :document="article"
         />
       </div>
     </div>
@@ -21,37 +21,44 @@ import { PostContent } from '@/content/types';
 import { Context } from '@nuxt/types';
 import { MetaInfo } from 'vue-meta/types';
 
+import { getMetaTags } from '@/seo';
+
 @Component({
   layout: 'post',
 })
 export default class Blog extends Vue {
-  private articles!: PostContent;
+  private article!: PostContent;
 
   head (): MetaInfo {
+    const postMetaTags = getMetaTags({
+      siteTitle: this.bannerInfo.title,
+      siteImage: this.bannerInfo.image,
+    });
+
     return {
-      title: this.bannerInfo.title,
+      ...postMetaTags,
     };
   }
 
-  async asyncData ({ $content, error, params }: Context): Promise<{ articles: PostContent }> {
-    const articles = await $content(params.post)
+  async asyncData ({ $content, error, params }: Context): Promise<{ article: PostContent }> {
+    const article = await $content(params.post)
       .fetch()
       .catch(() => {
         error({ statusCode: 404 });
       });
 
     return {
-      articles: articles as PostContent,
+      article: article as PostContent,
     };
   }
 
   get bannerInfo (): Partial<PostContent> {
-    const { title, description, createdAt, image, minutes } = this.articles;
+    const { title, description, date, image, minutes } = this.article;
 
     return {
       title,
       description,
-      createdAt,
+      date,
       image,
       minutes,
     };
