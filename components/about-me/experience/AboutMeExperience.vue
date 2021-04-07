@@ -31,7 +31,6 @@
 </template>
 
 <script lang="ts">
-import dayjs from 'dayjs';
 import { Vue, Component } from 'nuxt-property-decorator';
 
 import { WorkExperience } from '@/components/about-me/experience/types';
@@ -42,24 +41,24 @@ export default class AboutMeExperience extends Vue {
     {
       company: 'TELUS International',
       jobRole: 'Software Developer',
-      startYear: [2020, 11],
+      startYear: 'Dec 2020',
     },
     {
       company: 'Freelance',
       jobRole: 'Frontend Developer',
-      startYear: [2020, 2],
+      startYear: 'Mar 2020',
     },
     {
       company: 'Master Development',
       jobRole: 'Frontend Developer',
-      startYear: [2019, 9],
-      endYear: [2020, 7],
+      startYear: 'Oct 2019',
+      endYear: 'Aug 2020',
     },
     {
       company: 'Viaro Networks',
       jobRole: 'Quality Assurance',
-      startYear: [2018, 5],
-      endYear: [2019, 9],
+      startYear: 'Jun 2018',
+      endYear: 'Oct 2019',
     },
   ]
 }

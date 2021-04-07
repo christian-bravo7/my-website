@@ -2,8 +2,15 @@
 
 exports[`default layout should render correclty 1`] = `
 <main class="bg-gray-50 dark:bg-blue-800">
-  <div class="fixed | inset-0 z-50 | flex justify-center items-center | bg-white text-pink-500 dark:bg-blue-800 dark:text-blue-500">
-    <div class="w-64 h-64 sm:w-40 sm:h-40"><svg class="w-full h-full | fill-current | pulse-effect"></svg></div>
-  </div>
+  <div style="display: none;"></div>
+  <div></div>
+  <header>
+    <div current-route="/"></div>
+    <div name="page-banner" slim="" class="min-h-screen"></div>
+  </header>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </main>
 `;

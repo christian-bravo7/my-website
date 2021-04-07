@@ -6,15 +6,12 @@
   >
     <section class="relative | flex justify-center items-center | px-4">
       <div class="relative">
-        <Transition name="secondary-text">
-          <h2
-            v-show="isSecondaryTextVisible"
-            id="secondary"
-            class="absolute | font-bold text-center | text-6xl sm:text-8xl md:text-10xl xl:text-13xl | leading-none select-none | text-gray-200 dark:text-blue-900 | app-banner__secondary-text"
-          >
-            <slot name="secondary-text" />
-          </h2>
-        </Transition>
+        <h2
+          id="secondary"
+          class="absolute | font-bold text-center | text-6xl sm:text-8xl md:text-10xl xl:text-13xl | leading-none select-none | text-gray-200 dark:text-blue-900 | app-banner__secondary-text"
+        >
+          <slot name="secondary-text" />
+        </h2>
         <Transition name="primary-text">
           <h1
             v-show="isPrimaryTextVisible"
@@ -37,10 +34,8 @@ import baffle from 'baffle';
 @Component
 export default class AppBanner extends Vue {
   isPrimaryTextVisible: boolean = false;
-  isSecondaryTextVisible: boolean = false;
 
   shuffleText (): void {
-    this.displaySecondaryText();
     // @ts-ignore
     const secondaryText = baffle('#secondary', { speed: 70 });
     secondaryText.reveal(1000);
@@ -48,10 +43,6 @@ export default class AppBanner extends Vue {
 
   displayPrimaryText (): void {
     this.isPrimaryTextVisible = true;
-  }
-
-  displaySecondaryText (): void {
-    this.isSecondaryTextVisible = true;
   }
 }
 
@@ -70,19 +61,6 @@ export default class AppBanner extends Vue {
   transition: 0.9s;
 }
 
-.secondary-text-enter {
-  opacity: 0;
-}
-
-.secondary-text-enter-to {
-  opacity: 1;
-}
-
-.secondary-text-enter-active {
-  transition-duration: 0.8s;
-  transition-property: opacity;
-}
-
 .primary-text-enter {
   transform: translateY(50px);
   opacity: 0;
@@ -96,5 +74,18 @@ export default class AppBanner extends Vue {
 .primary-text-enter-active {
   transition-duration: 1s;
   transition-property: opacity, transform;
+}
+
+.primary-text-leave {
+  opacity: 1;
+}
+
+.primary-text-leave-to {
+  opacity: 0;
+}
+
+.primary-text-leave-active {
+  transition-duration: 1s;
+  transition-property: opacity;
 }
 </style>

@@ -2,26 +2,26 @@
 
 exports[`error page should render correclty 1`] = `
 <section class="flex items-center justify-center | w-full">
-  <section class="flex flex-col items-center justify-center"><span id="oops-label" class="text-5xl md:text-8xl | text-gray-900 dark:text-gray-50 | font-bold">
+  <section class="flex flex-col items-center justify-center"><span id="oops-label" class="text-5xl md:text-8xl | mb-6 | text-gray-900 dark:text-gray-100 | font-bold">
       @#$%@#
     </span>
-    <p class="text-md md:text-3xl | text-center | mb-10 md:mb-12 | text-gray-900 dark:text-gray-50">
+    <p class="text-md md:text-3xl | text-center | mb-10 md:mb-12 | text-gray-900 dark:text-gray-100">
       error.404-description
     </p> <a class="px-6 py-3 | text-base md:text-lg | rounded-full | bg-pink-500 dark:bg-blue-500 | text-white">
       error.home-link
     </a>
   </section>
   <div class="absolute inset-0 | flex justify-center items-center | overflow-hidden pointer-events-none | random-figures">
-    <figure class="absolute | opacity-50 | primary-text figure figure--1"><svg class="w-full h-full | fill-current"></svg></figure>
-    <figure class="absolute | opacity-50 | primary-text figure figure--2"><svg class="w-full h-full | fill-current"></svg></figure>
-    <figure class="absolute | opacity-50 | primary-text figure figure--3"><svg class="w-full h-full | fill-current"></svg></figure>
-    <figure class="absolute | opacity-50 | primary-text figure figure--4"><svg class="w-full h-full | fill-current"></svg></figure>
-    <figure class="absolute | opacity-50 | primary-text figure figure--5"><svg class="w-full h-full | fill-current"></svg></figure>
-    <figure class="absolute | opacity-50 | primary-text figure figure--6"><svg class="w-full h-full | fill-current"></svg></figure>
-    <figure class="absolute | opacity-50 | primary-text figure figure--7"><svg class="w-full h-full | fill-current"></svg></figure>
-    <figure class="absolute | opacity-50 | primary-text figure figure--8"><svg class="w-full h-full | fill-current"></svg></figure>
-    <figure class="absolute | opacity-50 | primary-text figure figure--9"><svg class="w-full h-full | fill-current"></svg></figure>
-    <figure class="absolute | opacity-50 | primary-text figure figure--10"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--1"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--2"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--3"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--4"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--5"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--6"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--7"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--8"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--9"><svg class="w-full h-full | fill-current"></svg></figure>
+    <figure class="absolute | opacity-25 | primary-text figure figure--10"><svg class="w-full h-full | fill-current"></svg></figure>
   </div>
 </section>
 `;

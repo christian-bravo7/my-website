@@ -1,7 +1,7 @@
 import { mount, RouterLinkStub } from '@vue/test-utils';
 
 import Error from '@/layouts/error.vue';
-import RandomFigures from '@/components/brand-figures/RandomFigures.vue';
+import RandomFigures from '@/components/app-figures/RandomFigures.vue';
 
 describe('error page', () => {
   it('should render correclty', () => {

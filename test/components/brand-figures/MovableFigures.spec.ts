@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 
-import MovableFigures from '@/components/brand-figures/MovableFigures.vue';
+import MovableFigures from '@/components/app-figures/MovableFigures.vue';
 
 describe('MovableFigures component', () => {
   it('should render correctly', () => {

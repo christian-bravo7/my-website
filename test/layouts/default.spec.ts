@@ -1,8 +1,7 @@
-import { createLocalVue, mount } from '@vue/test-utils';
+import { createLocalVue, shallowMount } from '@vue/test-utils';
 import Vuex from 'vuex';
 
 import Default from '@/layouts/default.vue';
-import AppFallbackLoad from '@/components/app/AppFallbackLoad.vue';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
@@ -21,12 +20,9 @@ describe('default layout', () => {
   });
 
   it('should render correclty', () => {
-    const wrapper = mount(Default, {
+    const wrapper = shallowMount(Default, {
       store,
       localVue,
-      components: {
-        AppFallbackLoad,
-      },
     });
 
     expect(wrapper.html()).toMatchSnapshot();

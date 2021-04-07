@@ -1,5 +1,3 @@
-@tailwind components;
-
 @layer components {
   .font-base {
     @apply text-sm md:text-lg leading-7 md:leading-loose text-black dark:text-white;

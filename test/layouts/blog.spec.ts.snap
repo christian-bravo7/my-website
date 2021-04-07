@@ -2,9 +2,9 @@
 
 exports[`blog layout should render correclty 1`] = `
 <main class="flex flex-col bg-gray-100 dark:bg-blue-800 min-h-screen">
-  <div class="fixed | inset-0 z-50 | flex justify-center items-center | bg-white text-pink-500 dark:bg-blue-800 dark:text-blue-500">
-    <div class="w-64 h-64 sm:w-40 sm:h-40"><svg class="w-full h-full | fill-current | pulse-effect"></svg></div>
-  </div>
-  <!---->
+  <div></div>
+  <div style="display: none;"></div>
+  <div></div>
+  <div class="pt-0 md:pt-20 px-4 w-full z-10 order-2"></div>
 </main>
 `;

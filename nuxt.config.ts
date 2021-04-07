@@ -31,7 +31,7 @@ export default {
     '@/assets/scss/main.scss',
   ],
 
-  tailwindcss: {
+  tailwind: {
     jit: true,
   },
 
@@ -40,8 +40,6 @@ export default {
     { src: '@/plugins/scrollReveal.ts', ssr: false },
     { src: '@/plugins/portalVue.ts', ssr: true },
     { src: '@/plugins/markdown.ts', ssr: true },
-    { src: '@/plugins/dayjs.ts', ssr: true },
-    { src: '@/plugins/i18n.ts', ssr: true },
   ],
 
   buildModules: [
