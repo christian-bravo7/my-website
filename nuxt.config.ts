@@ -4,7 +4,10 @@ import Locales from './lang/index';
 export default {
   target: 'static',
   components: [
-    { path: '~/components', pathPrefix: false },
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
   ],
 
   // server: {

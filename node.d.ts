@@ -4,10 +4,9 @@ import { ColorModeInstance } from '@nuxtjs/color-mode/types/color-mode';
 
 declare module 'vue/types/vue' {
   interface Vue {
-    localePath(route: RawLocation, locale?: string): string
-    switchLocalePath(locale: string): string
-    getRouteBaseName(route?: Route): string
-    readonly $i18n: VueI18n & IVueI18n,
-    $colorMode: ColorModeInstance
+    localePath(route: RawLocation, locale?: string): string;
+    switchLocalePath(locale: string): string;
+    getRouteBaseName(route?: Route): string;
+    $colorMode: ColorModeInstance;
   }
 }
