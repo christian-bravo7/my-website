@@ -31,7 +31,6 @@
 </template>
 
 <script lang="ts">
-import dayjs from 'dayjs';
 import { Vue, Component } from 'nuxt-property-decorator';
 
 import { WorkExperience } from '@/components/about-me/experience/types';

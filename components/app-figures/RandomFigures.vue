@@ -7,7 +7,7 @@
       :key="index"
       :class="`absolute | opacity-25 | primary-text figure figure--${index}`"
     >
-      <component
+      <Component
         :is="figureComponent"
         class="w-full h-full | fill-current"
       />

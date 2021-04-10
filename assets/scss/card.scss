@@ -1,17 +1,7 @@
-.card {
-  @apply p-4 rounded-2xl select-none bg-gray-100  shadow-sm border border-transparent transition-all duration-300;
+@tailwind components;
 
-  &:hover {
-    @apply shadow-md;
-  }
-}
-
-@include dark-mode {
+@layer components {
   .card {
-    @apply bg-transparent border-blue-300;
-
-    &:hover {
-      @apply bg-blue-700 bg-opacity-25;
-    }
+    @apply p-4 rounded-2xl select-none bg-gray-100 dark-hover:bg-opacity-25 dark:bg-transparent dark-hover:bg-blue-700 shadow-sm hover:shadow-md border border-transparent dark:border-blue-300 transition-all duration-300;
   }
 }
