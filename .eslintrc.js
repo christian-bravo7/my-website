@@ -39,7 +39,7 @@ module.exports = {
     }],
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
-    'max-params': ['error', 4],
+    'max-params': ['error', 5],
     'space-before-function-paren': ['error', 'always'],
     'no-debugger': 'warn',
     'no-console': 'warn',

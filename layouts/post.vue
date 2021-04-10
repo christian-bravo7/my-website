@@ -21,19 +21,9 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-import { MetaInfo } from 'vue-meta/types';
 import { mapGetters } from 'vuex';
 
-import { guestStore } from '@/store';
-
 @Component({
-  head (): MetaInfo {
-    return {
-      bodyAttrs: {
-        'data-theme': guestStore.theme,
-      },
-    };
-  },
   computed: {
     ...mapGetters({
       isAppInitialized: 'guest/isAppInitialized',

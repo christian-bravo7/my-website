@@ -1,4 +1,5 @@
 import { Context } from '@nuxt/types';
+
 import createPersistedState from 'vuex-persistedstate';
 
 import { guestStore } from '@/store';

@@ -37,7 +37,6 @@ export default {
 
   plugins: [
     { src: '@/plugins/persistedState.ts', ssr: false },
-    { src: '@/plugins/scrollReveal.ts', ssr: false },
     { src: '@/plugins/portalVue.ts', ssr: true },
     { src: '@/plugins/markdown.ts', ssr: true },
     { src: '@/plugins/dayjs.ts', ssr: true },

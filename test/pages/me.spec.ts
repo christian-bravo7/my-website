@@ -26,12 +26,6 @@ describe('me page', () => {
         AboutMeExperience,
       },
       localVue,
-      mocks: {
-        $scrollreveal: {
-          reveal: jest.fn(() => {}),
-          sync: jest.fn(() => {}),
-        },
-      },
     });
 
     expect(wrapper.html()).toMatchSnapshot();
@@ -45,12 +39,6 @@ describe('me page', () => {
         AboutMeExperience,
       },
       localVue,
-      mocks: {
-        $scrollreveal: {
-          reveal: jest.fn(() => {}),
-          sync: jest.fn(() => {}),
-        },
-      },
     });
 
     const title = wrapper.vm.$meta().refresh().metaInfo.title;

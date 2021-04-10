@@ -29,7 +29,6 @@
       "@types/node",
       "@nuxt/types",
       "@types/jest",
-      "@types/scrollreveal",
       "@nuxt/content",
       "nuxt-i18n/types"
     ]
