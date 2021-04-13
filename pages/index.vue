@@ -3,6 +3,7 @@
     <Portal to="page-banner">
       <HomeBanner />
     </Portal>
+    <AboutMeInformation />
     <RecentProjects />
   </section>
 </template>

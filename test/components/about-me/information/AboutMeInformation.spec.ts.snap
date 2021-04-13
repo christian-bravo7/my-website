@@ -2,11 +2,11 @@
 
 exports[`AboutMeInformation component should render correctly 1`] = `
 <section class="section-container">
-  <div class="container | flex | my-0 mx-auto">
-    <div class="text-black dark:text-white | about-me-information__content">
+  <div class="container | flex justify-center | my-0 mx-auto">
+    <div class="text-black dark:text-white | max-w-screen-lg | about-me-information__content">
       <div class="relative | mb-4 md:mb-0">
-        <h2 class="mb-4 | section-title about-me-information__title">
-          me.hi-label
+        <h2 class="mb-8 | section-title about-me-information__title">
+          me.about-me-label
         </h2>
         <p class="relative z-10 | font-base | about-me-information__description">me.about-me-description</p>
       </div>
