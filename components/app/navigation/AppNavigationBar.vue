@@ -7,7 +7,7 @@
     </template>
     <template #center>
       <div class="hidden | w-full | md:flex items-center justify-end col-span-3">
-        <div class="flex content-center | mr-5">
+        <div class="flex content-center | mr-6">
           <AppNavigationBarLink
             :to="localePath({ name: 'index' })"
           >

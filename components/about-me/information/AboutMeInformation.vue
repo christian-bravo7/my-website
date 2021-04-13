@@ -1,14 +1,14 @@
 <template>
   <section class="section-container">
-    <div class="container | flex | my-0 mx-auto">
-      <div class="text-black dark:text-white | about-me-information__content">
+    <div class="container | flex justify-center | my-0 mx-auto">
+      <div class="text-black dark:text-white | max-w-screen-lg | about-me-information__content">
         <div class="relative | mb-4 md:mb-0">
-          <h2 class="mb-4 | section-title about-me-information__title">
-            {{ $t('me.hi-label') }}
+          <h2 class="mb-8 | section-title about-me-information__title">
+            {{ $t('me.about-me-label') }}
           </h2>
           <p
             class="relative z-10 | font-base | about-me-information__description"
-            v-html="$md($t('me.about-me-description', { age: currentAge }))"
+            v-html="$md($t('me.about-me-description'))"
           />
         </div>
         <div class="flex items-center justify-center">
@@ -82,7 +82,7 @@ export default class AboutMeInformation extends Vue {
     &__content {
       @apply gap-40;
 
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 2fr 1fr;
     }
   }
 }

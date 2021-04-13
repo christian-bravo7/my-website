@@ -3,6 +3,7 @@
 exports[`index page should render page correctly 1`] = `
 <section>
   <div class="v-portal" style="display: none;"></div>
+  <aboutmeinformation></aboutmeinformation>
   <section class="section-container">
     <div class="container | flex | my-0 mx-auto">
       <div class="flex flex-col | w-full">

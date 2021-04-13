@@ -15,7 +15,7 @@ describe('AboutMeInformation component', () => {
     const title = wrapper.find('h2');
     const descriptionText = wrapper.find('p');
 
-    expect(title.text()).toBe('me.hi-label');
+    expect(title.text()).toBe('me.about-me-label');
     expect(descriptionText.text()).toBe('me.about-me-description');
   });
 });
