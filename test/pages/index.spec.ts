@@ -1,6 +1,6 @@
 import PortalVue from 'portal-vue';
 import VueMeta from 'vue-meta';
-import { createLocalVue, mount } from '@vue/test-utils';
+import { createLocalVue, shallowMount } from '@vue/test-utils';
 
 import IndexPage from '@/pages/index.vue';
 import RecentProjects from '@/components/home/recent-projects/RecentProjects.vue';
@@ -15,7 +15,7 @@ describe('index page', () => {
     // @ts-ignore
     RecentProjects.options.components.RecentProjectAdvice = RecentProjectAdvice;
 
-    const wrapper = mount(IndexPage, {
+    const wrapper = shallowMount(IndexPage, {
       localVue,
       components: {
         RecentProjects,
@@ -29,7 +29,7 @@ describe('index page', () => {
     // @ts-ignore
     RecentProjects.options.components.RecentProjectAdvice = RecentProjectAdvice;
 
-    const wrapper = mount(IndexPage, {
+    const wrapper = shallowMount(IndexPage, {
       localVue,
       components: {
         RecentProjects,

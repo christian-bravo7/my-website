@@ -1,9 +1,9 @@
 <template>
   <NuxtLink
-    class="flex w-8 h-8 text-black dark:text-white col-span-1"
+    class="flex col-span-1 | w-8 h-8 | text-black dark:text-white"
     :to="localePath({ name: 'index' })"
   >
-    <SiteLogo class="w-full h-full fill-current" />
+    <SiteLogo class="w-full h-full | fill-current" />
   </NuxtLink>
 </template>
 
