@@ -3,7 +3,6 @@ import { config } from '@vue/test-utils';
 
 config.mocks = {
   $md: label => label,
-  $t: msg => msg,
   localePath: path => path,
   getRouteBaseName: _ => '/',
 };

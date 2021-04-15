@@ -6,9 +6,9 @@ exports[`error page should render correclty 1`] = `
       @#$%@#
     </span>
     <p class="text-md md:text-3xl | text-center | mb-10 md:mb-12 | text-gray-900 dark:text-gray-100">
-      error.404-description
+      Sorry, but this page doesn't exist.
     </p> <a class="px-6 py-3 | text-base md:text-lg | rounded-full | bg-pink-500 dark:bg-blue-500 | text-white">
-      error.home-link
+      Take me home
     </a>
   </section>
   <div class="absolute inset-0 | flex justify-center items-center | overflow-hidden pointer-events-none | random-figures">
