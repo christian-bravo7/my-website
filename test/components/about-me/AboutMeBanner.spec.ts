@@ -36,7 +36,7 @@ describe('AboutMeBanner component', () => {
     const primaryText = wrapper.find('.app-banner__primary-text');
     const secondaryText = wrapper.find('#secondary');
 
-    expect(primaryText.text()).toBe('**Helping** companies achieve their goals, doing what I **love**');
+    expect(primaryText.text()).toBe('Helping companies achieve their goals, doing what I love');
     expect(secondaryText.text()).toBe('About me');
   });
 });
