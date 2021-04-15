@@ -2,25 +2,10 @@
 
 exports[`index page should render page correctly 1`] = `
 <section>
-  <div class="v-portal" style="display: none;"></div>
+  <portal-stub name="1" order="0" slotprops="[object Object]" tag="DIV" to="page-banner">
+    <homebanner></homebanner>
+  </portal-stub>
   <aboutmeinformation></aboutmeinformation>
-  <section class="section-container">
-    <div class="container | flex | my-0 mx-auto">
-      <div class="flex flex-col | w-full">
-        <h2 class="mb-8 | text-center | section-title recent-projects__title">
-          home.recent-projects
-        </h2>
-        <div class="flex justify-center items-center | flex-1">
-          <div class="flex flex-wrap justify-center | max-w-screen-lg">
-            <div class="card">
-              <p class="font-base">
-                home.no-recent-projects-message
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <recentprojects-stub></recentprojects-stub>
 </section>
 `;

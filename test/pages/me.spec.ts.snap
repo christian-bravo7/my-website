@@ -5,14 +5,18 @@ exports[`me page should render correctly 1`] = `
   <div class="v-portal" style="display: none;"></div>
   <section class="section-container mb-24 md:mb-0">
     <div class="container | flex justify-center | my-0 mx-auto">
-      <div class="text-black dark:text-white | max-w-screen-lg | about-me-information__content">
-        <div class="relative | mb-4 md:mb-0">
+      <div class="max-w-screen-lg | about-me-information__content">
+        <div class="mb-4 md:mb-0">
           <h2 class="mb-8 | section-title about-me-information__title">
-            me.about-me-label
+            About me
           </h2>
-          <p class="relative z-10 | font-base | about-me-information__description">me.about-me-description</p>
+          <p class="font-base | about-me-information__description">Hello, my name is Christian Bravo, a Frontend Developer from Guatemala with a great passion for web development using modern technologies.
+
+            I enjoy solving problems, creating dynamic and intuitive user interfaces, developing rich web applications and experiences.
+
+            Outside of the office you will find me playing soccer, collecting cactus and spending time with my pets and family.</p>
         </div>
-        <div class="flex items-center justify-center"><img src="~assets/img/photo-2.png" alt="christian"></div>
+        <div class="flex items-center justify-center"><img src="~assets/img/photo-2.png" alt="christian picture"></div>
       </div>
     </div>
   </section>
@@ -20,7 +24,7 @@ exports[`me page should render correctly 1`] = `
     <div class="container | flex | my-0 mx-auto">
       <div class="flex flex-col | w-full">
         <h2 class="mb-8 | text-center | section-title about-me-skills__title">
-          me.skills-label
+          Skills
         </h2>
         <div class="flex justify-center items-center | flex-1">
           <div class="flex flex-wrap justify-center | max-w-screen-lg">
@@ -66,7 +70,7 @@ exports[`me page should render correctly 1`] = `
     <div class="container | flex | my-0 mx-auto">
       <div class="flex flex-col | w-full">
         <h2 class="section-title | mb-8 | about-me-experience__title">
-          me.work-experience
+          Experience
         </h2>
         <div class="flex justify-center items-center | flex-1">
           <div class="w-full | grid grid-cols-1 gap-8 md:gap-2 md:grid-cols-9">
