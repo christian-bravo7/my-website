@@ -1,5 +1,5 @@
 module.exports = {
-  setupFiles: ['<rootDir>/test/setup.js'],
+  setupFiles: ['<rootDir>/test/setup.ts'],
   moduleNameMapper: {
     '.+\\.svg?.+$': '<rootDir>/test/mocks/svg-empty.vue',
     '^@/(.*)$': '<rootDir>/$1',

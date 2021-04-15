@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-
+import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 
-const loadEnglishMessages = () => {
+const loadEnglishMessages = (): VueI18n.LocaleMessages => {
   const messages = require('@/lang/en.json');
 
   return {
@@ -10,8 +9,8 @@ const loadEnglishMessages = () => {
   };
 };
 
-const setupI18n = (Vue) => {
-  Vue.use(VueI18n);
+const setupI18n = (vue: typeof Vue): VueI18n => {
+  vue.use(VueI18n);
 
   const i18n = new VueI18n({
     locale: 'en',
