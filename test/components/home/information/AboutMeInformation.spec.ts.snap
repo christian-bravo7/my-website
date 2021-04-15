@@ -8,11 +8,11 @@ exports[`AboutMeInformation component should render correctly 1`] = `
         <h2 class="mb-8 | section-title about-me-information__title">
           About me
         </h2>
-        <p class="font-base | about-me-information__description">Hello, my name is Christian Bravo, a Frontend Developer from Guatemala with a great passion for web development using modern technologies.
-
-          I enjoy solving problems, creating dynamic and intuitive user interfaces, developing rich web applications and experiences.
-
-          Outside of the office you will find me playing soccer, collecting cactus and spending time with my pets and family.</p>
+        <p class="font-base | about-me-information__description">
+        <p>Hello, my name is Christian Bravo, a Frontend Developer from Guatemala with a great passion for web development using modern technologies.</p>
+        <p>I enjoy solving problems, creating dynamic and intuitive user interfaces, developing rich web applications and experiences.</p>
+        <p>Outside of the office you will find me playing soccer, collecting cactus and spending time with my pets and family.</p>
+        </p>
       </div>
       <div class="flex items-center justify-center"><img src="~assets/img/photo-2.png" alt="christian picture"></div>
     </div>
