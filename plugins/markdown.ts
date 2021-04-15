@@ -25,6 +25,8 @@ md.renderer.rules.link_open = (tokens, idx, options, env, self): string => {
   return render(tokens, idx, options, env, self);
 };
 
+export const markdownRender = (markdown: string): string => md.render(markdown);
+
 export default function (_: Context, inject: Inject): void {
-  inject('md', (markdown: string): string => md.render(markdown));
+  inject('md', markdownRender);
 }
