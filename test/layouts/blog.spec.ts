@@ -1,5 +1,5 @@
 import Vuex from 'vuex';
-import { createLocalVue, shallowMount, RouterLinkStub } from '@vue/test-utils';
+import { createLocalVue, shallowMount } from '@vue/test-utils';
 import MockDate from 'mockdate';
 
 import Blog from '@/layouts/blog.vue';
@@ -30,10 +30,6 @@ describe('blog layout', () => {
         ClientOnly: {
           template: '<div></div>',
         },
-        Nuxt: {
-          template: '<div></div>',
-        },
-        NuxtLink: RouterLinkStub,
       },
     });
 

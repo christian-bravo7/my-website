@@ -69,7 +69,7 @@ export default class AppSidebarMenu extends Vue {
     this.isSidebarVisible = true;
   }
 
-  @Emit('closeSidebar')
+  @Emit('onSidebarClose')
   closeSidebarOverlay (): void {}
 }
 
