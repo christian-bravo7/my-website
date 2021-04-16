@@ -55,11 +55,3 @@ export default class AppNavigationBar extends Vue {
   toggleSidebar (): void {}
 }
 </script>
-
-<style lang="scss" scoped>
-@screen md {
-  .navbar {
-    backdrop-filter: blur(100px);
-  }
-}
-</style>

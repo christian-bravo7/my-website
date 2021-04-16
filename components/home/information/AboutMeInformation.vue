@@ -32,7 +32,7 @@ export default class AboutMeInformation extends Vue {}
 <style lang="scss" scoped>
 .about-me-information {
   &__content {
-    @apply grid grid-cols-1 items-center;
+    @apply grid grid-cols-1 lg:gap-40 items-center;
   }
 
   &__title {
@@ -49,8 +49,6 @@ export default class AboutMeInformation extends Vue {}
 @screen lg {
   .about-me-information {
     &__content {
-      @apply gap-40;
-
       grid-template-columns: 2fr 1fr;
     }
   }
