@@ -2,11 +2,11 @@
   <main class="bg-gray-50 dark:bg-blue-800">
     <AppSidebarMenu
       v-show="isSidebarActive"
-      @closeSidebar="closeSidebar"
+      @onSidebarClose="onSidebarClose"
     />
     <AppNavigationBar
       :is-sidebar-active="isSidebarActive"
-      @toggleSidebar="toggleSidebar"
+      @onSidebarToggle="onSidebarToggle"
     />
     <header>
       <MovableFigures :current-route="currentRoute" />
@@ -51,7 +51,7 @@ export default class Default extends Vue {
     return route;
   }
 
-  toggleSidebar (): void {
+  onSidebarToggle (): void {
     this.isSidebarActive = !this.isSidebarActive;
   }
 
@@ -59,7 +59,7 @@ export default class Default extends Vue {
     this.isSidebarActive = true;
   }
 
-  closeSidebar (): void {
+  onSidebarClose (): void {
     this.isSidebarActive = false;
   }
 }

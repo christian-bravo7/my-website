@@ -24,7 +24,7 @@ export default class AppBurgerButton extends Vue {
   @Prop({ type: Boolean, default: false })
   readonly isActive!: boolean;
 
-  @Emit('click')
+  @Emit('onClick')
   onClick (): void { }
 }
 </script>

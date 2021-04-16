@@ -33,7 +33,7 @@
       <div class="flex md:hidden justify-end items-center">
         <AppBurgerButton
           :is-active="isSidebarActive"
-          @click="toggleSidebar"
+          @onClick="onSidebarToggle"
         />
       </div>
     </template>
@@ -48,10 +48,7 @@ export default class AppNavigationBar extends Vue {
   @Prop({ type: Boolean, default: false })
   readonly isSidebarActive!: boolean;
 
-  @Emit('openSidebar')
-  openSidebar (): void {}
-
-  @Emit('toggleSidebar')
-  toggleSidebar (): void {}
+  @Emit('onSidebarToggle')
+  onSidebarToggle (): void {}
 }
 </script>

@@ -1,4 +1,4 @@
-import { config } from '@vue/test-utils';
+import { config, RouterLinkStub } from '@vue/test-utils';
 
 import { markdownRender } from '@/plugins/markdown';
 
@@ -9,6 +9,7 @@ config.mocks = {
 };
 
 config.stubs = {
+  NuxtLink: RouterLinkStub,
   AppNavigationBar: {
     template: '<div></div>',
   },
