@@ -68,36 +68,31 @@ export default class Blog extends Vue {
 
 <style lang="scss">
 .blog-content {
-  h1 {
-    @apply text-3xl mb-6 font-bold;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li {
+    @apply dark:text-gray-50;
+  }
 
-    @screen md {
-      @apply text-5xl;
-    }
+  h1 {
+    @apply text-3xl md:text-5xl mb-6 font-bold;
   }
 
   h2 {
-    @apply text-xl mb-4 font-bold;
-
-    @screen md {
-      @apply text-3xl;
-    }
+    @apply text-xl md:text-3xl mb-4 font-bold;
   }
 
   h3 {
-    @apply text-lg mb-3 font-bold;
-
-    @screen md {
-      @apply text-xl;
-    }
+    @apply text-lg md:text-xl mb-3 font-bold;
   }
 
   p {
-    @apply text-base mb-4 leading-loose;
-
-    @screen md {
-      @apply text-lg;
-    }
+    @apply text-base md:text-lg mb-4 leading-loose;
   }
 
   ul {
@@ -113,16 +108,4 @@ export default class Blog extends Vue {
   }
 }
 
-@include dark-mode {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  li {
-    @apply text-gray-50;
-  }
-}
 </style>

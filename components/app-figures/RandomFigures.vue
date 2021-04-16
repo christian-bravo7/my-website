@@ -40,15 +40,11 @@ export default class RandomFigures extends Vue {
   }
 
   &--2 {
-    @apply w-12 h-12 hidden;
+    @apply w-12 h-12 hidden md:block;
 
     top: 10%;
     left: 35%;
     transform: rotate(5deg);
-
-    @screen md {
-      @apply block;
-    }
   }
 
   &--3 {
@@ -76,15 +72,11 @@ export default class RandomFigures extends Vue {
   }
 
   &--6 {
-    @apply w-20 h-20 hidden;
+    @apply w-20 h-20 hidden md:block;
 
     top: 65%;
     left: 75%;
     transform: rotate(-15deg);
-
-    @screen md {
-      @apply block;
-    }
   }
 
   &--7 {
@@ -104,15 +96,11 @@ export default class RandomFigures extends Vue {
   }
 
   &--9 {
-    @apply w-40 h-40 hidden;
+    @apply w-40 h-40 hidden md:block;
 
     top: 5%;
     left: 90%;
     transform: rotate(35deg);
-
-    @screen md {
-      @apply block;
-    }
   }
 
   &--10 {

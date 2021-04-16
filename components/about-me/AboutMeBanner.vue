@@ -28,17 +28,5 @@ export default class AboutMeBanner extends Vue {}
       @include theme-gradients (one, two);
     }
   }
-
-  &__scroll-indicator {
-    bottom: 100px;
-  }
-}
-
-@screen md {
-  .about-me-banner {
-    &__scroll-indicator {
-      bottom: 60px;
-    }
-  }
 }
 </style>
