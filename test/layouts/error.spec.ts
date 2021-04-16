@@ -1,7 +1,6 @@
-import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils';
+import { createLocalVue, mount } from '@vue/test-utils';
 
 import Error from '@/layouts/error.vue';
-import RandomFigures from '@/components/app-figures/RandomFigures.vue';
 
 import setupI18n from '@/test/config/i18n';
 
@@ -16,9 +15,6 @@ const componentConfig = {
 describe('error page', () => {
   it('should render correclty', () => {
     const wrapper = mount(Error, {
-      components: {
-        RandomFigures,
-      },
       ...componentConfig,
     });
 

@@ -16,9 +16,6 @@ const componentConfig = {
 describe('AboutMeSkills component', () => {
   it('should render correctly', () => {
     const wrapper = mount(AboutMeSkills, {
-      components: {
-        SkillIcon,
-      },
       ...componentConfig,
     });
 
@@ -27,9 +24,6 @@ describe('AboutMeSkills component', () => {
 
   it('should display a title', () => {
     const wrapper = mount(AboutMeSkills, {
-      components: {
-        SkillIcon,
-      },
       ...componentConfig,
     });
 
@@ -40,9 +34,6 @@ describe('AboutMeSkills component', () => {
 
   it('should render multiple SkillIcon components', () => {
     const wrapper = mount(AboutMeSkills, {
-      components: {
-        SkillIcon,
-      },
       ...componentConfig,
     });
 

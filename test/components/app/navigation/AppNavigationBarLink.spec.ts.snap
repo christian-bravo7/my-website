@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppNavigationBarLink component should render correctly 1`] = `<a class="mx-6 | text-center text-sm | primary-text" to="/hello"></a>`;

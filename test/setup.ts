@@ -5,6 +5,7 @@ import { config, RouterLinkStub } from '@vue/test-utils';
 
 import { markdownRender } from '@/plugins/markdown';
 
+// Mock nuxt component auto registry
 glob.sync(path.join(__dirname, '../components/**/*.vue')).forEach((file: string) => {
   const name = file.match(/(\w*)\.vue$/)![1];
   Vue.component(name, require(file).default);
@@ -22,9 +23,9 @@ config.mocks = {
 config.stubs = {
   NuxtLink: RouterLinkStub,
   Nuxt: {
-    template: '<div></div>',
+    template: '<span><slot/></span>',
   },
   PortalTarget: {
-    template: '<div></div>',
+    template: '<span><slot/></span>',
   },
 };
