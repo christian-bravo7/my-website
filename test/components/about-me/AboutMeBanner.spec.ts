@@ -1,7 +1,6 @@
 import { createLocalVue, mount } from '@vue/test-utils';
 
 import AboutMeBanner from '@/components/about-me/AboutMeBanner.vue';
-import AppBanner from '@/components/app/AppBanner.vue';
 
 import setupI18n from '@/test/config/i18n';
 
@@ -16,9 +15,6 @@ const componentConfig = {
 describe('AboutMeBanner component', () => {
   it('should render correctly', () => {
     const wrapper = mount(AboutMeBanner, {
-      components: {
-        AppBanner,
-      },
       ...componentConfig,
     });
 
@@ -27,9 +23,6 @@ describe('AboutMeBanner component', () => {
 
   it('should render primary and seconday text', () => {
     const wrapper = mount(AboutMeBanner, {
-      components: {
-        AppBanner,
-      },
       ...componentConfig,
     });
 

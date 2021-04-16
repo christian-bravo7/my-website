@@ -1,12 +1,8 @@
 import { createLocalVue, mount } from '@vue/test-utils';
-import Me from '@/pages/me.vue';
 import PortalVue from 'portal-vue';
 import VueMeta from 'vue-meta';
-import AboutMeInformation from '@/components/home/information/AboutMeInformation.vue';
-import AboutMeExperience from '@/components/about-me/experience/AboutMeExperience.vue';
-import AboutMeExperienceCard from '@/components/about-me/experience/AboutMeExperienceCard.vue';
-import AboutMeSkills from '@/components/about-me/skills/AboutMeSkills.vue';
-import SkillIcon from '@/components/about-me/skills/SkillIcon.vue';
+
+import Me from '@/pages/me.vue';
 
 import setupI18n from '@/test/config/i18n';
 
@@ -24,17 +20,7 @@ localVue.use(VueMeta, { keyName: 'head' });
 
 describe('me page', () => {
   it('should render correctly', () => {
-    // @ts-ignore
-    AboutMeSkills.options.components.SkillIcon = SkillIcon;
-    // @ts-ignore
-    AboutMeExperience.options.components.AboutMeExperienceCard = AboutMeExperienceCard;
-
     const wrapper = mount(Me, {
-      components: {
-        AboutMeInformation,
-        AboutMeSkills,
-        AboutMeExperience,
-      },
       ...componentConfig,
     });
 
@@ -43,11 +29,6 @@ describe('me page', () => {
 
   it('should display meta-tag title', () => {
     const wrapper = mount(Me, {
-      components: {
-        AboutMeInformation,
-        AboutMeSkills,
-        AboutMeExperience,
-      },
       ...componentConfig,
     });
 
