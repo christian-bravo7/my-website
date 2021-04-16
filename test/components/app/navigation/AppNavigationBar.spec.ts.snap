@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppNavigationBar component should render correctly 1`] = `
+<nav class="fixed top-0 left-0 right-0 z-20 | p-4 md:py-3 md:px-8  | bg-transparent | transition-all duration-150 | navbar">
+  <div class="navbar__content">
+    <div class="flex items-center">
+      <div class="hidden md:flex"><a class="flex col-span-1 | w-8 h-8 | text-black dark:text-white"><svg class="w-full h-full | fill-current"></svg></a></div>
+    </div>
+    <div class="flex items-center">
+      <div class="hidden | w-full | md:flex items-center justify-end col-span-3">
+        <div class="flex content-center | mr-6"><a class="mx-6 | text-center text-sm | primary-text" to="[object Object]">
+            Home
+          </a> <a class="mx-6 | text-center text-sm | primary-text" to="[object Object]">
+            About me
+          </a></div>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <div class="hidden | md:flex items-center justify-end col-span-1">
+        <div class="mr-4">
+          <div class="inline-block">
+            <div class="flex items-center">
+              <div class="relative | select-none | app-select">
+                <div tabindex="0" class="flex items-center | py-1 pl-4 pr-1 | text-sm | text-gray-900 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | rounded-lg | cursor-pointer | app-select__button"><span class="flex items-center"><i class="material-icons text-sm mr-2">
+            translate
+          </i>
+          
+        </span> <i class="material-icons ml-1 | transition-transform duration-300">
+                    keyboard_arrow_down
+                  </i></div>
+                <div tabindex="0" class="absolute right-0 | p-1 | bg-gray-50 dark:bg-blue-900 | rounded-lg shadow-lg focus:outline-none | app-select__options-list" style="display: none;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div class="relative flex select-none"><input id="dark-mode-switch" type="checkbox" class="hidden"> <label for="dark-mode-switch" class="relative | flex justify-center items-center | w-8 h-8 | p-2 | text-yellow-500 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | cursor-pointer rounded-lg"><span mode="out-in"><i class="absolute | text-xl | material-icons dark-mode-switch__icon">
+        mode_night
+      </i></span></label></div>
+        </div>
+      </div>
+      <div class="flex md:hidden justify-end items-center"><button class="w-12 h-12 | p-3 | rounded-full | bg-gray-100 dark:bg-blue-900 | app-burger-button">
+          <div class="flex flex-col items-end justify-center | relative | w-full h-full | app-burger-button__wrapper"><span class="absolute | block | w-9/12 | bg-black dark:bg-gray-100"></span> <span class="absolute | block | w-full | bg-black dark:bg-gray-100"></span> <span class="absolute | block | w-7/12 | bg-black dark:bg-gray-100"></span></div>
+        </button></div>
+    </div>
+  </div>
+</nav>
+`;
