@@ -2,9 +2,9 @@
 
 exports[`blog layout should render correclty 1`] = `
 <main class="flex flex-col bg-gray-100 dark:bg-blue-800 min-h-screen">
-  <div></div>
-  <div style="display: none;"></div>
-  <div></div>
+  <appfallbackload-stub></appfallbackload-stub>
+  <appsidebarmenu-stub haslanguagepicker="true" style="display: none;"></appsidebarmenu-stub>
+  <appnavigationbar-stub></appnavigationbar-stub>
   <div class="pt-0 md:pt-20 px-4 w-full z-10 order-2"></div>
 </main>
 `;

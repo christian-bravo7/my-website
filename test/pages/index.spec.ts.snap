@@ -3,9 +3,9 @@
 exports[`index page should render page correctly 1`] = `
 <section>
   <portal-stub name="1" order="0" slotprops="[object Object]" tag="DIV" to="page-banner">
-    <homebanner></homebanner>
+    <homebanner-stub></homebanner-stub>
   </portal-stub>
-  <aboutmeinformation></aboutmeinformation>
+  <aboutmeinformation-stub></aboutmeinformation-stub>
   <recentprojects-stub></recentprojects-stub>
 </section>
 `;

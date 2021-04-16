@@ -2,15 +2,15 @@
 
 exports[`default layout should render correclty 1`] = `
 <main class="bg-gray-50 dark:bg-blue-800">
-  <div style="display: none;"></div>
-  <div></div>
+  <appsidebarmenu-stub haslanguagepicker="true" style="display: none;"></appsidebarmenu-stub>
+  <appnavigationbar-stub></appnavigationbar-stub>
   <header>
-    <div current-route="/"></div>
+    <movablefigures-stub currentroute="/"></movablefigures-stub>
     <div name="page-banner" slim="" class="min-h-screen"></div>
   </header>
   <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+  <appcontactme-stub></appcontactme-stub>
+  <appfooter-stub></appfooter-stub>
+  <appfallbackload-stub></appfallbackload-stub>
 </main>
 `;
