@@ -1,5 +1,6 @@
-import AppBanner from '@/components/app/AppBanner.vue';
 import { mount } from '@vue/test-utils';
+
+import AppBanner from '@/components/app/AppBanner.vue';
 
 describe('AppBanner component', () => {
   it('should render correclty', () => {
