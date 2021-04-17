@@ -24,7 +24,6 @@
           </h1>
         </Transition>
       </div>
-      <slot v-if="isPrimaryTextVisible" />
     </section>
   </Transition>
 </template>
