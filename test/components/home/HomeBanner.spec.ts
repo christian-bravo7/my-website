@@ -15,6 +15,7 @@ const componentConfig = {
 
 describe('HomeBanner component', () => {
   it('should render correctly', () => {
+    MockDate.set('Wed Nov 25 2020 21:00:00 GMT-0600 (Central Standard Time)');
     const wrapper = mount(HomeBanner, {
       ...componentConfig,
     });
