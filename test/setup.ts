@@ -5,6 +5,8 @@ import { config, RouterLinkStub } from '@vue/test-utils';
 
 import { markdownRender } from '@/plugins/markdown';
 
+import '@testing-library/jest-dom';
+
 // Mock nuxt component auto registry
 glob.sync(path.join(__dirname, '../components/**/*.vue')).forEach((file: string) => {
   const name = file.match(/(\w*)\.vue$/)![1];
