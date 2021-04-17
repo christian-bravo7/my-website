@@ -11,6 +11,5 @@ exports[`HomeBanner component should render correctly 1`] = `
     </span> <span class="block | text-center | leading-snug | home-banner__description"><p><strong>Frontend</strong> developer</p>
 </span></h1>
   </div>
-  <!---->
 </section>
 `;

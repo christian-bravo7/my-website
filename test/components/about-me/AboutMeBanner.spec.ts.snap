@@ -9,6 +9,5 @@ exports[`AboutMeBanner component should render correctly 1`] = `
     <h1 class="relative z-10 | max-w-md sm:max-w-lg lg:max-w-screen-md xl:max-w-screen-lg | text-center text-xl sm:text-3xl md:text-4xl xl:text-5xl | text-gray-900 dark:text-gray-50 | app-banner__primary-text" style="display: none;"><span class="block | text-center | leading-snug | about-me-banner__description"><p><strong>Helping</strong> companies achieve their goals, doing what I <strong>love</strong></p>
 </span></h1>
   </div>
-  <!---->
 </section>
 `;
