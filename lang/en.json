@@ -15,7 +15,10 @@
     "iam-name-text": "I'm Christian Bravo",
     "iam-job-text": "**Frontend** developer",
     "recent-projects": "Recent projects",
-    "no-recent-projects-message": "Sorry, I'm still working on this section, you will see my projects soon :)"
+    "no-recent-projects-message": "Sorry, I'm still working on this section, you will see my projects soon :)",
+    "where-i-have-worked": "Where I've worked",
+    "at-label": "at",
+    "present-label": "present"
   },
   "navigation": {
     "home-label": "Home",
@@ -40,5 +43,12 @@
   "footer": {
     "made-with-love": "Made with Love and Nuxt.js",
     "frontend-developer": "Frontend developer"
+  },
+  "time": {
+    "years-label": "years",
+    "month-label": "month",
+    "months-label": "months",
+    "year-label": "year",
+    "and-label": "and"
   }
 }

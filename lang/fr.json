@@ -15,7 +15,10 @@
     "iam-name-text": "Je suis Christian Bravo",
     "iam-job-text": "développeur **Frontend**",
     "recent-projects": "Les projets récents",
-    "no-recent-projects-message": "Désolé, je travaille toujours sur cette section, vous verrez bientôt mes projets :)"
+    "no-recent-projects-message": "Désolé, je travaille toujours sur cette section, vous verrez bientôt mes projets :)",
+    "where-i-have-worked": "Où j'ai travaillé",
+    "at-label": "à",
+    "present-label": "cadeau"
   },
   "navigation": {
     "about-me-label": "Moi",
@@ -40,5 +43,12 @@
     "say-hi": "Juste dit bonjour",
     "contact-me-description": "Je suis toujours ouvert pour discuter de projets et de nouveaux défis, n'hésitez pas à me contacter et parlons-en.",
     "email-me": "Envoyez-moi un courriel à:"
+  },
+  "time": {
+    "year-label": "an",
+    "years-label": "années",
+    "month-label": "mois",
+    "months-label": "mois",
+    "and-label": "et"
   }
 }
