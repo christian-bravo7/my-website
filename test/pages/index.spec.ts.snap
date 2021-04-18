@@ -6,6 +6,7 @@ exports[`index page should render page correctly 1`] = `
     <homebanner-stub></homebanner-stub>
   </portal-stub>
   <aboutmeinformation-stub></aboutmeinformation-stub>
+  <myworkexperience-stub></myworkexperience-stub>
   <recentprojects-stub></recentprojects-stub>
 </section>
 `;

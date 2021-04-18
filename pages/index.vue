@@ -4,6 +4,7 @@
       <HomeBanner />
     </Portal>
     <AboutMeInformation />
+    <MyWorkExperience />
     <RecentProjects />
   </section>
 </template>
