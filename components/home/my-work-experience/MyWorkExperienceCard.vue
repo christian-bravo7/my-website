@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <h6 class="text-xl">
+  <div>
+    <h6 class="text-xl | mb-2">
       <span class="font-bold">
         {{ jobPosition }}
       </span>
@@ -14,18 +14,22 @@
         {{ company }}
       </a>
     </h6>
-    <div>
-      <span>{{ formattedStartYear }}</span>
-      <span>-</span>
+    <div class="flex text-sm">
       <span>
-        <template v-if="endYear">
+        <span class="capitalize">
+          {{ formattedStartYear }}
+        </span>
+        <span>-</span>
+        <span class="capitalize">
           {{ formattedEndYear }}
-        </template>
-        <template v-else>
-          {{ $t('home.present-label') }}
-        </template>
+        </span>
       </span>
-      <span>| {{ formatDuration() }}</span>
+      <span class="flex items-center | mx-2">
+        <span class="w-1 h-1 | rounded-full | bg-black dark:bg-white" />
+      </span>
+      <span>
+        {{ formattedDuration }}
+      </span>
     </div>
   </div>
 </template>
@@ -56,26 +60,26 @@ export default class MyWorkExperienceCard extends Vue {
   }
 
   get formattedEndYear (): string {
-    return this.formattedYear(this.endYear);
+    if (this.endYear) {
+      return this.formattedYear(this.endYear);
+    }
+
+    return this.$t('home.present-label') as string;
   }
 
-  get separatorSymbol (): string {
-    return this.endYear ? '/' : '~';
-  }
-
-  get durationTime (): any {
-    return dayjs(this.endYear as any).diff(this.startYear as any, 'year');
+  get formattedDuration (): string {
+    return this.formatDuration();
   }
 
   formattedYear (date: any): string {
-    return dayjs(date).format('MMMM YYYY');
+    return dayjs(date).format('MMM YYYY');
   }
 
   formatDuration (): string {
     const totalYears = dayjs(this.endYear as any).diff(this.startYear as any, 'year');
     const totalMonths = dayjs(this.endYear as any).diff(this.startYear as any, 'month');
 
-    const restMonths = totalMonths - (totalYears * 12);
+    const restMonths = totalMonths - (totalYears * 12) + 1;
 
     const yearTranslation = totalYears === 1
       ? this.$t('time.year-label')
