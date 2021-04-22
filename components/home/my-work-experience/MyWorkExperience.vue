@@ -2,7 +2,7 @@
   <section class="section-container">
     <div class="container | flex justify-center | my-0 mx-auto">
       <div class="flex flex-col | w-full | max-w-screen-lg">
-        <h2 class="mb-8 mx-auto | text-center | section-title my-work-experience__title">
+        <h2 class="mb-12 mx-auto | text-center | section-title my-work-experience__title">
           {{ $t('home.where-i-have-worked') }}
         </h2>
         <div class="flex">
@@ -27,35 +27,7 @@
             </MyWorkExperienceButton>
           </div>
           <div class="flex-1 | ml-6">
-            <MyWorkExperienceCard
-              v-if="currentTab === 'telus'"
-              job-position="Software Developer"
-              company="Telus International"
-              website-url="https://www.telusinternational.com"
-              :start-year="[2020, 11]"
-            >
-              Yo trabaje en Telus
-            </MyWorkExperienceCard>
-            <MyWorkExperienceCard
-              v-if="currentTab === 'master'"
-              job-position="Frontend Developer"
-              company="Master development"
-              website-url="https://www.linkedin.com/company/corporaci%C3%B3n-master-group"
-              :start-year="[2019, 9]"
-              :end-year="[2020, 7]"
-            >
-              Yo trabaje en Master
-            </MyWorkExperienceCard>
-            <MyWorkExperienceCard
-              v-if="currentTab === 'viaro'"
-              job-position="Quality Assurance"
-              company="Viaro Networks"
-              website-url="https://www.viaro.net"
-              :start-year="[2018, 5]"
-              :end-year="[2019, 9]"
-            >
-              Yo trabaje en Viaro
-            </MyWorkExperienceCard>
+            <MyWorkExperienceCard v-bind="workExperienceData[currentTab]" />
           </div>
         </div>
       </div>
@@ -69,6 +41,35 @@ import { Vue, Component } from 'nuxt-property-decorator';
 @Component
 export default class MyWorkExperience extends Vue {
   currentTab: string = 'telus';
+
+  workExperienceData = {
+    telus: {
+      jobPosition: 'Software Developer',
+      company: 'Telus International',
+      websiteUrl: 'https://www.telusinternational.com',
+      startYear: [2020, 11],
+      descriptionParagraphs: this.$t('my-work-experience.masterdevel.description'),
+    },
+    master: {
+      jobPosition: 'Frontend Developer',
+      company: 'Master Development',
+      websiteUrl: 'https://www.linkedin.com/company/corporaci%C3%B3n-master-group',
+      startYear: [2019, 9],
+      endYear: [2020, 7],
+      descriptionParagraphs: this.$t('my-work-experience.masterdevel.description'),
+    },
+    viaro: {
+      jobPosition: 'Quality Assurance',
+      company: 'Viaro Networks',
+      websiteUrl: 'https://www.viaro.net',
+      startYear: [2018, 5],
+      descriptionParagraphs: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem possimus dolorum vel quam, magni veniam! Neque dolore adipisci delectus velit odit. Inventore expedita repellat praesentium rem veritatis velit, amet ab!',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem possimus dolorum vel quam, magni veniam! Neque dolore adipisci delectus velit odit. Inventore expedita repellat praesentium rem veritatis velit, amet ab!',
+      ],
+      endYear: [2019, 9],
+    },
+  }
 
   changeTab (nextTab: string): void {
     this.currentTab = nextTab;
