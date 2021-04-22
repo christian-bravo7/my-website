@@ -14,7 +14,7 @@
         {{ company }}
       </a>
     </h6>
-    <div class="flex text-sm">
+    <div class="flex text-sm mb-4">
       <span>
         <span class="capitalize">
           {{ formattedStartYear }}
@@ -27,9 +27,23 @@
       <span class="flex items-center | mx-2">
         <span class="w-1 h-1 | rounded-full | bg-black dark:bg-white" />
       </span>
-      <span>
+      <span class="text-gray-700 dark:text-gray-300">
         {{ formattedDuration }}
       </span>
+    </div>
+    <div>
+      <div
+        v-for="(description, index) in descriptionParagraphs"
+        :key="index"
+        class="flex mb-2"
+      >
+        <span class="material-icons">
+          arrow_right
+        </span>
+        <span class="leading-loose">
+          {{ description }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -54,6 +68,9 @@ export default class MyWorkExperienceCard extends Vue {
 
   @Prop({ type: Array })
   readonly endYear!: Array<number>;
+
+  @Prop({ type: Array })
+  readonly descriptionParagraphs!: Array<string>;
 
   get formattedStartYear (): string {
     return this.formattedYear(this.startYear);

@@ -50,5 +50,19 @@
     "months-label": "months",
     "year-label": "year",
     "and-label": "and"
+  },
+  "my-work-experience": {
+    "masterdevel": {
+      "description": [
+        "Write modern, performant and maintainable code for international clients and internal projects",
+        "Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Vue, NuxtJS, Prismic, and Angular",
+        "Communicate with multi disciplinary teams of engineers, designers, producers, and clients on a daily basis"
+      ]
+    },
+    "viaro": {
+      "description": [
+        ""
+      ]
+    }
   }
 }
