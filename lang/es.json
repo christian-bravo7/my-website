@@ -5,7 +5,7 @@
     "hi-label": "Hola",
     "about-me-label": "Sobre mí",
     "simple-description": "**Ayudo** a las empresas a alcanzar sus objetivos, haciendo lo que **amo**",
-    "about-me-description": "Hola, mi nombre es Christian Bravo, un Desarrollador Frontend de Guatemala con una gran pasión por el desarrollo web utilizando tecnologías modernas.\n\n \nDisfruto resolviendo problemas, creando interfaces de usuario dinámicas e intuitivas, desarrollando ricas aplicaciones y experiencias web.\n\n \nFuera de la oficina me encontrarás jugando al fútbol, ​​recolectando cactus y pasando tiempo con mis mascotas y mi familia.",
+    "about-me-description": "Hola, mi nombre es Christian Bravo, un Desarrollador Frontend de Guatemala con una gran pasión por el desarrollo web utilizando tecnologías modernas.\n\n \nDisfruto resolver problemas, crear interfaces de usuario dinámicas e intuitivas, desarrollar aplicaciones y experiencias web.\n\n \nFuera de la oficina me encontrarás jugando al fútbol, coleccionado cactus y pasando tiempo con mi familia y mis mascotas.",
     "skills-label": "Hábilidades",
     "crafted-label": "Crafteado con",
     "work-experience": "Experiencia"
@@ -50,5 +50,23 @@
     "month-label": "mes",
     "months-label": "meses",
     "and-label": "y"
+  },
+  "my-work-experience": {
+    "masterdevel": {
+      "description": [
+        "Desarrollo y mantenimiento de aplicaciones web, landing pages y herramientas internas para clientes internacionales",
+        "Creación de código moderno, eficaz y fácil de mantener adoptando la cultura de código limpio",
+        "Comunicación con equipos multidisciplinarios de desarrolladores, diseñadores, productores y clientes a diario"
+      ]
+    },
+    "viaro": {
+      "description": [
+        "Experiencia en redacción y ejecución de casos de prueba y escenarios de prueba",
+        "Experiencia en Pruebas de Cordura, Funcionales, Sistema y Regresión",
+        "Comunicación con desarrolladores y analistas de productos para comprender y analizar el estado de las pruebas",
+        "Creación de documentación técnica y guías de usuario",
+        "Pruebas Cross-browser"
+      ]
+    }
   }
 }

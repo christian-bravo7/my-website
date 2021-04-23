@@ -1,55 +1,31 @@
 <template>
   <div>
-    <h6 class="text-xl | mb-2">
-      <span class="font-bold">
-        {{ jobPosition }}
-      </span>
-      <span>{{ $t('home.at-label') }}</span>
-      <a
-        class="text-pink-500 dark:text-blue-500 | font-bold"
-        :href="websiteUrl"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {{ company }}
-      </a>
-    </h6>
-    <div class="flex text-sm mb-4">
-      <span>
-        <span class="capitalize">
-          {{ formattedStartYear }}
-        </span>
-        <span>-</span>
-        <span class="capitalize">
-          {{ formattedEndYear }}
-        </span>
-      </span>
-      <span class="flex items-center | mx-2">
-        <span class="w-1 h-1 | rounded-full | bg-black dark:bg-white" />
-      </span>
-      <span class="text-gray-700 dark:text-gray-300">
-        {{ formattedDuration }}
-      </span>
-    </div>
-    <div>
-      <div
-        v-for="(description, index) in descriptionParagraphs"
-        :key="index"
-        class="flex mb-2"
-      >
-        <span class="material-icons">
-          arrow_right
-        </span>
-        <span class="leading-loose">
-          {{ description }}
-        </span>
-      </div>
-    </div>
+    <MyWorkExperienceCardTitle
+      :company="company"
+      :job-position="jobPosition"
+      :website-url="websiteUrl"
+    />
+    <MyWorkExperienceDate
+      :start-year="startYear"
+      :end-year="endYear"
+    />
+    <MyWorkExperienceCardDescription
+      :description-paragraphs="descriptionParagraphs"
+    />
+    <MyWorkExperienceToolsList
+      v-if="techStack"
+      label="Technologies"
+      :tools="techStack"
+    />
+    <MyWorkExperienceToolsList
+      v-if="tools"
+      label="Tools"
+      :tools="tools"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import dayjs from 'dayjs';
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
 
 @Component
@@ -72,62 +48,10 @@ export default class MyWorkExperienceCard extends Vue {
   @Prop({ type: Array })
   readonly descriptionParagraphs!: Array<string>;
 
-  get formattedStartYear (): string {
-    return this.formattedYear(this.startYear);
-  }
+  @Prop({ type: Array })
+  readonly techStack!: Array<string>;
 
-  get formattedEndYear (): string {
-    if (this.endYear) {
-      return this.formattedYear(this.endYear);
-    }
-
-    return this.$t('home.present-label') as string;
-  }
-
-  get formattedDuration (): string {
-    return this.formatDuration();
-  }
-
-  formattedYear (date: any): string {
-    return dayjs(date).format('MMM YYYY');
-  }
-
-  formatDuration (): string {
-    const totalYears = dayjs(this.endYear as any).diff(this.startYear as any, 'year');
-    const totalMonths = dayjs(this.endYear as any).diff(this.startYear as any, 'month');
-
-    const restMonths = totalMonths - (totalYears * 12) + 1;
-
-    const yearTranslation = totalYears === 1
-      ? this.$t('time.year-label')
-      : totalYears > 1
-        ? this.$t('time.years-label')
-        : '';
-
-    const monthsTranslation = restMonths === 1
-      ? this.$t('time.month-label')
-      : restMonths > 1
-        ? this.$t('time.months-label')
-        : '';
-
-    const andTranslation = this.$t('time.and-label');
-
-    const formattedYear = totalYears ? `${totalYears} ${yearTranslation}` : '';
-    const formattedMonth = restMonths ? `${restMonths} ${monthsTranslation}` : '';
-
-    if (formattedYear && formattedMonth) {
-      return `${formattedYear} ${andTranslation} ${formattedMonth}`;
-    }
-
-    if (formattedYear) {
-      return `${formattedYear}`;
-    }
-
-    if (formattedMonth) {
-      return `${formattedMonth}`;
-    }
-
-    return 'problem';
-  }
+  @Prop({ type: Array })
+  readonly tools!: Array<string>;
 }
 </script>
