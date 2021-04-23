@@ -50,5 +50,23 @@
     "month-label": "mois",
     "months-label": "mois",
     "and-label": "et"
+  },
+  "my-work-experience": {
+    "masterdevel": {
+      "description": [
+        "Development and maintenance of web applications, landing pages and internal tools for international clients",
+        "Write modern, performant and maintainable code adopting clean code culture",
+        "Communication with multi disciplinary teams of developers, designers, producers, and clients on a daily basis"
+      ]
+    },
+    "viaro": {
+      "description": [
+        "Experience in writing and executing test cases and test scenarios",
+        "Experience in Sanity, Functional, System and Regression testing",
+        "Communication with developers and product analysts in order to understand and analyze testing status",
+        "Create technical documentation and user guidelines",
+        "Cross-browser testing"
+      ]
+    }
   }
 }
