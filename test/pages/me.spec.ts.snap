@@ -3,9 +3,9 @@
 exports[`me page should render correctly 1`] = `
 <section>
   <div class="v-portal" style="display: none;"></div>
-  <section class="section-container mb-24 md:mb-0">
-    <div class="container | flex justify-center | my-0 mx-auto">
-      <div class="max-w-screen-lg | about-me-information__content">
+  <section class="section-container">
+    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
+      <div class="about-me-information__content">
         <div class="mb-4 md:mb-0">
           <h2 class="mb-8 | section-title about-me-information__title">
             About me
@@ -20,118 +20,106 @@ exports[`me page should render correctly 1`] = `
       </div>
     </div>
   </section>
-  <section class="section-container mb-24 md:mb-0">
-    <div class="container | flex | my-0 mx-auto">
+  <section class="section-container">
+    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
       <div class="flex flex-col | w-full">
-        <h2 class="mb-8 | text-center | section-title about-me-skills__title">
-          Skills
+        <h2 class="my-32 mx-auto | text-center | section-title my-work-experience__title">
+          Where I've worked
         </h2>
-        <div class="flex justify-center items-center | flex-1">
-          <div class="flex flex-wrap justify-center | max-w-screen-lg">
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    Javascript
+        <div class="flex">
+          <div class="my-work-experience__button-list">
+            <div class="flex flex-col"><button class="px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | transition-all duration-300 | my-work-experience-button my-work-experience-button--is-active">
+                Telus International
+              </button> <button class="px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | transition-all duration-300 | my-work-experience-button">
+                Master Development
+              </button> <button class="px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | transition-all duration-300 | my-work-experience-button">
+                Viaro Networks
+              </button></div>
+          </div>
+          <div class="flex-1 | ml-6">
+            <div>
+              <h6 class="text-xl | mb-2"><span class="font-bold">
+    Software Developer
+  </span> <span>at</span> <a href="https://www.telusinternational.com" target="_blank" rel="noopener noreferrer" class="text-pink-500 dark:text-blue-500 | font-bold">
+                  Telus International
+                </a></h6>
+              <div class="flex text-sm mb-6"><span><span class="capitalize">
+      Nov 2020
+    </span> <span>-</span> <span class="capitalize">
+      present
+    </span></span> <span class="flex items-center | mx-2"><span class="w-1 h-1 | rounded-full | bg-black dark:bg-white"></span></span> <span class="text-gray-700 dark:text-gray-300">
+    6 months
   </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    Typescript
-  </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    NuxtJS
-  </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    VueJS
-  </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    ReactJS
-  </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    NodeJS
-  </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    Git
-  </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    Jest
-  </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    SASS
-  </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    CSS3
-  </span></div>
-            <div class="flex flex-col items-center justify-between | group transition-all duration-300 | card skill-icon m-2"><span class="flex justify-center items-center flex-1 | w-16"><svg></svg></span> <span class="mt-2 | text-black dark:text-white group-hover:text-pink-500 dark-group-hover:text-white | text-base md:text-lg | font-bold leading-none | transition-colors duration-300">
-    HTML5
-  </span></div>
+              <div class="mb-6">
+                <div class="flex mb-2"><span class="material-icons">
+      arrow_right
+    </span> <span class="leading-loose">
+      Development and maintenance of web applications, landing pages and internal tools for international clients
+    </span></div>
+                <div class="flex mb-2"><span class="material-icons">
+      arrow_right
+    </span> <span class="leading-loose">
+      Write modern, performant and maintainable code adopting clean code culture
+    </span></div>
+                <div class="flex mb-2"><span class="material-icons">
+      arrow_right
+    </span> <span class="leading-loose">
+      Communication with multi disciplinary teams of developers, designers, producers, and clients on a daily basis
+    </span></div>
+              </div>
+              <div><span class="block | font-bold | text-xs | mb-6">
+    Technologies
+  </span>
+                <div class="flex flex-wrap">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    Angular
+                  </div>
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    Typescript
+                  </div>
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    Javascript
+                  </div>
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    jQuery
+                  </div>
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    i18n
+                  </div>
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    Java Portlets
+                  </div>
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    LESS
+                  </div>
+                </div>
+              </div>
+              <!---->
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="section-container">
-    <div class="container | flex | my-0 mx-auto">
-      <div class="flex flex-col | w-full">
-        <h2 class="section-title | mb-8 | about-me-experience__title">
-          Experience
-        </h2>
-        <div class="flex justify-center items-center | flex-1">
-          <div class="w-full | grid grid-cols-1 gap-8 md:gap-2 md:grid-cols-9">
-            <div class="inline-block | transition-all duration-300 | card md:col-span-3 md:row-start-1 md:col-start-1">
-              <div class="flex items-center | text-black dark:text-white">
-                <div class="flex flex-col flex-1"><span class="mb-1 | text-lg | font-bold">
-        Software Developer
-      </span> <span class="text-sm">
-        TELUS International
-      </span></div>
-                <div class="flex flex-col | ml-5 | text-xs | capitalize"><span>
-        Nov 2020 ~
-      </span>
-                  <!---->
-                </div>
-              </div>
-            </div>
-            <div class="inline-block | transition-all duration-300 | card md:col-span-3 md:row-start-2 md:col-start-3">
-              <div class="flex items-center | text-black dark:text-white">
-                <div class="flex flex-col flex-1"><span class="mb-1 | text-lg | font-bold">
-        Frontend Developer
-      </span> <span class="text-sm">
-        Freelance
-      </span></div>
-                <div class="flex flex-col | ml-5 | text-xs | capitalize"><span>
-        Feb 2020 ~
-      </span>
-                  <!---->
-                </div>
-              </div>
-            </div>
-            <div class="inline-block | transition-all duration-300 | card md:col-span-3 md:row-start-3 md:col-start-5">
-              <div class="flex items-center | text-black dark:text-white">
-                <div class="flex flex-col flex-1"><span class="mb-1 | text-lg | font-bold">
-        Frontend Developer
-      </span> <span class="text-sm">
-        Master Development
-      </span></div>
-                <div class="flex flex-col | ml-5 | text-xs | capitalize"><span>
-        Sep 2019 /
-      </span> <span>
-        Jul 2020
-      </span></div>
-              </div>
-            </div>
-            <div class="inline-block | transition-all duration-300 | card md:col-span-3 md:row-start-4 md:col-start-7">
-              <div class="flex items-center | text-black dark:text-white">
-                <div class="flex flex-col flex-1"><span class="mb-1 | text-lg | font-bold">
-        Quality Assurance
-      </span> <span class="text-sm">
-        Viaro Networks
-      </span></div>
-                <div class="flex flex-col | ml-5 | text-xs | capitalize"><span>
-        May 2018 /
-      </span> <span>
-        Sep 2019
-      </span></div>
-              </div>
-            </div>
-          </div>
+  <section class="section-container contact-me">
+    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex flex-col justify-center | mb-12 md:mb-0">
+          <h3 class="mb-4 | section-title contact-me__title">
+            Just say hi
+          </h3>
+          <p class="mb-14 mr-0 md:mr-8 md:mb-20 | font-base">
+            I'm always open to discuss about projects and new challenges, do not hesitate to contact me and let's talk.
+          </p>
+          <div class="flex flex-col items-start"><span class="mb-2 | text-xs">
+            Email me at:
+          </span> <a href="mailto:hi@christian-bravo.dev" class="font-bold | font-base">
+              hi@christian-bravo.dev
+            </a></div>
         </div>
+        <section class="flex justify-center items-center">
+          <div class="grid gap-6 grid-cols-4 md:grid-cols-2 lg:grid-cols-4 page-social-icons"><a target="_blank" href="https://codepen.io/christian-bravo" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-blue-500 dark-hover:border-blue-500 text-gray-900 hover:bg-pink-500 hover:text-gray-50 hover:border-pink-500 rounded-full social-icon"><svg></svg></a><a target="_blank" href="https://github.com/christian-bravo7" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-blue-500 dark-hover:border-blue-500 text-gray-900 hover:bg-pink-500 hover:text-gray-50 hover:border-pink-500 rounded-full social-icon"><svg></svg></a><a target="_blank" href="https://www.instagram.com/christian.bravo_/" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-blue-500 dark-hover:border-blue-500 text-gray-900 hover:bg-pink-500 hover:text-gray-50 hover:border-pink-500 rounded-full social-icon"><svg></svg></a><a target="_blank" href="https://www.linkedin.com/in/christian151-bravo/" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-blue-500 dark-hover:border-blue-500 text-gray-900 hover:bg-pink-500 hover:text-gray-50 hover:border-pink-500 rounded-full social-icon"><svg></svg></a></div>
+        </section>
       </div>
     </div>
   </section>

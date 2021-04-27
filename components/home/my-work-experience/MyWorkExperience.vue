@@ -1,8 +1,8 @@
 <template>
   <section class="section-container">
-    <div class="container | flex justify-center | my-0 mx-auto">
-      <div class="flex flex-col | w-full | max-w-screen-lg">
-        <h2 class="mb-32 mx-auto | text-center | section-title my-work-experience__title">
+    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
+      <div class="flex flex-col | w-full">
+        <h2 class="my-32 mx-auto | text-center | section-title my-work-experience__title">
           {{ $t('home.where-i-have-worked') }}
         </h2>
         <div class="flex">
@@ -44,33 +44,35 @@ import { Vue, Component } from 'nuxt-property-decorator';
 export default class MyWorkExperience extends Vue {
   currentTab: string = 'telus';
 
-  workExperienceData = {
-    telus: {
-      jobPosition: 'Software Developer',
-      company: 'Telus International',
-      websiteUrl: 'https://www.telusinternational.com',
-      startYear: [2020, 11],
-      descriptionParagraphs: this.$t('my-work-experience.masterdevel.description'),
-      techStack: ['Angular', 'Typescript', 'Javascript', 'jQuery', 'i18n', 'Java Portlets', 'LESS'],
-    },
-    master: {
-      jobPosition: 'Frontend Developer',
-      company: 'Master Development',
-      websiteUrl: 'https://www.linkedin.com/company/corporaci%C3%B3n-master-group',
-      startYear: [2019, 9],
-      endYear: [2020, 7],
-      descriptionParagraphs: this.$t('my-work-experience.masterdevel.description'),
-      techStack: ['NuxtJS', 'Vue', 'Vuex', 'Angular', 'Typescript', 'i18n', 'Bulma', 'SCSS', 'Pug', 'Handlebars', 'Prismic CMS', 'NodeJS'],
-    },
-    viaro: {
-      jobPosition: 'Quality Assurance',
-      company: 'Viaro Networks',
-      websiteUrl: 'https://www.viaro.net',
-      startYear: [2018, 5],
-      descriptionParagraphs: this.$t('my-work-experience.viaro.description'),
-      endYear: [2019, 9],
-      tools: ['BrowserStack', 'Jira', 'Lighthouse by Google'],
-    },
+  get workExperienceData (): any {
+    return {
+      telus: {
+        jobPosition: 'Software Developer',
+        company: 'Telus International',
+        websiteUrl: 'https://www.telusinternational.com',
+        startYear: [2020, 11],
+        descriptionParagraphs: this.$i18n.t('my-work-experience.masterdevel.description'),
+        techStack: ['Angular', 'Typescript', 'Javascript', 'jQuery', 'i18n', 'Java Portlets', 'LESS'],
+      },
+      master: {
+        jobPosition: 'Frontend Developer',
+        company: 'Master Development',
+        websiteUrl: 'https://www.linkedin.com/company/corporaci%C3%B3n-master-group',
+        startYear: [2019, 9],
+        endYear: [2020, 7],
+        descriptionParagraphs: this.$i18n.t('my-work-experience.masterdevel.description'),
+        techStack: ['NuxtJS', 'Vue', 'Vuex', 'Angular', 'Typescript', 'i18n', 'Bulma', 'SCSS', 'Pug', 'Handlebars', 'Prismic CMS', 'NodeJS'],
+      },
+      viaro: {
+        jobPosition: 'Quality Assurance',
+        company: 'Viaro Networks',
+        websiteUrl: 'https://www.viaro.net',
+        startYear: [2018, 5],
+        descriptionParagraphs: this.$i18n.t('my-work-experience.viaro.description'),
+        endYear: [2019, 9],
+        tools: ['BrowserStack', 'Jira', 'Lighthouse by Google'],
+      },
+    };
   }
 
   changeTab (nextTab: string): void {

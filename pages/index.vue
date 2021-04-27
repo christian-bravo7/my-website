@@ -3,9 +3,7 @@
     <Portal to="page-banner">
       <HomeBanner />
     </Portal>
-    <AboutMeInformation />
-    <MyWorkExperience />
-    <RecentProjects />
+    <AppContactMe />
   </section>
 </template>
 

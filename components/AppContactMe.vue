@@ -1,8 +1,8 @@
 <template>
-  <section class="py-40 px-4 | text-black dark:text-white | contact-me">
-    <div class="container | my-0 mx-auto">
+  <section class="section-container contact-me">
+    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="flex flex-col | mb-12 md:mb-0">
+        <div class="flex flex-col justify-center | mb-12 md:mb-0">
           <h3 class="mb-4 | section-title contact-me__title">
             {{ $t('contact-me.say-hi') }}
           </h3>
