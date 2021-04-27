@@ -2,7 +2,7 @@ import { createLocalVue, mount } from '@vue/test-utils';
 
 import AboutMeInformation from '@/components/home/information/AboutMeInformation.vue';
 
-import setupI18n from '@/test/config/i18n';
+import setupI18n from '@/test/i18n';
 
 const localVue = createLocalVue();
 const i18n = setupI18n(localVue);

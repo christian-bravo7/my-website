@@ -3,7 +3,7 @@ import { createLocalVue, mount } from '@vue/test-utils';
 import AppNavigationBar from '@/components/app/navigation/AppNavigationBar.vue';
 import AppBurgerButton from '@/components/app/navigation/AppBurgerButton.vue';
 
-import setupI18n from '@/test/config/i18n';
+import setupI18n from '@/test/i18n';
 
 const localVue = createLocalVue();
 const i18n = setupI18n(localVue);

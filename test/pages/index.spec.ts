@@ -4,7 +4,7 @@ import { createLocalVue, shallowMount } from '@vue/test-utils';
 
 import IndexPage from '@/pages/index.vue';
 
-import setupI18n from '@/test/config/i18n';
+import setupI18n from '@/test/i18n';
 
 const localVue = createLocalVue();
 const i18n = setupI18n(localVue);

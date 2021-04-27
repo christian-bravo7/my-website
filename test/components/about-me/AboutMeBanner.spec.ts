@@ -2,7 +2,7 @@ import { createLocalVue, mount } from '@vue/test-utils';
 
 import AboutMeBanner from '@/components/about-me/AboutMeBanner.vue';
 
-import setupI18n from '@/test/config/i18n';
+import setupI18n from '@/test/i18n';
 
 const localVue = createLocalVue();
 const i18n = setupI18n(localVue);
