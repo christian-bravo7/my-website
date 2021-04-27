@@ -17,7 +17,6 @@
       />
     </header>
     <Nuxt />
-    <AppContactMe />
     <AppFooter />
     <AppFallbackLoad v-show="!isAppInitialized" />
   </main>

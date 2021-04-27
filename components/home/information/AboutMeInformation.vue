@@ -1,7 +1,7 @@
 <template>
   <section class="section-container">
-    <div class="container | flex justify-center | my-0 mx-auto">
-      <div class="max-w-screen-lg | about-me-information__content">
+    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
+      <div class="about-me-information__content">
         <div class="mb-4 md:mb-0">
           <h2 class="mb-8 | section-title about-me-information__title">
             {{ $t('me.about-me-label') }}

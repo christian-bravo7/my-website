@@ -5,8 +5,6 @@ exports[`index page should render page correctly 1`] = `
   <portal-stub name="1" order="0" slotprops="[object Object]" tag="DIV" to="page-banner">
     <homebanner-stub></homebanner-stub>
   </portal-stub>
-  <aboutmeinformation-stub></aboutmeinformation-stub>
-  <myworkexperience-stub></myworkexperience-stub>
-  <recentprojects-stub></recentprojects-stub>
+  <appcontactme-stub></appcontactme-stub>
 </section>
 `;

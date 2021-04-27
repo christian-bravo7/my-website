@@ -7,7 +7,6 @@ exports[`default layout should render correclty 1`] = `
   <header>
     <movablefigures-stub currentroute="/"></movablefigures-stub> <span name="page-banner" slim="" class="min-h-screen"></span>
   </header> <span></span>
-  <appcontactme-stub></appcontactme-stub>
   <appfooter-stub></appfooter-stub>
   <appfallbackload-stub></appfallbackload-stub>
 </main>

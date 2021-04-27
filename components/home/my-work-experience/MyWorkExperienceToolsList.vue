@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="block | font-bold | text-xs | mb-4">
+    <span class="block | font-bold | text-xs | mb-6">
       {{ label }}
     </span>
     <div class="flex flex-wrap">

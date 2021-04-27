@@ -10,13 +10,13 @@ const localVue = createLocalVue();
 
 const i18n = setupI18n(localVue);
 
+localVue.use(PortalVue);
+localVue.use(VueMeta, { keyName: 'head' });
+
 const componentConfig = {
   localVue,
   i18n,
 };
-
-localVue.use(PortalVue);
-localVue.use(VueMeta, { keyName: 'head' });
 
 describe('me page', () => {
   it('should render correctly', () => {
