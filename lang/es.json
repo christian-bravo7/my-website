@@ -52,21 +52,30 @@
     "and-label": "y"
   },
   "my-work-experience": {
+    "telus": {
+      "description": [
+        "Desarrollo de nuevas funcionalidades, corrección de errores y soporte para aplicaciones web."
+      ]
+    },
     "masterdevel": {
       "description": [
-        "Desarrollo y mantenimiento de aplicaciones web, landing pages y herramientas internas para clientes internacionales",
-        "Creación de código moderno, eficaz y fácil de mantener adoptando la cultura de código limpio",
-        "Comunicación con equipos multidisciplinarios de desarrolladores, diseñadores, productores y clientes a diario"
+        "Desarrollo y mantenimiento de aplicaciones web, landing pages y herramientas internas para clientes internacionales.",
+        "Creación de código eficaz y fácil de mantener adoptando la cultura de código limpio.",
+        "excelente comunicación con equipos multidisciplinares de desarrolladores, diseñadores y gestores de proyectos."
       ]
     },
     "viaro": {
       "description": [
-        "Experiencia en redacción y ejecución de casos de prueba y escenarios de prueba",
-        "Experiencia en Pruebas de Cordura, Funcionales, Sistema y Regresión",
-        "Comunicación con desarrolladores y analistas de productos para comprender y analizar el estado de las pruebas",
-        "Creación de documentación técnica y guías de usuario",
-        "Pruebas Cross-browser"
+        "Experiencia en redacción y ejecución de casos de prueba y escenarios de prueba.",
+        "Experiencia en Pruebas de Cordura, Funcionales, Sistema y Regresión.",
+        "Comunicación con desarrolladores y analistas de productos para comprender y analizar el estado de las pruebas.",
+        "Creación de documentación técnica y guías de usuario.",
+        "Pruebas Cross-browser."
       ]
     }
+  },
+  "generic": {
+    "technologies-label": "Tecnologías:",
+    "tools-label": "Herramientas:"
   }
 }

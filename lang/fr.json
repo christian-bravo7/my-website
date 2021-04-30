@@ -52,21 +52,30 @@
     "and-label": "et"
   },
   "my-work-experience": {
+    "telus": {
+      "description": [
+        "Développement de nouvelles fonctionnalités, correction de bogues et prise en charge des applications Web."
+      ]
+    },
     "masterdevel": {
       "description": [
-        "Development and maintenance of web applications, landing pages and internal tools for international clients",
-        "Write modern, performant and maintainable code adopting clean code culture",
-        "Communication with multi disciplinary teams of developers, designers, producers, and clients on a daily basis"
+        "Développement et maintenance d'applications web, de landing pages et d'outils internes pour des clients internationaux.",
+        "Écrire du code performant et maintenable en adoptant une culture de code propre.",
+        "Excellente communication avec des équipes multidisciplinaires de développeurs, designers et chefs de projets."
       ]
     },
     "viaro": {
       "description": [
-        "Experience in writing and executing test cases and test scenarios",
-        "Experience in Sanity, Functional, System and Regression testing",
-        "Communication with developers and product analysts in order to understand and analyze testing status",
-        "Create technical documentation and user guidelines",
-        "Cross-browser testing"
+        "Expérience de la rédaction et de l'exécution de cas de test et de scénarios de test.",
+        "Expérience dans les tests de santé mentale, fonctionnels, de système et de régression.",
+        "Communication avec les développeurs et les analystes produits afin de comprendre et d'analyser l'état des tests.",
+        "Créer une documentation technique et des directives d'utilisation.",
+        "Tests multi-navigateurs."
       ]
     }
+  },
+  "generic": {
+    "technologies-label": "Les technologies:",
+    "tools-label": "Outils:"
   }
 }

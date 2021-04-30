@@ -3,7 +3,7 @@
 exports[`me page should render correctly 1`] = `
 <section>
   <div class="v-portal" style="display: none;"></div>
-  <section class="section-container">
+  <section class="section-container mb-24 md:mb-0">
     <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
       <div class="about-me-information__content">
         <div class="mb-4 md:mb-0">
@@ -20,12 +20,14 @@ exports[`me page should render correctly 1`] = `
       </div>
     </div>
   </section>
-  <section class="section-container">
-    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto | overflow-x-hidden">
+  <section class="section-container mb-24 md:mb-0">
+    <div class="max-w-screen-lg | flex justify-center items-center | my-0 mx-auto | overflow-x-hidden">
       <div class="flex flex-col | w-full">
-        <h2 class="my-32 mx-auto | text-center | section-title my-work-experience__title">
-          Where I've worked
-        </h2>
+        <div class="flex justify-center | mb-16">
+          <h2 class="section-title my-work-experience__title">
+            Where I've worked
+          </h2>
+        </div>
         <div class="flex flex-col md:flex-row">
           <div class="relative | my-work-experience__button-wrapper">
             <div class="flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"><button class="relative | px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button my-work-experience-button--is-active">
@@ -53,43 +55,33 @@ exports[`me page should render correctly 1`] = `
               <div class="mb-6">
                 <div class="flex mb-2"><span class="material-icons">
       arrow_right
-    </span> <span class="leading-loose">
-      Development and maintenance of web applications, landing pages and internal tools for international clients
-    </span></div>
-                <div class="flex mb-2"><span class="material-icons">
-      arrow_right
-    </span> <span class="leading-loose">
-      Write modern, performant and maintainable code adopting clean code culture
-    </span></div>
-                <div class="flex mb-2"><span class="material-icons">
-      arrow_right
-    </span> <span class="leading-loose">
-      Communication with multi disciplinary teams of developers, designers, producers, and clients on a daily basis
+    </span> <span class="leading-loose | font-base">
+      Development of new features, bug fixing and support for web applications.
     </span></div>
               </div>
               <div><span class="block | font-bold | text-xs | mb-6">
-    Technologies
+    Technologies:
   </span>
                 <div class="flex flex-wrap">
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     Angular
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     Typescript
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     Javascript
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     jQuery
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     i18n
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     Java Portlets
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-transparent border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     LESS
                   </div>
                 </div>

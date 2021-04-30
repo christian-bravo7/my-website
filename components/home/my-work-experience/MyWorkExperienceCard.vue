@@ -14,12 +14,12 @@
     />
     <MyWorkExperienceToolsList
       v-if="techStack"
-      label="Technologies"
+      :label="$t('generic.technologies-label')"
       :tools="techStack"
     />
     <MyWorkExperienceToolsList
       v-if="tools"
-      label="Tools"
+      :label="$t('generic.tools-label')"
       :tools="tools"
     />
   </div>
