@@ -95,8 +95,8 @@ export default class AppSidebarMenu extends Vue {
 .sidebar-grid {
   @apply grid;
 
-  grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 // OVERLAY TRANSITIONS
