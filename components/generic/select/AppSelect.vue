@@ -47,7 +47,7 @@
 <script lang="ts">
 import { Vue, Component, Provide, Model, Emit, Watch, Ref, Prop } from 'nuxt-property-decorator';
 
-import AppSelectOption from '@/components/shared/select/AppSelectOption.vue';
+import AppSelectOption from '@/components/generic/select/AppSelectOption.vue';
 
 @Component
 export default class AppSelect extends Vue {

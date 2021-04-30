@@ -1,13 +1,13 @@
 <template>
   <section class="section-container">
-    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
+    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto | overflow-x-hidden">
       <div class="flex flex-col | w-full">
         <h2 class="my-32 mx-auto | text-center | section-title my-work-experience__title">
           {{ $t('home.where-i-have-worked') }}
         </h2>
-        <div class="flex">
-          <div class="my-work-experience__button-list">
-            <div class="flex flex-col">
+        <div class="flex flex-col md:flex-row">
+          <div class="relative | my-work-experience__button-wrapper">
+            <div class="flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list">
               <MyWorkExperienceButton
                 :is-active="currentTab === 'telus'"
                 @onClick="changeTab('telus')"
@@ -28,7 +28,7 @@
               </MyWorkExperienceButton>
             </div>
           </div>
-          <div class="flex-1 | ml-6">
+          <div class="flex-1 | md:ml-6">
             <MyWorkExperienceCard v-bind="workExperienceData[currentTab]" />
           </div>
         </div>
@@ -88,7 +88,30 @@ export default class MyWorkExperience extends Vue {
   }
 
   &__button-list {
-    width: 210px;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 80px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+      content: '';
+      pointer-events: none;
+    }
+  }
+}
+
+@screen md {
+  .my-work-experience {
+    &__button-wrapper {
+      width: 210px;
+    }
+
+    &__button-list {
+      &::after {
+        display: none;
+      }
+    }
   }
 }
 </style>
