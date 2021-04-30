@@ -2,22 +2,22 @@
 
 exports[`MyWorkExperience component should render correclty 1`] = `
 <section class="section-container">
-  <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
+  <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto | overflow-x-hidden">
     <div class="flex flex-col | w-full">
       <h2 class="my-32 mx-auto | text-center | section-title my-work-experience__title">
         Where I've worked
       </h2>
-      <div class="flex">
-        <div class="my-work-experience__button-list">
-          <div class="flex flex-col"><button class="px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | transition-all duration-300 | my-work-experience-button my-work-experience-button--is-active">
+      <div class="flex flex-col md:flex-row">
+        <div class="relative | my-work-experience__button-wrapper">
+          <div class="flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"><button class="relative | px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button my-work-experience-button--is-active">
               Telus International
-            </button> <button class="px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | transition-all duration-300 | my-work-experience-button">
+            </button> <button class="relative | px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button">
               Master Development
-            </button> <button class="px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | transition-all duration-300 | my-work-experience-button">
+            </button> <button class="relative | px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button">
               Viaro Networks
             </button></div>
         </div>
-        <div class="flex-1 | ml-6">
+        <div class="flex-1 | md:ml-6">
           <div>
             <h6 class="text-xl | mb-2"><span class="font-bold">
     Software Developer
