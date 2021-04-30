@@ -11,13 +11,21 @@ module.exports = {
     '@nuxtjs/eslint-config-typescript',
     'plugin:nuxt/recommended',
     'plugin:vue/recommended',
-    'plugin:vue-a11y/base',
+    'plugin:vuejs-accessibility/recommended',
   ],
   plugins: [
     '@typescript-eslint',
-    'vue-a11y',
+    'vuejs-accessibility',
   ],
   rules: {
+    'vuejs-accessibility/label-has-for': [
+      'error',
+      {
+        required: {
+          every: ['nesting', 'id'],
+        },
+      },
+    ],
     'vue/component-tags-order': ['error', {
       order: ['template', 'script', 'style'],
     }],
