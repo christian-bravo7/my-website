@@ -8,7 +8,7 @@
       <span class="material-icons">
         arrow_right
       </span>
-      <span class="leading-loose">
+      <span class="leading-loose | font-base">
         {{ description }}
       </span>
     </div>

@@ -1,10 +1,12 @@
 <template>
   <section class="section-container">
-    <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto | overflow-x-hidden">
+    <div class="max-w-screen-lg | flex justify-center items-center | my-0 mx-auto | overflow-x-hidden">
       <div class="flex flex-col | w-full">
-        <h2 class="my-32 mx-auto | text-center | section-title my-work-experience__title">
-          {{ $t('home.where-i-have-worked') }}
-        </h2>
+        <div class="flex justify-center | mb-16">
+          <h2 class="section-title my-work-experience__title">
+            {{ $t('home.where-i-have-worked') }}
+          </h2>
+        </div>
         <div class="flex flex-col md:flex-row">
           <div class="relative | my-work-experience__button-wrapper">
             <div class="flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list">
