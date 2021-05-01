@@ -32,7 +32,7 @@ export default class MyWorkExperienceButton extends Vue {
   }
 
   &--is-active {
-    @apply border-pink-500;
+    @apply border-pink-500 dark:border-blue-500;
   }
 }
 

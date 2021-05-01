@@ -1,6 +1,6 @@
 <template>
   <section class="section-container">
-    <div class="max-w-screen-lg | flex justify-center items-center | my-0 mx-auto | overflow-x-hidden">
+    <div class="max-w-screen-lg | flex justify-center items-center | w-full | my-0 mx-auto | overflow-x-hidden">
       <div class="flex flex-col | w-full">
         <div class="flex justify-center | mb-16">
           <h2 class="section-title my-work-experience__title">
@@ -30,7 +30,7 @@
               </MyWorkExperienceButton>
             </div>
           </div>
-          <div class="flex-1 | md:ml-6">
+          <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
             <MyWorkExperienceCard v-bind="workExperienceData[currentTab]" />
           </div>
         </div>
@@ -96,9 +96,10 @@ export default class MyWorkExperience extends Vue {
       right: 0;
       bottom: 0;
       width: 80px;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
       content: '';
       pointer-events: none;
+
+      @apply bg-gradient-to-r from-transparent to-gray-50 dark:to-blue-800;
     }
   }
 }
@@ -113,6 +114,10 @@ export default class MyWorkExperience extends Vue {
       &::after {
         display: none;
       }
+    }
+
+    &__card-wrapper {
+      min-height: 430px;
     }
   }
 }
