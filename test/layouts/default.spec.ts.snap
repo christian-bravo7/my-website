@@ -2,8 +2,7 @@
 
 exports[`default layout should render correclty 1`] = `
 <main class="bg-gray-50 dark:bg-blue-800">
-  <appsidebarmenu-stub haslanguagepicker="true" style="display: none;"></appsidebarmenu-stub>
-  <appnavigationbar-stub></appnavigationbar-stub>
+  <appsidebarmenu-stub haslanguagepicker="true" style="display: none;"></appsidebarmenu-stub> <span><appnavigationbar-stub></appnavigationbar-stub></span>
   <header>
     <movablefigures-stub currentroute="/"></movablefigures-stub> <span name="page-banner" slim="" class="min-h-screen"></span>
   </header> <span></span>

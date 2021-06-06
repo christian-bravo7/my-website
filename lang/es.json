@@ -77,5 +77,8 @@
   "generic": {
     "technologies-label": "Tecnologías:",
     "tools-label": "Herramientas:"
+  },
+  "blog": {
+    "welcome-text": "Bienvenido a mi espacio"
   }
 }

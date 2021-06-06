@@ -4,10 +4,12 @@
       v-show="isSidebarActive"
       @onSidebarClose="onSidebarClose"
     />
-    <AppNavigationBar
-      :is-sidebar-active="isSidebarActive"
-      @onSidebarToggle="onSidebarToggle"
-    />
+    <ClientOnly>
+      <AppNavigationBar
+        :is-sidebar-active="isSidebarActive"
+        @onSidebarToggle="onSidebarToggle"
+      />
+    </ClientOnly>
     <header>
       <MovableFigures :current-route="currentRoute" />
       <PortalTarget

@@ -1,17 +1,31 @@
 <template>
   <section>
-    <div class="pt-0 md:pt-20">
-      <div class="container mx-auto px-4 md:px-0 py-8 md:py-20 relative z-10">
-        <div class="blog-grid">
-          <PostCard
-            v-for="(article, index) in articles"
-            :key="index"
-            v-bind="article"
-            :first="index === 0"
-            :class="dynamicColors(index)"
-          />
-          <PostCardEmpty />
-        </div>
+    <div class="container mx-auto py-20">
+      <div class="flex flex-col items-center | mb-8">
+        <h1 class="text-7xl font-bold">
+          {{ $t(greetingKey) }}
+        </h1>
+        <p class="text-lg">
+          {{ $t('blog.welcome-text') }}
+        </p>
+      </div>
+      <div class="flex justify-center">
+        <label for="search">
+          <input
+            id="search"
+            type="text"
+          >
+        </label>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 md:px-0">
+      <div class="blog-grid">
+        <PostCard
+          v-for="(article, index) in articles"
+          :key="index"
+          v-bind="article"
+          :first="index === 0"
+        />
       </div>
     </div>
   </section>
@@ -20,20 +34,18 @@
 <script lang="ts">
 import { Context } from '@nuxt/types';
 import { Vue, Component } from 'nuxt-property-decorator';
+import { IContentDocument } from '@nuxt/content/types/content';
 
 import { getMetaTags } from '@/seo';
-import { IContentDocument } from '@nuxt/content/types/content';
+import { greetingByHour } from '@/utils/date/greetingByHour';
 
 // @ts-ignore
 @Component({
   middleware: ['wipMiddleware'],
   layout: 'blog',
-  nuxtI18n: {
-    locales: ['en'],
-  },
   head () {
     const homeMetaTags = getMetaTags({
-      siteTitle: 'blog',
+      siteTitle: 'Blog',
     });
 
     return {
@@ -54,46 +66,56 @@ export default class Blog extends Vue {
     };
   }
 
-  get dynamicColors (): (index: number) => string {
-    const colors = [
-      'hover:bg-teal-100 dark-hover:bg-teal-900',
-      'hover:bg-pink-100 dark-hover:bg-pink-900',
-      'hover:bg-yellow-100 dark-hover:bg-yellow-900',
-      'hover:bg-purple-50 dark-hover:bg-purple-900',
-      'hover:bg-indigo-100 dark-hover:bg-indigo- 900',
-    ];
+  get greetingKey (): string {
+    const greetingKey = greetingByHour();
 
-    return (index: number): string => {
-      return colors[index];
-    };
+    return `greeting.${greetingKey}`;
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .blog-grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 
   @apply grid gap-4;
 
   & > * {
     &::after {
       display: block;
-      padding-bottom: (9 / 9) * 100%;
+      padding-bottom: 100%;
       content: "";
     }
   }
 
-  & > *:first-child {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-  }
-
   @screen md {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    & > * {
+      &:first-child {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+
+        &::after {
+          padding-bottom: 80%;
+        }
+      }
+    }
   }
 
   @screen lg {
+    & > * {
+      &:first-child {
+        &::after {
+          padding-bottom: 100%;
+        }
+      }
+    }
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @screen xl {
     grid-template-columns: repeat(4, 1fr);
   }
 }

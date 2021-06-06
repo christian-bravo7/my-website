@@ -30,4 +30,7 @@ config.stubs = {
   PortalTarget: {
     template: '<span><slot/></span>',
   },
+  ClientOnly: {
+    template: '<span><slot/></span>',
+  },
 };

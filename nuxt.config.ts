@@ -17,7 +17,7 @@ export default {
 
   // Page headers: https://nuxtjs.org/api/configuration-head
   head: {
-    titleTemplate: (chunk): string => chunk ? `${chunk} | Christian Bravo` : 'Christian Bravo',
+    titleTemplate: (chunk): string => chunk ? `${chunk} - Christian Bravo` : 'Christian Bravo',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

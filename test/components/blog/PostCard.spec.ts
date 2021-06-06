@@ -9,6 +9,7 @@ describe('PostCard component', () => {
         path: 'something-cool',
         title: 'awesome post',
         description: 'this is the amazing post ever',
+        date: [2021, 2, 31],
       },
     });
 

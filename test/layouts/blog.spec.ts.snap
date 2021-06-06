@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`blog layout should render correclty 1`] = `
-<main class="flex flex-col bg-gray-100 dark:bg-blue-800 min-h-screen">
+<main class="flex flex-col bg-gray-50 dark:bg-blue-800 min-h-screen">
   <appfallbackload-stub></appfallbackload-stub>
   <appsidebarmenu-stub haslanguagepicker="true" style="display: none;"></appsidebarmenu-stub>
-  <appnavigationbar-stub></appnavigationbar-stub> <span class="pt-0 md:pt-20 px-4 w-full z-10 order-2"></span>
+  <div></div> <span class="pb-20"></span>
+  <appfooter-stub></appfooter-stub>
 </main>
 `;
