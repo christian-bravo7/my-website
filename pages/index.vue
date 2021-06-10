@@ -3,7 +3,7 @@
     <Portal to="page-banner">
       <HomeBanner />
     </Portal>
-    <AppContactMe />
+    <ContactMe />
   </section>
 </template>
 

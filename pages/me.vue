@@ -5,7 +5,7 @@
     </Portal>
     <AboutMeInformation class="mb-24 md:mb-0" />
     <MyWorkExperience class="mb-24 md:mb-0" />
-    <AppContactMe />
+    <ContactMe />
   </section>
 </template>
 

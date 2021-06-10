@@ -1,7 +1,7 @@
 <template>
   <section>
     <Portal to="blog-banner">
-      <BannerBlog v-bind="bannerInfo" />
+      <BlogBanner v-bind="bannerInfo" />
     </Portal>
     <div>
       <div class="container mx-auto py-20 px-4">
@@ -26,7 +26,7 @@ import { getMetaTags } from '@/seo';
 @Component({
   layout: 'post',
 })
-export default class Blog extends Vue {
+export default class Post extends Vue {
   private article!: PostContent;
 
   head (): MetaInfo {

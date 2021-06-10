@@ -17,7 +17,7 @@
         {{ $t('error.home-link') }}
       </NuxtLink>
     </section>
-    <RandomFigures :figure-component="questionIcon" />
+    <GenericBackgroundFigures :figure-component="questionIcon" />
   </section>
 </template>
 

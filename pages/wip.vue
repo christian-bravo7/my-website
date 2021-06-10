@@ -8,7 +8,7 @@
         This site is under construction
       </p>
     </section>
-    <RandomFigures :figure-component="gearIcon" />
+    <GenericBackgroundFigures :figure-component="gearIcon" />
   </section>
 </template>
 
