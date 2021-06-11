@@ -54,7 +54,7 @@ export default class MyWorkExperience extends Vue {
         websiteUrl: 'https://www.telusinternational.com',
         startYear: [2020, 11],
         descriptionParagraphs: this.$i18n.t('my-work-experience.telus.description'),
-        techStack: ['Angular', 'Typescript', 'Javascript', 'jQuery', 'i18n', 'Java Portlets', 'LESS'],
+        techStack: ['Angular', 'Typescript', 'Javascript', 'jQuery', 'i18n', 'Java (Liferay)', 'SCSS', 'LESS'],
       },
       master: {
         jobPosition: 'Frontend Developer',
