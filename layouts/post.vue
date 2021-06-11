@@ -5,17 +5,19 @@
       v-show="isSidebarActive"
       @closeSidebar="closeSidebar"
     />
-    <AppNavigationBar
-      @openSidebar="openSidebar"
-    />
-    <header>
+    <ClientOnly>
+      <AppNavigationBar
+        @openSidebar="openSidebar"
+      />
+    </ClientOnly>
+    <header class="pt-14">
       <PortalTarget
         name="blog-banner"
-        class="blog-banner"
         slim
       />
     </header>
     <Nuxt />
+    <AppFooter />
   </main>
 </template>
 
@@ -42,9 +44,3 @@ export default class BlogLayout extends Vue {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.blog-banner {
-  min-height: 50vh;
-}
-</style>

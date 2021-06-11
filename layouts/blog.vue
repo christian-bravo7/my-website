@@ -11,7 +11,7 @@
         @toggleSidebar="toggleSidebar"
       />
     </ClientOnly>
-    <Nuxt class="pb-20" />
+    <Nuxt class="pb-20 pt-14" />
     <AppFooter />
   </main>
 </template>

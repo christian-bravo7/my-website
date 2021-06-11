@@ -4,7 +4,7 @@ exports[`blog layout should render correclty 1`] = `
 <main class="flex flex-col bg-gray-50 dark:bg-blue-800 min-h-screen">
   <appfallbackload-stub></appfallbackload-stub>
   <appsidebarmenu-stub haslanguagepicker="true" style="display: none;"></appsidebarmenu-stub>
-  <div></div> <span class="pb-20"></span>
+  <div></div> <span class="pb-20 pt-14"></span>
   <appfooter-stub></appfooter-stub>
 </main>
 `;

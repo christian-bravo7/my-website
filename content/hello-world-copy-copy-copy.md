@@ -7,7 +7,7 @@ tags: ['welcome']
 date: [2021, 2, 31]
 ---
 
-# hello-world
+# Hello World
 
 Hi! I'm Christian Bravo a Guatemalan Frontend developer and I welcome you to my first post. It's a great pleasure to have you here!
 
@@ -42,4 +42,4 @@ Since I can remember, I've always had difficulties expressing and transmitting c
 
 Here I hope write about software development, web technologies and many interesting things.
 
-Thanks for reading my first post. You don't know how special it is to finally be able to reach other people with my words :)
+Thanks for reading my first post. You don't know how special it is to finally be able to reach other people with my words :).

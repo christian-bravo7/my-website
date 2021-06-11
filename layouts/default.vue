@@ -11,7 +11,7 @@
       />
     </ClientOnly>
     <header>
-      <BannerBackgroundFigures :current-route="currentRoute" />
+      <BannerBackgroundFigures />
       <PortalTarget
         name="page-banner"
         class="min-h-screen"

@@ -1,14 +1,16 @@
 <template>
   <section>
     <Portal to="blog-banner">
-      <BlogBanner v-bind="bannerInfo" />
+      <PostBanner v-bind="bannerInfo" />
     </Portal>
-    <div>
-      <div class="container mx-auto py-20 px-4">
-        <NuxtContent
-          class="blog-content"
-          :document="article"
-        />
+    <div class="relative | container mx-auto">
+      <div class="w-full | py-12 sm:py-20 px-4 sm:px-12 | shadow-lg | rounded-2xl | bg-gray-50 dark:bg-blue-900 | transform -translate-y-20">
+        <div class="max-w-7xl w-full | mx-auto">
+          <NuxtContent
+            class="blog-content"
+            :document="article"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -52,10 +54,18 @@ export default class Post extends Vue {
     };
   }
 
+  get postUrl (): string {
+    const base = process.env.hostname;
+    const path = this.$route.path;
+
+    return `${base}${path}`;
+  }
+
   get bannerInfo (): Partial<PostContent> {
     const { title, description, date, image, minutes } = this.article;
 
     return {
+      url: this.postUrl,
       title,
       description,
       date,
@@ -80,11 +90,11 @@ export default class Post extends Vue {
   }
 
   h1 {
-    @apply text-3xl md:text-5xl mb-6 font-bold;
+    @apply text-2xl md:text-4xl mb-4 sm:mb-8 font-bold;
   }
 
   h2 {
-    @apply text-xl md:text-3xl mb-4 font-bold;
+    @apply text-xl md:text-3xl mb-3 sm:mb-6 font-bold;
   }
 
   h3 {
@@ -92,7 +102,7 @@ export default class Post extends Vue {
   }
 
   p {
-    @apply text-base md:text-lg mb-4 leading-loose;
+    @apply text-base md:text-lg mb-3 sm:mb-6 leading-loose;
   }
 
   ul {
@@ -104,7 +114,7 @@ export default class Post extends Vue {
   }
 
   a {
-    @apply text-indigo-600 underline;
+    @apply text-pink-500 dark:text-blue-400 underline;
   }
 }
 

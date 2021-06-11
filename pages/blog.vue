@@ -1,23 +1,6 @@
 <template>
   <section>
-    <div class="container mx-auto py-20">
-      <div class="flex flex-col items-center | mb-8">
-        <h1 class="text-7xl font-bold">
-          {{ $t(greetingKey) }}
-        </h1>
-        <p class="text-lg">
-          {{ $t('blog.welcome-text') }}
-        </p>
-      </div>
-      <div class="flex justify-center">
-        <label for="search">
-          <input
-            id="search"
-            type="text"
-          >
-        </label>
-      </div>
-    </div>
+    <BlogBanner />
     <div class="container mx-auto px-4 md:px-0">
       <div class="blog-grid">
         <PostCard
@@ -37,7 +20,6 @@ import { Vue, Component } from 'nuxt-property-decorator';
 import { IContentDocument } from '@nuxt/content/types/content';
 
 import { getMetaTags } from '@/seo';
-import { greetingByHour } from '@/utils/date/greetingByHour';
 
 // @ts-ignore
 @Component({
@@ -64,12 +46,6 @@ export default class Blog extends Vue {
     return {
       articles: articles as IContentDocument[],
     };
-  }
-
-  get greetingKey (): string {
-    const greetingKey = greetingByHour();
-
-    return `greeting.${greetingKey}`;
   }
 }
 </script>

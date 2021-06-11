@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator';
+import { Vue, Component } from 'nuxt-property-decorator';
 
 import CircleIcon from '~/assets/img/circle-outline.svg?inline';
 
@@ -32,8 +32,10 @@ import CircleIcon from '~/assets/img/circle-outline.svg?inline';
   },
 })
 export default class BannerBackgroundFigures extends Vue {
-  @Prop({ type: String, required: true })
-  currentRoute!: string;
+  get currentRoute (): string {
+    const route = this.getRouteBaseName();
+    return route;
+  }
 }
 </script>
 

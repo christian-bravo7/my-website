@@ -3,15 +3,19 @@
 exports[`blog page should render correctly 1`] = `
 <section>
   <div class="container mx-auto py-20">
-    <div class="flex flex-col items-center | mb-8">
-      <h1 class="text-7xl font-bold">
-        Good noon
+    <div class="flex flex-col items-center | mb-12">
+      <h1 class="text-7xl font-bold | mb-2">
+        Good evening
       </h1>
       <p class="text-lg">
         Welcome to my space
       </p>
     </div>
-    <div class="flex justify-center"><label for="search"><input id="search" type="text"></label></div>
+    <div class="flex justify-center"><label for="post-search" class="relative | w-full max-w-xl"><span class="absolute | left-4 top-1/2 | text-gray-400 | transform -translate-y-1/2 | select-none cursor-text | material-icons">
+    search
+  </span> <input id="post-search" type="text" placeholder="Search..." class="w-full | py-4 px-14 | bg-white | rounded-md | shadow-md"> <button class="absolute | right-4 top-1/2 | text-gray-400 | transform -translate-y-1/2 | select-none cursor-pointer | material-icons hidden">
+          cancel
+        </button></label></div>
   </div>
   <div class="container mx-auto px-4 md:px-0">
     <div class="blog-grid"></div>

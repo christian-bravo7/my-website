@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostBanner component should render correclty 1`] = `
+<section class="flex | relative | bg-black"><img src="image.png" alt="ballon" class="absolute inset-0 | w-full h-full | object-cover object-center | opacity-50">
+  <div class="flex flex-col | z-10 | container max-w-7xl w-full | mx-auto px-4 py-52">
+    <h1 class="text-3xl md:text-5xl | font-bold | text-gray-50 | mb-6">
+      my new post
+    </h1>
+    <div class="flex justify-between items-center">
+      <div class="flex flex-col"><span class="text-gray-200 | mb-4">Oct 24, 2020</span>
+        <div><span class="py-1 px-2 text-xs font-bold mr-2 select-none capitalize rounded-full bg-pink-500 text-gray-50">
+  Welcome
+</span></div>
+      </div>
+      <div class="flex"><a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=localhost/my-new-post" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-blue-500 dark-hover:border-blue-500 text-gray-900 hover:bg-pink-500 hover:text-gray-50 hover:border-pink-500 rounded-full social-icon ml-4 | text-gray-50"><svg></svg></a><a target="_blank" href="https://www.twitter.com/intent/tweet?url=localhost/my-new-post&amp;text=my new post" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-blue-500 dark-hover:border-blue-500 text-gray-900 hover:bg-pink-500 hover:text-gray-50 hover:border-pink-500 rounded-full social-icon ml-4 | text-gray-50"><svg></svg></a></div>
+    </div>
+  </div>
+</section>
+`;

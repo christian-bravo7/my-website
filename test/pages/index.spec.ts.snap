@@ -15,8 +15,8 @@ exports[`index page should render page correctly 1`] = `
           </p>
           <div class="flex flex-col items-start"><span class="mb-2 | text-xs">
             Email me at:
-          </span> <a href="mailto:hi@christian-bravo.dev" class="font-bold | font-base">
-              hi@christian-bravo.dev
+          </span> <a href="mailto:christian.a.bravo.g@gmail.com" class="font-bold | font-base">
+              christian.a.bravo.g@gmail.com
             </a></div>
         </div>
         <section class="flex justify-center items-center">

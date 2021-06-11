@@ -7,7 +7,7 @@ tags: ['welcome']
 date: [2021, 2, 31]
 ---
 
-# hello-world
+# Hello world
 
 Hi! I'm Christian Bravo a Guatemalan Frontend developer and I welcome you to my first post. It's a great pleasure to have you here!
 

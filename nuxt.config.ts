@@ -115,6 +115,11 @@ export default {
     ],
   },
 
+  // env variables
+  env: {
+    hostname: process.env.HOSTNAME || 'http://localhost:3000',
+  },
+
   // Build configuration: https://nuxtjs.org/api/configuration-build/
   build: {
     postcss: {

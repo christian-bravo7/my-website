@@ -15,9 +15,9 @@
             </span>
             <a
               class="font-bold | font-base"
-              href="mailto:hi@christian-bravo.dev"
+              href="mailto:christian.a.bravo.g@gmail.com"
             >
-              hi@christian-bravo.dev
+              christian.a.bravo.g@gmail.com
             </a>
           </div>
         </div>

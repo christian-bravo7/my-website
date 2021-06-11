@@ -28,11 +28,11 @@ export default class MyWorkExperienceButton extends Vue {
 
   &--is-active,
   &:hover {
-    @apply text-pink-500 dark:text-blue-500 bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25;
+    @apply text-pink-500 dark:text-blue-400 bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25;
   }
 
   &--is-active {
-    @apply border-pink-500 dark:border-blue-500;
+    @apply border-pink-500 dark:border-blue-400;
   }
 }
 
@@ -44,7 +44,7 @@ export default class MyWorkExperienceButton extends Vue {
       transition-duration: 300ms;
       transition-property: width;
 
-      @apply absolute left-0 top-0 rounded-tr-2xl rounded-br-2xl bottom-0 bg-pink-500 dark:bg-blue-500;
+      @apply absolute left-0 top-0 rounded-tr-2xl rounded-br-2xl bottom-0 bg-pink-500 dark:bg-blue-400;
     }
 
     &--is-active {

@@ -5,7 +5,7 @@
     </span>
     <span>{{ $t('home.at-label') }}</span>
     <a
-      class="text-pink-500 dark:text-blue-500 | font-bold | hover:underline | transition-all duration-300"
+      class="text-pink-500 dark:text-blue-400 | font-bold | hover:underline | transition-all duration-300"
       :href="websiteUrl"
       target="_blank"
       rel="noopener noreferrer"
