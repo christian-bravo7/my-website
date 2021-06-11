@@ -21,9 +21,7 @@ import { IContentDocument } from '@nuxt/content/types/content';
 
 import { getMetaTags } from '@/seo';
 
-// @ts-ignore
 @Component({
-  middleware: ['wipMiddleware'],
   layout: 'blog',
   head () {
     const homeMetaTags = getMetaTags({
