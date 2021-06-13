@@ -96,7 +96,7 @@ exports[`me page should render correctly 1`] = `
       </div>
     </div>
   </section>
-  <section class="section-container contact-me">
+  <section class="section-container contact-me mb-12 md:mb-0">
     <div class="max-w-screen-lg | flex justify-center | my-0 mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col justify-center | mb-12 md:mb-0">

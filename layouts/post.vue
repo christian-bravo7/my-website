@@ -3,11 +3,12 @@
     <AppFallbackLoad v-show="!isAppInitialized" />
     <AppSidebarMenu
       v-show="isSidebarActive"
-      @closeSidebar="closeSidebar"
+      @onSidebarClose="onSidebarClose"
     />
     <ClientOnly>
       <AppNavigationBar
-        @openSidebar="openSidebar"
+        :is-sidebar-active="isSidebarActive"
+        @onSidebarToggle="onSidebarToggle"
       />
     </ClientOnly>
     <header class="pt-14">
@@ -35,11 +36,11 @@ import { mapGetters } from 'vuex';
 export default class BlogLayout extends Vue {
   isSidebarActive: boolean = false;
 
-  openSidebar (): void {
-    this.isSidebarActive = true;
+  onSidebarToggle (): void {
+    this.isSidebarActive = !this.isSidebarActive;
   }
 
-  closeSidebar (): void {
+  onSidebarClose (): void {
     this.isSidebarActive = false;
   }
 }

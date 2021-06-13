@@ -42,34 +42,22 @@ export default class AppSelectOption extends Vue {
 
 <style lang="scss" scoped>
 .app-select-option {
+  @apply dark:bg-blue-900 dark:text-white;
+
   &:last-child {
     @apply mb-0;
   }
 
   &:hover {
-    @apply pl-3;
+    @apply pl-3 dark:text-blue-500;
   }
 
   &--active {
-    @apply text-pink-500 bg-pink-50;
+    @apply text-pink-500 bg-pink-50 dark:bg-blue-800 dark:text-blue-500;
   }
 
   &--active:hover {
     @apply px-2;
-  }
-}
-
-@include dark-mode {
-  .app-select-option {
-    @apply bg-blue-900 text-white;
-
-    &:hover {
-      @apply text-blue-500;
-    }
-
-    &--active {
-      @apply bg-blue-800 text-blue-500;
-    }
   }
 }
 </style>

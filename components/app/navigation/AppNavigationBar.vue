@@ -86,7 +86,6 @@ export default class AppNavigationBar extends Vue {
   }
 
   toggleNavigationBar (direction: number, currentScroll: number): void {
-    console.log(direction);
     if (direction === 2 && currentScroll > 52) {
       this.isHidden = true;
       this.previousDirection = direction;

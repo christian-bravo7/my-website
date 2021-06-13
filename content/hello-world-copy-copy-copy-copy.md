@@ -15,6 +15,8 @@ Honestly, a couple of days ago I couldn't imagine that I'm writing this right no
 
 But, the 3 main reasons that really motivate me to create this blog are the following:
 
+<br/>
+
 ## .Teaching-is-the-best-way-to-learn {
 
 Over time, I've found that when you have the opportunity to teach something (no matter what it's) to someone else, you get amazing rewards like:
@@ -28,11 +30,15 @@ Therefore, If I can reach out to at least one person and provide them educationa
 
 ## }
 
+<br/>
+
 ## #Show-my-interests-skills-and-have-fun {
 
 I would like to demonstrate the skills that I have acquired by doing what I enjoy. Also, I want to have a space where I can express myself freely, writing about things that I am passionate about and that amuse me.
 
 ## }
+
+<br/>
 
 ## h2.Improve-my-written-communication-skills {
 
@@ -40,6 +46,10 @@ Since I can remember, I've always had difficulties expressing and transmitting c
 
 ## }
 
+<br/>
+
 Here I hope write about software development, web technologies and many interesting things.
+
+<br/>
 
 Thanks for reading my first post. You don't know how special it is to finally be able to reach other people with my words :)

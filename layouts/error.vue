@@ -11,7 +11,7 @@
         {{ $t('error.404-description') }}
       </p>
       <NuxtLink
-        class="px-6 py-3 | text-base md:text-lg | rounded-full | bg-pink-500 dark:bg-blue-500 | text-white"
+        class="button"
         :to="localePath('index')"
       >
         {{ $t('error.home-link') }}

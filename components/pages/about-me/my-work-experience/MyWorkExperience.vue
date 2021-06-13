@@ -90,16 +90,26 @@ export default class MyWorkExperience extends Vue {
   }
 
   &__button-list {
-    &::after {
+    &::before {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
-      width: 80px;
-      content: '';
+      z-index: 10;
+      width: 100px;
       pointer-events: none;
+      content: '';
 
       @apply bg-gradient-to-r from-transparent to-gray-50 dark:to-blue-800;
+    }
+
+    &::after {
+      display: block;
+      width: 80px;
+      height: 20px;
+      margin-left: 24px;
+      padding: 4px;
+      content: '';
     }
   }
 }

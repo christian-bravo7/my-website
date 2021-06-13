@@ -1,13 +1,4 @@
 @import 'sections';
-@import 'card';
-@import 'typography';
-
-body {
-  font-family: 'Montserrat', sans-serif;
-
-  @apply text-black dark:text-white;
-}
-
-.primary-text {
-  @apply text-pink-500 dark:text-blue-500;
-}
+@import 'font';
+@import 'ui/card';
+@import 'ui/button';

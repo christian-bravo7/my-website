@@ -3,7 +3,7 @@
     <Portal to="page-banner">
       <HomeBanner />
     </Portal>
-    <ContactMe />
+    <ContactMe class="mb-12 md:mb-0" />
   </section>
 </template>
 

@@ -191,17 +191,7 @@ export default class AppSelect extends Vue {
 
   &__button {
     &--active {
-      @apply bg-gray-50 shadow-md;
-    }
-  }
-}
-
-@include dark-mode {
-  .app-select {
-    &__button {
-      &--active {
-        @apply bg-blue-900;
-      }
+      @apply bg-gray-50 shadow-md dark:bg-blue-900;
     }
   }
 }

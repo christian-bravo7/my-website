@@ -21,16 +21,13 @@ export default class SocialNetworkIcon extends Vue {
 <style lang="scss" scoped>
 .social-icon {
   transition-duration: 300ms;
-  transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow, color;
 
   &:hover {
     box-shadow: 0 0 0 6px theme('colors.pink.100');
   }
 
   svg {
-    transition-duration: 300ms;
-    transition-property: fill;
-
     @apply fill-current;
   }
 }
