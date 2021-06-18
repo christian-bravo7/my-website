@@ -30,30 +30,34 @@ exports[`me page should render correctly 1`] = `
         </div>
         <div class="flex flex-col md:flex-row">
           <div class="relative | my-work-experience__button-wrapper">
-            <div class="flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"><button class="relative | px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button my-work-experience-button--is-active">
+            <div class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"><button id="paypal" class="relative | px-4 py-4 | text-left | rounded-tr-lg rounded-br-lg | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button ml-1 my-work-experience-button--is-active">
+                PayPal
+              </button><button id="telus" class="relative | px-4 py-4 | text-left | rounded-tr-lg rounded-br-lg | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button ml-1">
                 Telus International
-              </button> <button class="relative | px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button">
+              </button><button id="master" class="relative | px-4 py-4 | text-left | rounded-tr-lg rounded-br-lg | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button ml-1">
                 Master Development
-              </button> <button class="relative | px-4 py-4 | text-left | rounded-lg | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button">
+              </button><button id="viaro" class="relative | px-4 py-4 | text-left | rounded-tr-lg rounded-br-lg | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button ml-1">
                 Viaro Networks
-              </button></div>
+              </button>
+              <div class="absolute | left-0 top-0 bottom-0 h-full w-1 | rounded-full | bg-gray-100 dark:bg-blue-700"><span class="block | absolute | w-full h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | transition-all delay-100 duration-300" style="top: 0px;"></span></div>
+            </div>
           </div>
           <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
             <div>
               <h6 class="text-xl | mb-2"><span class="font-bold">
-    Software Developer
-  </span> <span>at</span> <a href="https://www.telusinternational.com" target="_blank" rel="noopener noreferrer" class="text-pink-500 dark:text-blue-400 | font-bold | hover:underline | transition-all duration-300">
-                  Telus International
+    Senior Web Engineer
+  </span> <span>at</span> <a href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer" class="text-pink-500 dark:text-blue-400 | font-bold | hover:underline | transition-all duration-300">
+                  PayPal
                 </a></h6>
               <div class="flex text-sm mb-6"><span><span class="capitalize">
-      Nov 2020
+      Jun 2021
     </span> <span>-</span> <span class="capitalize">
       present
     </span></span> <span class="flex items-center | mx-2"><span class="w-1 h-1 | rounded-full | bg-black dark:bg-white"></span></span> <span class="text-gray-700 dark:text-gray-300">
-    8 months
+    1 month
   </span></div>
               <div class="mb-6">
-                <div class="flex mb-2"><span class="material-icons">
+                <div class="flex mb-2"><span class="text-pink-600 dark:text-blue-300 | material-icons">
       arrow_right
     </span> <span class="leading-loose | font-base">
       Development of new features, bug fixing and support for web applications.
@@ -64,28 +68,16 @@ exports[`me page should render correctly 1`] = `
   </span>
                 <div class="flex flex-wrap">
                   <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    Angular
-                  </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    Typescript
+                    React
                   </div>
                   <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     Javascript
                   </div>
                   <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    jQuery
-                  </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     i18n
                   </div>
                   <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    Java (Liferay)
-                  </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    SCSS
-                  </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    LESS
+                    Webpack
                   </div>
                 </div>
               </div>

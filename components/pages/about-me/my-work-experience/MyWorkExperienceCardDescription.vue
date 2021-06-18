@@ -5,7 +5,7 @@
       :key="index"
       class="flex mb-2"
     >
-      <span class="material-icons">
+      <span class="text-pink-600 dark:text-blue-300 | material-icons">
         arrow_right
       </span>
       <span class="leading-loose | font-base">

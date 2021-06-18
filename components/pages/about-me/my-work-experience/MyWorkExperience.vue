@@ -9,25 +9,24 @@
         </div>
         <div class="flex flex-col md:flex-row">
           <div class="relative | my-work-experience__button-wrapper">
-            <div class="flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list">
+            <div class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list">
               <MyWorkExperienceButton
-                :is-active="currentTab === 'telus'"
-                @onClick="changeTab('telus')"
+                v-for="(work, key) in workExperienceData"
+                :id="key"
+                :key="key"
+                ref="myWorkExperienceButtons"
+                class="ml-1"
+                :is-active="currentTab === key"
+                @click="changeTab(key)"
               >
-                Telus International
+                {{ work.company }}
               </MyWorkExperienceButton>
-              <MyWorkExperienceButton
-                :is-active="currentTab === 'master'"
-                @onClick="changeTab('master')"
-              >
-                Master Development
-              </MyWorkExperienceButton>
-              <MyWorkExperienceButton
-                :is-active="currentTab === 'viaro'"
-                @onClick="changeTab('viaro')"
-              >
-                Viaro Networks
-              </MyWorkExperienceButton>
+              <div class="absolute | left-0 top-0 bottom-0 h-full w-1 | rounded-full | bg-gray-100 dark:bg-blue-700">
+                <span
+                  class="block | absolute | w-full h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | transition-all delay-100 duration-300"
+                  :style="{ 'top': `${markPosition}px` }"
+                />
+              </div>
             </div>
           </div>
           <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
@@ -44,10 +43,19 @@ import { Vue, Component } from 'nuxt-property-decorator';
 
 @Component
 export default class MyWorkExperience extends Vue {
-  currentTab: string = 'telus';
+  currentTab: string = 'paypal';
+  markPosition: number = 0;
 
   get workExperienceData (): any {
     return {
+      paypal: {
+        jobPosition: 'Senior Web Engineer',
+        company: 'PayPal',
+        websiteUrl: 'https://www.paypal.com/',
+        startYear: [2021, 6],
+        descriptionParagraphs: this.$i18n.t('my-work-experience.telus.description'),
+        techStack: ['React', 'Javascript', 'i18n', 'Webpack'],
+      },
       telus: {
         jobPosition: 'Software Developer',
         company: 'Telus International',
@@ -78,7 +86,10 @@ export default class MyWorkExperience extends Vue {
   }
 
   changeTab (nextTab: string): void {
+    const element = document.getElementById(nextTab) as HTMLElement;
+
     this.currentTab = nextTab;
+    this.markPosition = element.offsetTop;
   }
 }
 </script>
@@ -122,6 +133,10 @@ export default class MyWorkExperience extends Vue {
 
     &__button-list {
       &::after {
+        display: none;
+      }
+
+      &::before {
         display: none;
       }
     }
