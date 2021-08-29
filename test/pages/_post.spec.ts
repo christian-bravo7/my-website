@@ -11,9 +11,9 @@ describe('single post page', () => {
   it('should render page correctly', () => {
     const wrapper = mount(Post, {
       localVue,
-      stubs: {
-        NuxtContent: {
-          template: '<div></div>',
+      mocks: {
+        $route: {
+          path: 'localhost',
         },
       },
       data: () => ({
@@ -34,9 +34,9 @@ describe('single post page', () => {
   it('should display meta-tag title', () => {
     const wrapper = mount(Post, {
       localVue,
-      stubs: {
-        NuxtContent: {
-          template: '<div></div>',
+      mocks: {
+        $route: {
+          path: 'localhost',
         },
       },
       data: () => ({

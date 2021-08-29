@@ -1,6 +1,6 @@
 import PortalVue from 'portal-vue';
 import VueMeta from 'vue-meta';
-import { createLocalVue, shallowMount } from '@vue/test-utils';
+import { createLocalVue, mount } from '@vue/test-utils';
 
 import IndexPage from '@/pages/index.vue';
 
@@ -18,7 +18,7 @@ localVue.use(VueMeta, { keyName: 'head' });
 
 describe('index page', () => {
   it('should render page correctly', () => {
-    const wrapper = shallowMount(IndexPage, {
+    const wrapper = mount(IndexPage, {
       ...componentConfig,
     });
 
@@ -26,7 +26,7 @@ describe('index page', () => {
   });
 
   it('should display meta-tag title', () => {
-    const wrapper = shallowMount(IndexPage, {
+    const wrapper = mount(IndexPage, {
       ...componentConfig,
     });
 

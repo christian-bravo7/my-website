@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppNavigationBar component should render correctly 1`] = `
-<nav class="fixed top-0 left-0 right-0 z-20 | p-4 md:py-3 md:px-8  | bg-transparent | transition-all duration-150 | navbar">
+<nav class="fixed top-0 left-0 right-0 z-20 | p-4 md:py-3 md:px-8 | bg-gray-50 dark:bg-blue-800 | transition-all duration-150 transform transition-transform duration-300">
   <div class="navbar__content">
     <div class="flex items-center">
       <div class="hidden md:flex"><a class="flex col-span-1 | w-8 h-8 | text-black dark:text-white"><svg class="w-full h-full | fill-current"></svg></a></div>
     </div>
     <div class="flex items-center">
       <div class="hidden | w-full | md:flex items-center justify-end col-span-3">
-        <div class="flex content-center | mr-6"><a class="mx-6 | text-center text-sm | primary-text" to="[object Object]">
+        <div class="flex content-center | mr-6"><a class="mx-6 | text-center text-sm | text-pink-500 dark:text-blue-400" to="[object Object]">
             Home
-          </a> <a class="mx-6 | text-center text-sm | primary-text" to="[object Object]">
+          </a> <a class="mx-6 | text-center text-sm | text-pink-500 dark:text-blue-400" to="[object Object]">
             About me
           </a></div>
       </div>

@@ -37,7 +37,7 @@
   },
   "contact-me": {
     "say-hi": "Just say hi",
-    "contact-me-description": "I'm always open to discuss about projects and new challenges, do not hesitate to contact me and let's talk.",
+    "contact-me-description": "Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say Hello. I'll try my best to get back to you!",
     "email-me": "Email me at:"
   },
   "footer": {
@@ -77,5 +77,8 @@
   "generic": {
     "tools-label": "Tools:",
     "technologies-label": "Technologies:"
+  },
+  "blog": {
+    "welcome-text": "Welcome to my space"
   }
 }

@@ -24,10 +24,16 @@ config.mocks = {
 
 config.stubs = {
   NuxtLink: RouterLinkStub,
+  NuxtContent: {
+    template: '<span><slot/></span>',
+  },
   Nuxt: {
     template: '<span><slot/></span>',
   },
   PortalTarget: {
+    template: '<span><slot/></span>',
+  },
+  ClientOnly: {
     template: '<span><slot/></span>',
   },
 };

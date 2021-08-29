@@ -4,10 +4,6 @@
 
 .section-container {
   @apply flex p-4 sm:py-20 md:px-8;
-
-  &:last-child {
-    @apply mb-0;
-  }
 }
 
 @screen md {

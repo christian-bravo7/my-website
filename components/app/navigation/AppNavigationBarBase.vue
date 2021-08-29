@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-0 left-0 right-0 z-20 | p-4 md:py-3 md:px-8  | bg-transparent | transition-all duration-150 | navbar"
+    class="fixed top-0 left-0 right-0 z-20 | p-4 md:py-3 md:px-8 | bg-gray-50 dark:bg-blue-800 | transition-all duration-150"
   >
     <div class="navbar__content">
       <div class="flex items-center">
@@ -29,12 +29,6 @@ export default class AppNavigationBarBase extends Vue { }
     @apply grid;
 
     grid-template-columns: auto 1fr auto;
-  }
-}
-
-@screen md {
-  .navbar {
-    backdrop-filter: blur(100px);
   }
 }
 </style>

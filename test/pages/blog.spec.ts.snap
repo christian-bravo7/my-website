@@ -2,21 +2,23 @@
 
 exports[`blog page should render correctly 1`] = `
 <section>
-  <div class="pt-0 md:pt-20">
-    <div class="container mx-auto px-4 md:px-0 py-8 md:py-20 relative z-10">
-      <div class="blog-grid">
-        <div class="relative bg-white dark:bg-blue-900 bg-opacity-75 dark:bg-opacity-75 hover:bg hover:bg-opacity-100 dark-hover:bg-opacity-100 rounded-lg shadow-md transition-colors duration-200">
-          <div class="absolute inset-0 p-2 flex flex-col items-center justify-center select-none">
-            <p class="text-gray-600 dark:text-gray-400 text-center">
-              Writing cool things...
-            </p>
-            <p class="text-gray-600 dark:text-gray-400 text-center">
-              Come back soon :)
-            </p>
-          </div>
-        </div>
-      </div>
+  <div class="container mx-auto py-20">
+    <div class="flex flex-col items-center | mb-12">
+      <h1 class="text-7xl font-bold | mb-2">
+        Good noon
+      </h1>
+      <p class="text-lg">
+        Welcome to my space
+      </p>
     </div>
+    <div class="flex justify-center"><label for="post-search" class="relative | w-full max-w-xl"><span class="absolute | left-4 top-1/2 | text-gray-400 | transform -translate-y-1/2 | select-none cursor-text | material-icons">
+    search
+  </span> <input id="post-search" type="text" placeholder="Search..." class="w-full | py-4 px-14 | bg-white | rounded-md | shadow-md"> <button class="absolute | right-4 top-1/2 | text-gray-400 | transform -translate-y-1/2 | select-none cursor-pointer | material-icons hidden">
+          cancel
+        </button></label></div>
+  </div>
+  <div class="container mx-auto px-4 md:px-0">
+    <div class="blog-grid"></div>
   </div>
 </section>
 `;

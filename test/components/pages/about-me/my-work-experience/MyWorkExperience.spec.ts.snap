@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyWorkExperience component should render correclty 1`] = `
+<section class="section-container">
+  <div class="max-w-screen-lg | flex justify-center items-center | w-full | my-0 mx-auto | overflow-x-hidden">
+    <div class="flex flex-col | w-full">
+      <div class="flex justify-center | mb-16">
+        <h2 class="section-title my-work-experience__title">
+          Where I've worked
+        </h2>
+      </div>
+      <div class="relative flex flex-col md:flex-row">
+        <div class="my-work-experience__button-wrapper">
+          <div class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"><button id="telus" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button my-work-experience-button--is-active">
+              TELUS International
+            </button><button id="master" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button">
+              Master Development
+            </button><button id="viaro" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button">
+              Viaro Networks
+            </button>
+            <div class="absolute | left-0 bottom-3 md:bottom-0 h-1 md:h-full w-full md:w-1 | rounded-full | bg-gray-100 dark:bg-blue-700"><span class="block | absolute | md:w-full h-full md:h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | my-work-experience__button-marker" style="top: 0px; left: 0px; width: 0px;"></span></div>
+          </div> <span class="my-work-experience__button-list-fade"></span>
+        </div>
+        <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
+          <div>
+            <h6 class="text-xl | mb-2"><span class="font-bold">
+    Software Developer
+  </span> <span>at</span> <a href="https://www.telusinternational.com" target="_blank" rel="noopener noreferrer" class="text-pink-500 dark:text-blue-400 | font-bold | hover:underline | transition-all duration-300">
+                TELUS International
+              </a></h6>
+            <div class="flex text-sm mb-6"><span><span class="capitalize">
+      Nov 2020
+    </span> <span>-</span> <span class="capitalize">
+      present
+    </span></span> <span class="flex items-center | mx-2"><span class="w-1 h-1 | rounded-full | bg-black dark:bg-white"></span></span> <span class="text-gray-700 dark:text-gray-300">
+    10 months
+  </span></div>
+            <div class="mb-6">
+              <div class="flex mb-2"><span class="text-pink-600 dark:text-blue-300 | material-icons">
+      arrow_right
+    </span> <span class="leading-loose | font-base">
+      Development of new features, bug fixing and support for web applications.
+    </span></div>
+            </div>
+            <div><span class="block | font-bold | text-xs | mb-6">
+    Technologies:
+  </span>
+              <div class="flex flex-wrap">
+                <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  Angular
+                </div>
+                <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  Typescript
+                </div>
+                <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  Javascript
+                </div>
+                <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  jQuery
+                </div>
+                <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  i18n
+                </div>
+                <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  Java (Liferay)
+                </div>
+                <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  SCSS
+                </div>
+                <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                  LESS
+                </div>
+              </div>
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

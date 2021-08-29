@@ -1,39 +1,38 @@
 import { createLocalVue, mount } from '@vue/test-utils';
-import Blog from '@/pages/blog.vue';
 import PortalVue from 'portal-vue';
 import VueMeta from 'vue-meta';
 
+import Blog from '@/pages/blog.vue';
+
+import setupI18n from '@/test/i18n';
+
 const localVue = createLocalVue();
+const i18n = setupI18n(localVue);
+
 localVue.use(PortalVue);
 localVue.use(VueMeta, { keyName: 'head' });
+
+const componentConfig = {
+  localVue,
+  i18n,
+};
 
 describe('blog page', () => {
   it('should render correctly', () => {
     const wrapper = mount(Blog, {
-      localVue,
+      ...componentConfig,
     });
 
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('should return dynamic class for post index', () => {
-    const wrapper = mount(Blog, {
-      localVue,
-    });
-
-    // @ts-ignore
-    const dynamicClass = wrapper.vm.dynamicColors(1);
-
-    expect(dynamicClass).toBe('hover:bg-pink-100 dark-hover:bg-pink-900');
-  });
-
   it('should display meta-tag title', () => {
     const wrapper = mount(Blog, {
-      localVue,
+      ...componentConfig,
     });
 
     const title = wrapper.vm.$meta().refresh().metaInfo.title;
 
-    expect(title).toBe('blog');
+    expect(title).toBe('Blog');
   });
 });

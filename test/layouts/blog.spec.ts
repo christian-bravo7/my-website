@@ -2,7 +2,7 @@ import Vuex from 'vuex';
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import MockDate from 'mockdate';
 
-import Blog from '@/layouts/blog.vue';
+import Blog from '~/layouts/blog.vue';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);

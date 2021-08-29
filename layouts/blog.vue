@@ -1,15 +1,18 @@
 <template>
-  <main class="flex flex-col bg-gray-100 dark:bg-blue-800 min-h-screen">
+  <main class="flex flex-col bg-gray-50 dark:bg-blue-800 min-h-screen">
     <AppFallbackLoad v-show="!isAppInitialized" />
     <AppSidebarMenu
       v-show="isSidebarActive"
       @closeSidebar="closeSidebar"
     />
-    <AppNavigationBar
-      :is-sidebar-active="isSidebarActive"
-      @toggleSidebar="toggleSidebar"
-    />
-    <Nuxt class="pt-0 md:pt-20 px-4 w-full z-10 order-2" />
+    <ClientOnly>
+      <AppNavigationBar
+        :is-sidebar-active="isSidebarActive"
+        @toggleSidebar="toggleSidebar"
+      />
+    </ClientOnly>
+    <Nuxt class="pb-20 pt-14" />
+    <AppFooter />
   </main>
 </template>
 
@@ -18,6 +21,7 @@ import { Vue, Component } from 'nuxt-property-decorator';
 import { mapGetters } from 'vuex';
 
 @Component({
+  middleware: 'wipMiddleware',
   computed: {
     ...mapGetters({
       isAppInitialized: 'guest/isAppInitialized',

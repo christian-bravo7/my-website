@@ -10,14 +10,14 @@ export default {
     },
   ],
 
-  // server: {
-  //   port: 3000,
-  //   host: '0.0.0.0',
-  // },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
 
   // Page headers: https://nuxtjs.org/api/configuration-head
   head: {
-    titleTemplate: (chunk): string => chunk ? `${chunk} | Christian Bravo` : 'Christian Bravo',
+    titleTemplate: (chunk): string => chunk ? `${chunk} - Christian Bravo` : 'Christian Bravo',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -113,6 +113,11 @@ export default {
     routes: [
       'hello-world',
     ],
+  },
+
+  // env variables
+  env: {
+    hostname: process.env.HOSTNAME || 'http://localhost:3000',
   },
 
   // Build configuration: https://nuxtjs.org/api/configuration-build/

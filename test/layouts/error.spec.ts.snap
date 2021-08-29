@@ -7,7 +7,7 @@ exports[`error page should render correclty 1`] = `
     </span>
     <p class="text-md md:text-3xl | text-center | mb-10 md:mb-12 | text-gray-900 dark:text-gray-100">
       Sorry, but this page doesn't exist.
-    </p> <a class="px-6 py-3 | text-base md:text-lg | rounded-full | bg-pink-500 dark:bg-blue-500 | text-white">
+    </p> <a class="button">
       Take me home
     </a>
   </section>

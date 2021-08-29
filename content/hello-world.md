@@ -7,13 +7,15 @@ tags: ['welcome']
 date: [2021, 2, 31]
 ---
 
-# hello-world
+# Hello world
 
 Hi! I'm Christian Bravo a Guatemalan Frontend developer and I welcome you to my first post. It's a great pleasure to have you here!
 
 Honestly, a couple of days ago I couldn't imagine that I'm writing this right now. This started out of curiosity, when I started experimenting with <a target="_blank" href="https://content.nuxtjs.org/">Nuxt Content</a>. And after a couple of ideas and inspiration from <a target="_blank" href="https://dribbble.com/shots">Dribbble</a>, here I am.
 
 But, the 3 main reasons that really motivate me to create this blog are the following:
+
+<br/>
 
 ## .Teaching-is-the-best-way-to-learn {
 
@@ -28,11 +30,15 @@ Therefore, If I can reach out to at least one person and provide them educationa
 
 ## }
 
+<br/>
+
 ## #Show-my-interests-skills-and-have-fun {
 
 I would like to demonstrate the skills that I have acquired by doing what I enjoy. Also, I want to have a space where I can express myself freely, writing about things that I am passionate about and that amuse me.
 
 ## }
+
+<br/>
 
 ## h2.Improve-my-written-communication-skills {
 
@@ -40,6 +46,10 @@ Since I can remember, I've always had difficulties expressing and transmitting c
 
 ## }
 
+<br/>
+
 Here I hope write about software development, web technologies and many interesting things.
+
+<br/>
 
 Thanks for reading my first post. You don't know how special it is to finally be able to reach other people with my words :)

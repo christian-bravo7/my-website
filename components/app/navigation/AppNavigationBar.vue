@@ -1,5 +1,8 @@
 <template>
-  <AppNavigationBarBase>
+  <AppNavigationBarBase
+    class="transform transition-transform duration-300"
+    :class="{ '-translate-y-full': isHidden }"
+  >
     <template #left>
       <div class="hidden md:flex">
         <AppLogo />
@@ -45,10 +48,46 @@ import { Vue, Component, Emit, Prop } from 'nuxt-property-decorator';
 
 @Component
 export default class AppNavigationBar extends Vue {
+  previousScroll: number = window.scrollY || document.documentElement.scrollTop;
+  currentDirection: number = 0;
+  previousDirection: number = 0;
+  isHidden: boolean = false;
+
   @Prop({ type: Boolean, default: false })
   readonly isSidebarActive!: boolean;
 
   @Emit('onSidebarToggle')
   onSidebarToggle (): void {}
+
+  mounted (): void {
+    this.checkScrollDown();
+  }
+
+  checkScroll (): void {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+    if (currentScroll > this.previousScroll) {
+      this.currentDirection = 2;
+    } else if (currentScroll < this.previousScroll) {
+      this.currentDirection = 1;
+    }
+    if (this.currentDirection !== this.previousDirection) {
+      this.toggleNavigationBar(this.currentDirection, currentScroll);
+    }
+    this.previousScroll = currentScroll;
+  }
+
+  checkScrollDown (): void {
+    window.addEventListener('scroll', this.checkScroll);
+  }
+
+  toggleNavigationBar (direction: number, currentScroll: number): void {
+    if (direction === 2 && currentScroll > 52) {
+      this.isHidden = true;
+      this.previousDirection = direction;
+    } else if (direction === 1) {
+      this.isHidden = false;
+      this.previousDirection = direction;
+    }
+  }
 }
 </script>

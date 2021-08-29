@@ -3,19 +3,22 @@
     <AppFallbackLoad v-show="!isAppInitialized" />
     <AppSidebarMenu
       v-show="isSidebarActive"
-      @closeSidebar="closeSidebar"
+      @onSidebarClose="onSidebarClose"
     />
-    <AppNavigationBar
-      @openSidebar="openSidebar"
-    />
-    <header>
+    <ClientOnly>
+      <AppNavigationBar
+        :is-sidebar-active="isSidebarActive"
+        @onSidebarToggle="onSidebarToggle"
+      />
+    </ClientOnly>
+    <header class="pt-14">
       <PortalTarget
         name="blog-banner"
-        class="blog-banner"
         slim
       />
     </header>
     <Nuxt />
+    <AppFooter />
   </main>
 </template>
 
@@ -24,6 +27,7 @@ import { Vue, Component } from 'nuxt-property-decorator';
 import { mapGetters } from 'vuex';
 
 @Component({
+  middleware: 'wipMiddleware',
   computed: {
     ...mapGetters({
       isAppInitialized: 'guest/isAppInitialized',
@@ -33,18 +37,12 @@ import { mapGetters } from 'vuex';
 export default class BlogLayout extends Vue {
   isSidebarActive: boolean = false;
 
-  openSidebar (): void {
-    this.isSidebarActive = true;
+  onSidebarToggle (): void {
+    this.isSidebarActive = !this.isSidebarActive;
   }
 
-  closeSidebar (): void {
+  onSidebarClose (): void {
     this.isSidebarActive = false;
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.blog-banner {
-  min-height: 50vh;
-}
-</style>
