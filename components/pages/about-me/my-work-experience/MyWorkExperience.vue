@@ -7,27 +7,27 @@
             {{ $t('home.where-i-have-worked') }}
           </h2>
         </div>
-        <div class="flex flex-col md:flex-row">
-          <div class="relative | my-work-experience__button-wrapper">
+        <div class="relative flex flex-col md:flex-row">
+          <div class="my-work-experience__button-wrapper">
             <div class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list">
               <MyWorkExperienceButton
                 v-for="(work, key) in workExperienceData"
                 :id="key"
                 :key="key"
-                ref="myWorkExperienceButtons"
-                class="ml-1"
+                class="mr-1 md:ml-1 md:mr-0 | my-work-experience__button"
                 :is-active="currentTab === key"
                 @click="changeTab(key)"
               >
                 {{ work.company }}
               </MyWorkExperienceButton>
-              <div class="absolute | left-0 top-0 bottom-0 h-full w-1 | rounded-full | bg-gray-100 dark:bg-blue-700">
+              <div class="absolute | left-0 bottom-3 md:bottom-0 h-1 md:h-full w-full md:w-1 | rounded-full | bg-gray-100 dark:bg-blue-700">
                 <span
-                  class="block | absolute | w-full h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | transition-all delay-100 duration-300"
-                  :style="{ 'top': `${markPosition}px` }"
+                  class="block | absolute | md:w-full h-full md:h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | my-work-experience__button-marker"
+                  :style="{ 'top': `${markTopPosition}px`, 'left': `${markLeftPosition}px`, 'width': `${markWidth}px` }"
                 />
               </div>
             </div>
+            <span class="my-work-experience__button-list-fade" />
           </div>
           <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
             <MyWorkExperienceCard v-bind="workExperienceData[currentTab]" />
@@ -43,22 +43,16 @@ import { Vue, Component } from 'nuxt-property-decorator';
 
 @Component
 export default class MyWorkExperience extends Vue {
-  currentTab: string = 'paypal';
-  markPosition: number = 0;
+  currentTab: string = 'telus';
+  markTopPosition: number = 0;
+  markLeftPosition: number = 0;
+  markWidth: number = 0;
 
   get workExperienceData (): any {
     return {
-      paypal: {
-        jobPosition: 'Senior Web Engineer',
-        company: 'PayPal',
-        websiteUrl: 'https://www.paypal.com/',
-        startYear: [2021, 6],
-        descriptionParagraphs: this.$i18n.t('my-work-experience.telus.description'),
-        techStack: ['React', 'Javascript', 'i18n', 'Webpack'],
-      },
       telus: {
         jobPosition: 'Software Developer',
-        company: 'Telus International',
+        company: 'TELUS International',
         websiteUrl: 'https://www.telusinternational.com',
         startYear: [2020, 11],
         descriptionParagraphs: this.$i18n.t('my-work-experience.telus.description'),
@@ -89,7 +83,9 @@ export default class MyWorkExperience extends Vue {
     const element = document.getElementById(nextTab) as HTMLElement;
 
     this.currentTab = nextTab;
-    this.markPosition = element.offsetTop;
+    this.markTopPosition = element.offsetTop;
+    this.markLeftPosition = element.offsetLeft;
+    this.markWidth = element.offsetWidth;
   }
 }
 </script>
@@ -101,27 +97,37 @@ export default class MyWorkExperience extends Vue {
   }
 
   &__button-list {
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 10;
-      width: 100px;
-      pointer-events: none;
-      content: '';
-
-      @apply bg-gradient-to-r from-transparent to-gray-50 dark:to-blue-800;
-    }
-
     &::after {
       display: block;
-      width: 80px;
       height: 20px;
-      margin-left: 24px;
+      margin-left: 40px;
       padding: 4px;
       content: '';
     }
+  }
+
+  &__button {
+    min-width: 210px;
+  }
+
+  &__button-marker {
+    top: initial;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    transition-property: width, left;
+  }
+
+  &__button-list-fade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100px;
+    pointer-events: none;
+    content: '';
+
+    @apply bg-gradient-to-r from-transparent to-gray-50 dark:to-blue-800;
   }
 }
 
@@ -131,12 +137,22 @@ export default class MyWorkExperience extends Vue {
       width: 210px;
     }
 
+    &__button {
+      min-width: auto;
+    }
+
+    &__button-list-fade {
+      display: none;
+    }
+
+    &__button-marker {
+      left: 0 !important;
+      width: 100% !important;
+      transition-property: top;
+    }
+
     &__button-list {
       &::after {
-        display: none;
-      }
-
-      &::before {
         display: none;
       }
     }

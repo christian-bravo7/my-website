@@ -12,8 +12,6 @@ exports[`AppNavigationBar component should render correctly 1`] = `
             Home
           </a> <a class="mx-6 | text-center text-sm | text-pink-500 dark:text-blue-400" to="[object Object]">
             About me
-          </a> <a class="mx-6 | text-center text-sm | text-pink-500 dark:text-blue-400" to="[object Object]">
-            Blog
           </a></div>
       </div>
     </div>

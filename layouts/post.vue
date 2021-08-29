@@ -27,6 +27,7 @@ import { Vue, Component } from 'nuxt-property-decorator';
 import { mapGetters } from 'vuex';
 
 @Component({
+  middleware: 'wipMiddleware',
   computed: {
     ...mapGetters({
       isAppInitialized: 'guest/isAppInitialized',

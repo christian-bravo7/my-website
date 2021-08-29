@@ -13,7 +13,7 @@
         </div>
         <div class="flex items-center justify-center">
           <img
-            class="w-5/6 md:w-auto"
+            class="w-5/6 md:w-full"
             src="~assets/img/photo-2.png"
             alt="christian picture"
           >
@@ -33,7 +33,7 @@ export default class AboutMeInformation extends Vue {}
 <style lang="scss" scoped>
 .about-me-information {
   &__content {
-    @apply grid grid-cols-1 lg:gap-40 items-center;
+    @apply grid grid-cols-1 lg:gap-12 items-center;
   }
 
   &__title {

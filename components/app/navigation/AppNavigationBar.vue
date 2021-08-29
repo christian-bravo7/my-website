@@ -21,11 +21,6 @@
           >
             {{ $t('navigation.about-me-label') }}
           </AppNavigationBarLink>
-          <AppNavigationBarLink
-            :to="localePath({ name: 'blog' })"
-          >
-            Blog
-          </AppNavigationBarLink>
         </div>
       </div>
     </template>

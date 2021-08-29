@@ -1,7 +1,7 @@
 <template>
   <button
     :id="id"
-    class="relative | px-4 py-4 | text-left | rounded-tr-lg rounded-br-lg | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button"
+    class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button"
     :class="{ 'my-work-experience-button--is-active': isActive }"
     @click="click"
     @keydown.enter="click"

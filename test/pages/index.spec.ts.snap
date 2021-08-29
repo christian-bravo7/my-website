@@ -11,7 +11,7 @@ exports[`index page should render page correctly 1`] = `
             Just say hi
           </h3>
           <p class="mb-14 mr-0 md:mr-8 md:mb-20 | font-base">
-            I'm always open to discuss about projects and new challenges, do not hesitate to contact me and let's talk.
+            Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say Hello. I'll try my best to get back to you!
           </p>
           <div class="flex flex-col items-start"><span class="mb-2 | text-xs">
             Email me at:
