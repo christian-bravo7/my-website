@@ -1,7 +1,7 @@
 <template>
   <AppNavigationBarBase
-    class="transform transition-transform duration-300"
-    :class="{ '-translate-y-full': isHidden }"
+    class="transform transition-transform duration-300 -translate-y-0"
+    :class="{ 'md:-translate-y-full': isHidden }"
   >
     <template #left>
       <div class="hidden md:flex">

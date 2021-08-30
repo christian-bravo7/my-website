@@ -43,20 +43,29 @@ import { Vue, Component } from 'nuxt-property-decorator';
 
 @Component
 export default class MyWorkExperience extends Vue {
-  currentTab: string = 'telus';
+  currentTab: string = 'paypal';
   markTopPosition: number = 0;
   markLeftPosition: number = 0;
   markWidth: number = 0;
 
   get workExperienceData (): any {
     return {
+      paypal: {
+        jobPosition: 'Web Engineer',
+        company: 'Paypal',
+        websiteUrl: 'https://www.paypal.com',
+        startYear: [2021, 6],
+        descriptionParagraphs: this.$i18n.t('my-work-experience.telus.description'),
+        techStack: ['React', 'Redux', 'Node', 'Express', 'Kraken', 'Javascript', 'LESS'],
+      },
       telus: {
         jobPosition: 'Software Developer',
         company: 'TELUS International',
         websiteUrl: 'https://www.telusinternational.com',
         startYear: [2020, 11],
+        endYear: [2021, 4],
         descriptionParagraphs: this.$i18n.t('my-work-experience.telus.description'),
-        techStack: ['Angular', 'Typescript', 'Javascript', 'jQuery', 'i18n', 'Java (Liferay)', 'SCSS', 'LESS'],
+        techStack: ['Java', 'Angular', 'Typescript', 'Javascript', 'jQuery', 'i18n', 'SCSS', 'LESS'],
       },
       master: {
         jobPosition: 'Frontend Developer',
@@ -65,15 +74,15 @@ export default class MyWorkExperience extends Vue {
         startYear: [2019, 9],
         endYear: [2020, 7],
         descriptionParagraphs: this.$i18n.t('my-work-experience.masterdevel.description'),
-        techStack: ['NuxtJS', 'Vue', 'Vuex', 'Angular', 'Typescript', 'i18n', 'Bulma', 'SCSS', 'Pug', 'Handlebars', 'Prismic CMS', 'NodeJS'],
+        techStack: ['Nuxt', 'Vue', 'Vuex', 'Angular', 'Typescript', 'i18n', 'Bulma', 'SCSS', 'Pug', 'Handlebars', 'Prismic CMS', 'Node'],
       },
       viaro: {
         jobPosition: 'Quality Assurance',
         company: 'Viaro Networks',
         websiteUrl: 'https://www.viaro.net',
         startYear: [2018, 5],
-        descriptionParagraphs: this.$i18n.t('my-work-experience.viaro.description'),
         endYear: [2019, 9],
+        descriptionParagraphs: this.$i18n.t('my-work-experience.viaro.description'),
         tools: ['BrowserStack', 'Jira', 'Lighthouse by Google'],
       },
     };

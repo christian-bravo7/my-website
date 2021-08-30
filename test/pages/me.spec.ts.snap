@@ -16,7 +16,7 @@ exports[`me page should render correctly 1`] = `
           <p>Outside of the office you will find me playing soccer, collecting cactus and spending time with my pets and family.</p>
           </p>
         </div>
-        <div class="flex items-center justify-center"><img src="~assets/img/photo-2.png" alt="christian picture" class="w-5/6 md:w-full"></div>
+        <div class="flex items-center justify-center"><img src="~assets/img/photo-2.png" alt="christian picture" class="w-full max-w-sm"></div>
       </div>
     </div>
   </section>
@@ -30,7 +30,9 @@ exports[`me page should render correctly 1`] = `
         </div>
         <div class="relative flex flex-col md:flex-row">
           <div class="my-work-experience__button-wrapper">
-            <div class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"><button id="telus" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button my-work-experience-button--is-active">
+            <div class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"><button id="paypal" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button my-work-experience-button--is-active">
+                Paypal
+              </button><button id="telus" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button">
                 TELUS International
               </button><button id="master" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button">
                 Master Development
@@ -43,16 +45,16 @@ exports[`me page should render correctly 1`] = `
           <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
             <div>
               <h6 class="text-xl | mb-2"><span class="font-bold">
-    Software Developer
-  </span> <span>at</span> <a href="https://www.telusinternational.com" target="_blank" rel="noopener noreferrer" class="text-pink-500 dark:text-blue-400 | font-bold | hover:underline | transition-all duration-300">
-                  TELUS International
+    Web Engineer
+  </span> <span>at</span> <a href="https://www.paypal.com" target="_blank" rel="noopener noreferrer" class="text-pink-500 dark:text-blue-400 | font-bold | hover:underline | transition-all duration-300">
+                  Paypal
                 </a></h6>
               <div class="flex text-sm mb-6"><span><span class="capitalize">
-      Nov 2020
+      Jun 2021
     </span> <span>-</span> <span class="capitalize">
       present
     </span></span> <span class="flex items-center | mx-2"><span class="w-1 h-1 | rounded-full | bg-black dark:bg-white"></span></span> <span class="text-gray-700 dark:text-gray-300">
-    10 months
+    3 months
   </span></div>
               <div class="mb-6">
                 <div class="flex mb-2"><span class="text-pink-600 dark:text-blue-300 | material-icons">
@@ -66,25 +68,22 @@ exports[`me page should render correctly 1`] = `
   </span>
                 <div class="flex flex-wrap">
                   <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    Angular
+                    React
                   </div>
                   <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    Typescript
+                    Redux
+                  </div>
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    Node
+                  </div>
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    Express
+                  </div>
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
+                    Kraken
                   </div>
                   <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     Javascript
-                  </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    jQuery
-                  </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    i18n
-                  </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    Java (Liferay)
-                  </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
-                    SCSS
                   </div>
                   <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-pink-500 dark:border-blue-300 | bg-pink-50 bg-opacity-30 dark:bg-blue-700 dark:bg-opacity-25">
                     LESS

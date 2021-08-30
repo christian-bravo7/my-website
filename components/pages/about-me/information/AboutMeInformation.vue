@@ -13,7 +13,7 @@
         </div>
         <div class="flex items-center justify-center">
           <img
-            class="w-5/6 md:w-full"
+            class="w-full max-w-sm"
             src="~assets/img/photo-2.png"
             alt="christian picture"
           >
