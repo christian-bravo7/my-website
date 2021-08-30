@@ -12,8 +12,8 @@ exports[`me page should render correctly 1`] = `
           </h2>
           <p class="font-base | about-me-information__description">
           <p>Hello, my name is Christian Bravo, a Frontend Developer from Guatemala with a great passion for web development using modern technologies.</p>
-          <p>I enjoy solving problems, creating dynamic and intuitive user interfaces, developing rich web applications and experiences.</p>
-          <p>Outside of the office you will find me playing soccer, collecting cactus and spending time with my pets and family.</p>
+          <p>I love solving problems, developing applications and creating dynamic, intuitive and accessible user interfaces.</p>
+          <p>Outside of the office you will find me playing soccer, collecting cactus, playing videogames and spending time with my pets and family.</p>
           </p>
         </div>
         <div class="flex items-center justify-center"><img src="~assets/img/photo-2.png" alt="christian picture" class="w-full max-w-sm"></div>
@@ -31,7 +31,7 @@ exports[`me page should render correctly 1`] = `
         <div class="relative flex flex-col md:flex-row">
           <div class="my-work-experience__button-wrapper">
             <div class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"><button id="paypal" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button my-work-experience-button--is-active">
-                Paypal
+                PayPal
               </button><button id="telus" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button">
                 TELUS International
               </button><button id="master" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button">
@@ -47,7 +47,7 @@ exports[`me page should render correctly 1`] = `
               <h6 class="text-xl | mb-2"><span class="font-bold">
     Web Engineer
   </span> <span>at</span> <a href="https://www.paypal.com" target="_blank" rel="noopener noreferrer" class="text-pink-500 dark:text-blue-400 | font-bold | hover:underline | transition-all duration-300">
-                  Paypal
+                  PayPal
                 </a></h6>
               <div class="flex text-sm mb-6"><span><span class="capitalize">
       Jun 2021
@@ -60,7 +60,7 @@ exports[`me page should render correctly 1`] = `
                 <div class="flex mb-2"><span class="text-pink-600 dark:text-blue-300 | material-icons">
       arrow_right
     </span> <span class="leading-loose | font-base">
-      Development of new features, bug fixing and support for web applications.
+      Development of new features and bug fixing for web applications.
     </span></div>
               </div>
               <div><span class="block | font-bold | text-xs | mb-6">
@@ -102,7 +102,7 @@ exports[`me page should render correctly 1`] = `
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col justify-center | mb-12 md:mb-0">
           <h3 class="mb-4 | section-title contact-me__title">
-            Just say hi
+            Get in touch
           </h3>
           <p class="mb-14 mr-0 md:mr-8 md:mb-20 | font-base">
             Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say Hello. I'll try my best to get back to you!

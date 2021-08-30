@@ -5,7 +5,7 @@
     "hi-label": "Hi",
     "about-me-label": "About me",
     "simple-description": "**Helping** companies achieve their goals, doing what I **love**",
-    "about-me-description": "Hello, my name is Christian Bravo, a Frontend Developer from Guatemala with a great passion for web development using modern technologies. \n\n I enjoy solving problems, creating dynamic and intuitive user interfaces, developing rich web applications and experiences. \n\n Outside of the office you will find me playing soccer, collecting cactus and spending time with my pets and family.",
+    "about-me-description": "Hello, my name is Christian Bravo, a Frontend Developer from Guatemala with a great passion for web development using modern technologies. \n\n I love solving problems, developing applications and creating dynamic, intuitive and accessible user interfaces. \n\n Outside of the office you will find me playing soccer, collecting cactus, playing videogames and spending time with my pets and family.",
     "skills-label": "Skills",
     "crafted-label": "Crafted with",
     "work-experience": "Experience"
@@ -36,7 +36,7 @@
     "good-noon": "Good noon"
   },
   "contact-me": {
-    "say-hi": "Just say hi",
+    "title": "Get in touch",
     "contact-me-description": "Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say Hello. I'll try my best to get back to you!",
     "email-me": "Email me at:"
   },
@@ -54,22 +54,22 @@
   "my-work-experience": {
     "telus": {
       "description": [
-        "Development of new features, bug fixing and support for web applications."
+        "Development of new features and bug fixing for web applications."
       ]
     },
     "masterdevel": {
       "description": [
         "Development and maintenance of web applications, landing pages and internal tools for international clients.",
         "Write performant and maintainable code adopting clean code culture.",
-        "Excellent communication with multidisciplinary teams of developers, designers and project managers."
+        "Communicate with multi-disciplinary teams of developers, designers and project managers."
       ]
     },
     "viaro": {
       "description": [
-        "Experience in writing and executing test cases and test scenarios.",
-        "Experience in Sanity, Functional, System and Regression testing.",
-        "Communication with developers and product analysts in order to understand and analyze testing status.",
-        "Create technical documentation and user guidelines.",
+        "Writing and executing test cases and test scenarios.",
+        "Perform Sanity, Functional, System and Regression testing.",
+        "Communicate with developers and product analysts in order to understand and analyze testing status.",
+        "Creation of technical documentation and user guidelines.",
         "Cross-browser testing."
       ]
     }

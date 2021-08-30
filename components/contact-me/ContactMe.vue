@@ -4,7 +4,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col justify-center | mb-12 md:mb-0">
           <h3 class="mb-4 | section-title contact-me__title">
-            {{ $t('contact-me.say-hi') }}
+            {{ $t('contact-me.title') }}
           </h3>
           <p class="mb-14 mr-0 md:mr-8 md:mb-20 | font-base">
             {{ $t('contact-me.contact-me-description') }}

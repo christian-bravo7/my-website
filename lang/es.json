@@ -5,7 +5,7 @@
     "hi-label": "Hola",
     "about-me-label": "Sobre mí",
     "simple-description": "**Ayudo** a las empresas a alcanzar sus objetivos, haciendo lo que **amo**",
-    "about-me-description": "Hola, mi nombre es Christian Bravo, un Desarrollador Frontend de Guatemala con una gran pasión por el desarrollo web utilizando tecnologías modernas.\n\n \nDisfruto resolver problemas, crear interfaces de usuario dinámicas e intuitivas, desarrollar aplicaciones y experiencias web.\n\n \nFuera de la oficina me encontrarás jugando al fútbol, coleccionado cactus y pasando tiempo con mi familia y mis mascotas.",
+    "about-me-description": "Hola, mi nombre es Christian Bravo, un Desarrollador Frontend de Guatemala con una gran pasión por el desarrollo web utilizando tecnologías modernas.\n\n \nMe encanta resolver problemas, desarrollar aplicaciones y crear interfaces de usuario dinámicas, intuitivas y accesibles.\n\n \nFuera de la oficina me encontrarás jugando al fútbol, coleccionando cactus, jugando videojuegos y pasando tiempo con mis mascotas y mi familia.",
     "skills-label": "Hábilidades",
     "crafted-label": "Crafteado con",
     "work-experience": "Experiencia"
@@ -40,8 +40,8 @@
     "made-with-love": "Hecho con amor y Nuxt.js"
   },
   "contact-me": {
-    "say-hi": "Di hola",
-    "contact-me-description": "Aunque actualmente no estoy buscando nuevas oportunidades, mi bandeja de entrada siempre está abierta. \nYa sea que tenga una pregunta o simplemente quiera decir hola. \n¡Haré todo lo posible para responderle!",
+    "title": "Contáctame",
+    "contact-me-description": "Aunque actualmente no estoy buscando nuevas oportunidades, mi bandeja de entrada siempre está abierta. \nYa sea que tengas una pregunta o simplemente quieras decir Hola. \n¡Haré todo lo posible para responderte!",
     "email-me": "Envíame un correo electrónico a:"
   },
   "time": {
@@ -54,21 +54,21 @@
   "my-work-experience": {
     "telus": {
       "description": [
-        "Desarrollo de nuevas funcionalidades, corrección de errores y soporte para aplicaciones web."
+        "Desarrollo de nuevas funcionalidades y corrección de errores para aplicaciones web."
       ]
     },
     "masterdevel": {
       "description": [
         "Desarrollo y mantenimiento de aplicaciones web, landing pages y herramientas internas para clientes internacionales.",
-        "Creación de código eficaz y fácil de mantener adoptando la cultura de código limpio.",
-        "Excelente comunicación con equipos multidisciplinares de desarrolladores, diseñadores y gestores de proyectos."
+        "Creación de código eficaz y fácil de mantener, adoptando la cultura de código limpio.",
+        "Comunicación con equipos multidisciplinarios de desarrolladores, diseñadores y gestores de proyectos."
       ]
     },
     "viaro": {
       "description": [
-        "Experiencia en redacción y ejecución de casos de prueba y escenarios de prueba.",
-        "Experiencia en Pruebas de Cordura, Funcionales, Sistema y Regresión.",
-        "Comunicación con desarrolladores y analistas de productos para comprender y analizar el estado de las pruebas.",
+        "Escritura y ejecución de casos y escenarios de prueba.",
+        "Ejecución en Pruebas de Cordura, Funcionales, Sistema y Regresión.",
+        "Comunicación con desarrolladores y analistas de producto, para comprender y analizar el estado de pruebas.",
         "Creación de documentación técnica y guías de usuario.",
         "Pruebas Cross-browser."
       ]

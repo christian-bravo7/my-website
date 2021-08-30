@@ -52,7 +52,7 @@ export default class MyWorkExperience extends Vue {
     return {
       paypal: {
         jobPosition: 'Web Engineer',
-        company: 'Paypal',
+        company: 'PayPal',
         websiteUrl: 'https://www.paypal.com',
         startYear: [2021, 6],
         descriptionParagraphs: this.$i18n.t('my-work-experience.telus.description'),

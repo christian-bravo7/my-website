@@ -26,8 +26,8 @@ describe('AboutMeInformation component', () => {
     const descriptionText = wrapper.findAll('.about-me-information__description p');
 
     expect(descriptionText.at(0).text()).toBe('Hello, my name is Christian Bravo, a Frontend Developer from Guatemala with a great passion for web development using modern technologies.');
-    expect(descriptionText.at(1).text()).toBe('I enjoy solving problems, creating dynamic and intuitive user interfaces, developing rich web applications and experiences.');
-    expect(descriptionText.at(2).text()).toBe('Outside of the office you will find me playing soccer, collecting cactus and spending time with my pets and family.');
+    expect(descriptionText.at(1).text()).toBe('I love solving problems, developing applications and creating dynamic, intuitive and accessible user interfaces.');
+    expect(descriptionText.at(2).text()).toBe('Outside of the office you will find me playing soccer, collecting cactus, playing videogames and spending time with my pets and family.');
 
     expect(title.text()).toBe('About me');
   });

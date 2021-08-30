@@ -5,7 +5,7 @@
     "hi-label": "Salut",
     "about-me-label": "À propos de moi",
     "simple-description": "**Aider** les entreprises à atteindre leurs objectifs, faire ce que **j'aime**",
-    "about-me-description": "Bonjour, je m'appelle Christian Bravo, un développeur frontend du Guatemala passionné par le développement Web utilisant les technologies modernes.\n\n \nJ'aime résoudre des problèmes, créer des interfaces utilisateur dynamiques et intuitives, développer des applications et des expériences Web riches.\n\n \nEn dehors du bureau, vous me trouverez en train de jouer au football, de collectionner des cactus et de passer du temps avec mes animaux de compagnie et ma famille.",
+    "about-me-description": "Bonjour, je m'appelle Christian Bravo, un développeur Frontend du Guatemala passionné par le développement Web utilisant les technologies modernes.\n\n \nJ'aime résoudre des problèmes, développer des applications et créer des interfaces utilisateur dynamiques, intuitives et accessibles.\n\n \nEn dehors du bureau, vous me trouverez en train de jouer au football, de collectionner des cactus, de jouer à des jeux vidéo et de passer du temps avec mes animaux de compagnie et ma famille.",
     "skills-label": "Compétences",
     "crafted-label": "Créé avec",
     "work-experience": "Expérience"
@@ -40,7 +40,7 @@
     "made-with-love": "Fabriqué avec Love et Nuxt.js"
   },
   "contact-me": {
-    "say-hi": "Juste dit bonjour",
+    "title": "Entrer en contact",
     "contact-me-description": "Bien que je ne recherche actuellement aucune nouvelle opportunité, ma boîte de réception est toujours ouverte. \nQue vous ayez une question ou que vous vouliez simplement dire bonjour. \nJe ferai de mon mieux pour vous répondre !",
     "email-me": "Envoyez-moi un courriel à:"
   },
@@ -54,22 +54,22 @@
   "my-work-experience": {
     "telus": {
       "description": [
-        "Développement de nouvelles fonctionnalités, correction de bogues et prise en charge des applications Web."
+        "Développement de nouvelles fonctionnalités et correction de bugs pour les applications Web."
       ]
     },
     "masterdevel": {
       "description": [
         "Développement et maintenance d'applications web, de landing pages et d'outils internes pour des clients internationaux.",
         "Écrire du code performant et maintenable en adoptant une culture de code propre.",
-        "Excellente communication avec des équipes multidisciplinaires de développeurs, designers et chefs de projets."
+        "Communiquer avec des équipes multidisciplinaires de développeurs, de designers et de chefs de projet."
       ]
     },
     "viaro": {
       "description": [
-        "Expérience de la rédaction et de l'exécution de cas de test et de scénarios de test.",
-        "Expérience dans les tests de santé mentale, fonctionnels, de système et de régression.",
-        "Communication avec les développeurs et les analystes produits afin de comprendre et d'analyser l'état des tests.",
-        "Créer une documentation technique et des directives d'utilisation.",
+        "Rédaction et exécution de cas de test et de scénarios de test.",
+        "Effectuer des tests de santé mentale, fonctionnels, système et de régression.",
+        "Communiquer avec les développeurs et les analystes de produits afin de comprendre et d'analyser l'état des tests.",
+        "Création de la documentation technique et des guides d'utilisation.",
         "Tests multi-navigateurs."
       ]
     }

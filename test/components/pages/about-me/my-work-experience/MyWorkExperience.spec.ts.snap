@@ -12,7 +12,7 @@ exports[`MyWorkExperience component should render correclty 1`] = `
       <div class="relative flex flex-col md:flex-row">
         <div class="my-work-experience__button-wrapper">
           <div class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"><button id="paypal" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button my-work-experience-button--is-active">
-              Paypal
+              PayPal
             </button><button id="telus" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button">
               TELUS International
             </button><button id="master" class="relative | px-4 py-4 | text-center md:text-left | rounded-lg md:rounded-tl-none md:rounded-bl-none | outline-none focus:outline-none | text-black dark:text-white | whitespace-nowrap | transition-all duration-300 | my-work-experience-button mr-1 md:ml-1 md:mr-0 | my-work-experience__button">
@@ -28,7 +28,7 @@ exports[`MyWorkExperience component should render correclty 1`] = `
             <h6 class="text-xl | mb-2"><span class="font-bold">
     Web Engineer
   </span> <span>at</span> <a href="https://www.paypal.com" target="_blank" rel="noopener noreferrer" class="text-pink-500 dark:text-blue-400 | font-bold | hover:underline | transition-all duration-300">
-                Paypal
+                PayPal
               </a></h6>
             <div class="flex text-sm mb-6"><span><span class="capitalize">
       Jun 2021
@@ -41,7 +41,7 @@ exports[`MyWorkExperience component should render correclty 1`] = `
               <div class="flex mb-2"><span class="text-pink-600 dark:text-blue-300 | material-icons">
       arrow_right
     </span> <span class="leading-loose | font-base">
-      Development of new features, bug fixing and support for web applications.
+      Development of new features and bug fixing for web applications.
     </span></div>
             </div>
             <div><span class="block | font-bold | text-xs | mb-6">
