@@ -7,27 +7,35 @@
             {{ $t('home.where-i-have-worked') }}
           </h2>
         </div>
-        <div class="relative flex flex-col md:flex-row">
-          <div class="my-work-experience__button-wrapper">
-            <div class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list">
+        <div class="flex flex-col md:flex-row">
+          <div class="relative my-work-experience__button-wrapper">
+            <div
+              id="button-list-wrapper"
+              class="relative | flex md:flex-col | mb-8 md:mb-0 pb-4 md:pb-0 | overflow-x-scroll md:overflow-x-auto | my-work-experience__button-list"
+            >
               <MyWorkExperienceButton
-                v-for="(work, key) in workExperienceData"
+                v-for="(work, key, index) in workExperienceData"
                 :id="key"
                 :key="key"
                 class="mr-1 md:ml-1 md:mr-0 | my-work-experience__button"
                 :is-active="currentTab === key"
-                @click="changeTab(key)"
+                @click="changeTab(key, index)"
               >
                 {{ work.company }}
               </MyWorkExperienceButton>
               <div class="absolute | left-0 bottom-3 md:bottom-0 h-1 md:h-full w-full md:w-1 | rounded-full | bg-gray-100 dark:bg-blue-700">
                 <span
-                  class="block | absolute | md:w-full h-full md:h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | my-work-experience__button-marker"
-                  :style="{ 'top': `${markTopPosition}px`, 'left': `${markLeftPosition}px`, 'width': `${markWidth}px` }"
+                  class="hidden md:block | absolute | md:w-full h-full md:h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | my-work-experience__button-marker"
+                  :style="{ 'top': `${verticalMarkTopPosition}px`}"
+                />
+                <span
+                  class="block md:hidden | absolute z-10 | md:w-full h-full md:h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | my-work-experience__button-marker"
+                  :style="{ 'width': `${mobileButtonWidth}px`, 'left': `${horizontalMarkLeftPosition}px`}"
                 />
               </div>
             </div>
             <span class="my-work-experience__button-list-fade" />
+            <div class="block md:hidden | absolute | left-0 top-14 h-1 w-full | rounded-full | bg-gray-100 dark:bg-blue-700" />
           </div>
           <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
             <MyWorkExperienceCard v-bind="workExperienceData[currentTab]" />
@@ -44,9 +52,10 @@ import { Vue, Component } from 'nuxt-property-decorator';
 @Component
 export default class MyWorkExperience extends Vue {
   currentTab: string = 'paypal';
-  markTopPosition: number = 0;
-  markLeftPosition: number = 0;
-  markWidth: number = 0;
+  verticalMarkTopPosition: number = 0;
+  horizontalMarkLeftPosition: number = 0;
+  mobileButtonWidth: number = 210;
+  desktopButtonHeight: number = 56;
 
   get workExperienceData (): any {
     return {
@@ -88,13 +97,12 @@ export default class MyWorkExperience extends Vue {
     };
   }
 
-  changeTab (nextTab: string): void {
-    const element = document.getElementById(nextTab) as HTMLElement;
+  changeTab (tabName: string, tabIndex: number): void {
+    this.currentTab = tabName;
+    this.verticalMarkTopPosition = tabIndex * this.desktopButtonHeight;
+    this.horizontalMarkLeftPosition = tabIndex * this.mobileButtonWidth + (tabIndex * 4);
 
-    this.currentTab = nextTab;
-    this.markTopPosition = element.offsetTop;
-    this.markLeftPosition = element.offsetLeft;
-    this.markWidth = element.offsetWidth;
+    document.getElementById('button-list-wrapper')!.scrollLeft = this.horizontalMarkLeftPosition;
   }
 }
 </script>
@@ -106,6 +114,8 @@ export default class MyWorkExperience extends Vue {
   }
 
   &__button-list {
+    scroll-behavior: smooth;
+
     &::after {
       display: block;
       height: 20px;

@@ -33,13 +33,6 @@
             >
               {{ $t('navigation.about-me-label') }}
             </AppSidebarLink>
-            <AppSidebarLink
-              :to="localePath({ name: 'blog'})"
-              @click="closeSidebar"
-              @keydown.enter="closeSidebar"
-            >
-              Blog
-            </AppSidebarLink>
           </section>
           <section class="flex justify-between p-4">
             <DarkModeSwitch />
