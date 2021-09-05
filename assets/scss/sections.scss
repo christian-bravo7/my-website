@@ -3,11 +3,5 @@
 }
 
 .section-container {
-  @apply flex p-4 sm:py-20 md:px-8;
-}
-
-@screen md {
-  .section-container {
-    min-height: 90vh;
-  }
+  @apply flex p-4 sm:py-20 md:py-48 md:px-8;
 }
