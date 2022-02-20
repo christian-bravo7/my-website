@@ -26,4 +26,5 @@ module.exports = {
   ],
   snapshotSerializers: ['jest-serializer-vue'],
   snapshotResolver: './snapshotResolver.js',
+  testEnvironment: 'jsdom',
 };

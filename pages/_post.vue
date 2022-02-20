@@ -50,7 +50,7 @@ export default class Post extends Vue {
       });
 
     return {
-      article: article as PostContent,
+      article: article as unknown as PostContent,
     };
   }
 

@@ -66,8 +66,8 @@ export default {
   modules: [
     // Doc: https://content.nuxtjs.org/installation
     '@nuxt/content',
-    // Doc: https://github.com/nuxt-community/i18n-module
-    'nuxt-i18n',
+    // Doc: https://i18n.nuxtjs.org/
+    '@nuxtjs/i18n',
     // Doc: https://github.com/nuxt-community/sitemap-module - Conserve this module at the end
     '@nuxtjs/sitemap',
   ],

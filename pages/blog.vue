@@ -42,7 +42,7 @@ export default class Blog extends Vue {
       });
 
     return {
-      articles: articles as IContentDocument[],
+      articles: articles as unknown as IContentDocument[],
     };
   }
 }
