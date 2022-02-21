@@ -22,7 +22,8 @@ export default class AboutMeBanner extends Vue {}
 <style lang="scss" scoped>
 .about-me-banner {
   &__description {
-    /deep/ strong {
+    /* stylelint-disable */
+    ::v-deep strong {
       font-weight: normal;
 
       @include theme-gradients (one, two);

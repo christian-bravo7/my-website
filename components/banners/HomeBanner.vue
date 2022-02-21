@@ -35,7 +35,8 @@ export default class HomeBanner extends Vue {
 <style lang="scss" scoped>
 .home-banner {
   &__description {
-    /deep/ strong {
+    /* stylelint-disable */
+    ::v-deep strong {
       font-weight: normal;
 
       @include theme-gradients (one, two);

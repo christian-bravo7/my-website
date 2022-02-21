@@ -40,8 +40,9 @@ export default class AboutMeInformation extends Vue {}
     @include theme-gradients(four, five);
   }
 
-  &__description {
-    /deep/ p {
+  /* stylelint-disable */
+  ::v-deep &__description {
+    p {
       @apply mb-4;
     }
   }

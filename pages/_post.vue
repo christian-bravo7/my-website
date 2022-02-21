@@ -19,9 +19,9 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
-import { PostContent } from '@/content/types';
 import { Context } from '@nuxt/types';
 import { MetaInfo } from 'vue-meta/types';
+import { PostContent } from '@/content/types';
 
 import { getMetaTags } from '@/seo';
 
