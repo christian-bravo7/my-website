@@ -81,7 +81,7 @@ export default class MyWorkExperience extends Vue {
         company: 'Master Development',
         websiteUrl: 'https://www.linkedin.com/company/corporaci%C3%B3n-master-group',
         startYear: [2019, 9],
-        endYear: [2020, 7],
+        endYear: [2020, 8],
         descriptionParagraphs: this.$i18n.t('my-work-experience.masterdevel.description'),
         techStack: ['Nuxt', 'Vue', 'Vuex', 'Angular', 'Typescript', 'i18n', 'Bulma', 'SCSS', 'Pug', 'Handlebars', 'Prismic CMS', 'Node'],
       },
