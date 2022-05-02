@@ -15,13 +15,15 @@ exports[`AppFooter component should render correclty 1`] = `
           </h4>
         </div>
       </div>
-      <div class="flex flex-col justify-center items-center md:items-end | text-xs | text-right"><span role="img" aria-label="copyright symbol">
-          ©
-        </span> <span>
-          2022 Christian Bravo
-        </span> <span>
+      <div class="flex flex-col justify-center items-center md:items-end | text-xs | text-right">
+        <div><span role="img" aria-label="copyright symbol">
+            ©
+          </span> <span>
+            2022 Christian Bravo
+          </span></div> <span>
           Made with Love and Nuxt.js
-        </span></div>
+        </span>
+      </div>
     </div>
   </div>
 </footer>

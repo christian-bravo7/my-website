@@ -16,15 +16,17 @@
           </div>
         </div>
         <div class="flex flex-col justify-center items-center md:items-end | text-xs | text-right">
-          <span
-            role="img"
-            aria-label="copyright symbol"
-          >
-            ©
-          </span>
-          <span>
-            {{ currentYear }} Christian Bravo
-          </span>
+          <div>
+            <span
+              role="img"
+              aria-label="copyright symbol"
+            >
+              ©
+            </span>
+            <span>
+              {{ currentYear }} Christian Bravo
+            </span>
+          </div>
           <span>
             {{ $t('footer.made-with-love') }}
           </span>
