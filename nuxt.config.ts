@@ -91,7 +91,7 @@ export default {
     locales: Locales,
     seo: true,
     defaultLocale: 'en',
-    strategy: 'prefix_and_default',
+    strategy: 'prefix',
     langDir: 'lang/',
     lazy: true,
     vueI18n: {
@@ -118,11 +118,11 @@ export default {
 
   // Build configuration: https://nuxtjs.org/api/configuration-build/
   build: {
-    babel:{
+    babel: {
       plugins: [
         ['@babel/plugin-proposal-private-methods', { loose: true }],
-        ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
-      ]
-    }
-  }
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+      ],
+    },
+  },
 } as NuxtConfig;
