@@ -8,6 +8,7 @@
     <div
       class="block md:hidden | fixed inset-0 z-20 | w-full h-full | bg-transparent | overlay"
       @click.self="closeSidebar"
+      @keydown.enter="closeSidebar"
     >
       <transition
         name="sidebar"
@@ -95,8 +96,8 @@ export default class AppSidebarMenu extends Vue {
 .sidebar-grid {
   @apply grid;
 
-  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
 }
 
 // OVERLAY TRANSITIONS

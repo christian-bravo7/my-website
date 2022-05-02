@@ -14,13 +14,11 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-
-import { SocialMediaIcon } from '@/components/contact-me/my-social-networks/types';
-
 import CodepenIcon from '~/assets/img/codepen.svg?inline';
 import GithubIcon from '~/assets/img/github.svg?inline';
 import InstagramIcon from '~/assets/img/instagram.svg?inline';
 import LinkedinIcon from '~/assets/img/linkedin.svg?inline';
+import { SocialMediaIcon } from '@/types/social-media.types';
 
 @Component({
   components: {

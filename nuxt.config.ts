@@ -34,10 +34,6 @@ export default {
     '@/assets/scss/main.scss',
   ],
 
-  tailwindcss: {
-    jit: true,
-  },
-
   plugins: [
     { src: '@/plugins/persistedState.ts', ssr: false },
     { src: '@/plugins/portalVue.ts', ssr: true },
@@ -49,8 +45,8 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt/typescript
     '@nuxt/typescript-build',
-    // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module',
+    // // Doc: https://github.com/nuxt-community/stylelint-module
+    // '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/svg-module
@@ -122,15 +118,11 @@ export default {
 
   // Build configuration: https://nuxtjs.org/api/configuration-build/
   build: {
-    postcss: {
-      plugins: {
-        'postcss-each-variables': {},
-        'postcss-each': {},
-        'postcss-pxtorem': {
-          propList: ['*'],
-        },
-        'postcss-nested': {},
-      },
-    },
-  },
+    babel:{
+      plugins: [
+        ['@babel/plugin-proposal-private-methods', { loose: true }],
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
+      ]
+    }
+  }
 } as NuxtConfig;

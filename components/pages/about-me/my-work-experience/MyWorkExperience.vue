@@ -143,8 +143,8 @@ export default class MyWorkExperience extends Vue {
     bottom: 0;
     z-index: 10;
     width: 100px;
-    pointer-events: none;
     content: '';
+    pointer-events: none;
 
     @apply bg-gradient-to-r from-transparent to-gray-50 dark:to-blue-800;
   }

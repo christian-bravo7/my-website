@@ -67,8 +67,8 @@ export default class Blog extends Vue {
 
     & > * {
       &:first-child {
-        grid-column: 1 / 3;
         grid-row: 1 / 3;
+        grid-column: 1 / 3;
 
         &::after {
           padding-bottom: 80%;
