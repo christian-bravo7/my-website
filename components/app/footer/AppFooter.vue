@@ -16,8 +16,14 @@
           </div>
         </div>
         <div class="flex flex-col justify-center items-center md:items-end | text-xs | text-right">
+          <span
+            role="img"
+            aria-label="copyright symbol"
+          >
+            ©
+          </span>
           <span>
-            © 2021 Christian Bravo
+            {{ currentYear }} Christian Bravo
           </span>
           <span>
             {{ $t('footer.made-with-love') }}
@@ -32,5 +38,9 @@
 import { Vue, Component } from 'nuxt-property-decorator';
 
 @Component
-export default class AppFooter extends Vue {}
+export default class AppFooter extends Vue {
+  get currentYear (): number {
+    return new Date().getFullYear();
+  }
+}
 </script>

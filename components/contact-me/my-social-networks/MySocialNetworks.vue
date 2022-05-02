@@ -32,8 +32,8 @@ export default class MySocialNetworks extends Vue {
   socialMediaIcons: Array<SocialMediaIcon> = [
     { link: 'https://codepen.io/christian-bravo', component: CodepenIcon },
     { link: 'https://github.com/christian-bravo7', component: GithubIcon },
-    { link: 'https://www.instagram.com/christian.bravo_/', component: InstagramIcon },
-    { link: 'www.linkedin.com/in/bravo-christian', component: LinkedinIcon },
+    { link: 'https://www.instagram.com/christian.bravo_', component: InstagramIcon },
+    { link: 'https://www.linkedin.com/in/bravo-christian', component: LinkedinIcon },
   ]
 }
 </script>
