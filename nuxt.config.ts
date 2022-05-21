@@ -103,6 +103,8 @@ export default {
   //   middleware: ['wipMiddleware'],
   // },
 
+  // TEST
+
   sitemap: {
     hostname: process.env.HOSTNAME,
     i18n: true,
