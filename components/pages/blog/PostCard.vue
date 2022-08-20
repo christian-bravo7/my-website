@@ -62,7 +62,7 @@ export default class PostCard extends Vue {
   readonly description!: string;
 
   @Prop({ type: Array, required: true })
-  readonly date!: Array<number>;;
+  readonly date!: Array<number>;
 
   @Prop({ type: Boolean, default: false })
   readonly first!: boolean;

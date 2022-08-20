@@ -32,7 +32,7 @@ export default class PostShareWithSocialNetworks extends Vue {
   socialMediaIcons: Array<any> = [
     { link: `https://www.linkedin.com/sharing/share-offsite/?url=${this.postInformation.url}`, component: LinkedinIcon },
     { link: `https://www.twitter.com/intent/tweet?url=${this.postInformation.url}&text=${this.postInformation.title}`, component: TwitterIcon },
-  ]
+  ];
 }
 
 // onclick="window.open(this.href,'targetWindow','toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200');return false;"

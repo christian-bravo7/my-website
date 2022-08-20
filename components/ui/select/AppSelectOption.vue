@@ -18,13 +18,13 @@ export default class AppSelectOption extends Vue {
   active: boolean = false;
 
   @Prop()
-  value!: any;
+    value!: any;
 
   @Prop()
-  label!: any;
+    label!: any;
 
   @Inject()
-  onSelectOptionClick!: Function;
+    onSelectOptionClick!: Function;
 
   selectOption (): void {
     this.onSelectOptionClick(this);
