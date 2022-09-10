@@ -30,11 +30,8 @@ module.exports = {
       order: ['template', 'script', 'style'],
     }],
     'vue/max-attributes-per-line': ['error', {
-      singleline: 1,
-      multiline: {
-        max: 1,
-        allowFirstLine: false,
-      },
+      singleline: 3,
+      multiline: 1,
     }],
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/explicit-function-return-type': 'error',

@@ -6,10 +6,12 @@
           <h2 class="mb-8 | section-title about-me-information__title">
             {{ $t('me.about-me-label') }}
           </h2>
-          <p
-            class="font-base | about-me-information__description"
-            v-html="$md($t('me.about-me-description'))"
-          />
+          <ClientOnly>
+            <p
+              class="font-base | about-me-information__description"
+              v-html="$md($t('me.about-me-description'))"
+            />
+          </ClientOnly>
         </div>
         <div class="flex items-center justify-center">
           <img
@@ -41,8 +43,8 @@ export default class AboutMeInformation extends Vue {}
   }
 
   /* stylelint-disable */
-  ::v-deep &__description {
-    p {
+  &__description {
+    :deep(p) {
       @apply mb-4;
     }
   }
