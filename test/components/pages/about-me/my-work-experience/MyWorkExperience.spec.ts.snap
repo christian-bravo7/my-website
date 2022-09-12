@@ -27,7 +27,7 @@ exports[`MyWorkExperience component should render correclty 1`] = `
         <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
           <div>
             <h6 class="text-xl | mb-2"><span class="font-bold">
-    Web Engineer
+    Software Engineer
   </span> <span>at</span> <a href="https://www.paypal.com" target="_blank" rel="noopener noreferrer" class="text-pink-500 dark:text-blue-400 | font-bold | hover:underline | transition-all duration-300">
                 PayPal
               </a></h6>
@@ -42,7 +42,12 @@ exports[`MyWorkExperience component should render correclty 1`] = `
               <div class="flex mb-2"><span class="text-pink-600 dark:text-blue-300 | material-icons">
       arrow_right
     </span> <span class="leading-loose | font-base">
-      Development of new features and bug fixing for web applications.
+      Development of new features for the PayPal Crypto Web Application.
+    </span></div>
+              <div class="flex mb-2"><span class="text-pink-600 dark:text-blue-300 | material-icons">
+      arrow_right
+    </span> <span class="leading-loose | font-base">
+      Collaboration with multi-disciplinary teams of software engineers, designers and product managers.
     </span></div>
             </div>
             <div><span class="block | font-bold | text-xs | mb-6">

@@ -60,11 +60,11 @@ export default class MyWorkExperience extends Vue {
   get workExperienceData (): any {
     return {
       paypal: {
-        jobPosition: 'Web Engineer',
+        jobPosition: 'Software Engineer',
         company: 'PayPal',
         websiteUrl: 'https://www.paypal.com',
         startYear: [2021, 6],
-        descriptionParagraphs: this.$i18n.t('my-work-experience.telus.description'),
+        descriptionParagraphs: this.$i18n.t('my-work-experience.paypal.description'),
         techStack: ['React', 'Redux', 'Node', 'Express', 'Kraken', 'Javascript', 'LESS'],
       },
       telus: {
@@ -74,7 +74,7 @@ export default class MyWorkExperience extends Vue {
         startYear: [2020, 11],
         endYear: [2021, 4],
         descriptionParagraphs: this.$i18n.t('my-work-experience.telus.description'),
-        techStack: ['Java', 'Angular', 'Typescript', 'Javascript', 'jQuery', 'i18n', 'SCSS', 'LESS'],
+        techStack: ['Java', 'LifeRay', 'Angular', 'Typescript', 'Javascript', 'jQuery', 'i18n', 'SCSS', 'LESS'],
       },
       master: {
         jobPosition: 'Frontend Developer',
@@ -86,7 +86,7 @@ export default class MyWorkExperience extends Vue {
         techStack: ['Nuxt', 'Vue', 'Vuex', 'Angular', 'Typescript', 'i18n', 'Bulma', 'SCSS', 'Pug', 'Handlebars', 'Prismic CMS', 'Node'],
       },
       viaro: {
-        jobPosition: 'Quality Assurance',
+        jobPosition: 'Software Quality Assurance',
         company: 'Viaro Networks',
         websiteUrl: 'https://www.viaro.net',
         startYear: [2018, 5],
