@@ -36,7 +36,7 @@ describe('HomeBanner component', () => {
 
     const secondaryText = wrapper.find('#secondary');
 
-    expect(firstText.text()).toBe('I\'m Christian Bravo');
+    expect(firstText.text()).toBe('Hi, I\'m Christian Bravo');
     expect(secondText.text()).toBe('Frontend developer');
     expect(secondaryText.text()).toBe('Good evening');
   });

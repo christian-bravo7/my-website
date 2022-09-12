@@ -1,17 +1,22 @@
 import { Context } from '@nuxt/types';
 
-import createPersistedState from 'vuex-persistedstate';
+import VuexPersist from 'vuex-persist';
 
 import { guestStore } from '@/store';
 
 export default ({ store }: Context): void => {
   window.onNuxtReady(() => {
     guestStore.setStoreReady();
-    createPersistedState({
+    new VuexPersist({
       key: 'christian-bravo',
-      paths: [
-        'guest.theme',
-      ],
-    })(store);
+      // reducer: persistedReducer,
+    }).plugin(store);
   });
 };
+
+// const persistedReducer = state => ({
+//   // Keep store structure
+//   guest: {
+//     theme: state.guest.theme,
+//   },
+// });

@@ -4,7 +4,7 @@
     "me-label": "Moi",
     "hi-label": "Salut",
     "about-me-label": "À propos de moi",
-    "simple-description": "**Aider** les entreprises à atteindre leurs objectifs, faire ce que **j'aime**",
+    "simple-description": "**Aider** les gens à rendre le monde meilleur grâce au **logiciel**",
     "about-me-description": "Bonjour, je m'appelle Christian Bravo, un développeur Frontend du Guatemala passionné par le développement Web utilisant les technologies modernes.\n\n \nJ'aime résoudre des problèmes, développer des applications et créer des interfaces utilisateur dynamiques, intuitives et accessibles.\n\n \nEn dehors du bureau, vous me trouverez en train de jouer au football, de collectionner des cactus, de jouer à des jeux vidéo et de passer du temps avec mes animaux de compagnie et ma famille.",
     "skills-label": "Compétences",
     "crafted-label": "Créé avec",
@@ -12,7 +12,7 @@
   },
   "home": {
     "greeting": "Salut",
-    "iam-name-text": "Je suis Christian Bravo",
+    "iam-name-text": "Salut, je suis Christian Bravo",
     "iam-job-text": "développeur **Frontend**",
     "recent-projects": "Les projets récents",
     "no-recent-projects-message": "Désolé, je travaille toujours sur cette section, vous verrez bientôt mes projets :)",
@@ -37,7 +37,7 @@
   },
   "footer": {
     "frontend-developer": "Développeur Frontend",
-    "made-with-love": "Fabriqué avec Love et Nuxt.js"
+    "made-with-love": "Réalisé avec Nuxt.js"
   },
   "contact-me": {
     "title": "Entrer en contact",
@@ -52,6 +52,12 @@
     "and-label": "et"
   },
   "my-work-experience": {
+    "paypal": {
+      "description": [
+        "Développement de nouvelles fonctionnalités pour l'application Web PayPal Crypto.",
+        "Collaboration avec des équipes pluridisciplinaires d'ingénieurs logiciels, de concepteurs et de chefs de produit."
+      ]
+    },
     "telus": {
       "description": [
         "Développement de nouvelles fonctionnalités et correction de bugs pour les applications Web."
@@ -59,18 +65,18 @@
     },
     "masterdevel": {
       "description": [
-        "Développement et maintenance d'applications web, de landing pages et d'outils internes pour des clients internationaux.",
-        "Écrire du code performant et maintenable en adoptant une culture de code propre.",
-        "Communiquer avec des équipes multidisciplinaires de développeurs, de designers et de chefs de projet."
+        "Développement d'applications web et de landing pages.",
+        "Rédiger un code performant et maintenable en adoptant la culture du code propre.",
+        "Collaboration avec des équipes pluridisciplinaires de développeurs, de designers et de chefs de produits."
       ]
     },
     "viaro": {
       "description": [
-        "Rédaction et exécution de cas de test et de scénarios de test.",
-        "Effectuer des tests de santé mentale, fonctionnels, système et de régression.",
-        "Communiquer avec les développeurs et les analystes de produits afin de comprendre et d'analyser l'état des tests.",
-        "Création de la documentation technique et des guides d'utilisation.",
-        "Tests multi-navigateurs."
+        "Rédiger et exécuter des cas de test et des scénarios de test.",
+        "Effectuer des tests de sanité, fonctionnels et de régression.",
+        "Générer des rapports de test pour les développeurs et les analystes de produits.",
+        "Créer de la documentation technique et des manuels d'utilisation.",
+        "Test de croisement de navigateurs."
       ]
     }
   },

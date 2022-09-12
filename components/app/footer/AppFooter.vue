@@ -15,7 +15,7 @@
             </h4>
           </div>
         </div>
-        <div class="flex flex-col justify-center items-center md:items-end | text-xs | text-right">
+        <div class="flex flex-col justify-center items-center md:items-end | text-right">
           <div>
             <span
               role="img"
@@ -23,11 +23,11 @@
             >
               ©
             </span>
-            <span>
+            <span class="text-sm">
               {{ currentYear }} Christian Bravo
             </span>
           </div>
-          <span>
+          <span class="text-xs">
             {{ $t('footer.made-with-love') }}
           </span>
         </div>

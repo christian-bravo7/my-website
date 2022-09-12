@@ -4,7 +4,7 @@
     "me-label": "mí",
     "hi-label": "Hola",
     "about-me-label": "Sobre mí",
-    "simple-description": "**Ayudo** a las empresas a alcanzar sus objetivos, haciendo lo que **amo**",
+    "simple-description": "**Ayudando** a las personas a hacer del mundo un lugar mejor a través de **software**",
     "about-me-description": "Hola, mi nombre es Christian Bravo, un Desarrollador Frontend de Guatemala con una gran pasión por el desarrollo web utilizando tecnologías modernas.\n\n \nMe encanta resolver problemas, desarrollar aplicaciones y crear interfaces de usuario dinámicas, intuitivas y accesibles.\n\n \nFuera de la oficina me encontrarás jugando al fútbol, coleccionando cactus, jugando videojuegos y pasando tiempo con mis mascotas y mi familia.",
     "skills-label": "Hábilidades",
     "crafted-label": "Crafteado con",
@@ -12,7 +12,7 @@
   },
   "home": {
     "greeting": "Hola",
-    "iam-name-text": "Soy Christian Bravo",
+    "iam-name-text": "Hola! Soy Christian Bravo",
     "iam-job-text": "Desarrollador **Frontend**",
     "recent-projects": "Proyectos recientes",
     "no-recent-projects-message": "Lo siento, todavía estoy trabajando en esta sección, pronto verás mis proyectos :)",
@@ -37,11 +37,11 @@
   },
   "footer": {
     "frontend-developer": "Desarrollador Frontend",
-    "made-with-love": "Hecho con amor y Nuxt.js"
+    "made-with-love": "Hecho con Nuxt.js"
   },
   "contact-me": {
     "title": "Contáctame",
-    "contact-me-description": "Aunque actualmente no estoy buscando nuevas oportunidades, mi bandeja de entrada siempre está abierta. \nYa sea que tengas una pregunta o simplemente quieras decir Hola. \n¡Haré todo lo posible para responderte!",
+    "contact-me-description": "Aunque actualmente no estoy buscando nuevas oportunidades, mi inbox siempre está abierto. \nYa sea que tengas una pregunta o simplemente quieras decir Hola. \n¡Haré todo lo posible para responderte!",
     "email-me": "Envíame un correo electrónico a:"
   },
   "time": {
@@ -52,6 +52,12 @@
     "and-label": "y"
   },
   "my-work-experience": {
+    "paypal": {
+      "description": [
+        "Desarrollo de nuevas funcionalidades para la aplicación web de PayPal Crypto.",
+        "Colaboración con equipos multidisciplinares de ingenieros de software, diseñadores y responsables de producto."
+      ]
+    },
     "telus": {
       "description": [
         "Desarrollo de nuevas funcionalidades y corrección de errores para aplicaciones web."
@@ -59,17 +65,17 @@
     },
     "masterdevel": {
       "description": [
-        "Desarrollo y mantenimiento de aplicaciones web, landing pages y herramientas internas para clientes internacionales.",
-        "Creación de código eficaz y fácil de mantener, adoptando la cultura de código limpio.",
-        "Comunicación con equipos multidisciplinarios de desarrolladores, diseñadores y gestores de proyectos."
+        "Desarrollo de aplicaciones web y landing pages.",
+        "Creación de código eficaz y mantenible, adoptando la cultura del código limpio.",
+        "Colaboración con equipos multidisciplinares de desarrolladores, diseñadores y responsables de producto."
       ]
     },
     "viaro": {
       "description": [
-        "Escritura y ejecución de casos y escenarios de prueba.",
-        "Ejecución en Pruebas de Cordura, Funcionales, Sistema y Regresión.",
-        "Comunicación con desarrolladores y analistas de producto, para comprender y analizar el estado de pruebas.",
-        "Creación de documentación técnica y guías de usuario.",
+        "Escribir y ejecutar casos de prueba y escenarios de prueba.",
+        "Realizar pruebas de sanidad, funcionales y de regresión",
+        "Generar reportes de pruebas para desarrolladores y analistas de producto.",
+        "Crear documentación técnica y manuales de usuario.",
         "Pruebas Cross-browser."
       ]
     }
