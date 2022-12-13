@@ -16,7 +16,7 @@
         <div class="flex items-center justify-center">
           <img
             class="w-full max-w-sm"
-            src="~assets/img/photo-2.png"
+            src="~assets/img/photo-3.png"
             alt="christian picture"
           >
         </div>
