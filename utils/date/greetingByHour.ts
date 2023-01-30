@@ -4,12 +4,8 @@ const greetings: Array<{ greet: string, test: (hours: number) => boolean }> = [
     test: (hours: number): boolean => hours >= 0 && hours <= 11,
   },
   {
-    greet: 'good-noon',
-    test: (hours: number): boolean => hours === 12,
-  },
-  {
     greet: 'good-afternoon',
-    test: (hours: number): boolean => hours >= 13 && hours <= 17,
+    test: (hours: number): boolean => hours >= 12 && hours <= 17,
   },
   {
     greet: 'good-evening',
