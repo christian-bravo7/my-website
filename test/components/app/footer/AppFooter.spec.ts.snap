@@ -19,7 +19,7 @@ exports[`AppFooter component should render correclty 1`] = `
         <div><span role="img" aria-label="copyright symbol">
             ©
           </span> <span class="text-sm">
-            2022 Christian Bravo
+            2023 Christian Bravo
           </span></div> <span class="text-xs">
           Made with Nuxt.js
         </span>
