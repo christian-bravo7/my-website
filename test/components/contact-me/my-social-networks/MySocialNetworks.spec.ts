@@ -10,11 +10,11 @@ describe('MySocialNetworks component', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('should display 4 social icons', () => {
+  it('should display 3 social icons', () => {
     const wrapper = mount(MySocialNetworks);
 
     const SocialNetworkIcons = wrapper.findAllComponents(SocialNetworkIcon);
 
-    expect(SocialNetworkIcons.length).toBe(4);
+    expect(SocialNetworkIcons.length).toBe(3);
   });
 });
