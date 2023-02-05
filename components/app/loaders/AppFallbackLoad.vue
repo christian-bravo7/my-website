@@ -11,7 +11,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
-import SiteLogo from '~/assets/img/logo-new.svg?inline';
+import SiteLogo from '~/assets/img/logo.svg?inline';
 
 @Component({
   components: {
