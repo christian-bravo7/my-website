@@ -1,6 +1,6 @@
 <template>
   <section class="flex justify-center items-center">
-    <div class="grid gap-6 grid-cols-4 md:grid-cols-2 lg:grid-cols-4 page-social-icons">
+    <div class="grid gap-6 grid-cols-3 page-social-icons">
       <SocialNetworkIcon
         v-for="({ link, component }, index) in socialMediaIcons"
         :key="index"
@@ -30,7 +30,6 @@ import { SocialMediaIcon } from '@/types/social-media.types';
 })
 export default class MySocialNetworks extends Vue {
   socialMediaIcons: Array<SocialMediaIcon> = [
-    { link: 'https://codepen.io/christian-bravo', component: CodepenIcon },
     { link: 'https://github.com/christian-bravo7', component: GithubIcon },
     { link: 'https://www.instagram.com/christian.bravo_', component: InstagramIcon },
     { link: 'https://www.linkedin.com/in/bravo-christian', component: LinkedinIcon },

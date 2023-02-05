@@ -2,6 +2,6 @@
 
 exports[`AppFallbackLoad component should render correclty 1`] = `
 <div class="fixed | inset-0 z-50 | flex justify-center items-center | bg-white text-pink-500 dark:bg-blue-800 dark:text-blue-500">
-  <div class="w-64 h-64 sm:w-40 sm:h-40"><svg class="w-full h-full | fill-current | pulse-effect"></svg></div>
+  <div class="w-64 h-64 sm:w-40 sm:h-40"><svg class="w-full h-full | pulse-effect"></svg></div>
 </div>
 `;

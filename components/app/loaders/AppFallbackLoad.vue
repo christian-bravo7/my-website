@@ -3,7 +3,7 @@
     class="fixed | inset-0 z-50 | flex justify-center items-center | bg-white text-pink-500 dark:bg-blue-800 dark:text-blue-500"
   >
     <div class="w-64 h-64 sm:w-40 sm:h-40">
-      <SiteLogo class="w-full h-full | fill-current | pulse-effect" />
+      <SiteLogo class="w-full h-full | pulse-effect" />
     </div>
   </div>
 </template>
