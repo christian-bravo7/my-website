@@ -25,7 +25,7 @@ export default class RecentProjects extends Vue {}
 <style lang="scss" scoped>
 .recent-projects {
   &__title {
-    @include theme-gradients(four, five);
+    @include theme-gradients(one, two);
   }
 }
 </style>

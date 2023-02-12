@@ -44,7 +44,7 @@ export default class BannerBackgroundFigures extends Vue {
 
 .banner-figure {
   @apply primary-text;
-  @apply text-opacity-30;
+  @apply text-opacity-50;
 
   &__icon {
     $self: &;

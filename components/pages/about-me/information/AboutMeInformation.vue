@@ -39,7 +39,7 @@ export default class AboutMeInformation extends Vue {}
   }
 
   &__title {
-    @include theme-gradients(four, five);
+    @include theme-gradients(one, two);
   }
 
   /* stylelint-disable */

@@ -110,7 +110,7 @@ export default class MyWorkExperience extends Vue {
 <style lang="scss" scoped>
 .my-work-experience {
   &__title {
-    @include theme-gradients(four, five);
+    @include theme-gradients(one, two);
   }
 
   &__button-list {
