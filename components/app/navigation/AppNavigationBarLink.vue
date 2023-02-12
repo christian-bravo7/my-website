@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    class="mx-6 | text-center text-sm | text-pink-500 dark:text-blue-400"
+    class="mx-6 | text-center text-base | primary-text"
     exact-active-class="font-bold"
     v-bind="$attrs"
   >

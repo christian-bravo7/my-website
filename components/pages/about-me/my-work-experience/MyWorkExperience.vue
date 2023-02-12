@@ -23,19 +23,19 @@
               >
                 {{ work.company }}
               </MyWorkExperienceButton>
-              <div class="absolute | left-0 bottom-3 md:bottom-0 h-1 md:h-full w-full md:w-1 | rounded-full | bg-gray-100 dark:bg-blue-700">
+              <div class="absolute | left-0 bottom-3 md:bottom-0 h-1 md:h-full w-full md:w-1 | rounded-full | bg-gray-100 dark:bg-dark-theme-700">
                 <span
-                  class="hidden md:block | absolute | md:w-full h-full md:h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | my-work-experience__button-marker"
+                  class="hidden md:block | absolute | md:w-full h-full md:h-14 | rounded-full | bg-primary | my-work-experience__button-marker"
                   :style="{ 'top': `${verticalMarkTopPosition}px`}"
                 />
                 <span
-                  class="block md:hidden | absolute z-10 | md:w-full h-full md:h-14 | rounded-full | bg-pink-500 dark:bg-blue-400 | my-work-experience__button-marker"
+                  class="block md:hidden | absolute z-10 | md:w-full h-full md:h-14 | rounded-full | bg-primary | my-work-experience__button-marker"
                   :style="{ 'width': `${mobileButtonWidth}px`, 'left': `${horizontalMarkLeftPosition}px`}"
                 />
               </div>
             </div>
             <span class="my-work-experience__button-list-fade" />
-            <div class="block md:hidden | absolute | left-0 top-14 h-1 w-full | rounded-full | bg-gray-100 dark:bg-blue-700" />
+            <div class="block md:hidden | absolute | left-0 top-14 h-1 w-full | rounded-full | bg-gray-100 dark:bg-dark-theme-700" />
           </div>
           <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
             <MyWorkExperienceCard v-bind="workExperienceData[currentTab]" />
@@ -146,7 +146,7 @@ export default class MyWorkExperience extends Vue {
     content: '';
     pointer-events: none;
 
-    @apply bg-gradient-to-r from-transparent to-gray-50 dark:to-blue-800;
+    @apply bg-gradient-to-r from-transparent to-gray-50 dark:to-dark-theme-800;
   }
 }
 

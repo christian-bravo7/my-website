@@ -1,6 +1,6 @@
 <template>
   <button
-    class="w-12 h-12 | p-3 | rounded-full | bg-gray-100 dark:bg-blue-900 | app-burger-button"
+    class="w-12 h-12 | p-3 | rounded-full | bg-gray-100 dark:bg-dark-theme-900 | app-burger-button"
     :class="{ 'z-50': isActive }"
     @click="onClick"
     @keydown.enter="onClick"

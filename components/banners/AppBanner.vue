@@ -10,7 +10,7 @@
           <h2
             v-show="isSecondaryTextVisible"
             id="secondary"
-            class="absolute | font-bold text-center | text-6xl sm:text-8xl md:text-10xl xl:text-13xl | leading-none select-none | text-gray-100 dark:text-blue-900 | app-banner__secondary-text"
+            class="absolute | font-bold text-center | text-6xl sm:text-8xl md:text-10xl xl:text-13xl | leading-none select-none | text-gray-100 dark:text-dark-theme-900 | app-banner__secondary-text"
           >
             <slot name="secondary-text" />
           </h2>

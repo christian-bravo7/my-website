@@ -1,20 +1,20 @@
 <template>
   <div class="hidden md:block absolute overflow-hidden w-full h-full pointer-events-none">
-    <span class="text-pink-500 dark:text-blue-500 text-opacity-30 dark:text-opacity-30">
+    <span class="banner-figure">
       <CircleIcon
-        class="absolute w-6 h-6 movable-figure movable-figure--1 fill-current"
+        class="absolute w-6 h-6 banner-figure__icon banner-figure__icon--1 fill-current"
         :class="currentRoute"
       />
     </span>
-    <span class="text-pink-500 dark:text-blue-500 text-opacity-30 dark:text-opacity-30">
+    <span class="banner-figure">
       <CircleIcon
-        class="absolute w-7 h-7 movable-figure movable-figure--2 fill-current"
+        class="absolute w-7 h-7 banner-figure__icon banner-figure__icon--2 fill-current"
         :class="currentRoute"
       />
     </span>
-    <span class="text-pink-500 dark:text-blue-500 text-opacity-30 dark:text-opacity-30">
+    <span class="banner-figure">
       <CircleIcon
-        class="absolute w-8 h-8 movable-figure movable-figure--3 fill-current"
+        class="absolute w-8 h-8 banner-figure__icon banner-figure__icon--3 fill-current"
         :class="currentRoute"
       />
     </span>
@@ -40,55 +40,67 @@ export default class BannerBackgroundFigures extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.movable-figure {
-  $self: &;
+@import "../../assets/scss/font.scss";
 
-  transition: color 200ms, top 6s, left 6s, transform 6s;
+.banner-figure {
+  @apply primary-text;
+  @apply text-opacity-30;
 
-  &.index {
-    &#{$self}--1 {
-      top: 30%;
-      left: 92%;
-    }
-    &#{$self}--2 {
-      top: 20%;
-      left: 10%;
-    }
-    &#{$self}--3 {
-      top: 80%;
-      left: 60%;
-    }
-  }
+  &__icon {
+    $self: &;
 
-  &.me {
-    &#{$self}--1 {
-      top: 20%;
-      left: 80%;
-    }
-    &#{$self}--2 {
-      top: 50%;
-      left: 10%;
-    }
-    &#{$self}--3 {
-      top: 90%;
-      left: 70%;
-    }
-  }
+    transition: color 200ms, top 6s, left 6s, transform 6s;
 
-  &.blog {
-    &#{$self}--1 {
-      top: 10%;
-      left: 88%;
+    &.index {
+      &#{$self}--1 {
+        top: 30%;
+        left: 92%;
+      }
+
+      &#{$self}--2 {
+        top: 20%;
+        left: 10%;
+      }
+
+      &#{$self}--3 {
+        top: 80%;
+        left: 60%;
+      }
     }
-    &#{$self}--2 {
-      top: 60%;
-      left: 5%;
+
+    &.me {
+      &#{$self}--1 {
+        top: 20%;
+        left: 80%;
+      }
+
+      &#{$self}--2 {
+        top: 50%;
+        left: 10%;
+      }
+
+      &#{$self}--3 {
+        top: 90%;
+        left: 70%;
+      }
     }
-    &#{$self}--3 {
-      top: 94%;
-      left: 50%;
+
+    &.blog {
+      &#{$self}--1 {
+        top: 10%;
+        left: 88%;
+      }
+
+      &#{$self}--2 {
+        top: 60%;
+        left: 5%;
+      }
+
+      &#{$self}--3 {
+        top: 94%;
+        left: 50%;
+      }
     }
   }
 }
-
 </style>

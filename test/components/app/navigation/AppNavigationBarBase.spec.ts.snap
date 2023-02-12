@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppNavigationBarBase should render correclty 1`] = `
-<nav class="fixed top-0 left-0 right-0 z-20 | p-4 md:py-3 md:px-8 | bg-transparent md:bg-gray-50 md:dark:bg-blue-800 | transition-all duration-150">
+<nav class="fixed top-0 left-0 right-0 z-20 | p-4 md:py-3 md:px-8 | bg-transparent md:bg-gray-50 md:dark:bg-dark-theme-800 | transition-all duration-150">
   <div class="navbar__content">
     <div class="flex items-center"></div>
     <div class="flex items-center"></div>

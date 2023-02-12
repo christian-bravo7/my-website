@@ -1,7 +1,7 @@
 <template>
   <div
     ref="itemRef"
-    class="px-2 py-1 mb-1 | text-sm | hover:text-pink-500 | rounded-md | cursor-pointer | transition-all duration-300 | app-select-option"
+    class="px-2 py-1 mb-1 | text-base | hover:text-light-theme-500 | rounded-md | cursor-pointer | transition-all duration-300 | app-select-option"
     :class="{ 'app-select-option--active': active }"
     @click="selectOption"
     @keydown.enter="selectOption"
@@ -42,18 +42,18 @@ export default class AppSelectOption extends Vue {
 
 <style lang="scss" scoped>
 .app-select-option {
-  @apply dark:bg-blue-900 dark:text-white;
+  @apply dark:bg-dark-theme-900 dark:text-white;
 
   &:last-child {
     @apply mb-0;
   }
 
   &:hover {
-    @apply pl-3 dark:text-blue-500;
+    @apply pl-3 dark:text-dark-theme-500;
   }
 
   &--active {
-    @apply text-pink-500 bg-pink-50 dark:bg-blue-800 dark:text-blue-500;
+    @apply text-light-theme-500 bg-light-theme-50 dark:bg-dark-theme-800 dark:text-dark-theme-500;
   }
 
   &--active:hover {

@@ -9,7 +9,7 @@
       @change="changeTheme"
     >
     <label
-      class="relative | flex justify-center items-center | w-8 h-8 | p-2 | text-yellow-500 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | cursor-pointer rounded-lg"
+      class="relative | flex justify-center items-center | w-8 h-8 | p-2 | text-yellow-500 dark:text-gray-50 bg-gray-100 dark:bg-dark-theme-900 | cursor-pointer rounded-lg"
       for="dark-mode-switch"
     >
       <TransitionGroup

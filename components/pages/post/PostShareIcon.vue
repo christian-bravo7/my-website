@@ -2,7 +2,7 @@
   <a
     target="_blank"
     :href="link"
-    class="w-8 h-8 md:w-12 md:h-12 | p-1 | text-gray-50 hover:text-gray-50 | bg-transparent hover:bg-pink-500 | hover:border-pink-500 | rounded-full | social-icon"
+    class="w-8 h-8 md:w-12 md:h-12 | p-1 | text-gray-50 hover:text-gray-50 | bg-transparent hover:bg-light-theme-500 | hover:border-light-theme-500 | rounded-full | social-icon"
   >
     <slot />
   </a>
