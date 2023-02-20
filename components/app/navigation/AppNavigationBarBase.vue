@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-0 left-0 right-0 z-20 | p-4 md:py-8 md:px-10 | bg-transparent md:bg-gray-50 md:dark:bg-dark-theme-800 | transition-all duration-150"
+    class="fixed top-0 left-0 right-0 z-20 | p-4 md:py-6 md:px-10 | bg-transparent md:bg-gray-50 md:dark:bg-dark-theme-800 | transition-all duration-150"
   >
     <div class="navbar__content">
       <div class="flex items-center">

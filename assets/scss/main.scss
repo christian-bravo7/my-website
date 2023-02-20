@@ -2,3 +2,7 @@
 @import 'font';
 @import 'ui/card';
 @import 'ui/button';
+
+html.dark-mode {
+  background-color: black;
+}

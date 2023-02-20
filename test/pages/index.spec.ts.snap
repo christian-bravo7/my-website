@@ -19,7 +19,7 @@ exports[`index page should render page correctly 1`] = `
               christian.a.bravo.g@gmail.com
             </a></div>
         </div>
-        <section class="flex justify-center items-center">
+        <section class="flex justify-center md:justify-end items-center">
           <div class="grid gap-6 grid-cols-3 page-social-icons"><a target="_blank" href="https://github.com/christian-bravo7" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-dark-theme-500 dark-hover:border-dark-theme-500 text-gray-900 hover:bg-light-theme-500 hover:text-gray-50 hover:border-light-theme-500 rounded-full social-icon"><svg></svg></a><a target="_blank" href="https://www.instagram.com/christian.bravo_" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-dark-theme-500 dark-hover:border-dark-theme-500 text-gray-900 hover:bg-light-theme-500 hover:text-gray-50 hover:border-light-theme-500 rounded-full social-icon"><svg></svg></a><a target="_blank" href="https://www.linkedin.com/in/bravo-christian" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-dark-theme-500 dark-hover:border-dark-theme-500 text-gray-900 hover:bg-light-theme-500 hover:text-gray-50 hover:border-light-theme-500 rounded-full social-icon"><svg></svg></a></div>
         </section>
       </div>

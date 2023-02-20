@@ -14,7 +14,6 @@ exports[`me page should render correctly 1`] = `
 <p>Outside of the office you will find me playing soccer, collecting cactus, playing videogames and spending time with my pets and family.</p>
 </p></span>
         </div>
-        <div class="flex items-center justify-center"><img src="~assets/img/photo-3.png" alt="christian picture" class="w-full max-w-sm"></div>
       </div>
     </div>
   </section>
@@ -41,7 +40,7 @@ exports[`me page should render correctly 1`] = `
             </div> <span class="my-work-experience__button-list-fade"></span>
             <div class="block md:hidden | absolute | left-0 top-14 h-1 w-full | rounded-full | bg-gray-100 dark:bg-dark-theme-700"></div>
           </div>
-          <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
+          <div class="flex-1 | md:ml-12 | my-work-experience__card-wrapper">
             <div>
               <h6 class="text-xl | mb-2"><span class="font-bold">
     Software Engineer
@@ -71,25 +70,25 @@ exports[`me page should render correctly 1`] = `
     Technologies:
   </span>
                 <div class="flex flex-wrap">
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-500 dark:border-dark-theme-300 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-200 dark:border-dark-theme-400 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-600 dark:bg-opacity-25">
                     React
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-500 dark:border-dark-theme-300 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-200 dark:border-dark-theme-400 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-600 dark:bg-opacity-25">
                     Redux
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-500 dark:border-dark-theme-300 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-200 dark:border-dark-theme-400 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-600 dark:bg-opacity-25">
                     Node
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-500 dark:border-dark-theme-300 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-200 dark:border-dark-theme-400 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-600 dark:bg-opacity-25">
                     Express
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-500 dark:border-dark-theme-300 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-200 dark:border-dark-theme-400 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-600 dark:bg-opacity-25">
                     Kraken
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-500 dark:border-dark-theme-300 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-200 dark:border-dark-theme-400 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-600 dark:bg-opacity-25">
                     Javascript
                   </div>
-                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-500 dark:border-dark-theme-300 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-700 dark:bg-opacity-25">
+                  <div class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-200 dark:border-dark-theme-400 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-600 dark:bg-opacity-25">
                     LESS
                   </div>
                 </div>
@@ -117,7 +116,7 @@ exports[`me page should render correctly 1`] = `
               christian.a.bravo.g@gmail.com
             </a></div>
         </div>
-        <section class="flex justify-center items-center">
+        <section class="flex justify-center md:justify-end items-center">
           <div class="grid gap-6 grid-cols-3 page-social-icons"><a target="_blank" href="https://github.com/christian-bravo7" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-dark-theme-500 dark-hover:border-dark-theme-500 text-gray-900 hover:bg-light-theme-500 hover:text-gray-50 hover:border-light-theme-500 rounded-full social-icon"><svg></svg></a><a target="_blank" href="https://www.instagram.com/christian.bravo_" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-dark-theme-500 dark-hover:border-dark-theme-500 text-gray-900 hover:bg-light-theme-500 hover:text-gray-50 hover:border-light-theme-500 rounded-full social-icon"><svg></svg></a><a target="_blank" href="https://www.linkedin.com/in/bravo-christian" class="w-8 h-8 md:w-12 md:h-12 | p-1 | bg-transparent dark:text-gray-50 dark-hover:bg-dark-theme-500 dark-hover:border-dark-theme-500 text-gray-900 hover:bg-light-theme-500 hover:text-gray-50 hover:border-light-theme-500 rounded-full social-icon"><svg></svg></a></div>
         </section>
       </div>

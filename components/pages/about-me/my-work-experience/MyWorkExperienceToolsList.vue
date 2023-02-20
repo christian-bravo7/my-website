@@ -7,7 +7,7 @@
       <div
         v-for="(tool, index) in tools"
         :key="index"
-        class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-500 dark:border-dark-theme-300 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-700 dark:bg-opacity-25"
+        class="mr-4 mb-4 py-2 px-4 | text-sm | font-bold | whitespace-nowrap | rounded-full | border border-light-theme-200 dark:border-dark-theme-400 | bg-light-theme-50 bg-opacity-30 dark:bg-dark-theme-600 dark:bg-opacity-25"
       >
         {{ tool }}
       </div>

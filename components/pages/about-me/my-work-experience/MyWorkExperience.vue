@@ -37,7 +37,7 @@
             <span class="my-work-experience__button-list-fade" />
             <div class="block md:hidden | absolute | left-0 top-14 h-1 w-full | rounded-full | bg-gray-100 dark:bg-dark-theme-700" />
           </div>
-          <div class="flex-1 | md:ml-6 | my-work-experience__card-wrapper">
+          <div class="flex-1 | md:ml-12 | my-work-experience__card-wrapper">
             <MyWorkExperienceCard v-bind="workExperienceData[currentTab]" />
           </div>
         </div>
