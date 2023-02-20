@@ -30,7 +30,7 @@ export default class MyWorkExperienceButton extends Vue {
 .my-work-experience-button {
   &--is-active,
   &:hover {
-    @apply text-pink-500 dark:text-blue-400 bg-pink-50 bg-opacity-40 dark:bg-blue-700 dark:bg-opacity-30;
+    @apply text-light-theme-500 dark:text-dark-theme-400 bg-light-theme-50 bg-opacity-40 dark:bg-dark-theme-700 dark:bg-opacity-30;
   }
 }
 </style>

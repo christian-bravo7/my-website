@@ -1,5 +1,5 @@
 <template>
-  <section class="flex justify-center items-center">
+  <section class="flex justify-center md:justify-end items-center">
     <div class="grid gap-6 grid-cols-3 page-social-icons">
       <SocialNetworkIcon
         v-for="({ link, component }, index) in socialMediaIcons"

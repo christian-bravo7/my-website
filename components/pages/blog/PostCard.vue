@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative | bg-white dark:bg-blue-900 bg-opacity-75 dark:bg-opacity-75 | hover:bg-opacity-100 dark-hover:bg-opacity-100 hover:shadow-xl | group | rounded-xl shadow-md | transition-all duration-300"
+    class="relative | bg-white dark:bg-dark-theme-900 bg-opacity-75 dark:bg-opacity-75 | hover:bg-opacity-100 dark-hover:bg-opacity-100 hover:shadow-xl | group | rounded-xl shadow-md | transition-all duration-300"
   >
     <div class="absolute inset-0 flex flex-col">
       <figure class="relative flex-1 overflow-hidden rounded-xl">

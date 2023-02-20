@@ -4,7 +4,7 @@ exports[`single post page should render page correctly 1`] = `
 <section>
   <div class="v-portal" style="display: none;"></div>
   <div class="relative | container mx-auto">
-    <div class="w-full | py-12 sm:py-20 px-4 sm:px-12 | shadow-lg | rounded-2xl | bg-gray-50 dark:bg-blue-900 | transform -translate-y-20">
+    <div class="w-full | py-12 sm:py-20 px-4 sm:px-12 | shadow-lg | rounded-2xl | bg-gray-50 dark:bg-dark-theme-900 | transform -translate-y-20">
       <div class="max-w-7xl w-full | mx-auto"><span document="[object Object]" class="blog-content"></span></div>
     </div>
   </div>

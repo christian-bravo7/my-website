@@ -13,13 +13,6 @@
             />
           </ClientOnly>
         </div>
-        <div class="flex items-center justify-center">
-          <img
-            class="w-full max-w-sm"
-            src="~assets/img/photo-3.png"
-            alt="christian picture"
-          >
-        </div>
       </div>
     </div>
   </section>
@@ -39,7 +32,7 @@ export default class AboutMeInformation extends Vue {}
   }
 
   &__title {
-    @include theme-gradients(four, five);
+    @include theme-gradients(one, two);
   }
 
   /* stylelint-disable */

@@ -1,17 +1,20 @@
 @tailwind components;
 
 @layer components {
+  .bg-primary {
+    @apply bg-light-theme-500 dark:bg-dark-theme-500;
+  }
+
   .font-base {
     @apply text-sm md:text-base leading-7 md:leading-loose text-black dark:text-white;
   }
 
   .primary-text {
-    @apply text-pink-500 dark:text-blue-500;
+    @apply text-light-theme-500 dark:text-dark-theme-500;
   }
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-
   @apply text-black dark:text-white;
 }

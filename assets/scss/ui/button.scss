@@ -2,6 +2,6 @@
 
 @layer components {
   .button {
-    @apply px-6 py-3 text-base md:text-lg rounded-full bg-pink-500 dark:bg-blue-500 text-white;
+    @apply px-6 py-3 text-base md:text-lg rounded-full bg-primary text-white;
   }
 }

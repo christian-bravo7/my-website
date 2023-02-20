@@ -6,7 +6,7 @@
     <div
       ref="selectButton"
       tabindex="0"
-      class="flex items-center | py-1 pl-4 pr-1 | text-sm | text-gray-900 dark:text-gray-50 bg-gray-100 dark:bg-blue-900 | rounded-lg | cursor-pointer | app-select__button"
+      class="flex items-center | py-1 pl-4 pr-1 | text-base | text-gray-900 dark:text-gray-50 bg-gray-100 dark:bg-dark-theme-900 | rounded-lg | cursor-pointer | app-select__button"
       :class="{ 'app-select__button--active' : isOptionListOpened }"
       @click="toggleOptions"
       @keydown.enter="toggleOptions"
@@ -32,7 +32,7 @@
         ref="optionsList"
         tabindex="0"
         :class="{ 'app-select__options-list--top-right': isTopRight }"
-        class="absolute right-0 | p-1 | bg-gray-50 dark:bg-blue-900 | rounded-lg shadow-lg focus:outline-none | app-select__options-list"
+        class="absolute right-0 | p-1 | bg-gray-50 dark:bg-dark-theme-900 | rounded-lg shadow-lg focus:outline-none | app-select__options-list"
         @keydown.up.prevent="preparePreviousOption"
         @keydown.down.prevent="prepareNextOption"
         @keydown.esc="closeOptions"
@@ -191,7 +191,7 @@ export default class AppSelect extends Vue {
 
   &__button {
     &--active {
-      @apply bg-gray-50 shadow-md dark:bg-blue-900;
+      @apply bg-gray-50 shadow-md dark:bg-dark-theme-900;
     }
   }
 }

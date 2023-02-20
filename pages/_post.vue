@@ -4,7 +4,7 @@
       <PostBanner v-bind="bannerInfo" />
     </Portal>
     <div class="relative | container mx-auto">
-      <div class="w-full | py-12 sm:py-20 px-4 sm:px-12 | shadow-lg | rounded-2xl | bg-gray-50 dark:bg-blue-900 | transform -translate-y-20">
+      <div class="w-full | py-12 sm:py-20 px-4 sm:px-12 | shadow-lg | rounded-2xl | bg-gray-50 dark:bg-dark-theme-900 | transform -translate-y-20">
         <div class="max-w-7xl w-full | mx-auto">
           <NuxtContent
             class="blog-content"
@@ -114,7 +114,7 @@ export default class Post extends Vue {
   }
 
   a {
-    @apply text-pink-500 dark:text-blue-400 underline;
+    @apply text-light-theme-500 dark:text-dark-theme-400 underline;
   }
 }
 

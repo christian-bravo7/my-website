@@ -12,7 +12,6 @@ exports[`AboutMeInformation component should render correctly 1`] = `
 <p>Outside of the office you will find me playing soccer, collecting cactus, playing videogames and spending time with my pets and family.</p>
 </p></span>
       </div>
-      <div class="flex items-center justify-center"><img src="~assets/img/photo-3.png" alt="christian picture" class="w-full max-w-sm"></div>
     </div>
   </div>
 </section>

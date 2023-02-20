@@ -2,6 +2,6 @@
 
 @layer components {
   .card {
-    @apply p-4 rounded-2xl select-none bg-gray-100 dark-hover:bg-opacity-25 dark:bg-transparent dark-hover:bg-blue-700 shadow-sm hover:shadow-md border border-transparent dark:border-blue-300 transition-all duration-300;
+    @apply p-4 rounded-2xl select-none bg-gray-100 dark-hover:bg-opacity-25 dark:bg-transparent dark-hover:bg-dark-theme-700 shadow-sm hover:shadow-md border border-transparent dark:border-dark-theme-300 transition-all duration-300;
   }
 }

@@ -16,7 +16,7 @@
       >
         <aside
           v-show="isSidebarVisible"
-          class="absolute inset-y-0 right-0 w-full h-full max-w-sm p-0 bg-gray-50 dark:bg-blue-800 rounded-3xl rounded-r-none sidebar-grid"
+          class="absolute inset-y-0 right-0 w-full h-full max-w-sm p-0 bg-gray-50 dark:bg-dark-theme-800 rounded-3xl rounded-r-none sidebar-grid"
         >
           <section class="flex justify-end p-10" />
           <section class="flex flex-col items-start p-4">
@@ -88,7 +88,7 @@ export default class AppSidebarMenu extends Vue {
 @include dark-mode {
   .overlay {
     &::before {
-      @apply bg-blue-900 bg-opacity-75;
+      @apply bg-dark-theme-900 bg-opacity-75;
     }
   }
 }

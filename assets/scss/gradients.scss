@@ -1,9 +1,9 @@
 $font-gradients: (
   "one": linear-gradient(160deg, #A40EB0, #FE6565),
-  "two": linear-gradient(-70deg, #DB469F, #2188FF),
+  "two": linear-gradient(110.4deg, rgba(255, 196, 254, 1) 9.6%, rgba(251, 229, 123, 1) 91%),
   "three": linear-gradient(109deg, #EE3A88 11.2%, #80A2F5 91.1%),
   "four": radial-gradient(circle farthest-corner at 10% 20%, rgba(62, 133, 238, 1) 1.1%, rgba(227, 137, 240, 1) 43.7%, rgba(243, 193, 124, 1) 89.7%),
-  "five": linear-gradient(110.4deg, rgba(255, 196, 254, 1) 9.6%, rgba(251, 229, 123, 1) 91%),
+  "five": linear-gradient(-70deg, #DB469F, #2188FF),
 );
 
 @each $key, $value in $font-gradients {
